@@ -17,6 +17,7 @@
  xmlns="http://www.handcoded.com/BusinessRules"
  xsi:schemaLocation="http://www.handcoded.com/BusinessRules business-rules.xsd"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ 
 	<!-- Load Java classes that implement the standard rule sets -->
 	<forceLoad platform="Java" class="com.handcoded.fpml.validation.IrdRules"/>
 	<forceLoad platform="Java" class="com.handcoded.fpml.validation.CdsRules"/>
@@ -30,6 +31,20 @@
 	
 	<forceLoad platform="Java" class="com.handcoded.fpml.validation.SchemeRules"/>
 	<forceLoad platform="Java" class="com.handcoded.fpml.validation.DataTypeRules"/>
+	
+	<!-- Load .Net classes that implement the standard rule sets -->
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.IrdRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.CdsRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.EqdRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.FxRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.SharedRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.BusinessProcessRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.PricingAndRiskRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.ReferenceRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.LoanRules"/>
+	
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.SchemeRules"/>
+	<forceLoad platform=".Net" class="HandCoded.FpML.Validation.DataTypeRules"/>
 	
 	<!-- Define Standard FpML Rule Sets -->
 	<ruleSet name="IrdRules">
@@ -101,9 +116,9 @@
 		<addRule name="cd-1"/>
 		<addRule name="cd-1b"/>
 		<addRule name="cd-2"/>
-		<addRule name="cd-3"/>
+		<!-- Removed <addRule name="cd-3"/> -->
 		<addRule name="cd-3b"/>
-		<addRule name="cd-4"/>
+		<!-- Removed <addRule name="cd-4"/> -->
 		<addRule name="cd-4b"/>
 		<addRule name="cd-5"/>
 		<addRule name="cd-6"/>
@@ -144,7 +159,7 @@
 		<addRule name="cd-40"/>
 		<addRule name="cd-41"/>
 		<addRule name="cd-42"/>
-		<addRule name="cd-43"/>
+		<!-- Removed <addRule name="cd-43"/> -->
 		<addRule name="cd-44"/>
 	</ruleSet>
 	
@@ -243,19 +258,24 @@
 		<addRule name="shared-9"/>
 		<addRule name="shared-10"/>
 		<addRule name="shared-11"/>
+		<!-- Make 12-14 consistent -->
+		<addRule name="shared-12"/>
+		<addRule name="shared-13"/>
+		<addRule name="shared-14"/>
 		<addRule name="shared-12a"/>
 		<addRule name="shared-12b"/>
 		<addRule name="shared-13a"/>
 		<addRule name="shared-13b"/>
 		<addRule name="shared-14a"/>
 		<addRule name="shared-14b"/>
+		
 		<addRule name="shared-15"/>
 		<addRule name="shared-16"/>
 		<addRule name="shared-17"/>
 	</ruleSet>
 	
 	<ruleSet name="BusinessProcessRules">
-		<!-- Deprecated <addRule name="bp-1"/> -->
+		<!-- Removed <addRule name="bp-1"/> -->
 		<addRule name="bp-2"/>
 	</ruleSet>
 	
@@ -349,7 +369,11 @@
 		<addRule name="scheme-21"/>
 		<addRule name="scheme-22"/>
 		<addRule name="scheme-23"/>
+		<!-- Make consistent -->
 		<addRule name="scheme-24"/>
+		<addRule name="scheme-24a"/>
+		<addRule name="scheme-24b"/>
+
 		<addRule name="scheme-25"/>
 		<addRule name="scheme-26"/>
 		<addRule name="scheme-27"/>
