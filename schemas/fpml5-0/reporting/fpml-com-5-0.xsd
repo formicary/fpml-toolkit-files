@@ -90,6 +90,16 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  <xsd:complexType name="CalculationPeriodsDatesReference">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A pointer style reference to single-day-duration calculation periods defined elsewhere - note that this schedule consists of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Reference">
+        <xsd:attribute name="href" type="xsd:IDREF" use="required" ecore:reference="CommodityCalculationPeriodsSchedule" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
   <xsd:complexType name="CoalAttributeDecimal">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">The different options for specifying the attributes of a coal quality measure as a decimal value.</xsd:documentation>
@@ -313,6 +323,22 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  <xsd:complexType name="CommodityCalculationPeriodsSchedule">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A parametric representation of the Calculation Periods for on Asian option or a leg of a swap. In case the calculation frequency is of value T (term), the period is defined by the commoditySwap\effectiveDate and the commoditySwap\terminationDate.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Frequency">
+        <xsd:sequence>
+          <xsd:element name="balanceOfFirstPeriod" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">If true, indicates that that the first Calculation Period should run from the Effective Date to the end of the calendar period in which the Effective Date falls, e.g. Jan 15 - Jan 31 if the calculation periods are one month long and Effective Date is Jan 15. If false, the first Calculation Period should run from the Effective Date for one whole period, e.g. Jan 15 to Feb 14 if the calculation periods are one month long and Effective Date is Jan 15.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
   <xsd:complexType name="CommodityDeliveryPeriods">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">The different options for specifying the Delivery Periods of a physical leg.</xsd:documentation>
@@ -336,6 +362,26 @@
     </xsd:choice>
     <xsd:attribute name="id" type="xsd:ID" />
   </xsd:complexType>
+  <xsd:complexType name="CommodityDeliveryPoint">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A scheme identifying the types of the Delivery Point for a physically settled commodity trade.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="deliveryPointScheme" type="xsd:anyURI" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="CommodityDeliveryRisk">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A scheme identifying how the parties to the trade aportion responsibility for the delivery of the commodity product (for example Free On Board, Cost, Insurance, Freight)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="deliveryRiskScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/external/incoterms" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
   <xsd:complexType name="CommodityEuropeanExercise">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type for defining exercise procedures associated with a European style exercise of a commodity option.</xsd:documentation>
@@ -356,42 +402,6 @@
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:complexType name="CommodityCalculationPeriodsSchedule">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A parametric representation of the Calculation Periods for on Asian option or a leg of a swap. In case the calculation frequency is of value T (term), the period is defined by the commoditySwap\effectiveDate and the commoditySwap\terminationDate.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="Frequency">
-        <xsd:sequence>
-          <xsd:element name="balanceOfFirstPeriod" type="xsd:boolean" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">If true, indicates that that the first Calculation Period should run from the Effective Date to the end of the calendar period in which the Effective Date falls, e.g. Jan 15 - Jan 31 if the calculation periods are one month long and Effective Date is Jan 15. If false, the first Calculation Period should run from the Effective Date for one whole period, e.g. Jan 15 to Feb 14 if the calculation periods are one month long and Effective Date is Jan 15.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:complexType name="CommodityDeliveryPoint">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A scheme identifying the types of the Delivery Point for a physically settled commodity trade.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="deliveryPointScheme" type="xsd:anyURI" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:complexType name="CommodityDeliveryRisk">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A scheme identifying how the parties to the trade aportion responsibility for the delivery of the commodity product (for example Free On Board, Cost, Insurance, Freight)</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="deliveryRiskScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/external/incoterms" />
-      </xsd:extension>
-    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="CommodityExercise">
     <xsd:annotation>
@@ -438,6 +448,16 @@
       <xsd:group ref="CommodityPaymentDates.model" />
     </xsd:sequence>
   </xsd:complexType>
+  <xsd:complexType name="CommodityExpireRelativeToEvent">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A scheme identifying the physical event relative to which option expiration occurs.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="commodityExpireRelativeToEventScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/commodity-expire-relative-to-event" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
   <xsd:complexType name="CommodityForward">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Commodity Forward</xsd:documentation>
@@ -457,13 +477,14 @@
           </xsd:element>
           <xsd:choice>
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">This choice group is intended to allow legs based on different classes of commodity to be added to the shcema as this becomes necessary.</xsd:documentation>
+              <xsd:documentation xml:lang="en">This choice group is intended to allow legs based on different classes of commodity to be added to the schema as this becomes necessary.</xsd:documentation>
             </xsd:annotation>
             <xsd:element name="bullionPhysicalLeg" type="BullionPhysicalLeg" minOccurs="0">
               <xsd:annotation>
                 <xsd:documentation xml:lang="en">The physical leg of a Commodity Forward Transaction for which the underlyer is Bullion.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
+            <xsd:element ref="additionalCommodityForwardLeg" minOccurs="0" />
           </xsd:choice>
           <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
@@ -724,27 +745,18 @@
               <xsd:documentation xml:lang="en">The type of option transaction.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="commodity" type="Commodity" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">Specifies the underlying component. At the time of the initial schema design, only underlyers of type Commodity are supported; the choice group in the future could offer the possibility of adding other types later.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:group ref="CommodityAsian.model" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">A group containing properties specific to Asian options.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:group>
-          <xsd:group ref="CommodityNotionalQuantity.model" />
-          <xsd:element name="exercise" type="CommodityExercise" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">The parameters for defining how the commodity option can be exercised and how it is settled.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:group ref="CommodityStrikePrice.model">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">The different options for specifying the Strike price per unit. This will consists of a single strike price of a strike price schedule.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:group>
+          <xsd:choice>
+            <xsd:group ref="CommodityFinancialOption.model">
+              <xsd:annotation>
+                <xsd:documentation>Items specific to financially-settled commodity options.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:group>
+            <xsd:group ref="CommodityPhysicalOption.model">
+              <xsd:annotation>
+                <xsd:documentation>Items specific to fhysically-settled commodity options.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:group>
+          </xsd:choice>
           <xsd:element name="premium" type="CommodityPremium" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The option premium payable by the buyer to the seller.</xsd:documentation>
@@ -764,6 +776,53 @@
         <xsd:attribute name="commodityPayRelativeToEventScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/commodity-pay-relative-to-event" />
       </xsd:extension>
     </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="CommodityPhysicalAmericanExercise">
+    <xsd:annotation>
+      <xsd:documentation>The parameters for defining the expiration date(s) and time(s) for an American style option.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Exercise">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:sequence>
+              <xsd:element name="commencementDates" type="AdjustableOrRelativeDates" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation>The first day(s) of the exercise period(s) for an American-style option.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element name="expirationDates" type="AdjustableOrRelativeDates" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation>The Expiration Date(s) of an American-style option.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+            </xsd:sequence>
+            <xsd:sequence>
+              <xsd:element name="relativeCommencementDates" type="CommodityRelativeExpirationDates" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation>The first day(s) of the exercise period(s) for an American-style option where it is relative to the occurrence of an external event.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element name="relativeExpirationDates" type="CommodityRelativeExpirationDates" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation>The Expiration Date(s) of an American-style option where it is relative to the occurrence of an external event.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:choice>
+          <xsd:element name="latestExerciseTime" type="PrevailingTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">For a Bermuda or American style option, the latest time on an exercise business day (excluding the expiration date) within the exercise period that notice can be given by the buyer to the seller or seller's agent. Notice of exercise given after this time will be deemed to have been given on the next exercise business day.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="expirationTime" type="PrevailingTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The specific time of day at which the option expires.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="CommodityPhysicalQuantity">
     <xsd:annotation>
@@ -796,6 +855,68 @@
       <xsd:group ref="CommodityDeliveryPeriodsPointer.model" />
     </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID" />
+  </xsd:complexType>
+  <xsd:complexType name="CommodityPhysicalEuropeanExercise">
+    <xsd:annotation>
+      <xsd:documentation>The parameters for defining the expiration date(s) and time(s) for a European style option.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Exercise">
+        <xsd:sequence>
+          <xsd:choice>
+            <xsd:element name="expirationDate" type="AdjustableOrRelativeDate" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>The Expiration Date of a single expiry European-style option or the first Expiration Date of a multiple expiry or daily expiring option.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="expirationDates" type="AdjustableRelativeOrPeriodicDates2" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>The Expiration Date(s) of a European-style option.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="relativeExpirationDates" type="CommodityRelativeExpirationDates" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation>The Expiration Date(s) of a European-style option where it is relative to the occurrence of an external event.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:choice>
+          <xsd:element name="expirationTime" type="PrevailingTime" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The specific time of day at which the option expires.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="CommodityPhysicalExercise">
+    <xsd:annotation>
+      <xsd:documentation>The parameters for defining how the physically-settled commodity option can be exercised and how it is settled.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="americanExercise" type="CommodityPhysicalAmericanExercise" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation>The parameters for defining the expiration date(s) and time(s) for an American style option.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="europeanExercise" type="CommodityPhysicalEuropeanExercise" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">The parameters for defining the expiration date(s) and time(s) for a European style option.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+      <xsd:element name="automaticExercise" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies whether or not Automatic Exercise applies to a Commodity Option Transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="writtenConfirmation" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies whether or not Written Confirmation applies to a Commodity Option Transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CommodityPipeline">
     <xsd:annotation>
@@ -887,6 +1008,25 @@
         <xsd:attribute name="quantityFrequencyScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/commodity-quantity-frequency" />
       </xsd:extension>
     </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="CommodityRelativeExpirationDates">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The Expiration Dates of the trade relative to the Calculation Periods.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="expireRelativeToEvent" type="CommodityExpireRelativeToEvent" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies whether the payment(s) occur relative to the date of a physical event.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="expirationDateOffset" type="DateOffset" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies any offset from the adjusted Calculation Period start date or adjusted Calculation Period end date applicable to each Payment Date.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:group ref="BusinessCentersOrReference.model" minOccurs="0" />
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID" />
   </xsd:complexType>
   <xsd:complexType name="CommodityRelativePaymentDates">
     <xsd:annotation>
@@ -1044,7 +1184,7 @@
                 <xsd:documentation xml:lang="en">Physically settled oil or refined products leg.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
-            <xsd:element ref="additionalCommodityLeg" minOccurs="0" />
+            <xsd:element ref="additionalCommoditySwapLeg" minOccurs="0" />
           </xsd:choice>
           <xsd:group ref="CommodityContent.model" minOccurs="0" />
         </xsd:sequence>
@@ -1642,6 +1782,11 @@
               <xsd:documentation xml:lang="en">Fixed price on which fixed payments are based.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
+          <xsd:element name="totalPrice" type="NonNegativeMoney" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The total amount of the fixed payment for all units of the underlying commodity.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="quantityReference" type="QuantityReference" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">A pointer style reference to a quantity defined on another leg.</xsd:documentation>
@@ -1976,7 +2121,8 @@
     </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID" />
   </xsd:complexType>
-  <xsd:element name="additionalCommodityLeg" abstract="true" />
+  <xsd:element name="additionalCommodityForwardLeg" abstract="true" />
+  <xsd:element name="additionalCommoditySwapLeg" abstract="true" />
   <xsd:element name="commodityForward" type="CommodityForward" substitutionGroup="product">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Defines a commodity forward product.</xsd:documentation>
@@ -2072,6 +2218,11 @@
       <xsd:documentation xml:lang="en">The different options for specifying the Calculation Periods.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice>
+      <xsd:element name="calculationDates" type="AdjustableDates" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>The Calculation Period dates for this leg of the trade where the Calculation Periods are all one day long, typically a physically-settled emissions or metals trade. Only dates explicitly included determine the Calculation Periods and there is a Calculation Period for each date specified.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element name="calculationPeriods" type="AdjustableDates" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The Calculation Period start dates for this leg of the swap. This type is only intended to be used if the Calculation Periods differ on each leg. If Calculation Periods mirror another leg, then the calculationPeriodsReference element should be used to point to the Calculation Periods on that leg - or the calculationPeriodsScheduleReference can be used to point to the Calculation Periods Schedule for that leg.</xsd:documentation>
@@ -2102,6 +2253,11 @@
       <xsd:element name="calculationPeriodsScheduleReference" type="CalculationPeriodsScheduleReference" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">A pointer style reference to the Calculation Periods Schedule defined on another leg.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="calculationPeriodsDatesReference" type="CalculationPeriodsDatesReference" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>A pointer style reference to single-day-duration Calculation Periods defined on another leg.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:choice>
@@ -2218,6 +2374,34 @@
           <xsd:documentation xml:lang="en">Rounding direction and precision for amounts.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="CommodityFinancialOption.model">
+    <xsd:annotation>
+      <xsd:documentation>Items specific to financially-settled commodity options.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="commodity" type="Commodity" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies the underlying component. At the time of the initial schema design, only underlyers of type Commodity are supported; the choice group in the future could offer the possibility of adding other types later.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:group ref="CommodityAsian.model" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A group containing properties specific to Asian options.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:group>
+      <xsd:group ref="CommodityNotionalQuantity.model" />
+      <xsd:element name="exercise" type="CommodityExercise" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The parameters for defining how the commodity option can be exercised and how it is settled.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:group ref="CommodityStrikePrice.model">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The different options for specifying the Strike price per unit. This will consists of a single strike price of a strike price schedule.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:group>
     </xsd:sequence>
   </xsd:group>
   <xsd:group name="CommodityFixedPhysicalQuantity.model">
@@ -2367,6 +2551,22 @@
       </xsd:element>
       <xsd:group ref="CommodityNonPeriodicPaymentDates.model" />
     </xsd:choice>
+  </xsd:group>
+  <xsd:group name="CommodityPhysicalOption.model">
+    <xsd:annotation>
+      <xsd:documentation>Items specific to financially-settled commodity options.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element ref="commoditySwap" minOccurs="0" />
+        <xsd:element ref="commodityForward" minOccurs="0" />
+      </xsd:choice>
+      <xsd:element name="physicalExercise" type="CommodityPhysicalExercise" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>The parameters for defining how the commodity option can be exercised into a physical transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
   </xsd:group>
   <xsd:group name="CommodityStrikePrice.model">
     <xsd:annotation>

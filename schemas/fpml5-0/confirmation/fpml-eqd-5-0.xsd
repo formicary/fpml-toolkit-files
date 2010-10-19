@@ -6,7 +6,6 @@
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 2864 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-eq-shared-5-0.xsd" />
-<!--should we keep BrokerEquityOption? If we keep it, can brokerageFree be "NonNegativeMoney"?-->
   <xsd:complexType name="BrokerEquityOption">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type for defining the broker equity options.</xsd:documentation>
@@ -131,11 +130,6 @@
               <xsd:documentation xml:lang="en">Where the underlying is shares, specifies events affecting the issuer of those shares that may require the terms of the transaction to be adjusted.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="equityFeatures" type="OptionFeatures" minOccurs="0" fpml-annotation:deprecated="true" fpml-annotation:deprecatedReason="Option Features content is accessible in the complex type EquityDerivativeBase through the model group Feature.model">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">DEPRECATED This element will be removed in the next FpML major version. Use the "feature" element for option features such as asian, barrier, knock.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -194,7 +188,6 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:choice>
-<!--01-13-2010 - aded annotations-->
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The parameters for defining how the equity option can be exercised, how it is valued and how it is settled.</xsd:documentation>
         </xsd:annotation>
@@ -230,14 +223,12 @@
         <xsd:element name="prePayment" type="PrePayment">
           <xsd:annotation>
             <xsd:documentation xml:lang="en">Prepayment features for Forward.</xsd:documentation>
-<!--01-13-2010 - aded view-->
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
       <xsd:element name="equityValuation" type="EquityValuation">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The parameters for defining when valuation of the underlying takes place.</xsd:documentation>
-<!--01-13-2010 - aded view-->
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="settlementDate" type="AdjustableOrRelativeDate" minOccurs="0">
@@ -248,14 +239,12 @@
       <xsd:element name="settlementCurrency" type="Currency">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The currency in which a cash settlement for non-deliverable forward and non-deliverable options.</xsd:documentation>
-<!--01-13-2010 - aded view-->
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="settlementPriceSource" type="SettlementPriceSource" minOccurs="0" />
       <xsd:element name="settlementType" type="SettlementTypeEnum">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">How the option will be settled.</xsd:documentation>
-<!--01-13-2010 - aded view-->
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="settlementMethodElectionDate" type="AdjustableOrRelativeDate" minOccurs="0" />
@@ -273,7 +262,6 @@
           <xsd:element name="forwardPrice" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The forward price per share, index or basket.</xsd:documentation>
-<!--01-13-2010 - aded view-->
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -332,7 +320,6 @@
           <xsd:element name="equityPremium" type="EquityPremium">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The equity option premium payable by the buyer to the seller.</xsd:documentation>
-<!--01-13-2010 - aded view-->
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -345,7 +332,6 @@
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="settlementAmountPaymentDate" type="AdjustableDate" />
-<!--Used NonNegativeMoney-->
       <xsd:element name="settlementAmount" type="NonNegativeMoney" />
     </xsd:sequence>
   </xsd:complexType>
@@ -368,14 +354,12 @@
           </xsd:element>
           <xsd:group ref="IndexAnnexFallback.model" minOccurs="0" />
           <xsd:element name="methodOfAdjustment" type="MethodOfAdjustmentEnum" minOccurs="0" />
-<!--Changed type Country to CountryCode-->
           <xsd:element name="localJurisdiction" type="CountryCode" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">Local Jurisdiction is a term used in the AEJ Master Confirmation, which is used to determine local taxes, which shall mean taxes, duties, and similar charges imposed by the taxing authority of the Local Jurisdiction If this element is not present Local Jurisdiction is Not Applicable.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:choice minOccurs="0">
-<!--01-13-2010 - aded view-->
             <xsd:element name="optionEntitlement" type="PositiveDecimal">
               <xsd:annotation>
                 <xsd:documentation xml:lang="en">The number of shares per option comprised in the option transaction supplement.</xsd:documentation>
@@ -400,7 +384,6 @@
         <xsd:sequence>
           <xsd:group ref="PayerReceiver.model" />
           <xsd:element name="prePayment" type="xsd:boolean" />
-<!--Used NoneNegativeMoney-->
           <xsd:element name="prePaymentAmount" type="NonNegativeMoney" />
           <xsd:element name="prePaymentDate" type="AdjustableDate" />
         </xsd:sequence>

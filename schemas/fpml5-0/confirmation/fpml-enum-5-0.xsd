@@ -271,28 +271,6 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="ConditionsPrecedentEnum">
-    <xsd:annotation>
-      <xsd:documentation source="http://www.FpML.org" xml:lang="en">Defines whether conditions precedent have been met in a given syndicated loan deal.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="Yes">
-        <xsd:annotation>
-          <xsd:documentation source="http://www.FpML.org" xml:lang="en">Conditions precedent have been met.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="No">
-        <xsd:annotation>
-          <xsd:documentation source="http://www.FpML.org" xml:lang="en">Conditions precedent have not been met.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="Waived">
-        <xsd:annotation>
-          <xsd:documentation source="http://www.FpML.org" xml:lang="en">The requirement for conditions precedent were waived.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
   <xsd:simpleType name="DayOfWeekEnum">
     <xsd:annotation>
       <xsd:documentation>A day of the seven-day week.</xsd:documentation>
@@ -524,6 +502,11 @@
           <xsd:documentation source="http://www.FpML.org" xml:lang="en">Date on which the dividend will be paid by the issuer.</xsd:documentation>
         </xsd:annotation>
       </xsd:enumeration>
+      <xsd:enumeration value="DividendValuationDate">
+        <xsd:annotation>
+          <xsd:documentation source="http://www.FpML.org" xml:lang="en">In respect of each Dividend Period, number of days offset from the relevant Dividend Valuation Date.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
       <xsd:enumeration value="RecordDate">
         <xsd:annotation>
           <xsd:documentation source="http://www.FpML.org" xml:lang="en">Date on which the dividend will be recorded in the books of the paying agent.</xsd:documentation>
@@ -630,28 +613,6 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="DrawdownEventTypeEnum">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">When breakage cost is applicable, defines who is calculating it.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="NewDrawdownEvent">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Event triggered by the borrower requesting a new loan contract against an existing facility with the agent bank. The agent will receive the borrower notice, calculate the amount of principal due from each lender based on their respective share of the underlying commitment and send loan contract notices to the lenders.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="RateSetEvent">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">This is a notice that defines when the actual underlying base rate is set for the loan contract period.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="FxRateSetEvent">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">This is a notice that defines when the exchange rate is set for the loan contract period. Applicable only for multicurrency loan contracts.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
   <xsd:simpleType name="ElectricityProductTypeEnum">
     <xsd:annotation>
       <xsd:documentation>The type of electricity product.</xsd:documentation>
@@ -743,6 +704,23 @@
       <xsd:enumeration value="Floating">
         <xsd:annotation>
           <xsd:documentation source="http://www.FpML.org" xml:lang="en">The Flat Rate for each Pricing Date will be the New Worldwide Tanker Nominal Freight Scale for the Freight Index Route for the Pricing Date..</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="FPVFinalPriceElectionFallbackEnum">
+    <xsd:annotation>
+      <xsd:documentation source="http://www.FpML.org" xml:lang="en">Specifies the fallback provisions in respect to the applicable Futures Price Valuation.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="FPVClose">
+        <xsd:annotation>
+          <xsd:documentation source="http://www.FpML.org" xml:lang="en">In respect of the Early Final Valuation Date, the provisions for FPV Close shall apply.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
+      <xsd:enumeration value="FPVHedgeExecution">
+        <xsd:annotation>
+          <xsd:documentation source="http://www.FpML.org" xml:lang="en">In respect of the Early Final Valuation Date, the provisions for FPV Hedge Execution shall apply.</xsd:documentation>
         </xsd:annotation>
       </xsd:enumeration>
     </xsd:restriction>
@@ -865,28 +843,6 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="InterestPaidWithRepaymentEnum">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">&gt;Defines the options of paying interest with repayment.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="NoInterest">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Interest is not payed with repayment.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="PayedOnShareAmount">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Interest is payed with repayment. Interest accrual amount is based on lender loan contract share amount.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="PayedOnRepaymentAmount">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Interest is payed with repayment. Interest accrual amount is based on lender share repayment amount.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
   <xsd:simpleType name="InterestShortfallCapEnum">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">The specification of the interest shortfall cap, applicable to mortgage derivatives.</xsd:documentation>
@@ -923,24 +879,6 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="LcPurposeEnum">
-    <xsd:annotation>
-      <xsd:documentation source="http://www.FpML.org" xml:lang="en">Defines the purpose of a Letter of Credit.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="Financial" />
-      <xsd:enumeration value="Performance" />
-    </xsd:restriction>
-  </xsd:simpleType>
-  <xsd:simpleType name="LcTypeEnum">
-    <xsd:annotation>
-      <xsd:documentation source="http://www.FpML.org" xml:lang="en">Defines the type of a Letter of Credit.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="Standby" />
-      <xsd:enumeration value="Commercial" />
-    </xsd:restriction>
-  </xsd:simpleType>
   <xsd:simpleType name="LengthUnitEnum">
     <xsd:annotation>
       <xsd:documentation source="http://www.FpML.org" xml:lang="en">Used for indicating the length unit in the Resource type.</xsd:documentation>
@@ -948,28 +886,6 @@
     <xsd:restriction base="xsd:token">
       <xsd:enumeration value="Pages" />
       <xsd:enumeration value="TimeUnit" />
-    </xsd:restriction>
-  </xsd:simpleType>
-  <xsd:simpleType name="LoanRepaymentConfirmEnum">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines whether the lender is accepting in full, partially accepting or denying repayment.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="AcceptInFull">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Lender is accepting the repayment in full.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="PartiallyAccept">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Lender is partially accepting the repayment.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="Deny">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Lender is denying the repayment.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="MarketDisruptionEventsEnum">
@@ -1117,75 +1033,6 @@
       <xsd:enumeration value="BondOrLoan">
         <xsd:annotation>
           <xsd:documentation source="http://www.FpML.org" xml:lang="en">ISDA term "Bond or Loan".</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
-  <xsd:simpleType name="OneOffFeeTypeEnum">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">The list of oneOff fee types associated with a facility.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="AmendmentFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">A fee charged to the borrower for an amendment being made to the originally agreed credit agreement. The fee is based on a rate (as stated in the agreement) applied to the current commitment level.Calculated as a percentage of the unutilized portion of the facility.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="AssignmentFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Calculated as a percentage of the unutilized portion of the facility.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="FacilityExtensionFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">This fee represents any fee paid by the borrower to the syndicate lenders for extending an existing facility.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="FundingFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Fee associated with the funding requirements for given facility.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="BreakageFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Calculated as the cost of breaking financing on a loan contract which is repaid early.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="UpfrontFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">This fee is also known as Participation Fee, Arrangement Fee etc. This fee represents compensation to the members of the lending syndicate (and sometimes to institutional investors as well) in return for their commitment of capital.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="WaiverFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">This fee represents any fee paid by the borrower to the syndicate lenders / agent bank for accepting /processing waiver request. Waiver request is sent by the borrower to obtain approval from the syndicate lenders for any of their requirement, which is outside the terms of the agreement.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
-  <xsd:simpleType name="OnGoingFeeTypeEnum">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">The list of accruing fee types associated with a facility.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="CommitmentFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Calculated as a percentage of the unutilized portion of the facility.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="UtilizationFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Calculated as a percentage of the utilized portion of the facility. This fee type is subject to banding rules – different portions of the utilization amount may be subject to different percentages.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="FacilityFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Calculated as a percentage of the global commitment amount of a facility.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="LetterOfCreditFee">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">An on-going fee charged for the issuance of a letter of credit to a named beneficiary, on behalf of the borrower against a facility. The fee calculation is based on the percentage of the notional value of the letter of credit.</xsd:documentation>
         </xsd:annotation>
       </xsd:enumeration>
     </xsd:restriction>

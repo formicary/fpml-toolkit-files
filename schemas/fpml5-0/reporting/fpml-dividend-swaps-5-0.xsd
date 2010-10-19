@@ -89,7 +89,6 @@
     <xsd:complexContent>
       <xsd:extension base="PaymentBase">
         <xsd:sequence>
-<!--Used NonNegativeMoney-->
           <xsd:element name="paymentAmount" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">Payment amount, which is optional since the payment amount may be calculated using fixed strike and number of open units.</xsd:documentation>

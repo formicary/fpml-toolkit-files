@@ -19,7 +19,6 @@
           <xsd:documentation xml:lang="en">Unique ID for the allocation.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!-- <xsd:group ref="AccountReferenceOrPartyReference.model"/> -->
       <xsd:group ref="PartyAndAccountReferences.model" />
       <xsd:choice>
         <xsd:element name="allocatedFraction" type="xsd:decimal">
@@ -594,7 +593,6 @@
     </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID" />
   </xsd:complexType>
-<!-- RPTWG 2009-09-04 begin-->
   <xsd:complexType name="TradeCategory">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A scheme used to categorize positions.</xsd:documentation>
@@ -605,7 +603,6 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-<!-- RPTWG 2009-09-04 end -->
   <xsd:complexType name="TradeHeader">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type defining trade related information which is not product specific.</xsd:documentation>
@@ -656,8 +653,6 @@
           <xsd:documentation xml:lang="en">A pointer style reference to a party identifier and optionally an account identifier defined elsewhere in the document. The party referenced has allocated the trade identifier.</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
-<!-- RPTWG 2009-09-04 begin-->
-<!-- RPTWG 2009-09-04 end -->
       <xsd:choice maxOccurs="unbounded">
         <xsd:element name="tradeId" type="TradeId" />
         <xsd:element name="versionedTradeId" type="VersionedTradeId" />
@@ -708,7 +703,6 @@
       </xsd:group>
     </xsd:sequence>
   </xsd:complexType>
-<!-- RPTWG 2009-09-04 begin-->
   <xsd:complexType name="Unit">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type used to record information about a unit, subdivision, desk, or other similar business entity.</xsd:documentation>
@@ -719,7 +713,6 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-<!-- end RPTWG 2009-09-04 -->
   <xsd:attributeGroup name="VersionAttributes.atts">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Set of attributes that define versioning information.</xsd:documentation>
@@ -739,7 +732,7 @@
         <xsd:documentation xml:lang="en">This optional attribute can be supplied by a message creator in an FpML instance to specify which build number of the schema was used to define the message when it was generated.</xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
-    <xsd:attribute name="actualBuild" fixed="6" type="xsd:positiveInteger">
+    <xsd:attribute name="actualBuild" fixed="8" type="xsd:positiveInteger">
       <xsd:annotation>
         <xsd:documentation xml:lang="en">The specific build number of this schema version. This attribute is not included in an instance document. Instead, it is supplied by the XML parser when the document is validated against the FpML schema and indicates the build number of the schema file. Every time FpML publishes a change to the schema, validation rules, or examples within a version (e.g., version 4.2) the actual build number is incremented. If no changes have been made between releases within a version (i.e. from Trial Recommendation to Recommendation) the actual build number stays the same.</xsd:documentation>
       </xsd:annotation>

@@ -437,7 +437,6 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-<!-- RPTWG 2009-09-04 begin-->
   <xsd:complexType name="AssetClass">
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -445,7 +444,6 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-<!-- RPTWG 2009-09-04 end -->
   <xsd:complexType name="AutomaticExercise">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type to define automatic exercise of a swaption. With automatic exercise the option is deemed to have exercised if it is in the money by more than the threshold amount on the exercise date.</xsd:documentation>
@@ -858,7 +856,6 @@
 <!-- RPTWG 2009-09-04 end -->
     </xsd:sequence>
   </xsd:complexType>
-<!-- RPTWG 2009-09-04 begin-->
   <xsd:complexType name="CreditSupportAgreementIdentifier">
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -866,7 +863,6 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-<!-- RPTWG 2009-09-04 end -->
   <xsd:complexType name="CreditSupportAgreementType">
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -3513,14 +3509,12 @@
           <xsd:documentation xml:lang="en">A product reference identifier allocated by a party. FpML does not define the domain values associated with this element. Note that the domain values for this element are not strictly an enumerated list.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!-- RPTWG 2009-09-04 begin-->
       <xsd:element name="assetClass" type="AssetClass" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">A classification of the risk class of the trade. FpML defines a simple asset class categorization using a coding scheme.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
-<!-- RPTWG 2009-09-04 end -->
   </xsd:group>
   <xsd:group name="RoutingExplicitDetails.model">
     <xsd:sequence>

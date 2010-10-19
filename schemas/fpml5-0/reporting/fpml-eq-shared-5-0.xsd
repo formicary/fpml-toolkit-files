@@ -68,7 +68,6 @@
       <xsd:documentation xml:lang="en">Specifies the amount of the fee along with, when applicable, the formula that supports its determination.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-<!--Used NonNegativeMoney here-->
       <xsd:element name="paymentAmount" type="NonNegativeMoney" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The currency amount of the payment.</xsd:documentation>
@@ -158,7 +157,6 @@
           <xsd:documentation xml:lang="en">The start of the period over which observations are made which are used in the calculation Used when the observation start date differs from the trade date such as for forward starting swaps.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!-- Used approch created by - AP 20090128 used model group -->
       <xsd:group ref="Dividends.model" />
     </xsd:sequence>
   </xsd:complexType>
@@ -242,7 +240,6 @@
     <xsd:complexContent>
       <xsd:extension base="CalculationFromObservation">
         <xsd:sequence>
-<!--Needed NonNegativeMoney-->
           <xsd:element name="notionalAmount" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">Notional amount, which is a cash multiplier.</xsd:documentation>
@@ -422,6 +419,11 @@
           <xsd:documentation xml:lang="en">Defines how the composition of Dividends is to be determined.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="specialDividends" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Specifies the method according to which special dividends are determined.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="DividendPaymentDate">
@@ -534,7 +536,6 @@
               <xsd:documentation xml:lang="en">Forward start Premium type</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-<!--Used NonNegativeMoney-->
           <xsd:element name="paymentAmount" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The currency amount of the payment.</xsd:documentation>
@@ -550,13 +551,11 @@
               <xsd:documentation xml:lang="en">Specifies whether or not the premium is to be paid in the style of payments under an interest rate swap contract.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-<!--Used NonNegativeMoney-->
           <xsd:element name="pricePerOption" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The amount of premium to be paid expressed as a function of the number of options.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-<!--Used NonNegativeDecimal-->
           <xsd:element name="percentageOfNotional" type="NonNegativeDecimal" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The amount of premium to be paid expressed as a percentage of the notional value of the transaction. A percentage of 5% would be expressed as 0.05.</xsd:documentation>
@@ -637,6 +636,16 @@
       <xsd:element name="numberOfValuationDates" type="xsd:nonNegativeInteger" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The number of valuation dates between valuation start date and valuation end date.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="dividendValuationDates" type="AdjustableRelativeOrPeriodicDates" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies the dividend valuation dates of the swap.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="fPVFinalPriceElectionFallback" type="FPVFinalPriceElectionFallbackEnum" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies the fallback provisions for Hedging Party in the determination of the Final Price.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -1010,7 +1019,6 @@
           <xsd:documentation xml:lang="en">Specifies the method according to which an amount or a date is determined.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!--Used NonNegativeMoney-->
       <xsd:element name="principalAmount" type="NonNegativeMoney" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Principal exchange amount when explictly stated.</xsd:documentation>
@@ -1258,7 +1266,6 @@
               <xsd:documentation xml:lang="en">If true, then cash settlement is applicable.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-<!-- Used - AP 20090128 used model group -->
           <xsd:group ref="Dividends.model" />
         </xsd:sequence>
       </xsd:extension>
@@ -1408,7 +1415,6 @@
     <xsd:complexContent>
       <xsd:extension base="CalculationFromObservation">
         <xsd:sequence>
-<!--Used  NonNegativeMoney-->
           <xsd:element name="varianceAmount" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">Variance amount, which is a cash multiplier.</xsd:documentation>
@@ -1506,7 +1512,6 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:group>
-<!-- Used - AP 20090128 added -->
   <xsd:group name="Dividends.model">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A group containing Dividend content</xsd:documentation>

@@ -41,12 +41,12 @@
               <xsd:documentation xml:lang="en">The default quotation characteristics for this document (e.g. currency, location). Currency must be specified; other fields may be specified.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="fromDateTime" type="xsd:date" minOccurs="0">
+          <xsd:element name="fromDateTime" type="xsd:dateTime" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The starting point for reporting activity in this report.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="toDateTime" type="xsd:date" minOccurs="0">
+          <xsd:element name="toDateTime" type="xsd:dateTime" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The ending point for reporting activity in this report.</xsd:documentation>
             </xsd:annotation>
@@ -74,7 +74,7 @@
     <xsd:complexContent>
       <xsd:extension base="NotificationMessage">
         <xsd:sequence>
-          <xsd:element name="asOfDate" minOccurs="0">
+          <xsd:element name="asOfDate" type="IdentifiedDate" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The date for which this report was generated.</xsd:documentation>
             </xsd:annotation>
@@ -378,7 +378,7 @@
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
         <xsd:sequence>
-          <xsd:element name="asOfDate" minOccurs="0">
+          <xsd:element name="asOfDate" type="IdentifiedDate" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The date for which this request desires positions and valuations.</xsd:documentation>
             </xsd:annotation>
@@ -435,7 +435,7 @@
     <xsd:complexContent>
       <xsd:extension base="NotificationMessage">
         <xsd:sequence>
-          <xsd:element name="asOfDate" minOccurs="0">
+          <xsd:element name="asOfDate" type="IdentifiedDate" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The date for which this request was generated.</xsd:documentation>
             </xsd:annotation>

@@ -177,11 +177,6 @@
       <xsd:documentation xml:lang="en">A type defining the content model for a generic message header that is refined by its derived classes.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-<!--<xsd:element name="conversationId" type="ConversationId" minOccurs="0" fpml-annotation:deprecated="true" fpml-annotation:deprecatedReason="Messages participating in complex exchanges will be inter-related by means of the correlationId element.">
-                                <xsd:annotation>
-                                        <xsd:documentation xml:lang="en">The unique identifier (name) for the conversation (session), this message is within. A conversation identifier is usually assigned by the initiator of a conversation. Conversations may only be initiated and terminated. Joining conversations has the effect of initiating new conversations. Conversations cannot be split; this instead has the effect of parallel activities on the same conversation or the initiation of a new conversation. Each message belongs to only one conversation. Conversation scopes are defined in the business process definition.</xsd:documentation>
-                                </xsd:annotation>
-                        </xsd:element>-->
       <xsd:element name="messageId" type="MessageId" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">A unique identifier (within its coding scheme) assigned to the message by its creating party.</xsd:documentation>

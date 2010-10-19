@@ -277,19 +277,39 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
-<!-- AP 20080307 non negative payment as per EQD WG today TODO compare to classified payment-->
   <xsd:complexType name="FeaturePayment">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Payment made following trigger occurence.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-      <xsd:extension base="NonNegativePayment">
+      <xsd:extension base="PaymentBase">
         <xsd:sequence>
-<!-- AP 20090121 removed choice between level percentage and amount -->
-<!-- AP 20090121 renamed element -->
-          <xsd:element name="paymentTimeType" type="TimeTypeEnum" minOccurs="0">
+          <xsd:group ref="PayerReceiver.model" />
+          <xsd:choice>
+            <xsd:element name="levelPercentage" type="xsd:decimal" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The trigger level percentage.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="amount" type="NonNegativeDecimal" minOccurs="0">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">The monetary quantity in currency units.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:choice>
+          <xsd:element name="time" type="TimeTypeEnum" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The feature payment time.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="currency" type="Currency" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The currency in which an amount is denominated.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="featurePaymentDate" type="AdjustableOrRelativeDate" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The feature payment date.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
         </xsd:sequence>
@@ -584,17 +604,16 @@
   </xsd:complexType>
   <xsd:complexType name="RestructuringType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:extension base="Scheme">
         <xsd:attribute name="restructuringScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/restructuring" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
-<!-- AP 20080306 added documentation TODO review content model -->
   <xsd:complexType name="StrategyFeature">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type for definining equity option simple strike or calendar spread strategy features.</xsd:documentation>
     </xsd:annotation>
-    <xsd:sequence>
+    <xsd:choice>
       <xsd:element name="strikeSpread" type="StrikeSpread" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Definition of the upper strike in a strike spread.</xsd:documentation>
@@ -605,7 +624,7 @@
           <xsd:documentation xml:lang="en">Definition of the later expiration date in a calendar spread.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-    </xsd:sequence>
+    </xsd:choice>
   </xsd:complexType>
   <xsd:complexType name="StrikeSpread">
     <xsd:annotation>

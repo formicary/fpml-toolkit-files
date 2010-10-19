@@ -449,7 +449,7 @@
     <xsd:complexContent>
       <xsd:extension base="RequestMessage">
         <xsd:sequence>
-          <xsd:element name="asOfDate" minOccurs="0">
+          <xsd:element name="asOfDate" type="IdentifiedDate" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The date for which this request desires positions and valuations.</xsd:documentation>
             </xsd:annotation>
