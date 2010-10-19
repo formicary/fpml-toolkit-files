@@ -80,6 +80,23 @@
         <settlementCurrency>EUR</settlementCurrency>
         <settlementType>Cash</settlementType>
       </equityExercise>
+<!--FpML 5.0: Use this "feature", as "equityFeatures" ofType "OptionFeatures" was removed because Option Features content is accessible in the complex type EquityDerivativeBase through the model group Feature.model.  -->
+      <feature>
+        <passThrough>
+          <passThroughItem>
+            <payerPartyReference href="party1" />
+            <receiverPartyReference href="party2" />
+            <underlyerReference href="AholdEquity" />
+            <passThroughPercentage>0.80</passThroughPercentage>
+          </passThroughItem>
+          <passThroughItem>
+            <payerPartyReference href="party1" />
+            <receiverPartyReference href="party2" />
+            <underlyerReference href="RoyalDutchEquity" />
+            <passThroughPercentage>1.20</passThroughPercentage>
+          </passThroughItem>
+        </passThrough>
+      </feature>
       <methodOfAdjustment>CalculationAgent</methodOfAdjustment>
       <extraordinaryEvents>
         <mergerEvents>
@@ -111,22 +128,6 @@
         </representations>
         <nationalisationOrInsolvency>CancellationAndPayment</nationalisationOrInsolvency>
       </extraordinaryEvents>
-      <equityFeatures>
-        <passThrough>
-          <passThroughItem>
-            <payerPartyReference href="party1" />
-            <receiverPartyReference href="party2" />
-            <underlyerReference href="AholdEquity" />
-            <passThroughPercentage>0.80</passThroughPercentage>
-          </passThroughItem>
-          <passThroughItem>
-            <payerPartyReference href="party1" />
-            <receiverPartyReference href="party2" />
-            <underlyerReference href="RoyalDutchEquity" />
-            <passThroughPercentage>1.20</passThroughPercentage>
-          </passThroughItem>
-        </passThrough>
-      </equityFeatures>
       <numberOfOptions>79.099093</numberOfOptions>
       <optionEntitlement>1.00</optionEntitlement>
       <equityPremium>

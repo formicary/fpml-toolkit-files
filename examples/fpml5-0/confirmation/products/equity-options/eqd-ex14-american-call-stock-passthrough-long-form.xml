@@ -91,6 +91,17 @@
         </settlementMethodElectionDate>
         <settlementMethodElectingPartyReference href="party1" />
       </equityExercise>
+<!--FpML 5.0: Use this "feature", as "equityFeatures" ofType "OptionFeatures" was removed because Option Features content is accessible in the complex type EquityDerivativeBase through the model group Feature.model.  -->
+      <feature>
+        <passThrough>
+          <passThroughItem>
+            <payerPartyReference href="party1" />
+            <receiverPartyReference href="party2" />
+            <underlyerReference href="STMicroEquity" />
+            <passThroughPercentage>0.80</passThroughPercentage>
+          </passThroughItem>
+        </passThrough>
+      </feature>
       <methodOfAdjustment>CalculationAgent</methodOfAdjustment>
       <extraordinaryEvents>
         <mergerEvents>
@@ -122,16 +133,6 @@
         </representations>
         <nationalisationOrInsolvency>CancellationAndPayment</nationalisationOrInsolvency>
       </extraordinaryEvents>
-      <equityFeatures>
-        <passThrough>
-          <passThroughItem>
-            <payerPartyReference href="party1" />
-            <receiverPartyReference href="party2" />
-            <underlyerReference href="STMicroEquity" />
-            <passThroughPercentage>0.80</passThroughPercentage>
-          </passThroughItem>
-        </passThrough>
-      </equityFeatures>
       <strike>
         <strikePrice>32.00</strikePrice>
       </strike>

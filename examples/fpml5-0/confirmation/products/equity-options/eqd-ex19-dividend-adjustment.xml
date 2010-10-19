@@ -89,6 +89,36 @@
         </settlementMethodElectionDate>
         <settlementMethodElectingPartyReference href="jb2890" />
       </equityExercise>
+      <feature>
+        <dividendAdjustment>
+          <dividendPeriod>
+            <unadjustedStartDate>2006-08-14</unadjustedStartDate>
+            <unadjustedEndDate>2007-08-14</unadjustedEndDate>
+            <dateAdjustments>
+              <businessDayConvention>NONE</businessDayConvention>
+            </dateAdjustments>
+            <underlyerReference href="ud892" />
+            <dividend>
+              <currency>EUR</currency>
+              <amount>1.80</amount>
+            </dividend>
+            <multiplier>0.91</multiplier>
+          </dividendPeriod>
+          <dividendPeriod>
+            <unadjustedStartDate>2007-08-15</unadjustedStartDate>
+            <unadjustedEndDate>2008-08-14</unadjustedEndDate>
+            <dateAdjustments>
+              <businessDayConvention>NONE</businessDayConvention>
+            </dateAdjustments>
+            <underlyerReference href="ud892" />
+            <dividend>
+              <currency>EUR</currency>
+              <amount>1.90</amount>
+            </dividend>
+            <multiplier>0.91</multiplier>
+          </dividendPeriod>
+        </dividendAdjustment>
+      </feature>
       <methodOfAdjustment>CalculationAgent</methodOfAdjustment>
       <extraordinaryEvents>
         <mergerEvents>
@@ -120,37 +150,6 @@
         </representations>
         <nationalisationOrInsolvency>CancellationAndPayment</nationalisationOrInsolvency>
       </extraordinaryEvents>
-<!-- AP 20070814 dividend adjustment proposal -->
-      <equityFeatures>
-        <dividendAdjustment>
-          <dividendPeriod>
-            <unadjustedStartDate>2006-08-14</unadjustedStartDate>
-            <unadjustedEndDate>2007-08-14</unadjustedEndDate>
-            <dateAdjustments>
-              <businessDayConvention>NONE</businessDayConvention>
-            </dateAdjustments>
-            <underlyerReference href="ud892" />
-            <dividend>
-              <currency>EUR</currency>
-              <amount>1.80</amount>
-            </dividend>
-            <multiplier>0.91</multiplier>
-          </dividendPeriod>
-          <dividendPeriod>
-            <unadjustedStartDate>2007-08-15</unadjustedStartDate>
-            <unadjustedEndDate>2008-08-14</unadjustedEndDate>
-            <dateAdjustments>
-              <businessDayConvention>NONE</businessDayConvention>
-            </dateAdjustments>
-            <underlyerReference href="ud892" />
-            <dividend>
-              <currency>EUR</currency>
-              <amount>1.90</amount>
-            </dividend>
-            <multiplier>0.91</multiplier>
-          </dividendPeriod>
-        </dividendAdjustment>
-      </equityFeatures>
       <strike>
         <strikePrice>32.00</strikePrice>
       </strike>

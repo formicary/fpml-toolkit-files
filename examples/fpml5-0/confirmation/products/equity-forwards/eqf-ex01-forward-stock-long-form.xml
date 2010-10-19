@@ -46,7 +46,7 @@
           </equity>
           <openUnits>31000</openUnits>
           <dividendPayout>
-            <dividendPayoutRatio>100</dividendPayoutRatio>
+            <dividendPayoutRatio>1</dividendPayoutRatio>
           </dividendPayout>
         </singleUnderlyer>
       </underlyer>
@@ -101,6 +101,25 @@
         <settlementPriceSource>OfficialClose</settlementPriceSource>
         <settlementType>Physical</settlementType>
       </equityExercise>
+<!--FpML 5.0: Use this "feature", as "equityFeatures" ofType "OptionFeatures" was removed because Option Features content is accessible in the complex type EquityDerivativeBase through the model group Feature.model.  -->
+      <feature>
+        <asian>
+          <averagingInOut>Out</averagingInOut>
+          <averagingPeriodOut>
+            <averagingDateTimes>
+              <dateTime>2000-08-01T08:57:00Z</dateTime>
+              <dateTime>2000-09-01T08:57:00Z</dateTime>
+              <dateTime>2000-10-01T08:57:00Z</dateTime>
+              <dateTime>2000-11-01T08:57:00Z</dateTime>
+              <dateTime>2000-12-01T08:57:00Z</dateTime>
+              <dateTime>2001-01-04T08:57:00Z</dateTime>
+              <dateTime>2001-02-01T08:57:00Z</dateTime>
+              <dateTime>2001-03-01T08:57:00Z</dateTime>
+            </averagingDateTimes>
+            <marketDisruption>ModifiedPostponement</marketDisruption>
+          </averagingPeriodOut>
+        </asian>
+      </feature>
       <dividendConditions>
         <dividendReinvestment>false</dividendReinvestment>
         <dividendEntitlement>ExDate</dividendEntitlement>
@@ -144,24 +163,6 @@
         </representations>
         <nationalisationOrInsolvency>CancellationAndPayment</nationalisationOrInsolvency>
       </extraordinaryEvents>
-      <equityFeatures>
-        <asian>
-          <averagingInOut>Out</averagingInOut>
-          <averagingPeriodOut>
-            <averagingDateTimes>
-              <dateTime>2000-08-01T08:57:00Z</dateTime>
-              <dateTime>2000-09-01T08:57:00Z</dateTime>
-              <dateTime>2000-10-01T08:57:00Z</dateTime>
-              <dateTime>2000-11-01T08:57:00Z</dateTime>
-              <dateTime>2000-12-01T08:57:00Z</dateTime>
-              <dateTime>2001-01-04T08:57:00Z</dateTime>
-              <dateTime>2001-02-01T08:57:00Z</dateTime>
-              <dateTime>2001-03-01T08:57:00Z</dateTime>
-            </averagingDateTimes>
-            <marketDisruption>ModifiedPostponement</marketDisruption>
-          </averagingPeriodOut>
-        </asian>
-      </equityFeatures>
       <forwardPrice>
         <currency>EUR</currency>
         <amount>10.20</amount>

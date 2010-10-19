@@ -82,6 +82,79 @@
         <settlementPriceSource>OfficialClose</settlementPriceSource>
         <settlementType>Cash</settlementType>
       </equityExercise>
+<!--FpML 5.0: Use this "feature", as "equityFeatures" ofType "OptionFeatures" was removed because Option Features content is accessible in the complex type EquityDerivativeBase through the model group Feature.model.  -->
+      <feature>
+        <barrier>
+          <barrierCap>
+            <schedule>
+              <startDate>2002-03-29</startDate>
+              <endDate>2002-07-12</endDate>
+              <averagingPeriodFrequency>
+                <periodMultiplier>1</periodMultiplier>
+                <period>D</period>
+                <rollConvention>NONE</rollConvention>
+              </averagingPeriodFrequency>
+            </schedule>
+            <trigger>
+              <level>1606.346</level>
+            </trigger>
+            <featurePayment>
+              <payerPartyReference href="party1" />
+              <receiverPartyReference href="party2" />
+              <amount>15000000</amount>
+              <time>Close</time>
+              <currency>EUR</currency>
+              <featurePaymentDate>
+                <relativeDate>
+                  <periodMultiplier>3</periodMultiplier>
+                  <period>D</period>
+                  <dayType>Business</dayType>
+                  <businessDayConvention>NONE</businessDayConvention>
+                  <businessCenters>
+                    <businessCenter>EUTA</businessCenter>
+                  </businessCenters>
+                  <dateRelativeTo href="expirationDate" />
+                </relativeDate>
+              </featurePaymentDate>
+            </featurePayment>
+          </barrierCap>
+        </barrier>
+        <knock>
+          <knockOut>
+            <schedule>
+              <startDate>2002-07-26</startDate>
+              <endDate>2005-10-11</endDate>
+              <averagingPeriodFrequency>
+                <periodMultiplier>1</periodMultiplier>
+                <period>D</period>
+                <rollConvention>NONE</rollConvention>
+              </averagingPeriodFrequency>
+            </schedule>
+            <trigger>
+              <levelPercentage>1.50</levelPercentage>
+            </trigger>
+            <featurePayment>
+              <payerPartyReference href="party1" />
+              <receiverPartyReference href="party2" />
+              <amount>880000</amount>
+              <time>SpecificTime</time>
+              <currency>EUR</currency>
+              <featurePaymentDate>
+                <relativeDate>
+                  <periodMultiplier>3</periodMultiplier>
+                  <period>D</period>
+                  <dayType>Business</dayType>
+                  <businessDayConvention>NONE</businessDayConvention>
+                  <businessCenters>
+                    <businessCenter>EUTA</businessCenter>
+                  </businessCenters>
+                  <dateRelativeTo href="expirationDate" />
+                </relativeDate>
+              </featurePaymentDate>
+            </featurePayment>
+          </knockOut>
+        </knock>
+      </feature>
       <methodOfAdjustment>CalculationAgent</methodOfAdjustment>
       <extraordinaryEvents>
         <indexAdjustmentEvents>
@@ -106,84 +179,6 @@
           <additionalAcknowledgements>true</additionalAcknowledgements>
         </representations>
       </extraordinaryEvents>
-      <equityFeatures>
-        <barrier>
-          <barrierCap>
-            <schedule>
-              <startDate>2002-03-29</startDate>
-              <endDate>2002-07-12</endDate>
-              <averagingPeriodFrequency>
-                <periodMultiplier>1</periodMultiplier>
-                <period>D</period>
-                <rollConvention>NONE</rollConvention>
-              </averagingPeriodFrequency>
-            </schedule>
-            <trigger>
-              <level>1606.346</level>
-            </trigger>
-<!--FpML 5-0 - Kept the A.P. Refactored type NonNegativePayment-->
-            <featurePayment>
-              <payerPartyReference href="party1" />
-              <receiverPartyReference href="party2" />
-              <paymentDate>
-                <relativeDate>
-                  <periodMultiplier>3</periodMultiplier>
-                  <period>D</period>
-                  <dayType>Business</dayType>
-                  <businessDayConvention>NONE</businessDayConvention>
-                  <businessCenters>
-                    <businessCenter>EUTA</businessCenter>
-                  </businessCenters>
-                  <dateRelativeTo href="expirationDate" />
-                </relativeDate>
-              </paymentDate>
-              <paymentAmount>
-                <currency>EUR</currency>
-                <amount>15000000</amount>
-              </paymentAmount>
-              <paymentTimeType>Close</paymentTimeType>
-            </featurePayment>
-          </barrierCap>
-        </barrier>
-        <knock>
-          <knockOut>
-            <schedule>
-              <startDate>2002-07-26</startDate>
-              <endDate>2005-10-11</endDate>
-              <averagingPeriodFrequency>
-                <periodMultiplier>1</periodMultiplier>
-                <period>D</period>
-                <rollConvention>NONE</rollConvention>
-              </averagingPeriodFrequency>
-            </schedule>
-            <trigger>
-              <levelPercentage>1.50</levelPercentage>
-            </trigger>
-            <featurePayment>
-              <payerPartyReference href="party1" />
-              <receiverPartyReference href="party2" />
-<!--FpML 5-0 - Kept the A.P. Refactored type NonNegativePayment-->
-              <paymentDate>
-                <relativeDate>
-                  <periodMultiplier>3</periodMultiplier>
-                  <period>D</period>
-                  <dayType>Business</dayType>
-                  <businessDayConvention>NONE</businessDayConvention>
-                  <businessCenters>
-                    <businessCenter>EUTA</businessCenter>
-                  </businessCenters>
-                  <dateRelativeTo href="expirationDate" />
-                </relativeDate>
-              </paymentDate>
-              <paymentAmount>
-                <currency>EUR</currency>
-                <amount>880000</amount>
-              </paymentAmount>
-              <paymentTimeType>SpecificTime</paymentTimeType>
-            </featurePayment>
-          </knockOut>
-        </knock>
-      </equityFeatures>
       <strike>
         <strikePercentage>1.00</strikePercentage>
       </strike>
