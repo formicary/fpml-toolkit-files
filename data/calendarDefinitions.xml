@@ -1,55 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE calendars [
-<!ELEMENT calendars (calendar+)>
-
-<!ELEMENT calendar (fixed | offset | easter)+>
-<!ATTLIST calendar
-		name		CDATA		#REQUIRED
-		weekend	CDATA		'SAT/SUN'>
-<!ELEMENT fixed EMPTY>
-<!ATTLIST fixed
-		name		CDATA		#REQUIRED
-		from		CDATA		'1901'
-		until		CDATA		'2099'
-		month		(JAN|FEB|MAR|APR|MAY|JUN|
-					 JUL|AUG|SEP|OCT|NOV|DEC)	#REQUIRED
-		date		( 1| 2| 3| 4| 5| 6| 7| 8| 9|10|
-					 11|12|13|14|15|16|17|18|19|20|
-					 21|22|23|24|25|26|27|28|29|30|31)	#REQUIRED
-		roll		CDATA		'NONE'>
-		
-<!ELEMENT offset EMPTY>
-<!ATTLIST offset
-		name		CDATA		#REQUIRED
-		from		CDATA		'1901'
-		until		CDATA		'2099'
-		when		(FIRST|SECOND|THIRD|FOURTH|FIFTH|LAST)	#REQUIRED
-		weekday		(MON|TUE|WED|THU|FRI|SAT|SUN)	#REQUIRED
-		month		(JAN|FEB|MAR|APR|MAY|JUN|
-					 JUL|AUG|SEP|OCT|NOV|DEC)	#REQUIRED>
-		
-<!ELEMENT easter EMPTY>
-<!ATTLIST easter
-		name		CDATA		#REQUIRED
-		from		CDATA		'1901'
-		until		CDATA  		'2099'
-		offset		CDATA		#REQUIRED>
-]>
-<calendars>
+<calendars xmlns="urn:handcoded:calendars" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:handcoded:calendars ../calendars.xsd">
 	<!-- UK, London -->
 	<calendar name="GBLO" weekend="SAT/SUN">
 		<fixed name="New Years Day" month="JAN" date="1" roll="FOLLOWING"/>
 		<easter name="Good Friday" offset="-3"/>
 		<easter name="Easter Monday" offset="0"/>
 		<offset name="Early May Bank Holiday" when="FIRST" weekday="MON" month="MAY"/>
-		<offset name="Spring Bank Holiday" when="LAST" weekday="MON" month="MAY"/>
+		<offset name="Spring Bank Holiday" to="2011" when="LAST" weekday="MON" month="MAY"/>
+		<fixed name="Spring Bank Holiday" from="2011" to="2011" date="4" month="JUN"/>
+		<offset name="Spring Bank Holiday" from="2013" when="LAST" weekday="MON" month="MAY"/>
 		<offset name="Summer Bank Holiday" when="LAST" weekday="MON" month="AUG"/>
 		<fixed name="Christmas Day" month="DEC" date="25" roll="FOLLOWING"/>
 		<fixed name="Boxing Day" month="DEC" date="26" roll="FOLLOWING"/>
 		<!-- Special Holidays -->
-		<fixed name="Millenium Eve" month="DEC" date="31" from="1999" until="1999" roll="NONE"/>
-		<fixed name="Golden Jubilee Bank Holiday" month="JUN" date="3" from="2002" until="2002" roll="NONE"/>
-		<fixed name="Special Spring Bank Holiday" month="JUN" date="4" from="2002" until="2002" roll="NONE"/>
+		<fixed name="Millenium Eve" month="DEC" date="31" from="1999" until="1999"/>
+		<fixed name="Golden Jubilee Bank Holiday" month="JUN" date="3" from="2002" until="2002"/>
+		<fixed name="Special Spring Bank Holiday" month="JUN" date="4" from="2002" until="2002"/>
+		<fixed name="Queen's Diamond Jubilee" from="2011" to="2011" date="5" month="JUN"/>
 	</calendar>
 	<!-- US, New York -->
 	<calendar name="USNY" weekend="SAT/SUN">
