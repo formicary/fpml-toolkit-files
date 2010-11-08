@@ -13,7 +13,7 @@
 		<name>FpML</name>
 		<dtdRelease xsi:type="fpml:DtdRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLDTDReleaseLoader"/>
-			<classLoader platform=".Net" class="HandCoded.FpML.Meta.DtdClassLoader"/>
+			<classLoader platform=".Net" class="HandCoded.FpML.Meta.FpMLDTDReleaseLoader"/>
 			<version>1-0</version>
 			<publicName>-//FpML//DTD Financial product Markup Language 1-0//EN</publicName>
 			<systemId>fpml-dtd-1-0-2001-05-14.dtd</systemId>
@@ -195,7 +195,7 @@
 		</dtdRelease>
 		<dtdRelease xsi:type="fpml:DtdRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLDTDReleaseLoader"/>
-			<classLoader platform=".Net" class="HandCoded.FpML.Meta.DtdClassLoader"/>
+			<classLoader platform=".Net" class="HandCoded.FpML.Meta.FpMLDTDReleaseLoader"/>
 			<version>2-0</version>
 			<publicName>-//FpML//DTD Financial product Markup Language 2-0//EN</publicName>
 			<systemId>fpml-dtd-2-0-2003-05-05.dtd</systemId>
@@ -425,7 +425,7 @@
 		</dtdRelease>
 		<dtdRelease xsi:type="fpml:DtdRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLDTDReleaseLoader"/>
-			<classLoader platform=".Net" class="HandCoded.FpML.Meta.DtdClassLoader"/>
+			<classLoader platform=".Net" class="HandCoded.FpML.Meta.FpMLDTDReleaseLoader"/>
 			<version>3-0</version>
 			<publicName>-//FpML//DTD Financial product Markup Language 3-0//EN</publicName>
 			<systemId>fpml-dtd-1-0-2001-05-14.dtd</systemId>
