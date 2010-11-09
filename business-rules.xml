@@ -258,17 +258,12 @@
 		<addRule name="shared-9"/>
 		<addRule name="shared-10"/>
 		<addRule name="shared-11"/>
-		<!-- Make 12-14 consistent -->
-		<addRule name="shared-12"/>
-		<addRule name="shared-13"/>
-		<addRule name="shared-14"/>
-		<addRule name="shared-12a"/>
+		<addRule name="shared-12a"/><!-- XPointer version -->
 		<addRule name="shared-12b"/>
-		<addRule name="shared-13a"/>
+		<addRule name="shared-13a"/><!-- XPointer version -->
 		<addRule name="shared-13b"/>
-		<addRule name="shared-14a"/>
+		<addRule name="shared-14a"/><!-- XPointer version -->
 		<addRule name="shared-14b"/>
-		
 		<addRule name="shared-15"/>
 		<addRule name="shared-16"/>
 		<addRule name="shared-17"/>
@@ -369,11 +364,8 @@
 		<addRule name="scheme-21"/>
 		<addRule name="scheme-22"/>
 		<addRule name="scheme-23"/>
-		<!-- Make consistent -->
-		<addRule name="scheme-24"/>
 		<addRule name="scheme-24a"/>
-		<addRule name="scheme-24b"/>
-
+		<addRule name="scheme-24b"/><!-- Inconsistent attribute name in 4-0 -->
 		<addRule name="scheme-25"/>
 		<addRule name="scheme-26"/>
 		<addRule name="scheme-27"/>
