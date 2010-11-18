@@ -49,17 +49,7 @@
 	<uri name="http://www.fpml.org/2009/FpML-4-7" uri="schemas/fpml4-7/fpml-main-4-7.xsd"/>
 	<uri name="http://www.fpml.org/2010/FpML-4-8" uri="schemas/fpml4-8/fpml-main-4-8.xsd"/>
 	<uri name="http://www.fpml.org/2010/FpML-4-9" uri="schemas/fpml4-9/fpml-main-4-9.xsd"/>
-	
-	<!--
-	  == Only one compatible version of FpML 5 can be active at a time.
-	  -->
-	<!--
-	<uri name="http://www.fpml.org/FpML-5/confirmation" uri="schemas/fpml5-0/confirmation/fpml-main-5-0.xsd"/>
-	<uri name="http://www.fpml.org/FpML-5/reporting" uri="schemas/fpml5-0/reporting/fpml-main-5-0.xsd"/>
-	  -->
-	<uri name="http://www.fpml.org/FpML-5/confirmation" uri="schemas/fpml5-1/confirmation/fpml-main-5-1.xsd"/>
-	<uri name="http://www.fpml.org/FpML-5/reporting" uri="schemas/fpml5-1/reporting/fpml-main-5-1.xsd"/>
-	
+		
 	<!--
 	  == Standard extensions to FpML 4-2 for non-derivative products.
 	  -->

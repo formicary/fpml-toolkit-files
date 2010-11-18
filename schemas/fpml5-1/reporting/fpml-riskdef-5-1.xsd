@@ -450,15 +450,15 @@
       <xsd:documentation xml:lang="en">The time dimensions of a term-structure. The user must supply either a tenor or a date or both.</xsd:documentation>
     </xsd:annotation>
     <xsd:choice>
-      <xsd:element name="tenor" type="Period" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The amount of time from the base date of the pricing input to the specified term point, e.g. 6M or 5Y.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
       <xsd:sequence>
         <xsd:element name="date" type="xsd:date" minOccurs="0">
           <xsd:annotation>
             <xsd:documentation xml:lang="en">The absolute date corresponding to this term point, for example January 3, 2005.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="tenor" type="Period" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">The amount of time from the base date of the pricing input to the specified term point, e.g. 6M or 5Y.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:sequence>

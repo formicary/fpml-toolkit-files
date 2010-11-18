@@ -436,6 +436,11 @@
             <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2000 ISDA Definitions, Section 17.3. Cash Settlement Methods, paragraph (e).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
+        <xsd:element name="crossCurrencyMethod" type="CrossCurrencyMethod">
+          <xsd:annotation>
+            <xsd:documentation>An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in Supplement number 23 to the 2006 ISDA Definitions, Section 18.2. Certain Definitions Relating to Cash Settlement.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
       </xsd:choice>
     </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID" />
@@ -462,6 +467,25 @@
       </xsd:element>
     </xsd:choice>
     <xsd:attribute name="id" type="xsd:ID" />
+  </xsd:complexType>
+  <xsd:complexType name="CrossCurrencyMethod">
+    <xsd:sequence>
+      <xsd:element name="cashSettlementReferenceBanks" type="CashSettlementReferenceBanks" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A container for a set of reference institutions. These reference institutions may be called upon to provide rate quotations as part of the method to determine the applicable cash settlement amount. If institutions are not specified, it is assumed that reference institutions will be agreed between the parties on the exercise date, or in the case of swap transaction to which mandatory early termination is applicable, the cash settlement valuation date.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="cashSettlementCurrency" type="Currency" maxOccurs="2">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The currency, or currencies, in which the cash settlement amount(s) will be calculated and settled. While the order in which the currencies are stated is unimportant, the cash settlement currency or currencies must correspond to one or both of the constituent currencies of the swap transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="quotationRateType" type="QuotationRateTypeEnum">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Which rate quote is to be observed, either Bid, Mid, Offer or Exercising Party Pays. The meaning of Exercising Party Pays is defined in the 2000 ISDA Definitions, Section 17.2. Certain Definitions Relating to Cash Settlement, paragraph (j)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="DateRelativeToCalculationPeriodDates">
     <xsd:annotation>
@@ -1054,7 +1078,7 @@
     <xsd:sequence>
       <xsd:element name="referenceCurrency" type="Currency">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The currency in which the swap stream is denominated in.</xsd:documentation>
+          <xsd:documentation xml:lang="en">The currency in which the swap stream is denominated.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:choice>

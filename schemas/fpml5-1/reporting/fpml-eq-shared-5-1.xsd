@@ -708,6 +708,11 @@
           <xsd:documentation xml:lang="en">The term "Delisting" has the meaning defined in the ISDA 2002 Equity Derivatives Definitions.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:group ref="ExchangeIdentifier.model" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">In order for a contract to be considered a 'Designated Contract', the Related Exchange that the contract is traded on must also be a Specified Exchange (i.e. the Related Exchange specified for the underlier contract must be either Eure, Euronext, MEF, or IDEM or an exchange specified in the Transaction Supplement, in order for the contract to qualify as a Designated Contract). If the Related Exchange is not one of the Specified Exchanges, then no Designated Contract is deemed to exist.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:group>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="FloatingRateCalculationReference">

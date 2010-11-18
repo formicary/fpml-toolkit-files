@@ -6,10 +6,20 @@
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 2864 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-msg-5-1.xsd" />
+  <xsd:include schemaLocation="fpml-asset-5-1.xsd" />
   <xsd:complexType name="ChangeEvent" abstract="true">
     <xsd:annotation>
       <xsd:documentation>Abstract base type for non-negotiated trade change descriptions</xsd:documentation>
     </xsd:annotation>
+  </xsd:complexType>
+  <xsd:complexType name="DeClear">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing an de-clear event.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="tradeIdentifier" type="PartyTradeIdentifier" maxOccurs="unbounded" minOccurs="0" />
+      <xsd:element name="effectiveDate" type="xsd:date" minOccurs="0" />
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="EventProposedMatch">
     <xsd:sequence>
@@ -34,6 +44,81 @@
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OptionExercise">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing an option exercise.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="optionSeller" type="PartyReference" minOccurs="0" />
+      <xsd:element name="optionBuyer" type="PartyReference" minOccurs="0" />
+      <xsd:element name="tradeIdentifier" type="PartyTradeIdentifier" maxOccurs="unbounded" minOccurs="0" />
+      <xsd:element name="exerciseDate" type="xsd:date" minOccurs="0" />
+      <xsd:element name="exerciseTime" type="xsd:time" minOccurs="0" />
+      <xsd:choice>
+        <xsd:element name="expiry" type="xsd:boolean" minOccurs="0" />
+        <xsd:element name="fullExercise" type="xsd:boolean" minOccurs="0" />
+        <xsd:sequence>
+          <xsd:element name="exerciseInNotionalAmount" type="Money" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Specifies the fixed amount by which the option should be exercised expressed as notional amount.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="outstandingNotionalAmount" type="Money" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Specifies the Notional amount after the Change</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="exerciseInNumberOfOptions" type="xsd:decimal" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Specifies the fixed amount by which the option should be exercised expressed as number of options.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="outstandingNumberOfOptions" type="xsd:decimal" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Specifies the Number of Options after the Change.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+        <xsd:sequence>
+          <xsd:element name="exerciseInNumberOfUnits" type="xsd:decimal" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Specifies the fixed amount by which the option should be exercised express as number of units.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="outstandingNumberOfUnits" type="xsd:decimal" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Specifies the Number of Units</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:choice>
+      <xsd:choice minOccurs="0">
+        <xsd:element name="settlementType" type="SettlementTypeEnum" minOccurs="0" />
+        <xsd:element name="cashSettlement" type="SimplePayment" minOccurs="0" />
+        <xsd:element name="physicalSettlement" minOccurs="0" />
+<!--security transactions need to be added -->
+      </xsd:choice>
+      <xsd:element name="payment" type="NonNegativePayment" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OptionExpiry">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing an option expiring.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="tradeIdentifier" type="PartyTradeIdentifier" maxOccurs="unbounded" minOccurs="0" />
+      <xsd:element name="date" type="xsd:date" minOccurs="0" />
+      <xsd:element name="time" type="xsd:time" minOccurs="0" />
+      <xsd:element name="exerciseProcedure" type="ExerciseProcedureOption" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PhysicalExercise">
+    <xsd:sequence>
+      <xsd:group ref="TradeOrTradeReference.model" />
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="TradeAmendmentContent">
     <xsd:annotation>
@@ -334,6 +419,10 @@
       <xsd:element name="increase" type="TradeNotionalChange" minOccurs="0" />
       <xsd:element name="termination" type="TradeNotionalChange" minOccurs="0" />
       <xsd:element name="novation" type="TradeNovationContent" minOccurs="0" />
+      <xsd:element name="optionExercise" type="OptionExercise" minOccurs="0" />
+      <xsd:element name="optionExpiry" type="OptionExpiry" maxOccurs="unbounded" minOccurs="0" />
+<!-- made repeatable so multiple options expiring can be specified in a single message -->
+      <xsd:element name="deClear" type="DeClear" minOccurs="0" />
       <xsd:element ref="additionalEvent" minOccurs="0" />
     </xsd:choice>
   </xsd:group>

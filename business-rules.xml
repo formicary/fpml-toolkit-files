@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  == Copyright (C),2005-2008 HandCoded Software Ltd.
+  == Copyright (C),2005-2010 HandCoded Software Ltd.
   == All rights reserved.
   ==
   == This software is licensed in accordance with the terms of the 'Open Source
@@ -191,6 +191,11 @@
 		<addRule name="eqd-25"/>
 	</ruleSet>
 	
+	<!--
+	  == As of 5.1 some FX rules are now enforced by the schema but they remain
+	  == in this list so that they will be applied to pre FpML 5-0 documents. They
+	  == are not executed at run time against 5-1 or later documents
+	  -->
 	<ruleSet name="FxRules">
 		<addRule name="fx-1"/>
 		<addRule name="fx-2"/>
@@ -199,13 +204,17 @@
 		<addRule name="fx-5"/>
 		<addRule name="fx-6"/>
 		<addRule name="fx-7"/>
-		<addRule name="fx-8"/>
+		<addRule name="fx-8[A]"/>
+		<addRule name="fx-8[B]"/>
 		<addRule name="fx-9"/>
 		<addRule name="fx-10"/>
-		<addRule name="fx-11"/>
+		<addRule name="fx-11[A]"/>
+		<addRule name="fx-11[B]"/>
 		<addRule name="fx-12"/>
-		<addRule name="fx-13"/>
-		<addRule name="fx-14"/>
+		<addRule name="fx-13[A]"/>
+		<addRule name="fx-13[B]"/>
+		<addRule name="fx-14[A]"/>
+		<addRule name="fx-14[B]"/>
 		<addRule name="fx-15"/>
 		<addRule name="fx-16"/>
 		<addRule name="fx-17"/>

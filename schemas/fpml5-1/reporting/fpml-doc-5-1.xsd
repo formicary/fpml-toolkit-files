@@ -635,6 +635,13 @@
         </xsd:annotation>
       </xsd:element>
 <!-- RPTWG 2009-11-12 end -->
+<!-- RPTWG 2010-10-08 start (option exercise) -->
+      <xsd:element name="originatingEvent" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">indicates the reason a trade was created.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- RPTWG 2010-10-08 end -->
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="TradeId">
@@ -743,7 +750,7 @@
         <xsd:documentation xml:lang="en">This optional attribute can be supplied by a message creator in an FpML instance to specify which build number of the schema was used to define the message when it was generated.</xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
-    <xsd:attribute name="actualBuild" fixed="1" type="xsd:positiveInteger">
+    <xsd:attribute name="actualBuild" fixed="3" type="xsd:positiveInteger">
       <xsd:annotation>
         <xsd:documentation xml:lang="en">The specific build number of this schema version. This attribute is not included in an instance document. Instead, it is supplied by the XML parser when the document is validated against the FpML schema and indicates the build number of the schema file. Every time FpML publishes a change to the schema, validation rules, or examples within a version (e.g., version 4.2) the actual build number is incremented. If no changes have been made between releases within a version (i.e. from Trial Recommendation to Recommendation) the actual build number stays the same.</xsd:documentation>
       </xsd:annotation>

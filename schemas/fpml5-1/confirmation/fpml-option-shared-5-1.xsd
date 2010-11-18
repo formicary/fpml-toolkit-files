@@ -402,14 +402,27 @@
       <xsd:element name="sellerPartyReference" type="PartyReference" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="OptionBase" abstract="true">
+<!--5-1 FX Refactoring: Added new complex type Option-->
+  <xsd:complexType name="Option" abstract="true">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type for defining the common features of options.</xsd:documentation>
+      <xsd:documentation>A type for defining the common features of options.</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="Product">
         <xsd:sequence>
           <xsd:group ref="BuyerSeller.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="OptionBase" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type for defining the common features of options.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+<!--5-1 FX Refactoring: Replaced the Product with Option base class. Removed BuyerSeller.model as it exists inside the option base class-->
+      <xsd:extension base="Option">
+        <xsd:sequence>
           <xsd:element name="optionType" type="OptionTypeEnum">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The type of option transaction. From a usage standpoint, put/call is the default option type, while payer/receiver indicator is used for options index credit default swaps, consistently with the industry practice. Straddle is used for the case of straddle strategy, that combine a call and a put with the same strike.</xsd:documentation>
@@ -667,12 +680,12 @@
           <xsd:element name="creditEventsReference" type="CreditEventsReference" />
         </xsd:choice>
       </xsd:choice>
-      <xsd:element name="triggerType" type="TriggerTypeEnum" minOccurs="0" maxOccurs="1">
+      <xsd:element name="triggerType" type="TriggerTypeEnum" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The Triggering condition.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="triggerTimeType" type="TriggerTimeTypeEnum" minOccurs="0" maxOccurs="1">
+      <xsd:element name="triggerTimeType" type="TriggerTimeTypeEnum" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The valuation time type of knock condition.</xsd:documentation>
         </xsd:annotation>

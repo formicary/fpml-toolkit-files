@@ -6,7 +6,7 @@
 <!--Version is 5-0-->
 <!--NS is http://www.fpml.org/FpML-5/master-->
 <!--Omit some adjustments, details of procedures, and other information not required for a report-->
-<positionReport xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fpmlVersion="5-1" xsi:schemaLocation="http://www.fpml.org/FpML-5/reporting ../fpml-main-5-1.xsd">
+<positionReport xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fpmlVersion="5-1" xsi:schemaLocation="http://www.fpml.org/FpML-5/reporting ../fpml-main-5-1.xsd http://www.w3.org/2000/09/xmldsig# ../xmldsig-core-schema.xsd">
   <header>
     <messageId messageIdScheme="http://www.abc.com/mid">XXX00123</messageId>
     <sentBy>ABCDUS33</sentBy>
@@ -32,7 +32,7 @@
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CreditDefaultSwap</productType>
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Credit</assetClass>
           <generalTerms>
             <buyerPartyReference href="hedge_global" />
           </generalTerms>
@@ -90,7 +90,7 @@
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CreditDefaultIndex</productType>
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Credit</assetClass>
           <generalTerms>
             <sellerPartyReference href="hedge_global" />
           </generalTerms>
@@ -157,7 +157,7 @@
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CreditDefaultIndexTranche</productType>
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Credit</assetClass>
           <generalTerms>
             <buyerPartyReference href="hedge_asia" />
           </generalTerms>
@@ -225,7 +225,7 @@
         </tradeHeader>
         <capFloor>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">InterestRateCap</productType>
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">InterestRates</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">InterestRates</assetClass>
           <capFloorStream>
             <payerPartyReference href="hedge_asia" />
           </capFloorStream>
@@ -282,7 +282,7 @@
         </tradeHeader>
         <swap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">InterestRateSwap</productType>
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">InterestRates</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">InterestRates</assetClass>
 <!-- it is difficult to record which party pays fixed in a compact form.  Should we do something to simplify reporting of this? -->
         </swap>
       </trade>
@@ -338,7 +338,7 @@
         </tradeHeader>
         <swaption>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">InterestRateSwaption</productType>
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">InterestRates</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">InterestRates</assetClass>
         </swaption>
       </trade>
     </constituent>
@@ -393,7 +393,7 @@
         </tradeHeader>
         <swap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CrossCurrencySwap</productType>
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">InterestRates</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">InterestRates</assetClass>
         </swap>
       </trade>
     </constituent>
@@ -449,7 +449,7 @@
 <!-- to be refactored, omitted for the moment
         <fxSingleLeg>
                 <productType productTypeScheme="http://www.fpml.org/product-type-simple">FxSpot</productType>
-                <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">ForeignExchange</assetClass>
+                <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">ForeignExchange</assetClass>
         </fxSingleLeg>
         -->
       </trade>
@@ -469,7 +469,7 @@
 <!-- to be refactored, omitted for the moment
         <fxSingleLeg>
                 <productType productTypeScheme="http://www.fpml.org/product-type-simple">FxForward</productType>
-                <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">ForeignExchange</assetClass>
+                <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">ForeignExchange</assetClass>
         </fxSingleLeg>
         -->
       </trade>
@@ -525,7 +525,7 @@
 <!-- to be refactored, omitted for the moment
         <fxSimpleOption>
                 <productType productTypeScheme="http://www.fpml.org/product-type-simple">FxOption</productType>
-                <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">ForeignExchange</assetClass>
+                <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">ForeignExchange</assetClass>
         </fxSimpleOption>
         -->
       </trade>
@@ -582,7 +582,7 @@
 <!-- to be refactored, omitted for the moment
         <fxSimpleOption>
                 <productType productTypeScheme="http://www.fpml.org/product-type-simple">NonDeliverableFxOption</productType> 
-                <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">ForeignExchange</assetClass>
+                <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">ForeignExchange</assetClass>
         </fxSimpleOption>
         -->
       </trade>
@@ -651,7 +651,7 @@
         <returnSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">TotalReturnSwap</productType>
 <!-- should we add equity swap or equity return swap to the scheme? -->
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Equities</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Equities</assetClass>
         </returnSwap>
       </trade>
     </constituent>
@@ -708,7 +708,7 @@
         <returnSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">TotalReturnSwap</productType>
 <!-- should we add equity swap or equity return swap to the scheme? -->
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Equities</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Equities</assetClass>
         </returnSwap>
       </trade>
     </constituent>
@@ -775,7 +775,7 @@
         <equityOption>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">EquityOption</productType>
 <!-- should we add equity swap or equity return swap to the scheme? -->
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Equities</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Equities</assetClass>
         </equityOption>
       </trade>
     </constituent>
@@ -831,7 +831,7 @@
         <commoditySwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CrudeOilSwap</productType>
 <!-- needs to be added to the scheme -->
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Commodities</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Commodities</assetClass>
           <fixedLeg>
             <receiverPartyReference href="hedge_asia" />
           </fixedLeg>
@@ -889,7 +889,7 @@
         <commoditySwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">NaturalGasSwap</productType>
 <!-- needs to be added to the scheme -->
-          <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Commodities</assetClass>
+          <assetClass assetClassScheme="http://www.fpml.org/coding-scheme/asset-class-1-0">Commodities</assetClass>
           <fixedLeg>
             <receiverPartyReference href="hedge_global" />
           </fixedLeg>

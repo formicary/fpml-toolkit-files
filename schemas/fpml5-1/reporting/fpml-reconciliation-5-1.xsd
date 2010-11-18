@@ -393,17 +393,7 @@
       <xsd:documentation xml:lang="en">A global type describing the payment exposed to the matching process, along with its gross component(s) and calculation details.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="identifier" type="PaymentId" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Unique identifier assigned by either party or matching service, as agreed, to a payment.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:group ref="PayerReceiver.model" />
-      <xsd:element name="paymentAmount" type="Money" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Payment amount in a given currency to be paid/received.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
+      <xsd:group ref="PaymentDetails.model" />
       <xsd:element name="calculationDetails" type="CalculationDetails" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The set of cash flow components with calculations that comprise this payment.</xsd:documentation>

@@ -201,8 +201,18 @@
   </xsd:complexType>
   <xsd:complexType name="Cash">
     <xsd:complexContent>
-      <xsd:extension base="IdentifiedAsset">
+      <xsd:extension base="Asset">
         <xsd:sequence>
+          <xsd:element name="instrumentId" type="InstrumentId" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Identification of the underlying asset, using public and/or private identifiers.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="description" type="xsd:string" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Long name of the underlying asset.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="currency" type="Currency" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The currency in which an amount is denominated.</xsd:documentation>
@@ -1334,6 +1344,11 @@
       <xsd:element name="optionsExchangeId" type="ExchangeId" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">A short form unique identifier for an exchange on which the reference option contract is listed. This is to address the case where the reference exchange for the future is different than the one for the option. The options Exchange is referenced on share options when Merger Elections are selected as Options Exchange Adjustment.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="specifiedExchangeId" type="ExchangeId" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A short form unique identifier for a specified exchange. If the element is not present then the exchange shall be default terms as defined in the MCA; unless otherwise specified in the Transaction Supplement.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>

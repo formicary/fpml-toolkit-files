@@ -7,13 +7,16 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 2350 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-business-events-5-1.xsd" />
   <xsd:include schemaLocation="fpml-reconciliation-5-1.xsd" />
+<!-- **********************-->
+<!-- Margin Call Process -->
+<!-- **********************-->
 <!-- MC1 Margin Call Message Definition -->
   <xsd:complexType name="RequestMargin">
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
         <xsd:sequence>
-          <xsd:element name="marginCallIssuer" type="PartyReference" minOccurs="0" />
-          <xsd:element name="marginCallReceiver" type="PartyReference" minOccurs="0" />
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference" minOccurs="0" />
           <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
           <xsd:element name="valuationDate" type="xsd:date" minOccurs="0" />
           <xsd:element name="baseCurrency" type="Currency" minOccurs="0" />
@@ -32,7 +35,8 @@
     <xsd:complexContent>
       <xsd:extension base="NonCorrectableRequestMessage">
         <xsd:sequence minOccurs="0">
-          <xsd:group ref="PayerReceiver.model" />
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference" minOccurs="0" />
           <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
           <xsd:element name="collateralRetractionReason" type="CollateralRetractionReason" minOccurs="0" maxOccurs="unbounded" />
         </xsd:sequence>
@@ -44,8 +48,8 @@
     <xsd:complexContent>
       <xsd:extension base="ResponseMessage">
         <xsd:sequence>
-          <xsd:element name="marginCallIssuer" type="PartyReference" minOccurs="0" />
-          <xsd:element name="marginCallReceiver" type="PartyReference" minOccurs="0" />
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference" minOccurs="0" />
           <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
           <xsd:element name="valuationDate" type="xsd:date" minOccurs="0" />
           <xsd:element name="baseCurrency" type="Currency" minOccurs="0" />
@@ -62,12 +66,12 @@
     <xsd:complexContent>
       <xsd:extension base="ResponseMessage">
         <xsd:sequence>
-          <xsd:element name="marginCallIssuer" type="PartyReference">
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference">
             <xsd:annotation>
               <xsd:documentation>The party that issues the margin call.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="marginCallReceiver" type="PartyReference">
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference">
             <xsd:annotation>
               <xsd:documentation>The party that receives the margin call.</xsd:documentation>
             </xsd:annotation>
@@ -89,7 +93,8 @@
     <xsd:complexContent>
       <xsd:extension base="NonCorrectableRequestMessage">
         <xsd:sequence minOccurs="0">
-          <xsd:group ref="PayerReceiver.model" />
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference" minOccurs="0" />
           <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
           <xsd:element name="collateralRetractionReason" type="CollateralRetractionReason" minOccurs="0" maxOccurs="unbounded" />
         </xsd:sequence>
@@ -101,12 +106,12 @@
     <xsd:complexContent>
       <xsd:extension base="ResponseMessage">
         <xsd:sequence>
-          <xsd:element name="marginCallIssuer" type="PartyReference">
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference">
             <xsd:annotation>
               <xsd:documentation>The party that issues the margin call.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="marginCallReceiver" type="PartyReference">
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference">
             <xsd:annotation>
               <xsd:documentation>The party that receives the margin call.</xsd:documentation>
             </xsd:annotation>
@@ -127,12 +132,12 @@
     <xsd:complexContent>
       <xsd:extension base="NotificationMessage">
         <xsd:sequence>
-          <xsd:element name="marginCallIssuer" type="PartyReference">
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference">
             <xsd:annotation>
               <xsd:documentation>The party that issues the margin call.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="marginCallReceiver" type="PartyReference">
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference">
             <xsd:annotation>
               <xsd:documentation>The party that receives the margin call.</xsd:documentation>
             </xsd:annotation>
@@ -154,14 +159,510 @@
     <xsd:complexContent>
       <xsd:extension base="NonCorrectableRequestMessage">
         <xsd:sequence minOccurs="0">
-          <xsd:group ref="PayerReceiver.model" />
+          <xsd:element name="marginCallIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="marginCallReceiverPartyReference" type="PartyReference" minOccurs="0" />
           <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
           <xsd:element name="collateralRetractionReason" type="CollateralRetractionReason" minOccurs="0" maxOccurs="unbounded" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-<!-- Type Definitions -->
+<!-- ***********************-->
+<!-- Substitution Process -->
+<!-- ***********************-->
+<!-- CS1 Request Substitution Message Definition -->
+  <xsd:complexType name="RequestSubstitution">
+    <xsd:complexContent>
+      <xsd:extension base="CorrectableRequestMessage">
+        <xsd:sequence>
+          <xsd:element name="substitutionIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="substitutionReceiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
+          <xsd:group ref="SubstitutionDetails.model" />
+          <xsd:element name="assets" type="Assets" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- Rescind Request Substitution Message Definition -->
+  <xsd:complexType name="RequestSubstitutionRetracted">
+    <xsd:complexContent>
+      <xsd:extension base="NonCorrectableRequestMessage">
+        <xsd:sequence minOccurs="0">
+          <xsd:element name="substitutionIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="substitutionReceiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
+          <xsd:element name="collateralRetractionReason" type="CollateralRetractionReason" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- CS2 Agree Collateral Substitution / CS5 Reject Collateral Substitution Message Definition -->
+  <xsd:complexType name="SubstitutionStatus">
+    <xsd:complexContent>
+      <xsd:extension base="ResponseMessage">
+        <xsd:sequence>
+          <xsd:element name="substitutionIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="substitutionReceiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
+          <xsd:group ref="SubstitutionResponse.model" />
+          <xsd:element name="assets" type="Assets" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- Rescind Response to Request Substitution Message Definition -->
+  <xsd:complexType name="SubstitutionStatusRetracted">
+    <xsd:complexContent>
+      <xsd:extension base="NonCorrectableRequestMessage">
+        <xsd:sequence minOccurs="0">
+          <xsd:element name="substitutionIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="substitutionReceiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
+          <xsd:element name="collateralRetractionReason" type="CollateralRetractionReason" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- CS3 Confirm Substitution Message Definition / CS4 Confirm Collateral Returned Message Definition -->
+  <xsd:complexType name="SubstituteReturnConfirmationStatus">
+    <xsd:complexContent>
+      <xsd:extension base="ResponseMessage">
+        <xsd:sequence>
+          <xsd:element name="substitutionIssuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="substitutionReceiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
+          <xsd:group ref="SubstitutionConfirmationDetails.model" />
+          <xsd:element name="assets" type="Assets" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- ******************-->
+<!-- Interest Process -->
+<!-- ******************-->
+<!-- IN1 Interest Notification Message Definition -->
+  <xsd:complexType name="RequestInterest">
+    <xsd:complexContent>
+      <xsd:extension base="CorrectableRequestMessage">
+        <xsd:sequence>
+          <xsd:element name="issuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="receiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
+          <xsd:element name="interestRequirement" type="InterestRequirement" minOccurs="0" />
+          <xsd:element name="comment" type="xsd:string" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- Rescind Interest Notification Message Definition -->
+  <xsd:complexType name="RequestInterestRetracted">
+    <xsd:complexContent>
+      <xsd:extension base="NonCorrectableRequestMessage">
+        <xsd:sequence minOccurs="0">
+          <xsd:element name="issuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="receiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
+          <xsd:element name="collateralRetractionReason" type="CollateralRetractionReason" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- IN2 Matched Acceptance / IN3 Reject Value Date / IN5 Dispute Interest Messages Definition -->
+  <xsd:complexType name="InterestStatus">
+    <xsd:complexContent>
+      <xsd:extension base="ResponseMessage">
+        <xsd:sequence>
+          <xsd:element name="issuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="receiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
+          <xsd:group ref="InterestResponseDetails.model" />
+          <xsd:group ref="PartiesAndAccounts.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- Rescind Response to Interest Notification Message Definition -->
+  <xsd:complexType name="InterestStatusRetracted">
+    <xsd:complexContent>
+      <xsd:extension base="NonCorrectableRequestMessage">
+        <xsd:sequence minOccurs="0">
+          <xsd:element name="issuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="receiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
+          <xsd:element name="collateralRetractionReason" type="CollateralRetractionReason" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- IN1 Interest Notification Message Definition -->
+  <xsd:complexType name="InterestStatement">
+    <xsd:complexContent>
+      <xsd:extension base="NotificationMessage">
+        <xsd:sequence>
+          <xsd:element name="issuerPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="receiverPartyReference" type="PartyReference" minOccurs="0" />
+          <xsd:element name="creditSupportAgreement" type="CreditSupportAgreement" minOccurs="0" />
+          <xsd:element name="interestRequirement" type="InterestStatementRequirement" minOccurs="0" />
+<!-- the content model is essentially the same as for the interest notification (IN1) except that NO treatment is needed for the Interest Statement -->
+          <xsd:element name="comment" type="xsd:string" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- ************** TEMPORARY AREA for INTEREST Type Definitions - WORK-IN-PROGRESS 8/25/2010 - 10/27/2010 *************** START -->
+  <xsd:complexType name="InterestPeriod">
+    <xsd:sequence>
+      <xsd:group ref="Period.model" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestRequirement">
+    <xsd:sequence>
+      <xsd:element name="interestPeriod" type="InterestPeriod" minOccurs="0" />
+      <xsd:choice>
+        <xsd:sequence>
+          <xsd:element name="variationMargin" type="InterestDirection">
+            <xsd:annotation>
+              <xsd:documentation>variation margin details for the interest direction</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="segregatedIndependentAmount" type="InterestDirection" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:element name="segregatedIndependentAmount" type="InterestDirection">
+          <xsd:annotation>
+            <xsd:documentation>segregated independent amount details for the interest direction</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestStatementRequirement">
+<!-- the content model is essentially the same as for the interestRequirement (used by IN1) except that NO treatment is needed for the Interest Statement -->
+    <xsd:sequence>
+      <xsd:element name="interestPeriod" type="InterestPeriod" minOccurs="0" />
+      <xsd:choice>
+        <xsd:sequence>
+          <xsd:element name="variationMargin" type="InterestStatementDirection">
+            <xsd:annotation>
+              <xsd:documentation>variation margin details for the interest statement</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="segregatedIndependentAmount" type="InterestStatementDirection" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:element name="segregatedIndependentAmount" type="InterestStatementDirection">
+          <xsd:annotation>
+            <xsd:documentation>segregated independent amount details for the interest statement</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestDirection">
+    <xsd:choice>
+      <xsd:element name="singleDirection" type="SingleDirectionInterestRequirement" minOccurs="0" />
+      <xsd:element name="bothDirections" type="BothDirectionsInterestRequirement" minOccurs="0" />
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="InterestStatementDirection">
+    <xsd:choice>
+      <xsd:element name="singleDirection" type="SingleDirectionInterestStatementRequirement" minOccurs="0" />
+      <xsd:element name="bothDirections" type="BothDirectionsInterestStatementRequirement" minOccurs="0" />
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="SingleDirectionInterestRequirement">
+    <xsd:sequence>
+      <xsd:element name="singleTreatment" type="SingleTreatment" minOccurs="0" />
+      <xsd:element name="interestAccrued" type="InterestAccrued" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BothDirectionsInterestRequirement">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:element name="netTreatment" type="NetTreatment" minOccurs="0" />
+        <xsd:element name="grossTreatment" type="GrossTreatment" minOccurs="0" />
+      </xsd:choice>
+      <xsd:element name="interestAccrued" type="InterestAccrued" minOccurs="0" maxOccurs="2" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SingleDirectionInterestStatementRequirement">
+    <xsd:sequence>
+<!-- no treatment for the interest statement -->
+      <xsd:element name="interestAccrued" type="InterestAccrued" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BothDirectionsInterestStatementRequirement">
+    <xsd:sequence>
+<!-- no treatment for the interest statement -->
+      <xsd:element name="interestAccrued" type="InterestAccrued" minOccurs="0" maxOccurs="2" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SingleTreatment">
+    <xsd:sequence>
+      <xsd:element name="paymentDetails" type="InterestPaymentDetails" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="NetTreatment">
+    <xsd:sequence>
+      <xsd:element name="paymentDetails" type="InterestPaymentDetails" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="GrossTreatment">
+    <xsd:sequence>
+      <xsd:element name="paymentDetails" type="InterestPaymentDetails" minOccurs="0" maxOccurs="2" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestPaymentDetails">
+    <xsd:complexContent>
+      <xsd:extension base="NonNegativePayment">
+        <xsd:sequence>
+          <xsd:element name="method" type="InterestMethodEnum" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="InterestAccrued">
+    <xsd:sequence>
+      <xsd:element name="deliveringPartyReference" type="PartyReference" minOccurs="0" />
+      <xsd:element name="receivingPartyReference" type="PartyReference" minOccurs="0" />
+      <xsd:element name="interest" type="Money" minOccurs="0" />
+      <xsd:sequence minOccurs="0">
+        <xsd:element name="withholdingTax" type="Money" minOccurs="0" />
+        <xsd:element name="withholdingTaxTerms" type="WithholdingTaxTerms" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="interestCalculationTerms" type="InterestCalculationTerms" minOccurs="0" />
+      <xsd:element name="interestCalculationDetails" type="InterestCalculationDetails" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestCalculationTerms">
+    <xsd:sequence>
+      <xsd:element name="calculationType" type="InterestCalculationTypeEnum" minOccurs="0" />
+      <xsd:element name="index" type="FloatingRateIndex" minOccurs="0" />
+<!-- reusing FpML Floating Rate Index Scheme floating-rate-index-2-2.xml-->
+      <xsd:element name="spread" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="dayCountFraction" type="DayCountFraction" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="WithholdingTaxTerms">
+    <xsd:sequence>
+      <xsd:element name="jurisdiction" type="CountryCode" minOccurs="0" />
+<!-- referencing Country Code Scheme -->
+      <xsd:element name="rate" type="PositiveDecimal" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestCalculationDetails">
+    <xsd:sequence>
+      <xsd:element name="dailyInterestCalculation" type="dailyInterestCalculation" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="dailyInterestCalculation">
+    <xsd:sequence>
+      <xsd:element name="calculationDate" type="xsd:date" minOccurs="0" />
+      <xsd:sequence minOccurs="0">
+        <xsd:sequence minOccurs="0">
+          <xsd:sequence>
+            <xsd:element name="openingPrincipalAmount" type="NonNegativeDecimal" minOccurs="0" />
+            <xsd:element name="principalMovement" type="PrincipalMovement" minOccurs="0" />
+          </xsd:sequence>
+        </xsd:sequence>
+        <xsd:element name="effectivePrincipalAmount" type="NonNegativeDecimal" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:sequence minOccurs="0">
+        <xsd:sequence minOccurs="0">
+          <xsd:element name="observedRate" type="PositiveDecimal" minOccurs="0" />
+          <xsd:element name="spread" type="xsd:decimal" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:element name="effectiveRate" type="PositiveDecimal" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="accruedInterestAmount" type="NonNegativeDecimal" minOccurs="0" />
+      <xsd:element name="cumulativeInterestAmount" type="NonNegativeDecimal" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PrincipalMovement">
+    <xsd:sequence>
+      <xsd:group ref="PaymentDetails.model" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="InterestCalculationTypeEnum">
+    <xsd:annotation>
+      <xsd:documentation source="http://www.FpML.org" xml:lang="en">The type of calculation.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="Simple" />
+      <xsd:enumeration value="Compounding" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="InterestMethodEnum">
+    <xsd:annotation>
+      <xsd:documentation source="http://www.FpML.org" xml:lang="en">The type of method.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="PhysicalSettlement" />
+      <xsd:enumeration value="RollIn" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:group name="InterestResponseDetails.model">
+    <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="variationMargin" type="InterestResponse">
+          <xsd:annotation>
+            <xsd:documentation>variation margin details for the interest reponse</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="segregatedIndependentAmount" type="InterestResponse" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="segregatedIndependentAmount" type="InterestResponse">
+        <xsd:annotation>
+          <xsd:documentation>segregated independent amount details for the interest reponse</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:complexType name="InterestResponse">
+    <xsd:sequence>
+      <xsd:element name="interestApproved" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="interestResponseReason" type="InterestResponseReason" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="InterestResponseReason">
+    <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="reasonCode" type="InterestResponseReasonCode">
+          <xsd:annotation>
+            <xsd:documentation>standard reason codes used for the response to the interest notification.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="description" type="xsd:string" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="description" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>free form description of the reason</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="InterestResponseReasonCode">
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="reasonCodeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/interest-response-reason-code" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+<!-- ************** TEMPORARY AREA for INTEREST Type Definitions - WORK-IN-PROGRESS 8/25/2010 *************** END -->
+<!-- ************** TEMPORARY AREA for SUBSTITUTION Type Definitions - WORK-IN-PROGRESS 8/18/2010 *************** START -->
+  <xsd:group name="SubstitutionDetails.model">
+    <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="variationMargin" type="SubstituteCollateral">
+          <xsd:annotation>
+            <xsd:documentation>variation margin details for substitute collateral</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="segregatedIndependentAmount" type="SubstituteCollateral" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="segregatedIndependentAmount" type="SubstituteCollateral">
+        <xsd:annotation>
+          <xsd:documentation>segregated independent amount details for substitute collateral</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:complexType name="SubstituteCollateral">
+    <xsd:sequence>
+      <xsd:choice>
+        <xsd:sequence>
+          <xsd:element name="return" type="ProposedCollateralDeliveryReturn">
+            <xsd:annotation>
+              <xsd:documentation>return details for substitute collateral</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="deliver" type="ProposedCollateralDeliveryReturn" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:element name="deliver" type="ProposedCollateralDeliveryReturn">
+          <xsd:annotation>
+            <xsd:documentation>return details for substitute collateral</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:choice>
+      <xsd:element name="substitutionAmount" type="xsd:decimal" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:group name="SubstitutionConfirmationDetails.model">
+    <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="variationMargin" type="SubstitutionConfirmation">
+          <xsd:annotation>
+            <xsd:documentation>variation margin details for substitute collateral</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="segregatedIndependentAmount" type="SubstitutionConfirmation" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="segregatedIndependentAmount" type="SubstitutionConfirmation">
+        <xsd:annotation>
+          <xsd:documentation>segregated independent amount details for substitute collateral</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="SubstitutionResponse.model">
+    <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="variationMargin" type="SubstitutionResponse">
+          <xsd:annotation>
+            <xsd:documentation>variation margin details for substitute collateral</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="segregatedIndependentAmount" type="SubstitutionResponse" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="segregatedIndependentAmount" type="SubstitutionResponse">
+        <xsd:annotation>
+          <xsd:documentation>segregated independent amount details for substitute collateral</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:complexType name="SubstitutionResponse">
+    <xsd:sequence>
+      <xsd:element name="substitutionApproved" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="substitutionResponseReason" type="SubstitutionResponseReason" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SubstitutionConfirmation">
+    <xsd:sequence>
+      <xsd:element name="released" type="xsd:boolean" minOccurs="0" />
+      <xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SubstitutionResponseReason">
+    <xsd:choice>
+      <xsd:sequence>
+        <xsd:element name="reasonCode" type="SubstitutionResponseReasonCode">
+          <xsd:annotation>
+            <xsd:documentation>standard reason codes used for the substitution response message</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="description" type="xsd:string" minOccurs="0" />
+      </xsd:sequence>
+      <xsd:element name="description" type="xsd:string">
+        <xsd:annotation>
+          <xsd:documentation>free form description of the reason</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="SubstitutionResponseReasonCode">
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="reasonCodeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/substitution-response-reason-code" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+<!-- ************** TEMPORARY AREA for SUBSTITUTION Type Definitions - WORK-IN-PROGRESS 8/18/2010 *************** END -->
+<!-- GENERAL Type Definitions -->
   <xsd:complexType name="AggregatedIndependentAmount">
     <xsd:choice maxOccurs="unbounded">
       <xsd:element name="trade" type="IndependentAmountType" minOccurs="0" />
@@ -195,11 +696,11 @@
   <xsd:complexType name="CashDeliveryReturn">
     <xsd:sequence>
       <xsd:element name="assetReference" type="AssetReference" minOccurs="0" />
-      <xsd:element name="nominalAmount" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="nominalAmount" type="NonNegativeDecimal" minOccurs="0" />
       <xsd:element name="valueDate" type="xsd:date" minOccurs="0" />
-      <xsd:element name="marketValue" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="marketValue" type="NonNegativeDecimal" minOccurs="0" />
       <xsd:element name="haircut" type="xsd:decimal" minOccurs="0" />
-      <xsd:element name="collateralValue" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="collateralValue" type="NonNegativeDecimal" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="CashType">
@@ -301,11 +802,11 @@
     <xsd:complexContent>
       <xsd:extension base="LcSummary">
         <xsd:sequence>
-          <xsd:element name="amount" type="xsd:decimal" minOccurs="0" />
+          <xsd:element name="amount" type="NonNegativeDecimal" minOccurs="0" />
           <xsd:element name="valueDate" type="xsd:date" minOccurs="0" />
-          <xsd:element name="marketValue" type="xsd:decimal" minOccurs="0" />
+          <xsd:element name="marketValue" type="NonNegativeDecimal" minOccurs="0" />
           <xsd:element name="haircut" type="xsd:decimal" minOccurs="0" />
-          <xsd:element name="collateralValue" type="xsd:decimal" minOccurs="0" />
+          <xsd:element name="collateralValue" type="NonNegativeDecimal" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
@@ -451,9 +952,9 @@
         <xsd:group ref="NominalAmount.model" />
         <xsd:group ref="UnitContract.model" />
       </xsd:choice>
-      <xsd:element name="marketValue" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="marketValue" type="NonNegativeDecimal" minOccurs="0" />
       <xsd:element name="haircut" type="xsd:decimal" minOccurs="0" />
-      <xsd:element name="collateralValue" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="collateralValue" type="NonNegativeDecimal" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="SecurityType">
@@ -468,14 +969,14 @@
   </xsd:complexType>
   <xsd:complexType name="Threshold">
     <xsd:sequence>
-      <xsd:element name="amount" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="amount" type="NonNegativeDecimal" minOccurs="0" />
       <xsd:element name="type" type="ThresholdTypeEnum" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="TransferRounding">
     <xsd:sequence>
       <xsd:element name="direction" type="RoundingDirectionEnum" minOccurs="0" />
-      <xsd:element name="amount" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="amount" type="NonNegativeDecimal" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="VariationMarginTerm">
@@ -614,7 +1115,7 @@
       <xsd:element name="deliveringPartyReference" type="PartyReference" minOccurs="0" />
       <xsd:element name="receivingPartyReference" type="PartyReference" minOccurs="0" />
       <xsd:element name="currency" type="Currency" minOccurs="0" />
-      <xsd:element name="amount" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="amount" type="NonNegativeDecimal" minOccurs="0" />
     </xsd:sequence>
   </xsd:group>
   <xsd:group name="DisputedDetails.model">
@@ -665,8 +1166,8 @@
   </xsd:group>
   <xsd:group name="NominalAmount.model">
     <xsd:sequence>
-      <xsd:element name="nominalAmount" type="xsd:decimal" minOccurs="0" />
-      <xsd:element name="dirtyPrice" type="xsd:decimal" minOccurs="0" />
+      <xsd:element name="nominalAmount" type="NonNegativeDecimal" minOccurs="0" />
+      <xsd:element name="dirtyPrice" type="NonNegativeDecimal" minOccurs="0" />
     </xsd:sequence>
   </xsd:group>
   <xsd:group name="ProposedCollateral.model">
@@ -714,12 +1215,12 @@
       <xsd:documentation xml:lang="en">A group which has unit based trade elements (copied from FpML Extensions 2.2 - fpmlext-repo.xsd).</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="numberOfUnits" type="xsd:decimal" minOccurs="0">
+      <xsd:element name="numberOfUnits" type="NonNegativeDecimal" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The number of units (index or securities).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="unitPrice" type="xsd:decimal" minOccurs="0">
+      <xsd:element name="unitPrice" type="NonNegativeDecimal" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The price of each unit.</xsd:documentation>
         </xsd:annotation>
@@ -730,30 +1231,46 @@
   <xsd:annotation>
     <xsd:documentation xml:lang="en">Collateral Messages</xsd:documentation>
   </xsd:annotation>
+<!--  Margin Call Process -->
   <xsd:element name="requestMargin" type="RequestMargin" />
 <!-- MC1 -->
   <xsd:element name="requestMarginRetracted" type="RequestMarginRetracted" />
 <!-- MC2 -->
   <xsd:element name="marginAcknowledgement" type="Acknowledgement" />
   <xsd:element name="marginException" type="Exception" />
-<!--  -->
   <xsd:element name="marginCallStatus" type="MarginCallStatus" />
 <!-- MC3b/5/6 -->
   <xsd:element name="marginCallStatusRetracted" type="MarginCallStatusRetracted" />
 <!-- MC4 -->
-<!--  -->
   <xsd:element name="requestCollateralAcceptance" type="RequestCollateralAcceptance" />
 <!-- MC3c -->
   <xsd:element name="collateralAcceptanceAcknowledgement" type="Acknowledgement" />
   <xsd:element name="collateralAcceptanceException" type="Exception" />
-<!--  -->
   <xsd:element name="collateralProposalStatus" type="CollateralProposalStatus" />
 <!-- MC7/MC8 -->
-<!--  -->
   <xsd:element name="disputeNotification" type="DisputeNotification" />
 <!-- MC11 -->
   <xsd:element name="disputeRetracted" type="DisputeRetracted" />
   <xsd:element name="disputeAcknowledgement" type="Acknowledgement" />
   <xsd:element name="disputeException" type="Exception" />
+<!--  Substitution Process -->
+  <xsd:element name="requestSubstitution" type="RequestSubstitution" />
+<!-- CS1 -->
+  <xsd:element name="requestSubstitutionRetracted" type="RequestSubstitutionRetracted" />
+  <xsd:element name="substitutionStatus" type="SubstitutionStatus" />
+<!-- CS2/CS5 -->
+  <xsd:element name="substitutionStatusRetracted" type="SubstitutionStatusRetracted" />
+  <xsd:element name="substituteConfirmationStatus" type="SubstituteReturnConfirmationStatus" />
+<!-- CS3 -->
+  <xsd:element name="returnConfirmationStatus" type="SubstituteReturnConfirmationStatus" />
+<!-- CS4 -->
+<!--  Interest Process -->
+  <xsd:element name="requestInterest" type="RequestInterest" />
+<!-- IN1 -->
+  <xsd:element name="requestInterestRetracted" type="RequestInterestRetracted" />
+  <xsd:element name="interestStatus" type="InterestStatus" />
+<!-- IN2 -->
+  <xsd:element name="interestStatusRetracted" type="InterestStatusRetracted" />
+  <xsd:element name="interestStatement" type="InterestStatement" />
 </xsd:schema>
 

@@ -350,6 +350,13 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
+<!--5-1 FX Refactoring: added new simple type DealtCurrencyEnum-->
+  <xsd:simpleType name="DealtCurrencyEnum">
+    <xsd:restriction base="xsd:token">
+      <xsd:enumeration value="ExchangedCurrency1" />
+      <xsd:enumeration value="ExchangedCurrency2" />
+    </xsd:restriction>
+  </xsd:simpleType>
   <xsd:simpleType name="DeliveryDatesEnum">
     <xsd:annotation>
       <xsd:documentation source="http://www.FpML.org" xml:lang="en">In respect of a Transaction and a Commodity Reference Price, the relevant date or month for delivery of the underlying Commodity.</xsd:documentation>
@@ -577,6 +584,11 @@
           <xsd:documentation source="http://www.FpML.org" xml:lang="en">If "Dividend Payment Date(s)" is specified in the Transaction Supplement as "Cash Settlement Payment Date – Issuer Payment", then the Dividend Payment Date in respect of a Dividend Amount shall be the Cash Settlement Payment Date relating to the end of the Dividend Period during which the issuer pays the relevant dividend to a holder of record provided that in the case where the Equity Amount Payer is the party specified to be the sole Hedging Party and the Hedging Party has not received the Dividend Amount by such date, then the date falling a number of Currency Business Days as specified in the Cash Settlement Payment Date after actual receipt by the Hedging Party of the Received Ex Amount or Paid Ex Amount (as applicable).</xsd:documentation>
         </xsd:annotation>
       </xsd:enumeration>
+      <xsd:enumeration value="ExDividendPaymentDate">
+        <xsd:annotation>
+          <xsd:documentation source="http://www.FpML.org" xml:lang="en">If "Dividend Payment Date(s)" is specified in the Transaction Supplement as "Ex-dividend Payment Date", then the Dividend Payment Date in respect of a Dividend Amount shall be the number of Currency Business Days as provided in the Transaction Supplement following the day on which the Shares commence trading ‘ex’ on the Exchange.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="DividendEntitlementEnum">
@@ -791,6 +803,7 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
+<!--5-1 FX Refactoring: added new simple typeTenorPeriod-->
   <xsd:simpleType name="GasProductTypeEnum">
     <xsd:annotation>
       <xsd:documentation>The type of gas product.</xsd:documentation>
@@ -1789,33 +1802,34 @@
       </xsd:enumeration>
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="SideRateBasisEnum">
-    <xsd:annotation>
-      <xsd:documentation source="http://www.FpML.org" xml:lang="en">The specification of how an individual currency in an FX trade is quoted relative to the base currency.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:restriction base="xsd:token">
-      <xsd:enumeration value="Currency1PerBaseCurrency">
-        <xsd:annotation>
-          <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the exchangedCurrency1 for one unit of baseCurrency.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="BaseCurrencyPerCurrency1">
-        <xsd:annotation>
-          <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the baseCurrency for one unit of exchangedCurrency1.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="Currency2PerBaseCurrency">
-        <xsd:annotation>
-          <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the exchangedCurrency2 for one unit of baseCurrency.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="BaseCurrencyPerCurrency2">
-        <xsd:annotation>
-          <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the baseCurrency for one unit of exchangedCurrency2.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-    </xsd:restriction>
-  </xsd:simpleType>
+<!--5-1 FX Refactoring: Removed SideRateBasisEnum. SideRate and SideRates were replaced with crossRate component for ExchangeRate structure to accomodate the currency exchange rates used to cross between the traded currencies -->
+<!--xsd:simpleType name="SideRateBasisEnum">
+                <xsd:annotation>
+                        <xsd:documentation source="http://www.FpML.org" xml:lang="en">The specification of how an individual currency in an FX trade is quoted relative to the base currency.</xsd:documentation>
+                </xsd:annotation>
+                <xsd:restriction base="xsd:token">
+                        <xsd:enumeration value="Currency1PerBaseCurrency">
+                                <xsd:annotation>
+                                        <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the exchangedCurrency1 for one unit of baseCurrency.</xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:enumeration>
+                        <xsd:enumeration value="BaseCurrencyPerCurrency1">
+                                <xsd:annotation>
+                                        <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the baseCurrency for one unit of exchangedCurrency1.</xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:enumeration>
+                        <xsd:enumeration value="Currency2PerBaseCurrency">
+                                <xsd:annotation>
+                                        <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the exchangedCurrency2 for one unit of baseCurrency.</xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:enumeration>
+                        <xsd:enumeration value="BaseCurrencyPerCurrency2">
+                                <xsd:annotation>
+                                        <xsd:documentation source="http://www.FpML.org" xml:lang="en">The amount of the baseCurrency for one unit of exchangedCurrency2.</xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:enumeration>
+                </xsd:restriction>
+        </xsd:simpleType-->
   <xsd:simpleType name="SpecifiedPriceEnum">
     <xsd:annotation>
       <xsd:documentation source="http://www.FpML.org" xml:lang="en">The Specified Price in respect of a Transaction and a Commodity Reference Price.</xsd:documentation>

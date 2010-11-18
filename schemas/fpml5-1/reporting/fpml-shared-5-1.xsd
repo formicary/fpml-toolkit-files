@@ -1208,6 +1208,23 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
+  <xsd:complexType name="ExerciseProcedureOption">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type describing how notice of exercise should be given. This can be either manual or automatic.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="manualExercise" type="Empty" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies that the notice of exercise must be given by the buyer to the seller or seller's agent.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="automaticExercise" type="Empty" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">If automatic is specified then the notional amount of the underlying swap, not previously exercised under the swaption will be automatically exercised at the expriration time on the expiration date if at such time the buyer is in-the-money, provided that the difference between the settlement rate and the fixed rate under the relevant underlying swap is not less than the specified threshold rate. The term in-the-money is assumed to have the meaning defining in the 2000 ISDA Definitions, Section 17.4 In-the-money.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
   <xsd:complexType name="FloatingRate">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type defining a floating rate.</xsd:documentation>
@@ -1382,7 +1399,31 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:complexType name="FxCashSettlement">
+<!--5-1 FX Refactoring: instead of extending "FxSpotRateSource" complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" that way eliminating dependency on the rate source-->
+  <xsd:complexType name="FxFixing">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type that specifies the source for and timing of a fixing of an exchange rate. This is used in the agreement of non-deliverable forward trades as well as various types of FX OTC options that require observations against a particular rate.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="quotedCurrencyPair" type="QuotedCurrencyPair" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Defines the two currencies for an FX trade and the quotation relationship between the two currencies.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="fixingDate" type="xsd:date" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Describes the specific date when a non-deliverable forward or non-deliverable option will "fix" against a particular rate, which will be used to compute the ultimate cash settlement.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="fxSpotRateSource" type="FxSpotRateSource" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies the methodology (reference source and, optionally, fixing time) to be used for determining a currency conversion rate.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+<!--5-1 FX Refactoring: Renamed type from FxCashSettlement  to FxNonDeliverableSettlement to make  FX Options, FX Single Leg and FX Swap consistent and have consistent name with IRD products-->
+  <xsd:complexType name="FxNonDeliverableSettlement">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type that is used for describing cash settlement of an option / non deliverable forward. It includes the currency to settle into together with the fixings required to calculate the currency amount.</xsd:documentation>
     </xsd:annotation>
@@ -1398,27 +1439,6 @@
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="FxFixing">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type that specifies the source for and timing of a fixing of an exchange rate. This is used in the agreement of non-deliverable forward trades as well as various types of FX OTC options that require observations against a particular rate.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="FxSpotRateSource">
-        <xsd:sequence>
-          <xsd:element name="quotedCurrencyPair" type="QuotedCurrencyPair" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">Defines the two currencies for an FX trade and the quotation relationship between the two currencies.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="fixingDate" type="xsd:date" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">Describes the specific date when a non-deliverable forward or non-deliverable option will "fix" against a particular rate, which will be used to compute the ultimate cash settlement.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-      </xsd:extension>
-    </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="FxRate">
     <xsd:annotation>
@@ -1452,6 +1472,7 @@
           <xsd:documentation xml:lang="en">An alternative, or secondary, source for where the rate observation will occur. Will typically be either a page or a reference bank published rate.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+<!--5-1 FX Refactoring: made fixingTime an optional -->
       <xsd:element name="fixingTime" type="BusinessCenterTime" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The time at which the spot currency exchange rate will be observed. It is specified as a time in a specific business center, e.g. 11:00am London time.</xsd:documentation>
@@ -2259,7 +2280,8 @@
       <xsd:extension base="PaymentBase">
         <xsd:sequence>
           <xsd:group ref="PayerReceiver.model"></xsd:group>
-          <xsd:element name="paymentAmount" type="Money" minOccurs="0">
+<!--5-1 FX Refactoring: Changed type from 'Money' to 'NonNegativeMoney'. Coord apprv. 10-12-2010-->
+          <xsd:element name="paymentAmount" type="NonNegativeMoney" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The currency amount of the payment.</xsd:documentation>
             </xsd:annotation>
@@ -3052,7 +3074,8 @@
       <xsd:extension base="PaymentBase">
         <xsd:sequence>
           <xsd:group ref="PayerReceiver.model" />
-          <xsd:element name="paymentAmount" type="Money" minOccurs="0" />
+<!--5-1 FX Refactoring: Changed type from 'Money' to 'NonNegativeMoney'. Coord apprv. 10-12-2010-->
+          <xsd:element name="paymentAmount" type="NonNegativeMoney" minOccurs="0" />
           <xsd:element name="paymentDate" type="AdjustableOrRelativeDate" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The payment date. This date is subject to adjustment in accordance with any applicable business day convention.</xsd:documentation>

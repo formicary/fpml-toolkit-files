@@ -10,7 +10,7 @@
 <!--
         Margin Call Process: Issuance of Margin Call (MC1)
 -->
-<requestMargin xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fpmlVersion="5-1" xsi:schemaLocation="http://www.fpml.org/FpML-5/reporting ../fpml-main-5-1.xsd">
+<requestMargin xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fpmlVersion="5-1" xsi:schemaLocation="http://www.fpml.org/FpML-5/reporting ../fpml-main-5-1.xsd http://www.w3.org/2000/09/xmldsig# ../xmldsig-core-schema.xsd">
   <header>
     <messageId messageIdScheme="http://www.abcbank.com/message-Id">123abc0000010</messageId>
     <sentBy messageAddressScheme="http://www.abcbank.com/party-Id">ABCBICXXX</sentBy>
@@ -19,9 +19,9 @@
   <isCorrection>false</isCorrection>
   <correlationId correlationIdScheme="http://www.abcbank.com/correlation-id">111222333456</correlationId>
   <sequenceNumber>1</sequenceNumber>
-  <marginCallIssuer href="party2" />
+  <marginCallIssuerPartyReference href="party2" />
 <!-- margin call issuer -->
-  <marginCallReceiver href="party1" />
+  <marginCallReceiverPartyReference href="party1" />
 <!-- margin call receiver -->
   <creditSupportAgreement>
     <type creditSupportAgreementTypeScheme="http://www.fpml.org/coding-scheme/credit-support-agreement-type">ISDA1994CreditSupportAnnexNewYorkLaw</type>
@@ -83,14 +83,12 @@
     <variationMargin>
       <deliver>
         <deliveringPartyReference href="party1" />
-<!-- delivery -->
         <receivingPartyReference href="party2" />
         <currency>USD</currency>
         <amount>3755902</amount>
       </deliver>
       <return>
         <deliveringPartyReference href="party1" />
-<!-- return -->
         <receivingPartyReference href="party2" />
         <currency>USD</currency>
         <amount>9330000</amount>

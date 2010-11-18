@@ -50,6 +50,32 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  <xsd:complexType name="ClearingStatus">
+    <xsd:complexContent>
+      <xsd:extension base="NotificationMessage">
+        <xsd:sequence>
+          <xsd:element name="clearingStatusItem" type="ClearingStatusItem" minOccurs="0" />
+<!--<xsd:group ref="Events.model" minOccurs="0"/>-->
+          <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- ADDED November 2010 for LCH ClearingStatus Proposal -->
+  <xsd:complexType name="ClearingStatusItem">
+    <xsd:sequence>
+      <xsd:element name="tradeIdentifier" type="TradeIdentifier" />
+      <xsd:element name="clearingStatusValue" type="clearingStatusValueCode" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="clearingStatusValueCode">
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="clearingStatusScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/clearing-status-code" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+<!-- ADDED November 2010 for LCH ClearingStatus Proposal END -->
   <xsd:complexType name="ConfirmationAgreed">
     <xsd:complexContent>
       <xsd:extension base="ResponseMessage">
@@ -127,6 +153,8 @@
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
         <xsd:sequence>
+          <xsd:element name="productType" type="ProductType" minOccurs="0" />
+<!-- added 2010-09  for Option Excercise / Expiry -->
           <xsd:group ref="Events.model" />
           <xsd:element name="paymentDetails" type="PaymentDetails" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
@@ -299,6 +327,28 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+<!-- added 2010-11-06 for Option Exercise (copied from pretrade) -->
+  <xsd:complexType name="PlaceOrder">
+    <xsd:complexContent>
+      <xsd:extension base="CorrectableRequestMessage">
+        <xsd:sequence>
+          <xsd:group ref="Events.model" />
+          <xsd:group ref="PartiesAndAccounts.model" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PlaceOrderRetracted">
+    <xsd:complexContent>
+      <xsd:extension base="NonCorrectableRequestMessage">
+        <xsd:sequence>
+          <xsd:group ref="Events.model" minOccurs="0" />
+          <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+<!-- added 2010-11-06 for Option Exercise (copied from pretrade) END -->
   <xsd:annotation>
     <xsd:documentation xml:lang="en">Confirmation messages.</xsd:documentation>
   </xsd:annotation>
@@ -338,6 +388,7 @@
   <xsd:element name="clearingAcknowledgement" type="Acknowledgement" />
   <xsd:element name="clearingException" type="Exception" />
   <xsd:element name="clearingRefused" type="ClearingRefused" />
+  <xsd:element name="clearingStatus" type="ClearingStatus" />
   <xsd:element name="clearingConfirmed" type="ClearingConfirmed" />
 <!-- Allocation -->
   <xsd:element name="requestAllocation" type="RequestAllocation" />
@@ -346,5 +397,10 @@
   <xsd:element name="allocationException" type="Exception" />
   <xsd:element name="allocationRefused" type="AllocationRefused" />
   <xsd:element name="allocationApproved" type="AllocationApproved" />
+<!--Option Exercise / Expiry  -->
+  <xsd:element name="optionExpirationNotification" type="ExecutionNotification" />
+  <xsd:element name="placeOrder" type="PlaceOrder" />
+<!-- Order (copied from pretrade to support Option Exercise) -->
+  <xsd:element name="placeOrderRetracted" type="PlaceOrderRetracted" />
 </xsd:schema>
 
