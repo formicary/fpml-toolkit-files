@@ -29,7 +29,6 @@
     <settlementType>Cash</settlementType>
 <!-- uses FpML enumeration: SettlementTypeEnum -->
     <payment>
-<!-- should <payment> sit outside optionExercise? TBD -->
       <payerPartyReference href="AMAG" />
       <receiverPartyReference href="SKY" />
       <paymentDate>

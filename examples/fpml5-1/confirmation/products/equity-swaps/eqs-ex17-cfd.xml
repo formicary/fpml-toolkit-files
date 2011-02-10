@@ -89,7 +89,7 @@
               <commissionAmount>0.0</commissionAmount>
               <currency>USD</currency>
             </commission>
-            <determinationMethod>HedgeUnwind</determinationMethod>
+            <determinationMethod>HedgeExecution</determinationMethod>
             <valuationRules>
               <valuationDate id="FinalValuationDate__CFD123456789">
                 <adjustableDate>
@@ -108,7 +108,7 @@
                 <dateAdjustments>
                   <businessDayConvention>FOLLOWING</businessDayConvention>
                   <businessCenters>
-                    <businessCenter>US-USD</businessCenter>
+                    <businessCenter businessCenterScheme="http://www.example.com/cfd-calendars">US-USD</businessCenter>
                   </businessCenters>
                 </dateAdjustments>
               </adjustableDate>
@@ -178,7 +178,7 @@
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
-                  <businessCenter>ZA-JNBE</businessCenter>
+                  <businessCenter businessCenterScheme="http://www.example.com/cfd-calendars">ZA-JNBE</businessCenter>
                 </businessCenters>
               </dateAdjustments>
             </adjustableDates>

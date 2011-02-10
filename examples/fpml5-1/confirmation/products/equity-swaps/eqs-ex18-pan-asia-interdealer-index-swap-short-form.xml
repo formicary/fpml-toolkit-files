@@ -129,7 +129,7 @@
             </valuationRules>
           </valuationPriceInterim>
           <valuationPriceFinal>
-            <determinationMethod>PriceAtValuation</determinationMethod>
+            <determinationMethod>ValuationTime</determinationMethod>
           </valuationPriceFinal>
           <paymentDates id="CashSettlementPaymentDate">
             <paymentDatesInterim>
@@ -279,8 +279,10 @@
     </collateral>
     <documentation>
       <masterConfirmation>
-        <masterConfirmationType>ISDA2009EquityPanAsiaInterdealer</masterConfirmationType>
+        <masterConfirmationType>ISDA2009EquityPanAsia</masterConfirmationType>
         <masterConfirmationDate>2009-07-20</masterConfirmationDate>
+        <masterConfirmationAnnexDate>2009-07-20</masterConfirmationAnnexDate>
+        <masterConfirmationAnnexType>ISDA2009ShareSwapPanAsia</masterConfirmationAnnexType>
       </masterConfirmation>
     </documentation>
   </trade>

@@ -30,7 +30,6 @@
 <!-- this transaction has been created because of another transaction -->
       </partyTradeIdentifier>
       <tradeDate>2007-10-31</tradeDate>
-<!-- originatingEvent is based on CME's extension (To be discussed)-->
       <originatingEvent>OptionExercise</originatingEvent>
     </tradeHeader>
     <creditDefaultSwap>

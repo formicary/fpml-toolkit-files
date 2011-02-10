@@ -11,7 +11,7 @@
   <header>
     <messageId messageIdScheme="http://www.drkw.com/messageId/OTC">OTCCallorPutSpread456a789b</messageId>
     <sentBy messageAddressScheme="http://www.MsgParty.com/partyId">drkw</sentBy>
-    <creationTimestamp>2000-08-01T08:57:00Z</creationTimestamp>
+    <creationTimestamp>2002-08-01T08:57:00Z</creationTimestamp>
   </header>
   <isCorrection>false</isCorrection>
   <correlationId correlationIdScheme="http://www.drkw.com/conversationId/OTC">OTCCallorPutSpread45678</correlationId>
@@ -22,7 +22,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.drkw.com/tradeId/OTC">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2001-07-13Z</tradeDate>
+      <tradeDate id="TradeDate">2002-07-13Z</tradeDate>
     </tradeHeader>
     <equityOptionTransactionSupplement>
       <productType>americanCallStock</productType>
@@ -42,7 +42,7 @@
         <equityAmericanExercise>
           <commencementDate>
             <adjustableDate>
-              <unadjustedDate>2001-07-13Z</unadjustedDate>
+              <unadjustedDate>2002-07-13Z</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -50,7 +50,7 @@
           </commencementDate>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2001-09-27Z</unadjustedDate>
+              <unadjustedDate>2002-09-27Z</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -84,7 +84,7 @@
           <amount>405000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2001-07-17Z</unadjustedDate>
+          <unadjustedDate>2002-07-17Z</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>
@@ -100,7 +100,8 @@
     </calculationAgent>
     <documentation>
       <masterAgreement>
-        <masterAgreementType>ISDA2002</masterAgreementType>
+        <masterAgreementType>ISDA</masterAgreementType>
+        <masterAgreementDate>2002-08-01</masterAgreementDate>
       </masterAgreement>
       <contractualDefinitions>ISDA2002Equity</contractualDefinitions>
     </documentation>

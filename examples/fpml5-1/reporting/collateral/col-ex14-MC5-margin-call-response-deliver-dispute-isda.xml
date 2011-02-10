@@ -89,7 +89,7 @@
     </variationMargin>
   </agreedAmount>
   <marginCallResponseReason>
-    <reasonCode reasonCodeScheme="http://www.fpml.org/coding-scheme/collateral-margin-call-response-reason-code">PartyReferenceMismatch</reasonCode>
+    <reasonCode collateralMarginCallResponseReasonScheme="http://www.fpml.org/coding-scheme/collateral-margin-call-response-reason">PartyReferenceMismatch</reasonCode>
     <description>The margin call was issued to the incorrect entity.</description>
   </marginCallResponseReason>
   <marginCallResponseReason>

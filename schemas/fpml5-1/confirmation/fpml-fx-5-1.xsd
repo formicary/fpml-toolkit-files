@@ -4,7 +4,7 @@
         == Financial Products Markup Language is subject to the FpML public license. 
         == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 2806 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 7623 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-option-shared-5-1.xsd" />
 <!--5-0 FX Refactoring: Added new PointValue complex type - that documents the size of point (pip) in which a rate was quoted (or in this case, forwardPoints are calculated). Point (pip) size varies by currency pair: major currencies are all traded in points of 0.0001, with the exception of JPY which has a point size of 0.01. -->
   <xsd:simpleType name="PointValue">
@@ -97,14 +97,14 @@
           <xsd:documentation xml:lang="en">Defines the two currencies for an FX trade and the quotation relationship between the two currencies.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!--5-1 FX Refactoring: changed 'rate' element's type to PositiveDecimal  -->
+<!--5-1 FX Refactoring: changed rate elements type to PositiveDecimal  -->
       <xsd:element name="rate" type="PositiveDecimal">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The rate of exchange between the two currencies of the leg of a deal. Must be specified with a quote basis.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:sequence minOccurs="0">
-<!--5-1 FX Refactoring: changed 'rate' element's type to PositiveDecimal  -->
+<!--5-1 FX Refactoring: changed rate elements type to PositiveDecimal  -->
         <xsd:element name="spotRate" type="PositiveDecimal">
           <xsd:annotation>
             <xsd:documentation xml:lang="en">An element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
@@ -169,24 +169,21 @@
           <xsd:documentation xml:lang="en">The time at which the spot currency exchange rate will be observed. It is specified as a time in a specific business center, e.g. 11:00am London time.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+<!--5-1 FX Refactoring: the existing observedRates/ObservedRates structure was refactored into rateObservation/FxAverageRateObservation and used in a choice between { parametric [observationSchedule/FxAverageRateObservation and optional (rateObservation/FxAverageRateObservation and  rateObservationQuoteBasis/StrikeQuoteBasisEnum) ] or specific [(rateObservation/FxAverageRateObservation and  rateObservationQuoteBasis/StrikeQuoteBasisEnum)] -->
       <xsd:choice>
-        <xsd:element name="observationSchedule" type="FxAverageRateObservationSchedule">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Parametric schedule of rate observations.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="observationDate" type="FxAverageRateObservationDate" maxOccurs="unbounded">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">One of more specific rate observation dates.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
+        <xsd:sequence>
+          <xsd:element name="observationSchedule" type="FxAverageRateObservationSchedule">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Parametric schedule of rate observations.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:group ref="FxRateObservation.model" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:group ref="FxRateObservation.model">
+<!--This second option in the choice will not appear in the reporting view, since the first option in the choice will have observationSchedule and elements in the FxRateObservation are optional-->
+        </xsd:group>
       </xsd:choice>
-<!--5-1 FX Refactoring: Rename observedRates/ObservedRates (plural) to  observedRate/ObservedRate (singular) -->
-      <xsd:element name="observedRate" type="ObservedRate" minOccurs="0" maxOccurs="unbounded">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Describes prior rate observations within average rate options. Periodically, an average rate option agreement will be struck whereby some rates have already been observed in the past but will become part of computation of the average rate of the option. This structure provides for these previously observed rates to be included in the description of the trade.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
+<!--5-1 FX Refactoring: the existing observedRates/ObservedRates structure was removed from here and refactored into rateObservation/FxAverageRateObservation and used in a choice between { parametric [observationSchedule/FxAverageRateObservation and optional (rateObservation/FxAverageRateObservation and  rateObservationQuoteBasis/StrikeQuoteBasisEnum) ] or specific [(rateObservation/FxAverageRateObservation and  rateObservationQuoteBasis/StrikeQuoteBasisEnum)] -->
       <xsd:element name="payoutFormula" type="xsd:string" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The description of the mathematical computation for how the payout is computed.</xsd:documentation>
@@ -199,12 +196,13 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="FxAverageRateObservationDate">
+<!--5-1 FX Refactoring: Added new FxAverageRateObservation complex type, that, for average rate options, is used to describe each specific observation date, as opposed to a parametric frequency of rate observations.-->
+  <xsd:complexType name="FxAverageRateObservation">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type that, for average rate options, is used to describe each specific observation date, as opposed to a parametric frequency of rate observations.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-<!--5-1 FX Refactoring: Renamed observationDate to date- as the container of the date already says observationDate-->
+<!--10-21-2010 FX WG agreed to renamed observationDate to date- as the container of the date already says observationDate-->
       <xsd:element name="date" type="xsd:date">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">A specific date for which an observation against a particular rate will be made and will be used for subsequent computations.</xsd:documentation>
@@ -215,8 +213,14 @@
           <xsd:documentation xml:lang="en">An optional factor that can be used for weighting certain observation dates. Typically, firms will weight each date with a factor of 1 if there are standard, unweighted adjustments.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="rate" type="NonNegativeDecimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>The observed rate of exchange between the two option currencies. In the absence of rateObservationQuoteBasis, the rate is assumed to be quoted as per option strike/strikeQuoteBasis.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
+<!--5-1 FX Refactoring: FxAverageRateObservationSchedule complex type was replaced with a new FxAverageRateObservation complex type-->
   <xsd:complexType name="FxAverageRateObservationSchedule">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type that describes average rate options rate observations. This is used to describe a parametric frequency of rate observations against a particular rate. Typical frequencies might include daily, every Friday, etc.</xsd:documentation>
@@ -254,7 +258,7 @@
           <xsd:documentation xml:lang="en">Defines the two currencies for an FX trade and the quotation relationship between the two currencies.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!--5-1 FX Refactoring: Changed the 'triggerRate' element’s type from 'xsd:decimal' to 'fpml:PositiveDecimal' which eliminates rule fx-41.-->
+<!--5-1 FX Refactoring: Changed the triggerRate elements type from xsd:decimal to fpml:PositiveDecimal which eliminates rule fx-41.-->
       <xsd:element name="triggerRate" type="PositiveDecimal">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a trigger event is deemed to have occurred.</xsd:documentation>
@@ -265,16 +269,19 @@
           <xsd:documentation xml:lang="en">The information source where a published or displayed market rate will be obtained, e.g. Telerate Page 3750.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="observationStartDate" type="xsd:date" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The start of the period over which observations are made to determine whether a trigger has occurred.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="observationEndDate" type="xsd:date" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The end of the period over which observations are made to determine whether a trigger event has occurred.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
+<!--5-1 FX Refactoring: Moved elements observationStartDate and observationEndDate in side an optional xsd:sequence. Made observationStartDate required and observationEndDate optional. This eliminates the second if statement in the rule fx-14. -->
+      <xsd:sequence minOccurs="0">
+        <xsd:element name="observationStartDate" type="xsd:date">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">The start of the period over which observations are made to determine whether a trigger has occurred.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="observationEndDate" type="xsd:date" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">The end of the period over which observations are made to determine whether a trigger event has occurred.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="FxBoundary">
@@ -290,7 +297,7 @@
     <xsd:annotation>
       <xsd:documentation>Descrines the characteristics for American exercise in FX digital options.</xsd:documentation>
     </xsd:annotation>
-<!--5-1 FX Refactoring: Added an abstract base class 'Exercise' -->
+<!--5-1 FX Refactoring: Added an abstract base class Exercise -->
     <xsd:complexContent>
       <xsd:extension base="Exercise">
         <xsd:sequence>
@@ -390,7 +397,7 @@
     <xsd:annotation>
       <xsd:documentation>Describes the characteristics for European exercise of FX products.</xsd:documentation>
     </xsd:annotation>
-<!--5-1 FX Refactoring: Added an abstract base class 'Exercise' -->
+<!--5-1 FX Refactoring: Added an abstract base class Exercise -->
     <xsd:complexContent>
       <xsd:extension base="Exercise">
         <xsd:sequence>
@@ -474,13 +481,13 @@
             <xsd:annotation>
               <xsd:documentation>Defines the underlying FX transaction.</xsd:documentation>
             </xsd:annotation>
-<!--5-1 FX Refactoring: Made 'putCurrencyAmount' of type 'NonNegativeMoney'-->
+<!--5-1 FX Refactoring: Made putCurrencyAmount of type NonNegativeMoney-->
             <xsd:element name="putCurrencyAmount" type="NonNegativeMoney">
               <xsd:annotation>
                 <xsd:documentation>The currency amount that the option gives the right to sell.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
-<!--5-1 FX Refactoring: Made 'callCurrencyAmount' of type 'NonNegativeMoney'-->
+<!--5-1 FX Refactoring: Made callCurrencyAmount of type NonNegativeMoney-->
             <xsd:element name="callCurrencyAmount" type="NonNegativeMoney">
               <xsd:annotation>
                 <xsd:documentation>The currency amount that the option gives the right to buy.</xsd:documentation>
@@ -498,13 +505,13 @@
                 <xsd:documentation>Defines the option strike price.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
-<!--5-1 FX Refactoring: Changed 'spotRate' type from 'xsd:decimal' to 'fpml:PositiveDecimal' which eliminates rule fx-15-->
+<!--5-1 FX Refactoring: Changed spotRate type from xsd:decimal to fpml:PositiveDecimal which eliminates rule fx-15-->
             <xsd:element name="spotRate" type="PositiveDecimal" minOccurs="0">
               <xsd:annotation>
                 <xsd:documentation xml:lang="en">An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
               </xsd:annotation>
             </xsd:element>
-<!--5-1 FX Refactoring: Remove 'QuotedAs'. Rationale: it does not add any value -->
+<!--5-1 FX Refactoring: Remove QuotedAs. Rationale: it does not add any value -->
           </xsd:sequence>
           <xsd:element name="features" type="FxOptionFeatures" minOccurs="0">
             <xsd:annotation>
@@ -544,7 +551,7 @@
       <xsd:documentation xml:lang="en">A type that contains full details of a predefined fixed payout which may occur (or not) in a Barrier Option or Digital Option when a trigger event occurs (or not).</xsd:documentation>
     </xsd:annotation>
     <xsd:complexContent>
-<!--5-1 FX Refactoring: Made payout amount of type 'NonNegativeMoney'-->
+<!--5-1 FX Refactoring: Made payout amount of type NonNegativeMoney-->
       <xsd:extension base="NonNegativeMoney">
         <xsd:sequence>
           <xsd:element name="payoutStyle" type="PayoutEnum">
@@ -565,7 +572,7 @@
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type that specifies the premium exchanged for a single option trade or option strategy.</xsd:documentation>
     </xsd:annotation>
-<!--5-1 FX Refactoring: added NonNegativePayment base class  which makes premium amount of type 'non-negative-money'  -->
+<!--5-1 FX Refactoring: added NonNegativePayment base class  which makes premium amount of type non-negative-money  -->
     <xsd:complexContent>
       <xsd:extension base="NonNegativePayment">
         <xsd:sequence>
@@ -601,7 +608,7 @@
       <xsd:documentation xml:lang="en">A type that describes the rate of exchange at which the option has been struck.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-<!--5-1 FX Refactoring: changed 'rate' element's type from 'xsd:decimal' to 'fpml:PositiveDecimal' which eliminates rule fx-24-->
+<!--5-1 FX Refactoring: changed rate elements type from xsd:decimal to fpml:PositiveDecimal which eliminates rule fx-24-->
       <xsd:element name="rate" type="PositiveDecimal">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The rate of exchange between the two currencies of the leg of a deal.</xsd:documentation>
@@ -636,7 +643,7 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-<!--5-1 FX Refactoring: FxSwapLeg is now extending base class "Leg" to be consistant with other swap products' legs -->
+<!--5-1 FX Refactoring: FxSwapLeg is now extending base class "Leg" to be consistant with other swap products legs -->
   <xsd:complexType name="FxSwapLeg">
     <xsd:complexContent>
       <xsd:extension base="Leg">
@@ -664,13 +671,13 @@
           <xsd:documentation xml:lang="en">Defines the two currencies for an FX trade and the quotation relationship between the two currencies.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!--5-1 FX Refactoring: Changed 'triggerRate' element's type from 'xsd:decimal' to 'fpml:PositiveDecimal' which eliminates rule fx-7-->
+<!--5-1 FX Refactoring: Changed triggerRate elements type from xsd:decimal to fpml:PositiveDecimal which eliminates rule fx-7-->
       <xsd:element name="triggerRate" type="PositiveDecimal">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a trigger event is deemed to have occurred.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!--5-1 FX Refactoring: Change the 'spotRate' type from 'xsd:decimal' to 'fpml:PositiveDecimal' which eliminates rule fx-16-->
+<!--5-1 FX Refactoring: Change the spotRate type from xsd:decimal to fpml:PositiveDecimal which eliminates rule fx-16-->
       <xsd:element name="spotRate" type="PositiveDecimal" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
@@ -710,13 +717,13 @@
           <xsd:documentation xml:lang="en">Defines the two currencies for an FX trade and the quotation relationship between the two currencies.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!--5-1 FX Refactoring: Change the 'triggerRate' type from 'xsd:decimal' to 'fpml:PositiveDecimal' which eliminates rule fx-17-->
+<!--5-1 FX Refactoring: Change the triggerRate type from xsd:decimal to fpml:PositiveDecimal which eliminates rule fx-17-->
       <xsd:element name="triggerRate" type="PositiveDecimal">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The market rate is observed relative to the trigger rate, and if it is found to be on the predefined side of (above or below) the trigger rate, a trigger event is deemed to have occurred.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!--5-1 FX Refactoring: Change the 'spotRate' type from 'xsd:decimal' to 'fpml:PositiveDecimal' which eliminates fx rule-->
+<!--5-1 FX Refactoring: Change the spotRate type from xsd:decimal to fpml:PositiveDecimal which eliminates fx rule-->
       <xsd:element name="spotRate" type="PositiveDecimal" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">An optional element used for FX forwards and certain types of FX OTC options. For deals consumated in the FX Forwards Market, this represents the current market rate for a particular currency pair. For barrier and digital/binary options, it can be useful to include the spot rate at the time the option was executed to make it easier to know whether the option needs to move "up" or "down" to be triggered.</xsd:documentation>
@@ -765,25 +772,7 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
-<!--5-1 FX Refactoring: Renamed observedRates/ObservedRates (plural) to  observedRate/ObservedRate (singular) -->
-  <xsd:complexType name="ObservedRate">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type that describes prior rate observations within average rate options. Periodically, an average rate option agreement will be struck whereby some rates have already been observed in the past but will become part of computation of the average rate of the option. This structure provides for these previously observed rates to be included in the description of the trade.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-<!--5-1 FX Refactoring: Renamed observationDate to ‘date’ and observedRate to 'rate',  as the container of the date / rate  already says observedDate. The change was approved by FXWG on 10-21-2010.-->
-      <xsd:element name="date" type="xsd:date">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">A specific date for which an observation against a particular rate will be made and will be used for subsequent computations.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="rate" type="xsd:decimal">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The actual observed rate before any required rate treatment is applied, e.g. before converting a rate quoted on a discount basis to an equivalent yield. An observed rate of 5% would be represented as 0.05.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:complexType>
+<!--5-1 FX Refactoring: the existing ObservedRates structure was removed from here and refactored into FxAverageRateObservation -->
   <xsd:complexType name="PremiumQuote">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type that describes the option premium as quoted.</xsd:documentation>
@@ -801,7 +790,7 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
-<!--5-1 FX Refactoring: Removed 'QuotedAs' complex type. Rationale: it does not add any value -->
+<!--5-1 FX Refactoring: Removed QuotedAs complex type. Rationale: it does not add any value -->
 <!--5-1 FX Refactoring: Removed SideRate and SideRates and added crossRate component for ExchangeRate structure to accomodate the currency exchange rates used to cross between the traded currencies -->
 <!--5-1 FX Refactoring: Added new complex type TenorPeriod to be used for reporting-->
   <xsd:complexType name="TermDeposit">
@@ -826,13 +815,13 @@
               <xsd:documentation xml:lang="en">The end date of the calculation period. This date should already be adjusted for any applicable business day convention.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-<!--5-1 FX Refactoring: Changed 'principal' element's type to 'PositiveMoney' which eliminates rule fx-34-->
+<!--5-1 FX Refactoring: Changed principal elements type to PositiveMoney which eliminates rule fx-34-->
           <xsd:element name="principal" type="PositiveMoney">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The principal amount of the trade.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-<!--5-1 FX Refactoring: Changed 'fixedRate' element's type from xsd:decimal to 'PositiveDecimal' which eliminates rule fx-35-->
+<!--5-1 FX Refactoring: Changed fixedRate elements type from xsd:decimal to PositiveDecimal which eliminates rule fx-35-->
           <xsd:element name="fixedRate" type="PositiveDecimal">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">The calculation period fixed rate. A per annum rate, expressed as a decimal. A fixed rate of 5% would be represented as 0.05.</xsd:documentation>
@@ -843,7 +832,7 @@
               <xsd:documentation xml:lang="en">The day count fraction.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-<!--5-1 FX Refactoring: added new 'optional 'features' component where dual currency option is modeled as a feature.-->
+<!--5-1 FX Refactoring: added new optional features component where dual currency option is modeled as a feature.-->
           <xsd:element name="features" type="TermDepositFeatures" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation>An optional container that hold additional features of the deposit (e.g. Dual Currency feature).</xsd:documentation>
@@ -874,6 +863,24 @@
       <xsd:element name="maximumExclusive" type="PositiveDecimal" />
     </xsd:choice>
   </xsd:complexType>
+<!--5-1 FX Refactoring: a new FxRateObservation.model - The elements common to FX rate observation. Used in the  rateObservation/FxAverageRateObservation within FxAsianFeature complex type to facilitate one or more specific rate and observation dates [(rateObservation/FxAverageRateObservation and  rateObservationQuoteBasis/StrikeQuoteBasisEnum)] -->
+  <xsd:group name="FxRateObservation.model">
+    <xsd:annotation>
+      <xsd:documentation>The elements common to FX rate observation.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="rateObservation" type="FxAverageRateObservation" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">One or more specific rate observation dates.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="rateObservationQuoteBasis" type="StrikeQuoteBasisEnum" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>The method by which observed rate values are quoted, in terms of the option put/call currencies. In the absence of this element, rate observations are assumed to be quoted as per the option strikeQuoteBasis.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
   <xsd:group name="FxCoreDetails.model">
     <xsd:annotation>
       <xsd:documentation>The elements common to FX spot, forward and swap legs.</xsd:documentation>

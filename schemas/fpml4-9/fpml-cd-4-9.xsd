@@ -4,7 +4,7 @@
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.fpml.org/2010/FpML-4-9" xmlns:fpml="http://www.fpml.org/2010/FpML-4-9" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:fpml-annotation="http://www.fpml.org/annotation" ecore:nsPrefix="fpml" ecore:package="org.fpml" ecore:documentRoot="FpML" targetNamespace="http://www.fpml.org/2010/FpML-4-9" version="$Revision: 7265 $" attributeFormDefault="unqualified" elementFormDefault="qualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.fpml.org/2010/FpML-4-9" xmlns:fpml="http://www.fpml.org/2010/FpML-4-9" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:fpml-annotation="http://www.fpml.org/annotation" ecore:nsPrefix="fpml" ecore:package="org.fpml" ecore:documentRoot="FpML" targetNamespace="http://www.fpml.org/2010/FpML-4-9" version="$Revision: 7458 $" attributeFormDefault="unqualified" elementFormDefault="qualified">
   <xsd:include schemaLocation="fpml-option-shared-4-9.xsd" />
   <xsd:complexType name="AdditionalFixedPayments">
     <xsd:sequence>
@@ -135,6 +135,11 @@
             </xsd:annotation>
           </xsd:element>
           <xsd:group ref="FixedRecovery.model" minOccurs="0" />
+          <xsd:element name="fixedSettlement" type="xsd:boolean" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Used for Recovery Lock, to indicate whether fixed Settlement is Applicable or Not Applicable. If Buyer fails to deliver an effective Notice of Physical Settlement on or before the Buyer NOPS Cut-off Date, and If Seller fails to deliver an effective Seller NOPS on or before the Seller NOPS Cut-off Date, then either: (a) if Fixed Settlement is specified in the related Confirmation as not applicable, then the Seller NOPS Cut-off Date shall be the Termination Date; or (b) if Fixed Settlement is specified in the related Confirmation as applicable, then: (i) if the Fixed Settlement Amount is a positive number, Seller shall, subject to Section 3.1 (except for the requirement of satisfaction of the Notice of Physical Settlement Condition to Settlement), pay the Fixed Settlement Amount to Buyer on the Fixed Settlement Payment Date; and (ii) if the Fixed Settlement Amount is a negative number, Buyer shall, subject to Section 3.1 (except for the requirement of satisfaction of the Notice of Physical Settlement Condition to Settlement), pay the absolute value of the Fixed Settlement Amount to Seller on the Fixed Settlement Payment Date.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
           <xsd:element name="accruedInterest" type="xsd:boolean" minOccurs="0">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">Indicates whether accrued interest is included (true) or not (false). For cash settlement this specifies whether quotations should be obtained inclusive or not of accrued interest. For physical settlement this specifies whether the buyer should deliver the obligation with an outstanding principal balance that includes or excludes accrued interest. ISDA 2003 Term: Include/Exclude Accrued Interest</xsd:documentation>
@@ -383,7 +388,7 @@
           </xsd:element>
           <xsd:element name="marketFixedRate" type="xsd:decimal" minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">An optional element that only has meaning in a credit index trade. This element contains the credit spread ("fair value") at which the trade was executed. Unlike the fixedRate of an index, the marketFixedRate varies over the life of the index depending on market conditions. The marketFixedRate is the price of the index as quoted by trading desks.</xsd:documentation>
+              <xsd:documentation xml:lang="en">This optional element contains the credit spread ("fair value") at which the trade was executed. Unlike the fixedRate, the marketFixedRate varies over the life of the product depending on market conditions. The marketFixedRate is the price of the product as quoted by trading desks.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
           <xsd:element name="paymentDelay" type="xsd:boolean" minOccurs="0">

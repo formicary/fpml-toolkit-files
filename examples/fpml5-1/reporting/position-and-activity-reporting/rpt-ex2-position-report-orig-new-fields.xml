@@ -541,7 +541,7 @@
                   <commissionAmount>60</commissionAmount>
                   <commissionPerTrade>1234</commissionPerTrade>
                 </commission>
-                <determinationMethod>HedgeUnwind</determinationMethod>
+                <determinationMethod>HedgeExecution</determinationMethod>
                 <valuationRules>
                   <valuationDate id="trs-eq1-FinalValuationDate">
                     <adjustableDate>
@@ -990,7 +990,7 @@
                   <commissionAmount>60</commissionAmount>
                   <commissionPerTrade>1234</commissionPerTrade>
                 </commission>
-                <determinationMethod>HedgeUnwind</determinationMethod>
+                <determinationMethod>HedgeExecution</determinationMethod>
                 <valuationRules>
                   <valuationDate id="trs-eqbasket-FinalValuationDate">
                     <adjustableDate>
@@ -1457,7 +1457,7 @@
                   <commissionAmount>60</commissionAmount>
                   <commissionPerTrade>1234</commissionPerTrade>
                 </commission>
-                <determinationMethod>HedgeUnwind</determinationMethod>
+                <determinationMethod>HedgeExecution</determinationMethod>
                 <valuationRules>
                   <valuationDate>
                     <adjustableDate>
@@ -1977,7 +1977,7 @@
                   <commissionAmount>60</commissionAmount>
                   <commissionPerTrade>1234</commissionPerTrade>
                 </commission>
-                <determinationMethod>HedgeUnwind</determinationMethod>
+                <determinationMethod>HedgeExecution</determinationMethod>
                 <valuationRules id="trs-bondbasket-FinalValuationDate">
                   <valuationDate>
                     <adjustableDate>

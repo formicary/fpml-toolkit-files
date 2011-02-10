@@ -7,13 +7,13 @@
    <header>
       <conversationId conversationIdScheme="http://www.altova.com">oneofffeenotice001</conversationId>
       <messageId messageIdScheme="http://www.altova.com">oneofffeenotice001_Message001</messageId>
-      <inReplyTo messageIdScheme="http://www.altova.com">Breakfunding Fee Payment for JAS FPML EXAMPLE1 REVOLVING CREDIT </inReplyTo>
+      <inReplyTo messageIdScheme="http://www.altova.com">Breakfunding-Fee-Payment-for-JAS-FPML-EXAMPLE1-REVOLVING-CREDIT</inReplyTo>
       <sentBy>Bank One Corporation</sentBy>
       <sendTo>JEFF STUDER LENDER A</sendTo>
       <creationTimestamp>2001-12-17T09:30:47-05:00</creationTimestamp>
       <expiryTimestamp>2001-12-17T09:30:47-05:00</expiryTimestamp>
    </header>
-   <validation validationScheme="http://www.altova.com">NOT AVAILABLE</validation>
+   <validation validationScheme="http://www.altova.com">NOTAVAILABLE</validation>
    <noticeDate>2007-10-29</noticeDate>
    <agentBankPartyReference href="agentParty"/>
    <borrowerPartyReference href="borrowerParty"/>
@@ -56,7 +56,7 @@
          <loanContractSummary>
             <identifier id="ID000175">
                <partyReference href="agentParty"/>
-               <contractId contractIdScheme="http://www.agent.com/contractId" id="ID000176">NOT AVAILABLE</contractId>
+               <contractId contractIdScheme="http://www.agent.com/contractId" id="ID000176">NOTAVAILABLE</contractId>
             </identifier>
             <originalAmount id="ID000177">
                <currency>USD</currency>
@@ -90,8 +90,7 @@
    <loanContractSummary>
       <identifier id="ID000169">
          <partyReference href="agentParty"/>
-         <contractId contractIdScheme="http://www.altova.com" id="ID000184">NOT
-			AVAILABLE</contractId>
+         <contractId contractIdScheme="http://www.altova.com" id="ID000184">NOTAVAILABLE</contractId>
       </identifier>
       <originalAmount id="ID000170">
          <currency>USD</currency>
@@ -118,7 +117,7 @@
       <partyId>bankOne999</partyId>
       <partyName>BankOne</partyName>
       <account id="ID000190">
-         <accountId accountIdScheme="http://www.bankone.com/accountId">NOT AVAILABLE</accountId>
+         <accountId accountIdScheme="http://www.bankone.com/accountId">NOTAVAILABLE</accountId>
          <accountName>BankOne Corp.</accountName>
       </account>
    </party>
@@ -127,7 +126,7 @@
       <partyName>JEFF STUDER BORROWER </partyName>
       <account id="ID000192">
          <accountId accountIdScheme="http://www.jeffstuder.com/accountId">JS-001</accountId>
-         <accountName>JEFF STUDER BORROWER </accountName>
+         <accountName>JEFF STUDER BORROWER</accountName>
       </account>
    </party>
    <party id="lenderBeneficiary">

@@ -77,6 +77,7 @@
               <commissionDenomination>BPS</commissionDenomination>
               <commissionAmount>30</commissionAmount>
             </commission>
+<!--EqdWG recommendation: Users SHOULD NOT use free text within this element. Users MAY provide their own over ride coding scheme.-->
             <determinationMethod determinationMethodScheme="http://www.abc.com/determination-method">Average price per share obtained by Party B on Trade Date by selling 18,388,000 shares in the market, net of commissions</determinationMethod>
             <valuationRules>
               <valuationDate id="InitialValuationDate">
@@ -97,6 +98,7 @@
               <commissionDenomination>BPS</commissionDenomination>
               <commissionAmount>30</commissionAmount>
             </commission>
+<!--EqdWG recommendation: Users SHOULD NOT use free text within this element. Users MAY provide their own over ride coding scheme.-->
             <determinationMethod determinationMethodScheme="http://www.abc.com/determination-method">At the discretion of Party A, either (i) the amount received by Party A in selling 10,000,000 shares in the market (net of taxes and commissions), or (ii) the amount paid by Party B in buying 10,000,000 shares in the market (net of taxes and commissions)</determinationMethod>
             <valuationRules>
               <valuationDate id="FinalValuationDate">
@@ -127,6 +129,7 @@
           </paymentDates>
         </rateOfReturn>
         <notional>
+<!--EqdWG recommendation: Users SHOULD NOT use free text within this element. Users MAY provide their own over ride coding scheme.-->
           <determinationMethod determinationMethodScheme="http://www.abc.com/determination-method" id="EquityNotionalAmount">Number of Shares * Initial Price</determinationMethod>
         </notional>
         <amount>

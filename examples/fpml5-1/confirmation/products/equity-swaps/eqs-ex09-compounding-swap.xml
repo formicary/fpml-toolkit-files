@@ -54,7 +54,7 @@
           </initialPrice>
           <notionalReset>true</notionalReset>
           <valuationPriceInterim>
-            <determinationMethod>PriceAtValuation</determinationMethod>
+            <determinationMethod>ValuationTime</determinationMethod>
             <valuationRules id="equityValuationDates">
               <valuationDates>
                 <adjustableDates>
@@ -67,7 +67,7 @@
             </valuationRules>
           </valuationPriceInterim>
           <valuationPriceFinal>
-            <determinationMethod>PriceAtValuation</determinationMethod>
+            <determinationMethod>ValuationTime</determinationMethod>
           </valuationPriceFinal>
           <paymentDates id="CashSettlementPaymentDate">
             <paymentDatesInterim>

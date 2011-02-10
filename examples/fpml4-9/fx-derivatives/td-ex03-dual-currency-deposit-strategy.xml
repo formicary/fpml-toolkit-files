@@ -15,16 +15,16 @@
       <tradeHeader>
          <partyTradeIdentifier>
             <partyReference href="party1"/>
-            <tradeId tradeIdScheme="http://www.hsbc.com/swaps/trade-id">MB87623</tradeId>
+            <tradeId tradeIdScheme="http://www.midlandnb.com.com/swaps/trade-id">MB87623</tradeId>
          </partyTradeIdentifier>
          <partyTradeIdentifier>
             <partyReference href="party2"/>
-            <tradeId tradeIdScheme="http://www.abnamro.com/swaps/trade-id">AA9876</tradeId>
+            <tradeId tradeIdScheme="http://www.abn.com/swaps/trade-id">AA9876</tradeId>
          </partyTradeIdentifier>
          <tradeDate>2002-02-14Z</tradeDate>
       </tradeHeader>
       <strategy>
-         <productType productTypeScheme="http://www.hsbc.com/swaps/product-type">DualCurrencyDeposit</productType>
+         <productType productTypeScheme="http://www.sample.com/coding-scheme/product-type-simple">DualCurrencyDeposit</productType>
          <termDeposit>
             <initialPayerReference href="party1"/>
             <initialReceiverReference href="party2"/>

@@ -65,7 +65,7 @@
           <rate>1.4800</rate>
         </crossRate>
         <crossRate>
-          <currency1>USA</currency1>
+          <currency1>USD</currency1>
           <currency2>EUR</currency2>
           <quoteBasis>Currency1PerCurrency2</quoteBasis>
           <rate>0.9325</rate>

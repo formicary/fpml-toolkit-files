@@ -15,7 +15,7 @@
       <tradeHeader>
          <partyTradeIdentifier>
             <partyReference href="party1"/>
-            <tradeId tradeIdScheme="http://www.partyA.com/fx/trade-id">CH-23948</tradeId>
+            <tradeId tradeIdScheme="http://www.partyA.com/swaps/trade-id">PARTYAUS33</tradeId>
          </partyTradeIdentifier>
          <partyTradeIdentifier>
             <partyReference href="party2"/>

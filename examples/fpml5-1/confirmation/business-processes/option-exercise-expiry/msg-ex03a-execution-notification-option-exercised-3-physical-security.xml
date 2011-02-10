@@ -26,8 +26,12 @@
     <exerciseTime>12:00:00Z</exerciseTime>
     <exerciseInNumberOfOptions>1000</exerciseInNumberOfOptions>
     <outstandingNumberOfOptions>0</outstandingNumberOfOptions>
-    <physicalSettlement />
-<!-- to be developed -->
+    <physicalSettlement>
+      <resultingTradeIdentifier>
+        <partyReference href="AMAG" />
+        <tradeId tradeIdScheme="http://www.swift.com/coding-scheme/contract-id">F0983765</tradeId>
+      </resultingTradeIdentifier>
+    </physicalSettlement>
     <payment>
       <payerPartyReference href="AMAG" />
       <receiverPartyReference href="SKY" />
@@ -44,15 +48,6 @@
         <amount>100000</amount>
       </paymentAmount>
     </payment>
-<!-- physical settlement example where the underlying is security (e.g., equity option) (TBD) -->
-<!--    <numberOfSecuritiesOwned href="eq01">996</numberOfSecuritiesOwned>      <!-\- presumably 1000 exercised options minus some transaction fee -\->
-                <equity id="eq01">                                                              <!-\- "option buyer owns 996 stocks of IBM.N" -\->                              
-                        <instrumentId instrumentIdScheme="ISIN">IBM.N</instrumentId>
-                        <description>ABN AMRO HOLDING NV</description>
-                        <currency>USD</currency>
-                        <exchangeId>AEX</exchangeId>
-                        <relatedExchangeId>LIFFE</relatedExchangeId>
-                </equity>-->
   </optionExercise>
   <party id="AMAG">
     <partyId>AMAGGB22</partyId>

@@ -21,7 +21,6 @@
     <partyReference href="SKY" />
   </onBehalfOf>
   <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple">InterestRateSwaption</productType>
-<!-- Added, Mandatory TBD -->
   <optionExercise>
     <tradeIdentifier>
       <partyReference href="SKY" />
@@ -38,7 +37,6 @@
       <payerPartyReference href="AMAG" />
       <receiverPartyReference href="SKY" />
       <receiverAccountReference href="ACC0" />
-<!-- account info added 9/24 -->
       <paymentDate>
         <adjustableDate>
           <unadjustedDate>2010-09-09</unadjustedDate>

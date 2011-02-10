@@ -8,7 +8,7 @@
       <messageId messageIdScheme="perFpMLReqmt">123456-002700000000001</messageId>
       <sentBy>DTCC00006441</sentBy>
       <sendTo>DTCC00006440</sendTo>
-      <creationTimestamp>2002-09-24T18:08:40.335-05:00</creationTimestamp>
+      <creationTimestamp>2009-09-10T18:08:40.335-05:00</creationTimestamp>
    </header>
    <trade>
       <tradeHeader>
@@ -20,7 +20,7 @@
             <partyReference href="party2"/>
             <tradeId tradeIdScheme="http://www.partyB.com/trade-id-1-0">299442</tradeId>
          </partyTradeIdentifier>
-         <tradeDate>2002-10-31</tradeDate>
+         <tradeDate>2009-09-10</tradeDate>
       </tradeHeader>
       <equitySwapTransactionSupplement>
          <returnLeg>
@@ -28,7 +28,7 @@
             <receiverPartyReference href="party2"/>
             <effectiveDate id="equityEffectiveDate">
                <adjustableDate>
-                  <unadjustedDate>2004-07-21</unadjustedDate>
+                  <unadjustedDate>2009-10-12</unadjustedDate>
                   <dateAdjustments>
                      <businessDayConvention>NONE</businessDayConvention>
                   </dateAdjustments>
@@ -69,17 +69,17 @@
                         <periodicDates>
                            <calculationStartDate>
                               <adjustableDate>
-                                 <unadjustedDate>2001-10-12</unadjustedDate>
+                                 <unadjustedDate>2009-10-12</unadjustedDate>
                                  <dateAdjustments>
-                                    <businessDayConvention>PRECEDING</businessDayConvention>
+                                    <businessDayConvention>NotApplicable</businessDayConvention>
                                  </dateAdjustments>
                               </adjustableDate>
                            </calculationStartDate>
                            <calculationEndDate>
                               <adjustableDate>
-                                 <unadjustedDate>2002-08-12</unadjustedDate>
+                                 <unadjustedDate>2010-08-12</unadjustedDate>
                                  <dateAdjustments>
-                                    <businessDayConvention>PRECEDING</businessDayConvention>
+                                    <businessDayConvention>NotApplicable</businessDayConvention>
                                  </dateAdjustments>
                               </adjustableDate>
                            </calculationEndDate>
@@ -90,16 +90,21 @@
                            </calculationPeriodFrequency>
                            <calculationPeriodDatesAdjustments>
                               <businessDayConvention>PRECEDING</businessDayConvention>
+                              <businessCenters id="businessCenters">
+                                 <businessCenter>USNY</businessCenter>
+                                 <businessCenter>GBLO</businessCenter>
+                              </businessCenters>
                            </calculationPeriodDatesAdjustments>
                         </periodicDates>
                      </valuationDates>
                      <futuresPriceValuation>true</futuresPriceValuation><!-- Dividend Valuation Dates ISDA2009EquityPanAsiaInterdealer MCA-->
                      <dividendValuationDates>
                         <adjustableDates>
-                           <unadjustedDate>2009-03-12</unadjustedDate>
-                           <unadjustedDate>2009-03-15</unadjustedDate>
+                           <unadjustedDate>2009-10-12</unadjustedDate>
+                           <unadjustedDate>2009-10-15</unadjustedDate>
                            <dateAdjustments>
                               <businessDayConvention>PRECEDING</businessDayConvention>
+                              <businessCentersReference href="businessCenters"/>
                            </dateAdjustments>
                         </adjustableDates>
                      </dividendValuationDates><!-- FPV Final Price Election for ISDA2009EquityPanAsiaInterdealer MCA-->
@@ -187,23 +192,19 @@
                </interestLegResetDates>
                <interestLegPaymentDates>
                   <adjustableDates>
-                     <unadjustedDate>2001-10-12</unadjustedDate>
-                     <unadjustedDate>2001-11-13</unadjustedDate>
-                     <unadjustedDate>2001-12-12</unadjustedDate>
-                     <unadjustedDate>2002-01-14</unadjustedDate>
-                     <unadjustedDate>2002-02-12</unadjustedDate>
-                     <unadjustedDate>2002-03-12</unadjustedDate>
-                     <unadjustedDate>2002-04-12</unadjustedDate>
-                     <unadjustedDate>2002-05-13</unadjustedDate>
-                     <unadjustedDate>2002-06-02</unadjustedDate>
-                     <unadjustedDate>2002-07-12</unadjustedDate>
-                     <unadjustedDate>2002-08-12</unadjustedDate>
+                     <unadjustedDate>2009-10-12</unadjustedDate>
+                     <unadjustedDate>2009-11-13</unadjustedDate>
+                     <unadjustedDate>2009-12-12</unadjustedDate>
+                     <unadjustedDate>2010-01-14</unadjustedDate>
+                     <unadjustedDate>2010-02-12</unadjustedDate>
+                     <unadjustedDate>2010-03-12</unadjustedDate>
+                     <unadjustedDate>2010-04-12</unadjustedDate>
+                     <unadjustedDate>2010-05-13</unadjustedDate>
+                     <unadjustedDate>2010-06-02</unadjustedDate>
+                     <unadjustedDate>2010-07-12</unadjustedDate>
+                     <unadjustedDate>2010-08-12</unadjustedDate>
                      <dateAdjustments>
-                        <businessDayConvention>NotApplicable</businessDayConvention>
-                        <businessCenters>
-                           <businessCenter>USNY</businessCenter>
-                           <businessCenter>GBLO</businessCenter>
-                        </businessCenters>
+                        <businessDayConvention>NONE</businessDayConvention>
                      </dateAdjustments>
                   </adjustableDates>
                </interestLegPaymentDates>
