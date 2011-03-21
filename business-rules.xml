@@ -55,7 +55,7 @@
 		<addRule name="ird-5"/>
 		<addRule name="ird-6"/>
 		<addRule name="ird-7"/>
-		<!-- Deprecated <addRule name="ird-8"/> -->
+		<addRule name="ird-8"/>
 		<addRule name="ird-9"/>
 		<addRule name="ird-10"/>
 		<addRule name="ird-11"/>
