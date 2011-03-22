@@ -49,7 +49,7 @@
 <!--Rule ir-57-->
           <calculationPeriodFrequency>
             <periodMultiplier>1</periodMultiplier>
-            <period>T</period>
+            <period><!-- AJJ: Was T -->Y</period>
             <rollConvention>1</rollConvention>
           </calculationPeriodFrequency>
 <!--Rule ir-57-->
@@ -132,7 +132,7 @@
 <!--Rule ir-57-->
           <calculationPeriodFrequency>
             <periodMultiplier>1</periodMultiplier>
-            <period>T</period>
+            <period><!-- AJJ: Was T -->M</period>
             <rollConvention>NONE</rollConvention>
           </calculationPeriodFrequency>
 <!--Rule ir-57-->
