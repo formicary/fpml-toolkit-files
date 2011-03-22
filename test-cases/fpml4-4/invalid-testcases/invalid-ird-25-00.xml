@@ -155,7 +155,7 @@
                      </notionalStepSchedule>
                   </notionalSchedule>
                   <fixedRateSchedule>
-                     <initialValue>0.06</initialValue>
+                     <initialValue><!-- AJJ: Was 0.06 -->0.00</initialValue>
                   </fixedRateSchedule>
                   <dayCountFraction>30E/360</dayCountFraction>
                </calculation>
