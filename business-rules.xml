@@ -75,8 +75,8 @@
 		<addRule name="ird-25"/>
 		<addRule name="ird-26"/>
 		<addRule name="ird-27"/>
-		<addRule name="ird-28a"/>
-		<addRule name="ird-28b"/>
+		<addRule name="ird-28[XLINK]"/>
+		<addRule name="ird-28"/>
 		<addRule name="ird-29"/>
 		<addRule name="ird-30"/>
 		<addRule name="ird-31"/>
@@ -94,9 +94,10 @@
 		<addRule name="ird-43"/>
 		<addRule name="ird-44"/>
 		<!-- Gap in the sequence <addRule name="ird-45"/> -->
-		<addRule name="ird-46a"/>
-		<addRule name="ird-46b"/>
-		<addRule name="ird-47"/>
+		<addRule name="ird-46[XLINK]"/>
+		<addRule name="ird-46"/>
+		<addRule name="ird-47[XLINK]"/>
+		<addRulr name="ird-47"/>
 		<addRule name="ird-48"/>
 		<addRule name="ird-49"/>
 		<addRule name="ird-50"/>
