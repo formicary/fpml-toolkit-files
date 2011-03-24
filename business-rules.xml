@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  == Copyright (C),2005-2010 HandCoded Software Ltd.
+  == Copyright (C),2005-2011 HandCoded Software Ltd.
   == All rights reserved.
   ==
   == This software is licensed in accordance with the terms of the 'Open Source
@@ -198,29 +198,40 @@
 	  == are not executed at run time against 5-1 or later documents
 	  -->
 	<ruleSet name="FxRules">
+		<!-- 3.0 - -->
+		<addRule name="fx-3"/>
+		
+		<!-- 3.0 - 4.x -->
 		<addRule name="fx-1"/>
 		<addRule name="fx-2"/>
-		<addRule name="fx-3"/>
 		<addRule name="fx-4"/>
 		<addRule name="fx-5"/>
 		<addRule name="fx-6"/>
 		<addRule name="fx-7"/>
-		<addRule name="fx-8[A]"/>
-		<addRule name="fx-8[B]"/>
-		<addRule name="fx-9"/>
-		<addRule name="fx-10"/>
-		<addRule name="fx-11[A]"/>
-		<addRule name="fx-11[B]"/>
-		<addRule name="fx-12"/>
-		<addRule name="fx-13[A]"/>
-		<addRule name="fx-13[B]"/>
-		<addRule name="fx-14[A]"/>
-		<addRule name="fx-14[B]"/>
+		<addRule name="fx-8[OLD]"/>
+		<addRule name="fx-9[OLD]"/>
+		<addRule name="fx-10[OLD]"/>
+		<addRule name="fx-11[OLD]"/>
+		<addRule name="fx-12[OLD]"/>
+		<addRule name="fx-13"/>
+		<addRule name="fx-14[OLD]"/>
 		<addRule name="fx-15"/>
 		<addRule name="fx-16"/>
 		<addRule name="fx-17"/>
 		<addRule name="fx-18"/>
+		<addRule name="fx-19[OLD]"/>
+		
+		<!-- 5.1 - -->
+		<addRule name="fx-8"/>
+		<addRule name="fx-9"/>
+		<addRule name="fx-10"/>
+		<addRule name="fx-11"/>
+		<addRule name="fx-12"/>
+		<addRule name="fx-14"/>
 		<addRule name="fx-19"/>
+		
+		
+		
 		<addRule name="fx-20"/>
 		<addRule name="fx-21"/>
 		<addRule name="fx-22"/>
