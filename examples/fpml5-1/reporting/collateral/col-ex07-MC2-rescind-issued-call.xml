@@ -33,7 +33,7 @@
     <partyName>XYZ Bank</partyName>
   </party>
   <collateralRetractionReason>
-    <reasonCode>IncorrectEntity</reasonCode>
+    <reasonCode>PartyReferenceMismatch</reasonCode>
     <description>The margin call was issued to the incorrect entity.</description>
   </collateralRetractionReason>
 </requestMarginRetracted>

@@ -63,7 +63,7 @@
 <!--invalid rule fx-51: If nonDeliverableSettlement exists, then exchangeRate/forwardPoints must exist -->
           <forwardPoints>0.05</forwardPoints>
         </exchangeRate>
-<!--FpML 5-1: As part of FX Product Refactoring work, renamed element/type from nonDeliverableForward/FxCashSettlement  to nonDeliverableSettlement/FxNonDeliverableSettlement-->
+<!--FpML-5-1 FX Refactoring: As part of FX Product Refactoring work, renamed element/type from nonDeliverableForward/FxCashSettlement  to nonDeliverableSettlement/FxCashSettlement-->
         <nonDeliverableSettlement>
           <settlementCurrency>USD</settlementCurrency>
           <fixing>

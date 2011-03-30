@@ -61,7 +61,7 @@
         <spotRate>43.35</spotRate>
         <forwardPoints>0.05</forwardPoints>
       </exchangeRate>
-<!--5-1- renamed  from nonDeliverableForward to nonDeliverableSettlement-->
+<!--FX Refactoring- renamed  from nonDeliverableForward to nonDeliverableSettlement-->
       <nonDeliverableSettlement>
         <settlementCurrency>USD</settlementCurrency>
         <fixing>
@@ -71,7 +71,7 @@
             <quoteBasis>Currency2PerCurrency1</quoteBasis>
           </quotedCurrencyPair>
           <fixingDate>2002-02-09Z</fixingDate>
-<!--07-08-2010 Refactoring: instead of extending "FxSpotRateSource" complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" that way eliminating dependency on the rate source-->
+<!--FX Refactoring - instead of extending "FxSpotRateSource" complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" that way eliminating dependency on the rate source-->
           <fxSpotRateSource>
             <primaryRateSource>
               <rateSource>Reuters</rateSource>

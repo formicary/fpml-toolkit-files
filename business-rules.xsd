@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Andrew Jacobs (HandCoded Consulting Ltd.) -->
 <!-- Copyright (C),2008 HandCoded Software Ltd.
   == All rights reserved.
   -->
-<xs:schema
- xmlns="http://www.handcoded.com/BusinessRules"
- xmlns:xs="http://www.w3.org/2001/XMLSchema"
- targetNamespace="http://www.handcoded.com/BusinessRules"
- elementFormDefault="qualified"
- attributeFormDefault="unqualified"
- version="1-0">
+<xs:schema xmlns="http://www.handcoded.com/BusinessRules" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.handcoded.com/BusinessRules" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1-0">
 	<xs:simpleType name="Platform">
 		<xs:annotation>
 			<xs:documentation>A supported application platform</xs:documentation>
@@ -42,7 +37,7 @@
 		<xs:annotation>
 			<xs:documentation>Contains a RuleSet configuration</xs:documentation>
 		</xs:annotation>
-		<xs:choice maxOccurs="unbounded">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
 			<xs:element name="addRule" type="RuleReference"/>
 			<xs:element name="removeRule" type="RuleReference"/>
 			<xs:element name="addRuleSet" type="RuleSetReference"/>
@@ -60,6 +55,7 @@
 			<xs:documentation>Defines a reference to a Rule</xs:documentation>
 		</xs:annotation>
 		<xs:attribute name="name" type="xs:token" use="required"/>
+		<xs:attribute name="alias" type="xs:token"/>
 	</xs:complexType>
 	<xs:element name="rules" type="Rules">
 		<xs:annotation>

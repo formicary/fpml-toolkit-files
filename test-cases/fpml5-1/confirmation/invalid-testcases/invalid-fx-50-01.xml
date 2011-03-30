@@ -51,8 +51,9 @@
             <amount>14800000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-<!--invalid fx-40: The value of all fxSwap/fxSingleLegnearLeg/valueDate, fxSwap/ nearLeg/currency1ValueDate and fxSwap/ nearLeg/currency2ValueDate instances must be after tradeHeader/tradeDate.Correct value is <valueDate>2002-01-25Z</valueDate>-->
-        <valueDate>2001-01-25</valueDate>
+<!--invalid fx-50: then currency1ValueDate must not be equal to currency2ValueDate. currency1ValueDate should be 2002-01-25Z -->
+        <currency1ValueDate>2002-02-25Z</currency1ValueDate>
+        <currency2ValueDate>2002-02-25Z</currency2ValueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>

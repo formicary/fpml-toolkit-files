@@ -42,17 +42,23 @@
             <currency>GBP</currency>
             <amount>10000000</amount>
           </paymentAmount>
+          <settlementInformation>
+            <standardSettlementStyle>Standard</standardSettlementStyle>
+          </settlementInformation>
         </exchangedCurrency1>
         <exchangedCurrency2>
           <payerPartyReference href="party1" />
           <receiverPartyReference href="party2" />
           <paymentAmount>
-            <currency>USD</currency>
+<!--invalid rule fx-49: If exchangedCurrency1/paymentAmount/currency and exchangedCurrency2/paymentAmount/currency have the same-currency-scheme, then exchangedCurrency1/paymentAmount/currency must not be equal to exchangedCurrency2/paymentAmount/currency. Duplicated currency. The correct value is <currency>USD</currency>-->
+            <currency>GBP</currency>
             <amount>14800000</amount>
           </paymentAmount>
+          <settlementInformation>
+            <standardSettlementStyle>Standard</standardSettlementStyle>
+          </settlementInformation>
         </exchangedCurrency2>
-<!--invalid fx-40: The value of all fxSwap/fxSingleLegnearLeg/valueDate, fxSwap/ nearLeg/currency1ValueDate and fxSwap/ nearLeg/currency2ValueDate instances must be after tradeHeader/tradeDate.Correct value is <valueDate>2002-01-25Z</valueDate>-->
-        <valueDate>2001-01-25</valueDate>
+        <valueDate>2002-01-25Z</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>

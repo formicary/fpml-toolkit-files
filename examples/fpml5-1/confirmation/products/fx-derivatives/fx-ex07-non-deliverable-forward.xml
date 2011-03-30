@@ -60,7 +60,7 @@
         <spotRate>43.35</spotRate>
         <forwardPoints>0.05</forwardPoints>
       </exchangeRate>
-<!--10-21-2010 FXWG and Coord apprv: renamed element/type  from nonDeliverableForward/FxCashSettlement  to nonDeliverableSettlement/FxNonDeliverableSettlement to be consistent with FX Options and IRD-->
+<!--10-21-2010 FXWG and Coord apprv: renamed element/type  from nonDeliverableForward/FxCashSettlement  to nonDeliverableSettlement/FxCashSettlement -->
       <nonDeliverableSettlement>
         <settlementCurrency>USD</settlementCurrency>
         <fixing>

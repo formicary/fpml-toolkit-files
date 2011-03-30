@@ -12,72 +12,68 @@
 <!--5.0 Messaging: changed <requestTradeConfirmation> -><requestConfirmation>-->
 <requestConfirmation xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" fpmlVersion="5-1" xsi:schemaLocation="http://www.fpml.org/FpML-5/confirmation ../../fpml-main-5-1.xsd http://www.w3.org/2000/09/xmldsig# ../../xmldsig-core-schema.xsd">
   <header>
-    <messageId messageIdScheme="http://www.matchingservice.com/coding-scheme/messageId">FX12345678</messageId>
-    <sentBy messageAddressScheme="http://www.matchingservice.com/partyId">PARTY1US33</sentBy>
+    <messageId messageIdScheme="http://www.matchingservice.com/coding-scheme/messageId">FX456a789b</messageId>
+    <sentBy messageAddressScheme="http://www.matchingservice.com/partyId">ABN</sentBy>
     <sendTo messageAddressScheme="http://www.matchingservice.com/partyId">MATCHSRV</sendTo>
-    <creationTimestamp>2001-10-23T08:57:00Z</creationTimestamp>
+    <creationTimestamp>2001-11-19T08:57:00Z</creationTimestamp>
   </header>
   <isCorrection>false</isCorrection>
-  <correlationId correlationIdScheme="hhttp://www.matchingservice.com/coding-scheme/correlationId">FX987</correlationId>
+  <correlationId correlationIdScheme="http://www.matchingservice.com/coding-scheme/correlationId">FX987</correlationId>
   <sequenceNumber>1</sequenceNumber>
   <trade>
     <tradeHeader>
       <partyTradeIdentifier>
-        <partyReference href="party2" />
-        <tradeId tradeIdScheme="http://www.handcoded.com/trade-id">TQ2453-3</tradeId>
+        <partyReference href="party1" />
+        <tradeId tradeIdScheme="http://www.abn-amro.com/fx/trade-id">ABN1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2008-03-31Z</tradeDate>
+      <partyTradeIdentifier>
+        <partyReference href="party2" />
+        <tradeId tradeIdScheme="http://www.db.com/fx/trade-id">DB5678</tradeId>
+      </partyTradeIdentifier>
+      <tradeDate>2001-11-19Z</tradeDate>
     </tradeHeader>
     <fxSingleLeg>
       <exchangedCurrency1>
         <payerPartyReference href="party2" />
         <receiverPartyReference href="party1" />
         <paymentAmount>
-          <currency>GBP</currency>
+          <currency>EUR</currency>
           <amount>10000000</amount>
         </paymentAmount>
+        <settlementInformation>
+          <standardSettlementStyle>Standard</standardSettlementStyle>
+        </settlementInformation>
       </exchangedCurrency1>
       <exchangedCurrency2>
         <payerPartyReference href="party1" />
         <receiverPartyReference href="party2" />
         <paymentAmount>
-          <currency>MXN</currency>
-          <amount>21376606</amount>
+<!--invalid rule fx-19: If exchangedCurrency1/paymentAmount/currency and exchangedCurrency2/paymentAmount/currency have the same-currency-scheme, then exchangedCurrency1/paymentAmount/currency must not be equal to exchangedCurrency2/paymentAmount/currency. Duplicated currency. The correct value is <currency>USD</currency>-->
+          <currency>EUR</currency>
+          <amount>9175000</amount>
         </paymentAmount>
+        <settlementInformation>
+          <standardSettlementStyle>Standard</standardSettlementStyle>
+        </settlementInformation>
       </exchangedCurrency2>
-      <valueDate>2008-04-04Z</valueDate>
+      <valueDate>2001-12-21Z</valueDate>
       <exchangeRate>
         <quotedCurrencyPair>
-          <currency1>MXN</currency1>
-          <currency2>GBP</currency2>
-          <quoteBasis>Currency1PerCurrency2</quoteBasis>
-        </quotedCurrencyPair>
-        <rate>21.3766</rate>
-        <spotRate>21.2531</spotRate>
-        <forwardPoints>0.1235</forwardPoints>
-        <crossRate>
-          <currency1>MXN</currency1>
+          <currency1>EUR</currency1>
           <currency2>USD</currency2>
           <quoteBasis>Currency2PerCurrency1</quoteBasis>
-          <rate>10.7145</rate>
-        </crossRate>
-        <crossRate>
-          <currency1>USD</currency1>
-          <currency2>EUR</currency2>
-          <quoteBasis>Currency1PerCurrency2</quoteBasis>
-<!--invalid rule fx-30: rate must be equal to the sum of spotRate and forwardPoints. -->
-          <rate>1.9951</rate>
-          <spotRate>1.0000</spotRate>
-          <forwardPoints>2.000</forwardPoints>
-        </crossRate>
+        </quotedCurrencyPair>
+        <rate>0.9175</rate>
+        <spotRate>0.9130</spotRate>
+        <forwardPoints>0.0045</forwardPoints>
       </exchangeRate>
     </fxSingleLeg>
   </trade>
   <party id="party1">
-    <partyId>PARTY1US33</partyId>
+    <partyId>ABNANL2A</partyId>
   </party>
   <party id="party2">
-    <partyId>HDCDUK12</partyId>
+    <partyId>DEUTDEFF</partyId>
   </party>
 </requestConfirmation>
 

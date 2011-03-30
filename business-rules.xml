@@ -63,30 +63,24 @@
 		<addRule name="ird-12"/>
 		<!-- Gap in the sequence ird-13 -->
 		<addRule name="ird-14"/>
-		<!-- REMOVED: <addRule name="ird-15"/> -->
 		<addRule name="ird-16"/>
 		<addRule name="ird-17"/>
 		<addRule name="ird-18"/>
-		<!-- REMOVED: <addRule name="ird-19"/> -->
 		<addRule name="ird-20"/>
 		<addRule name="ird-21"/>
 		<addRule name="ird-22"/>
 		<addRule name="ird-23"/>
 		<addRule name="ird-24"/>
 		<addRule name="ird-25"/>
-		<!-- REMOVED: <addRule name="ird-26"/> -->
 		<addRule name="ird-27"/>
-		<!-- REMOVED: <addRule name="ird-28"/> -->		
 		<addRule name="ird-29"/>
 		<addRule name="ird-30"/>
 		<addRule name="ird-31"/>
-		<!-- REMOVED: <addRule name="ird-32"/> -->
 		<addRule name="ird-33"/>
 		<addRule name="ird-34"/>
 		<addRule name="ird-35"/>
 		<addRule name="ird-36"/>
 		<!-- Gap in the sequence ird-37 -->
-		<!-- REMOVED: <addRule name="ird-38"/> -->
 		<addRule name="ird-39"/>
 		<addRule name="ird-40"/>
 		<addRule name="ird-41"/>
@@ -101,22 +95,31 @@
 		<addRule name="ird-52"/>
 		<addRule name="ird-53"/>
 		<addRule name="ird-54"/>
-		<!-- REMOVED: <addRule name="ird-55"/> -->
-		<!-- REMOVED: <addRule name="ird-56"/> -->
 		<addRule name="ird-57"/>
 		<addRule name="ird-58"/>
 		<addRule name="ird-59"/>
 		<addRule name="ird-60"/>
 		
 		<!-- 1.0 - 3.0 -->
-		<addRule name="ird-28[XLINK]"/>
-		<addRule name="ird-46[XLINK]"/>
-		<addRule name="ird-47[XLINK]"/>
+		<addRule name="ird-28[XLINK]" alias="ird-28"/>
+		<addRule name="ird-46[XLINK]" alias="ird-46"/>
+		<addRule name="ird-47[XLINK]" alias="ird-47"/>
 
 		<!-- 3.0 - -->		
 		<addRule name="ird-28"/>
 		<addRule name="ird-46"/>
-		<addRulr name="ird-47"/>
+		<addRule name="ird-47"/>
+		
+		<!-- Removed Rules
+		<addRule name="ird-15"/> 
+		<addRule name="ird-19"/> 
+		<addRule name="ird-26"/> 
+		<addRule name="ird-28"/> 	
+		<addRule name="ird-32"/>
+		<addRule name="ird-38"/> 
+		<addRule name="ird-55"/> 
+		<addRule name="ird-56"/> 
+		-->
 	</ruleSet>
 	
 	<ruleSet name="CdsRules">
@@ -206,27 +209,39 @@
 	<ruleSet name="FxRules">
 		<!-- 3.0 - -->
 		<addRule name="fx-3"/>
+		<addRule name="fx-27"/>
 		
 		<!-- 3.0 - 4.x -->
-		<addRule name="fx-1"/>
-		<addRule name="fx-2"/>
-		<addRule name="fx-4"/>
-		<addRule name="fx-5"/>
-		<addRule name="fx-6"/>
-		<addRule name="fx-7"/>
-		<addRule name="fx-8[OLD]"/>
-		<addRule name="fx-9[OLD]"/>
-		<addRule name="fx-10[OLD]"/>
-		<addRule name="fx-11[OLD]"/>
-		<addRule name="fx-12[OLD]"/>
-		<addRule name="fx-13"/>
-		<addRule name="fx-14[OLD]"/>
-		<addRule name="fx-15"/>
-		<addRule name="fx-16"/>
-		<addRule name="fx-17"/>
-		<addRule name="fx-18"/>
-		<addRule name="fx-19[OLD]"/>
-		
+		<addRule name="fx-1[OLD]" alias="fx-1"/>
+		<addRule name="fx-2[OLD]" alias="fx-2"/>
+		<addRule name="fx-4[OLD]" alias="fx-4"/>
+		<addRule name="fx-5[OLD]" alias="fx-5"/>
+		<addRule name="fx-6[OLD]" alias="fx-6"/>
+		<addRule name="fx-7[OLD]" alias="fx-7"/>
+		<addRule name="fx-8[OLD]" alias="fx-8"/>
+		<addRule name="fx-9[OLD]" alias="fx-9"/>
+		<addRule name="fx-10[OLD]" alias="fx-10"/>
+		<addRule name="fx-11[OLD]" alias="fx-11"/>
+		<addRule name="fx-12[OLD]" alias="fx-12"/>
+		<addRule name="fx-13[OLD]" alias="fx-13"/>
+		<addRule name="fx-14[OLD]" alias="fx-14"/>
+		<addRule name="fx-15[OLD]" alias="fx-15"/>
+		<addRule name="fx-16[OLD]" alias="fx-16"/>
+		<addRule name="fx-17[OLD]" alias="fx-17"/>
+		<addRule name="fx-18[OLD]" alias="fx-18"/>
+		<addRule name="fx-19[OLD]" alias="fx-19"/>
+		<addRule name="fx-20[OLD]" alias="fx-20"/>
+		<addRule name="fx-21[OLD]" alias="fx-21"/>
+		<addRule name="fx-22[OLD]" alias="fx-22"/>
+		<addRule name="fx-23[OLD]" alias="fx-23"/>
+		<addRule name="fx-24[OLD]" alias="fx-24"/>
+		<addRule name="fx-25[OLD]" alias="fx-25"/>
+		<addRule name="fx-26[OLD]" alias="fx-26"/>
+		<addRule name="fx-28[OLD]" alias="fx-28"/>
+		<addRule name="fx-29[OLD]" alias="fx-29"/>
+		<addRule name="fx-30[OLD]" alias="fx-30"/>
+		<addRule name="fx-31[OLD]" alias="fx-31"/>
+
 		<!-- 5.1 - -->
 		<addRule name="fx-8"/>
 		<addRule name="fx-9"/>
@@ -235,21 +250,15 @@
 		<addRule name="fx-12"/>
 		<addRule name="fx-14"/>
 		<addRule name="fx-19"/>
-		
-		
-		
 		<addRule name="fx-20"/>
 		<addRule name="fx-21"/>
 		<addRule name="fx-22"/>
 		<addRule name="fx-23"/>
-		<addRule name="fx-24"/>
-		<addRule name="fx-25"/>
 		<addRule name="fx-26"/>
-		<addRule name="fx-27"/>
-		<addRule name="fx-28"/>
-		<addRule name="fx-29"/>
 		<addRule name="fx-30"/>
-		<addRule name="fx-31"/>
+		
+		
+		
 		<addRule name="fx-32"/>
 		<addRule name="fx-33"/>
 		<addRule name="fx-34"/>

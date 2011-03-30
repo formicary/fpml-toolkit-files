@@ -30,7 +30,6 @@
 <!-- this transaction has been created because of another transaction -->
       </partyTradeIdentifier>
       <tradeDate>2007-10-31</tradeDate>
-      <originatingEvent>OptionExercise</originatingEvent>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>

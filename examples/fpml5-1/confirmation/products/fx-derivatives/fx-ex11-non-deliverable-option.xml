@@ -94,17 +94,17 @@
             </dateAdjustments>
           </adjustableDate>
         </paymentDate>
-<!--FpML-5-1 Renamed from 'premiumAmount' to 'amount'-->
-<!--09-02-2010 - renamed from 'amount' to 'paymentAmount'; moved after 'paymentDate'-->
+<!--FpML-5-x Refactoring - Renamed from 'premiumAmount' to 'amount'-->
+<!--FpML-5-x Refactoring - renamed from 'amount' to 'paymentAmount'; moved after 'paymentDate'-->
         <paymentAmount>
           <currency>USD</currency>
           <amount>372750</amount>
         </paymentAmount>
       </premium>
-<!--10-21-2010 FXWG and Coord apprv: renamed element/type  from cashSettlementTerms/FxCashSettlement  to nonDeliverableSettlement/FxNonDeliverableSettlement to be consistent with FX Single Leg, FX Swap and IRD-->
-      <nonDeliverableSettlement>
+<!--FX Refactoring - renamed element/type  from cashSettlementTerms/FxCashSettlement  to nonDeliverableSettlement/FxCashSettlement-->
+      <cashSettlement>
         <settlementCurrency>USD</settlementCurrency>
-<!--Approved by FXWG 07-08-2010 -  modified 'FxFixing' complex type used in 'nonDeliverableForward' and 'cashSettlementTerms'. Instead of extending 'FxSpotRateSource' complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" that way eliminating dependency on the rate source. 'fxSpotRateSource' Structure is moved after 'fixingDate' . -->
+<!--FX Refactoring -  modified FxFixing complex type used in nonDeliverableSettlement and cashSettlemen. Instead of extending FxSpotRateSource complex type, added an optional element fxSpotRateSource of Type FxSpotRateSource that way eliminating dependency on the rate source. 'fxSpotRateSource' Structure is moved after 'fixingDate' . -->
         <fixing>
           <quotedCurrencyPair>
             <currency1>VEB</currency1>
@@ -123,7 +123,7 @@
             </fixingTime>
           </fxSpotRateSource>
         </fixing>
-      </nonDeliverableSettlement>
+      </cashSettlement>
     </fxOption>
   </trade>
   <party id="party1">

@@ -61,7 +61,7 @@
 <!--invalid rule fx-21: If nonDeliverableSettlement exists, then exchangeRate/forwardPoints must exist -->
 <!-- Removed  <forwardPoints>0.05</forwardPoints> -->
       </exchangeRate>
-<!--10-21-2010 FXWG and Coord apprv: renamed element/type  from nonDeliverableForward/FxCashSettlement  to nonDeliverableSettlement/FxNonDeliverableSettlement to be consistent with FX Options and IRD-->
+<!--FX Refactoring: renamed element/type  from nonDeliverableForward/FxCashSettlement  to nonDeliverableSettlement/FxCashSettlement-->
       <nonDeliverableSettlement>
         <settlementCurrency>USD</settlementCurrency>
         <fixing>
@@ -71,7 +71,7 @@
             <quoteBasis>Currency2PerCurrency1</quoteBasis>
           </quotedCurrencyPair>
           <fixingDate>2002-04-09Z</fixingDate>
-<!--07-08-2010 Refactoring: instead of extending "FxSpotRateSource" complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" that way eliminating dependency on the rate source-->
+<!--FX Refactoring: instead of extending "FxSpotRateSource" complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" that way eliminating dependency on the rate source-->
           <fxSpotRateSource>
             <primaryRateSource>
               <rateSource>Reuters</rateSource>
