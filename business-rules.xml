@@ -210,6 +210,8 @@
 		<!-- 3.0 - -->
 		<addRule name="fx-3"/>
 		<addRule name="fx-27"/>
+		<addRule name="fx-33"/>
+		<addRule name="fx-39"/>
 		
 		<!-- 3.0 - 4.x -->
 		<addRule name="fx-1[OLD]" alias="fx-1"/>
@@ -241,6 +243,27 @@
 		<addRule name="fx-29[OLD]" alias="fx-29"/>
 		<addRule name="fx-30[OLD]" alias="fx-30"/>
 		<addRule name="fx-31[OLD]" alias="fx-31"/>
+		<addRule name="fx-32[OLD]" alias="fx-32"/>
+		<addRule name="fx-34[OLD]" alias="fx-34"/>
+		<addRule name="fx-35[OLD]" alias="fx-35"/>
+		<addRule name="fx-36[OLD]" alias="fx-36"/>
+		<addRule name="fx-37[OLD]" alias="fx-37"/>
+		<addRule name="fx-38[OLD]" alias="fx-38"/>
+		<addRule name="fx-40[OLD]" alias="fx-40"/>
+		<addRule name="fx-41[OLD]" alias="fx-41"/>
+		<addRule name="fx-42[OLD]" alias="fx-42"/>
+		<addRule name="fx-43[OLD]" alias="fx-43"/>
+		<addRule name="fx-44[OLD]" alias="fx-44"/>
+		<addRule name="fx-45[OLD]" alias="fx-45"/>
+		<addRule name="fx-46[OLD]" alias="fx-46"/>
+		<addRule name="fx-47[OLD]" alias="fx-47"/>
+		
+		<!-- 4.2 - 4.x [Contract] -->
+		<addRule name="fx-36b[OLD]" alias="fx-36b"/>
+		<addRule name="fx-37b[OLD]" alias="fx-37b"/>
+		<addRule name="fx-38b[OLD]" alias="fx-38b"/>
+		<addRule name="fx-39b[OLD]" alias="fx-39b"/>
+		<addRule name="fx-40b[OLD]" alias="fx-40b"/>
 
 		<!-- 5.1 - -->
 		<addRule name="fx-8"/>
@@ -256,30 +279,17 @@
 		<addRule name="fx-23"/>
 		<addRule name="fx-26"/>
 		<addRule name="fx-30"/>
-		
-		
-		
-		<addRule name="fx-32"/>
-		<addRule name="fx-33"/>
-		<addRule name="fx-34"/>
-		<addRule name="fx-35"/>
+		<addRule name="fx-32"/>		
 		<addRule name="fx-36"/>
-		<addRule name="fx-36b"/>
-		<addRule name="fx-37"/>
-		<addRule name="fx-37b"/>
 		<addRule name="fx-38"/>
-		<addRule name="fx-38b"/>
-		<addRule name="fx-39"/>
-		<addRule name="fx-39b"/>
 		<addRule name="fx-40"/>
-		<addRule name="fx-40b"/>
-		<addRule name="fx-41"/>
-		<addRule name="fx-42"/>
-		<addRule name="fx-43"/>
-		<addRule name="fx-44"/>
 		<addRule name="fx-45"/>
-		<addRule name="fx-46"/>
-		<addRule name="fx-47"/>
+		<addRule name="fx-48"/>
+		<addRule name="fx-49"/>
+		<addRule name="fx-50"/>
+		<addRule name="fx-51"/>
+		<addRule name="fx-52"/>
+		<addRule name="fx-53"/>
 	</ruleSet>
 	
 	<ruleSet name="SharedRules">
