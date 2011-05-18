@@ -106,8 +106,7 @@
           <calculation>
             <notionalSchedule>
               <notionalStepSchedule>
-<!-- CHANGE modified initial value; zero not allowed! By Chris Simmons.  Date 14 May 2003 -->
-                <initialValue>0</initialValue>
+                <initialValue>50000000</initialValue>
                 <currency>DEM</currency>
               </notionalStepSchedule>
             </notionalSchedule>
@@ -171,7 +170,8 @@
               </notionalStepSchedule>
             </notionalSchedule>
             <fixedRateSchedule>
-              <initialValue>0.06</initialValue>
+              <!-- AJJ: Changed from 0.06 -->
+              <initialValue>0.00</initialValue>
             </fixedRateSchedule>
             <dayCountFraction>30E/360</dayCountFraction>
           </calculation>

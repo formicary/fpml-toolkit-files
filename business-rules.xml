@@ -71,7 +71,6 @@
 		<addRule name="ird-22"/>
 		<addRule name="ird-23"/>
 		<addRule name="ird-24"/>
-		<addRule name="ird-25"/>
 		<addRule name="ird-27"/>
 		<addRule name="ird-29"/>
 		<addRule name="ird-30"/>
@@ -104,11 +103,18 @@
 		<addRule name="ird-28[XLINK]" alias="ird-28"/>
 		<addRule name="ird-46[XLINK]" alias="ird-46"/>
 		<addRule name="ird-47[XLINK]" alias="ird-47"/>
+		
+		<!-- 1.0 - 4.6 -->
+		<addRule name="ird-25[OLD]" alias="ird-25"/>
 
 		<!-- 3.0 - -->		
 		<addRule name="ird-28"/>
 		<addRule name="ird-46"/>
 		<addRule name="ird-47"/>
+		
+		<!-- 4.7 - -->
+		<addRule name="ird-25"/>
+		<addRule name="ird-61"/>
 		
 		<!-- Removed Rules
 		<addRule name="ird-15"/> 
@@ -326,21 +332,39 @@
 	</ruleSet>
 	
 	<ruleSet name="ReferenceRules">
+		<!-- 4.1 - -->
 		<addRule name="ref-1"/>
-		<addRule name="ref-2"/>
+		<addRule name="ref-10"/>
+		
+		<!-- 4.2 - -->
 		<addRule name="ref-3"/>
 		<addRule name="ref-4"/>
-		<!-- Deprecated <addRule name="ref-5"/> -->
-		<addRule name="ref-6"/>
 		<addRule name="ref-7"/>
 		<addRule name="ref-8"/>
-		<addRule name="ref-9"/>
-		<addRule name="ref-10"/>
 		<addRule name="ref-11"/>
 		<addRule name="ref-12"/>
-		<addRule name="ref-13"/>
+		<addRule name="ref-25"/>
+		
+		<!-- 4.2 - 4.4 -->
+		<addRule name="ref-6"/>
+		
+		<!-- 4.2 - 4.x -->
 		<addRule name="ref-14"/>
 		<addRule name="ref-15"/>
+		
+		
+		<!-- 4.3 - -->
+		<addRule name="ref-2"/>
+		<addRule name="ref-9"/>
+		<addRule name="ref-13"/>
+		
+
+
+
+		<!-- Deprecated Rules
+		<addRule name="ref-5"/>
+		-->
+		
 		<addRule name="ref-16"/>
 		<addRule name="ref-17"/>
 		<addRule name="ref-18"/>
@@ -350,7 +374,6 @@
 		<addRule name="ref-22"/>
 		<addRule name="ref-23"/>
 		<addRule name="ref-24"/>
-		<addRule name="ref-25"/>
 		<addRule name="ref-26"/>
 		<addRule name="ref-27"/>
 		<addRule name="ref-28"/>
@@ -467,6 +490,7 @@
 	<ruleSet name="FpMLRules">
 		<addRuleSet name="IrdRules"/>
 		<addRuleSet name="FxRules"/>
+		
 		<addRuleSet name="CdsRules"/>
 		<addRuleSet name="EqdRules"/>
 		<addRuleSet name="SharedRules"/>
