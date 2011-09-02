@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<calendars xmlns="urn:handcoded:calendars" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:handcoded:calendars ../calendars.xsd">
+<calendars xmlns="urn:HandCoded:Calendars" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:HandCoded:Calendars ../calendars.xsd">
 	<!-- UK, London -->
 	<calendar name="GBLO" weekend="SAT/SUN">
 		<fixed name="New Years Day" month="JAN" date="1" roll="FOLLOWING"/>
 		<easter name="Good Friday" offset="-3"/>
 		<easter name="Easter Monday" offset="0"/>
 		<offset name="Early May Bank Holiday" when="FIRST" weekday="MON" month="MAY"/>
-		<offset name="Spring Bank Holiday" to="2011" when="LAST" weekday="MON" month="MAY"/>
-		<fixed name="Spring Bank Holiday" from="2011" to="2011" date="4" month="JUN"/>
+		<offset name="Spring Bank Holiday" until="2011" when="LAST" weekday="MON" month="MAY"/>
+		<fixed name="Spring Bank Holiday" from="2011" until="2011" date="4" month="JUN"/>
 		<offset name="Spring Bank Holiday" from="2013" when="LAST" weekday="MON" month="MAY"/>
 		<offset name="Summer Bank Holiday" when="LAST" weekday="MON" month="AUG"/>
 		<fixed name="Christmas Day" month="DEC" date="25" roll="FOLLOWING"/>
@@ -16,7 +16,7 @@
 		<fixed name="Millenium Eve" month="DEC" date="31" from="1999" until="1999"/>
 		<fixed name="Golden Jubilee Bank Holiday" month="JUN" date="3" from="2002" until="2002"/>
 		<fixed name="Special Spring Bank Holiday" month="JUN" date="4" from="2002" until="2002"/>
-		<fixed name="Queen's Diamond Jubilee" from="2011" to="2011" date="5" month="JUN"/>
+		<fixed name="Queen's Diamond Jubilee" from="2012" until="2012" date="5" month="JUN"/>
 	</calendar>
 	<!-- US, New York -->
 	<calendar name="USNY" weekend="SAT/SUN">

@@ -13,8 +13,8 @@
   == LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING
   == OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
   -->
-<xs:schema xmlns="urn:handcoded:calendars" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:handcoded:calendars" elementFormDefault="qualified" attributeFormDefault="unqualified">
-	<xs:element name="calendars">
+<xs:schema xmlns="urn:HandCoded:Calendars" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:HandCoded:Calendars" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="calendars" type="Calendars">
 		<xs:annotation>
 			<xs:documentation>A collection of calendar definitions</xs:documentation>
 		</xs:annotation>
@@ -24,7 +24,7 @@
 			<xs:documentation>Defines a collection of calendars</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="calendar" type="Calendar"/>
+			<xs:element name="calendar" type="Calendar" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Calendar">
@@ -123,7 +123,7 @@
 				<xs:documentation>The first year in which the holiday occurs. Defaults to 1901.</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
-		<xs:attribute name="to" type="xs:gYear" use="optional" default="2099">
+		<xs:attribute name="until" type="xs:gYear" use="optional" default="2099">
 			<xs:annotation>
 				<xs:documentation>The last year in which the holiday occurs. Defaults to 2099.</xs:documentation>
 			</xs:annotation>

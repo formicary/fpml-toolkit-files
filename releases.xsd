@@ -14,7 +14,7 @@
   == LIABLE FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING
   == OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
   -->
-<xs:schema xmlns="urn:handcoded:releases" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:handcoded:releases" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+<xs:schema xmlns="urn:HandCoded:Releases" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:HandCoded:Releases" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
 	<xs:element name="specifications" type="Specifications">
 		<xs:annotation>
 			<xs:documentation>The root element containing all the specification meta-data</xs:documentation>

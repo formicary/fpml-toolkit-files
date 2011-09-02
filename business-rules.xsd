@@ -3,7 +3,7 @@
 <!-- Copyright (C),2008 HandCoded Software Ltd.
   == All rights reserved.
   -->
-<xs:schema xmlns="http://www.handcoded.com/BusinessRules" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.handcoded.com/BusinessRules" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1-0">
+<xs:schema xmlns="urn:HandCoded:BusinessRules" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:HandCoded:BusinessRules" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1-0">
 	<xs:simpleType name="Platform">
 		<xs:annotation>
 			<xs:documentation>A supported application platform</xs:documentation>

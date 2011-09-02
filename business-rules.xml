@@ -14,9 +14,9 @@
   == OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
   -->
 <rules
- xmlns="http://www.handcoded.com/BusinessRules"
- xsi:schemaLocation="http://www.handcoded.com/BusinessRules business-rules.xsd"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ xmlns="urn:HandCoded:BusinessRules"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="urn:HandCoded:BusinessRules business-rules.xsd">
  
 	<!-- Load Java classes that implement the standard rule sets -->
 	<forceLoad platform="Java" class="com.handcoded.fpml.validation.IrdRules"/>
@@ -278,6 +278,7 @@
 		<addRule name="fx-11"/>
 		<addRule name="fx-12"/>
 		<addRule name="fx-14"/>
+		<addRule name="fx-18"/>
 		<addRule name="fx-19"/>
 		<addRule name="fx-20"/>
 		<addRule name="fx-21"/>

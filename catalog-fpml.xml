@@ -14,6 +14,9 @@
   == OR DISTRIBUTING THIS SOFTWARE OR ITS DERIVATIVES.
   -->
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:entity:xmlns:xml:catalog catalog.xsd">
+
+	<nextCatalog catalog="catalog-toolkit.xml"/>
+
 	<!--
  	  == The catalog rules for DTD based specifications are straight forward
  	  == as the XML parser entity resolver is passed the public name from
@@ -54,10 +57,12 @@
 	  == Standard extensions to FpML 4-2 for non-derivative products.
 	  -->
 	<uri name="http://www.fpml.org/extensions" uri="schemas/fpml-ext1-0/fpml-extensions-1-0.xsd"/>
-	
-	<!--
-	  == Mapping for data files used by the toolkit
-	  -->
-	<uri name="urn:handcoded:releases" uri="releases.xsd"/>
-	<uri name="urn:handcoded:fpml-releases" uri="fpml-releases.xsd"/>
+
+	<!-- 
+	  == HandCoded extensions for errors and messaging are provided in
+	  == this schema.
+  	  --> 
+  	<uri name="http://www.handcoded.com/spec/2005/Acme-1-0" uri="schemas/acme1-0/acme-1-0.xsd" /> 
+  	<uri name="http://www.handcoded.com/spec/2007/Acme-2-0" uri="schemas/acme2-0/acme-2-0.xsd" /> 
+  	
 </catalog>

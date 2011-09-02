@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classification xmlns="urn:HandCoded:Classification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:HandCoded:Classification classification.xsd">
+	<!-- -->
+	<abstractCategory id="DocumentForm" name="DocumentForm"/>
+	<abstractCategory id="ShortForm" name="ShortForm" superClasses="DocumentForm"/>
+	<abstractCategory id="LongForm" name="LongForm" superClasses="DocumentForm"/>
+	<!-- -->
+	<abstractCategory id="AssetClass" name="AssetClass"/>
+	<abstractCategory id="InterestRate" name="InterestRate" superClasses="AssetClass"/>
+	<abstractCategory id="Credit" name="Credit" superClasses="AssetClass"/>
+	<abstractCategory id="Equity" name="Equity" superClasses="AssetClass"/>
+	<abstractCategory id="ForeignExchange" name="ForeignExchange" superClasses="AssetClass"/>
+	<abstractCategory id="Commodity" name="Commodity" superClasses="AssetClass"/>
+	<!-- -->
+	<abstractCategory id="InstrumentType" name="InstrumentType"/>
+	<abstractCategory id="Securities" name="Securities" superClasses="InstrumentType"/>
+	<abstractCategory id="Cash" name="Cash" superClasses="InstrumentType"/>
+	<abstractCategory id="ExchangeTraded" name="ExchangeTraded" superClasses="InstrumentType"/>
+	<abstractCategory id="OtcDerivative" name="OtcDerivative" superClasses="InstrumentType"/>
+	<!-- -->
+	<abstractCategory id="ProductType" name="ProductType"/>
+	<abstractCategory id="StructuredProduct" name="StructuredProduct" superClasses="ProductType"/>
+	<abstractCategory id="Payment" name="Payment" superClasses="ProductType"/>
+	<abstractCategory id="Exchange" name="Exchange" superClasses="ProductType"/>
+	<abstractCategory id="Derivative" name="Derivative" superClasses="ProductType"/>
+	<abstractCategory id="Future" name="Future" superClasses="Derivative"/>
+	<abstractCategory id="Forward" name="Forward" superClasses="Derivative"/>
+	<abstractCategory id="Swap" name="Swap" superClasses="Derivative"/>
+	<abstractCategory id="Option" name="Option" superClasses="Derivative"/>
+	<abstractCategory id="OptionStrategy" name="OptionStrategy" superClasses="StructuredProduct"/>
+	<!-- -->
+	<abstractCategory id="FpML" name="FpML"/>
+	<refinableCategory id="BulletPayment" name="BulletPayment" superClasses="FpML Cash Payment LongForm">
+		<xpath test="bulletPayment"/>
+	</refinableCategory>
+	<refinableCategory id="Fx" name="Fx" superClasses="FpML ForeignExchange Exchange LongForm">
+		<xpath test="fxSingleLeg"/>
+	</refinableCategory>
+	<refinableCategory id="FxSpot" name="FxSpot" superClasses="Fx">
+		<xpath test="count(fxSingleLeg/exchangeRate/forwardPoints) = 0"/>
+	</refinableCategory>
+	<refinableCategory id="FxForward" name="FxForward" superClasses="Fx">
+		<xpath test="fxSingleLeg/exchangeRate/forwardPoints"/>
+	</refinableCategory>
+	<refinableCategory name="FxSwap" superClasses="FpML ForeignExchange Swap LongForm">
+		<xpath test="fxSwap"/>
+	</refinableCategory>
+	<abstractCategory id="FxOption" name="FxOption" superClasses="FpML ForeignExchange Option LongForm"/>
+	<refinableCategory id="FxSimpleOption" name="FxSimpleOption" superClasses="FxOption">
+		<xpath test="fxSimpleOption or (fxOption and count(fxOption/features) = 0)"/>
+	</refinableCategory>
+	<refinableCategory id="FxDigitalOption" name="FxDigitalOption" superClasses="FxOption">
+		<xpath test="fxDigitalOption"/>
+	</refinableCategory>
+	<refinableCategory id="FxBarrierOption" name="FxBarrierOption" superClasses="FxOption">
+		<xpath test="fxBarrierOption or (fxOption and fxOption/features/barrier)"/>
+	</refinableCategory>
+	<refinableCategory id="FxAsianOption" name="FxAsianOption" superClasses="FxOption">
+		<xpath test="fxAverageRateOption or (fxOption and fxOption/features/asian)"/>
+	</refinableCategory>
+	<refinableCategory id="FxOptionStrategy" name="FxOptionStrategy" superClasses="FpML ForeignExchange OptionStrategy LongForm">
+		<xpath test="count(strategy/fxSimpleOption) + count(strategy/fxDigitalOption) + count(strategy/fxBarrierOption) + count(strategy/fxAverageRateOption) + count(strategy/fxOption) &gt; 0"/>
+	</refinableCategory>
+	<refinableCategory id="InterestRateSwap" name="InterestRateSwap" superClasses="FpML InterestRate Swap LongForm">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="//swap"/>
+			</then>
+			<else>
+				<xpath test="//dyn:swap"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory id="CrossCurrencySwap" name="CrossCurrencySwap" superClasses="InterestRateSwap">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="//swap/swapStream[position() &gt; 1][.//notionalSchedule/notionalStepSchedule/currency != ../swapStream[1]//notionalSchedule/notionalStepSchedule/currency]"/>
+			</then>
+			<else>
+				<xpath test="//dyn:swap/dyn:swapStream[position() &gt; 1][.//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency != ../dyn:swapStream[1]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency]"/>
+			</else>
+		</if>
+		</refinableCategory>
+	<refinableCategory id="ForwardRateAgreement" name="ForwardRateAgreement" superClasses="FpML InterestRate Exchange LongForm">
+		<xpath test="fra"/>
+	</refinableCategory>
+	<refinableCategory id="InterestRateCap" name="InterestRateCap" superClasses="FpML InterestRate Option LongForm">
+		<xpath test="capFloor/capFloorStream/calculationPeriodAmount/calculation/floatingRateCalculation/capRateSchedule"/>
+	</refinableCategory>
+	<refinableCategory id="InterestRateFloor" name="InterestRateFloor" superClasses="FpML InterestRate Option LongForm">
+		<xpath test="capFloor/capFloorStream/calculationPeriodAmount/calculation/floatingRateCalculation/floorRateSchedule"/>
+	</refinableCategory>
+	<refinableCategory id="InterestRateCollar" name="InterestRateCollar" superClasses="InterestRateCap InterestRateFloor">
+		<xpath test="capFloor/capFloorStream/calculationPeriodAmount/calculation/floatingRateCalculation/capRateSchedule and capFloor/capFloorStream/calculationPeriodAmount/calculation/floatingRateCalculation/floorRateSchedule"/>
+	</refinableCategory>	
+	<refinableCategory id="InterestRateSwaption" name="InterestRateSwaption" superClasses="FpML InterestRate Option LongForm">
+		<xpath test="swaption"/>
+	</refinableCategory>
+	<refinableCategory id="TermDeposit" name="TermDeposit" superClasses="FpML InterestRate LongForm">
+		<xpath test="termDeposit"/>
+	</refinableCategory>
+	<refinableCategory id="EquityOption" name="EquityOption" superClasses="FpML Equity Option LongForm">
+		<xpath test="equityOption"/>
+	</refinableCategory>
+</classification>

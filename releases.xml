@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specifications xmlns="urn:handcoded:releases" xmlns:fpml="urn:handcoded:fpml-releases" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:handcoded:releases releases.xsd urn:handcoded:fpml-releases fpml-releases.xsd">
+<specifications xmlns="urn:HandCoded:Releases" xmlns:fpml="urn:HandCoded:FpML-Releases" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:HandCoded:Releases releases.xsd urn:HandCoded:FpML-Releases fpml-releases.xsd">
 	<specification>
 		<name>DSig</name>
 		<schemaRelease id="dsig-1-0">
@@ -857,7 +857,7 @@
 			<fpml:schemes>files/data/schemes3-0.xml</fpml:schemes>
 			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
 		</dtdRelease>
-		<schemaRelease xsi:type="fpml:SchemaRelease">
+		<schemaRelease id="fpml-4-0" xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
 			<classLoader platform=".Net" class="HandCoded.FpML.Meta.FpMLSchemaReleaseLoader"/>
 			<version>4-0</version>
@@ -1133,7 +1133,7 @@
 			<fpml:schemes>files/data/schemes4-1.xml</fpml:schemes>
 			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
-		<schemaRelease xsi:type="fpml:SchemaRelease">
+		<schemaRelease id="fpml-4-2" xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
 			<classLoader platform=".Net" class="HandCoded.FpML.Meta.FpMLSchemaReleaseLoader"/>
 			<version>4-2</version>
@@ -6218,6 +6218,24 @@
 			</fpml:schemeDefault>
 			<fpml:schemes>files/data/schemes5-2.xml</fpml:schemes>
 			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+		</schemaRelease>
+	</specification>
+	<!-- HandCoded ACME extensions: Used by the HandCoded WebServices -->
+	<specification>
+		<name>Acme</name>
+		<schemaRelease id="acme-1-0">
+			<version>1-0</version>
+			<namespaceUri>http://www.handcoded.com/spec/2005/Acme-1-0</namespaceUri>
+			<schemaLocation>acme-1-0.xsd</schemaLocation>
+			<preferredPrefix>acme</preferredPrefix>
+			<import href="fpml-4-0"/>
+		</schemaRelease>
+		<schemaRelease id="acme-2-0">
+			<version>2-0</version>
+			<namespaceUri>http://www.handcoded.com/spec/2007/Acme-2-0</namespaceUri>
+			<schemaLocation>acme-2-0.xsd</schemaLocation>
+			<preferredPrefix>acme</preferredPrefix>
+			<import href="fpml-4-2"/>
 		</schemaRelease>
 	</specification>
 </specifications>
