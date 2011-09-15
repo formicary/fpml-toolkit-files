@@ -4402,7 +4402,7 @@
 			<rootElement>requestMarginRetracted</rootElement>
 			<rootElement>requestPortfolio</rootElement>
 			<rootElement>requestPositionReport</rootElement>
-			<rootElement>reDSIGquestValuationReport</rootElement>
+			<rootElement>requestValuationReport</rootElement>
 			<rootElement>resetReport</rootElement>
 			<rootElement>resetReportAcknowledgement</rootElement>
 			<rootElement>resetReportException</rootElement>
