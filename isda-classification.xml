@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classification xmlns="urn:HandCoded:Classification" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:HandCoded:Classification classification.xsd">
+	<!--
+		ISDA Working Group Product Taxonomies (as at 2011-09-13)
+		Copyright (C),2011 HandCoded Software Ltd.
+		All rights reserved.
+	-->
+	<abstractCategory id="isda" name="{ISDA}"/>
+	
+	<!-- Credit -->
+	<abstractCategory id="credit" name="{CREDIT}" superClasses="isda"/>
+	
+	<!-- Rates -->
+	<abstractCategory id="rates" name="{RATES}" superClasses="isda"/>
+	<refinableCategory id="rates-exotic" name="RATES-EXOTIC" superClasses="rates">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="product/swap | product/fra | swap | fra | capFloor | swaption"/>
+			</then>
+			<else>
+				<xpath test="dyn:swap | dyn:fra | dyn:capFloor | dyn:bondOption | dyn:swaption "/>
+			</else>
+		</if>
+	</refinableCategory>
+	<abstractCategory id="rates-irs" name="{RATES-IR SWAP}" superClasses="rates-exotic"/>
+	<refinableCategory name="RATES-IR SWAP-FIXED/FIXED" superClasses="rates-irs">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="count(//swap/swapStream) = 2 and count(//swap/swapStream/resetDates) = 0 and //swap [swapStream[1]//notionalSchedule/notionalStepSchedule/currency = swapStream[2]//notionalSchedule/notionalStepSchedule/currency]"/>
+			</then>
+			<else>
+				<xpath test="count(dyn:swap/dyn:swapStream) = 2 and count(//dyn:swap/dyn:swapStream/dyn:resetDates) = 0 and count(dyn:swap/dyn:swapStream/dyn:calculationPeriodAmount/dyn:calculation/dyn:inflationRateCalculation) = 0 and count(dyn:swap/dyn:swapStream [dyn:calculationPeriodDates/dyn:calculationPeriodFrequency/dyn:period = 'T']) = 0 and //dyn:swap [dyn:swapStream[1]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency = dyn:swapStream[2]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency]"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-IR SWAP-FIXED/FLOAT" superClasses="rates-irs">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="count(//swap/swapStream) = 2 and count(//swap/swapStream/resetDates) = 1 and
+				//swap [swapStream[1]//notionalSchedule/notionalStepSchedule/currency = swapStream[2]//notionalSchedule/notionalStepSchedule/currency]"/>
+			</then>
+			<else>
+				<xpath test="count(dyn:swap/dyn:swapStream) = 2 and count(//dyn:swap/dyn:swapStream/dyn:resetDates) = 1 and count(dyn:swap/dyn:swapStream/dyn:calculationPeriodAmount/dyn:calculation/dyn:inflationRateCalculation) = 0 and count(dyn:swap/dyn:swapStream [dyn:calculationPeriodDates/dyn:calculationPeriodFrequency/dyn:period = 'T']) = 0 and //dyn:swap [dyn:swapStream[1]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency = dyn:swapStream[2]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency]"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-IR SWAP-BASIS" superClasses="rates-irs">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="count(//swap/swapStream) = 2 and count(//swap/swapStream/resetDates) = 2 and
+				//swap [swapStream[1]//notionalSchedule/notionalStepSchedule/currency = swapStream[2]//notionalSchedule/notionalStepSchedule/currency]"/>
+			</then>
+			<else>
+				<xpath test="count(dyn:swap/dyn:swapStream) = 2 and count(//dyn:swap/dyn:swapStream/dyn:resetDates) = 2 and count(dyn:swap/dyn:swapStream/dyn:calculationPeriodAmount/dyn:calculation/dyn:inflationRateCalculation) = 0 and count(dyn:swap/dyn:swapStream [dyn:calculationPeriodDates/dyn:calculationPeriodFrequency/dyn:period = 'T']) = 0 and //dyn:swap [dyn:swapStream[1]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency = dyn:swapStream[2]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency]"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-IR SWAP-INFLATION" superClasses="rates-irs">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="false()"/>
+			</then>
+			<else>
+				<xpath test="count(dyn:swap/dyn:swapStream) = 2 and dyn:swap[count(dyn:swapStream/dyn:calculationPeriodAmount/dyn:calculation/dyn:inflationRateCalculation) &gt; 0]"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-IR SWAP-OIS" superClasses="rates-irs">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="false()"/>
+			</then>
+			<else>
+				<xpath test="count(dyn:swap/dyn:swapStream) = 2 and count(dyn:swap/dyn:swapStream [dyn:calculationPeriodDates/dyn:calculationPeriodFrequency/dyn:period = 'T']) = 2"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-FRA" superClasses="rates-exotic">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="product/fra | fra"/>
+			</then>
+			<else>
+				<xpath test="dyn:fra"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-CAP/FLOOR" superClasses="rates-exotic">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="capFloor/capFloorStream"/>
+			</then>
+			<else>
+				<xpath test="dyn:capFloor/dyn:capFloorStream"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<abstractCategory id="rates-xccy" name="{RATES-XCCY SWAP}" superClasses="rates-exotic"/>
+	<refinableCategory name="RATES-XCCY SWAP-FIXED/FIXED" superClasses="rates-xccy">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="count(//swap/swapStream) = 2 and count(//swap/swapStream/resetDates) = 0 and
+				//swap [swapStream[1]//notionalSchedule/notionalStepSchedule/currency != swapStream[2]//notionalSchedule/notionalStepSchedule/currency]"/>
+			</then>
+			<else>
+				<xpath test="count(//dyn:swap/dyn:swapStream) = 2 and count(//dyn:swap/dyn:swapStream/dyn:resetDates) = 0 and //dyn:swap [dyn:swapStream[1]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency != dyn:swapStream[2]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency]"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-XCCY SWAP-FIXED/FLOAT" superClasses="rates-xccy">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="count(//swap/swapStream) = 2 and count(//swap/swapStream/resetDates) = 1 and
+				//swap [swapStream[1]//notionalSchedule/notionalStepSchedule/currency != swapStream[2]//notionalSchedule/notionalStepSchedule/currency]"/>
+			</then>
+			<else>
+				<xpath test="count(//dyn:swap/dyn:swapStream) = 2 and count(//dyn:swap/dyn:swapStream/dyn:resetDates) = 1 and //dyn:swap [dyn:swapStream[1]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency != dyn:swapStream[2]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency]"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-XCCY SWAP-BASIS" superClasses="rates-xccy">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="count(//swap/swapStream) = 2 and count(//swap/swapStream/resetDates) = 2 and
+				//swap [swapStream[1]//notionalSchedule/notionalStepSchedule/currency != swapStream[2]//notionalSchedule/notionalStepSchedule/currency]"/>
+			</then>
+			<else>
+				<xpath test="count(//dyn:swap/dyn:swapStream) = 2 and count(//dyn:swap/dyn:swapStream/dyn:resetDates) = 2 and //dyn:swap [dyn:swapStream[1]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency != dyn:swapStream[2]//dyn:notionalSchedule/dyn:notionalStepSchedule/dyn:currency]"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<abstractCategory id="rates-option" name="{RATES-OPTION}" superClasses="rates-exotic"/>
+	<refinableCategory name="RATES-OPTIONS-DEBT OPTION" superClasses="rates-option">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="false ()"/>
+			</then>
+			<else>
+				<xpath test="dyn:bondOption"/>
+			</else>
+		</if>
+	</refinableCategory>
+	<refinableCategory name="RATES-OPTIONS-SWAPTION" superClasses="rates-option">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="swaption"/>
+			</then>
+			<else>
+				<xpath test="dyn:swaption"/>
+			</else>
+		</if>
+	</refinableCategory>
+	
+	<!-- Equities -->
+	<abstractCategory id="equity" name="{EQUITY}" superClasses="isda"/>
+	
+	<!-- FX -->
+	<abstractCategory id="fx" name="{FX}" superClasses="isda"/>
+	<refinableCategory name="FX-SPOT" superClasses="fx">
+		<if>
+			<test>
+				<range specification="FpML" lower="1-0" upper="3-0"/>
+			</test>
+			<then>
+				<xpath test="fxSingleLeg and count(fxSingleLeg/exchangeRate/forwardPoints) = 0"/>
+			</then>
+			<else>
+				<xpath test="dyn:fxSingleLeg and count(dyn:fxSingleLeg/dyn:exchangeRate/dyn:forwardPoints) = 0"/>
+			</else>
+		</if>
+	</refinableCategory>
+	
+	<!-- Commodities -->
+	<abstractCategory id="commodity" name="{COMMODITY}" superClasses="isda"/>
+
+</classification>
