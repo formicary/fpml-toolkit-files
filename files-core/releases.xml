@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specifications xmlns="urn:HandCoded:Releases" xmlns:fpml="urn:HandCoded:FpML-Releases" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:HandCoded:Releases releases.xsd urn:HandCoded:FpML-Releases fpml-releases.xsd">
+<specifications xmlns="urn:HandCoded:Releases" xmlns:fpml="urn:HandCoded:FpML-Releases" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:HandCoded:Releases releases.xsd urn:HandCoded:FpML-Releases ../files-fpml/fpml-releases.xsd">
 	<specification>
 		<name>DSig</name>
 		<schemaRelease id="dsig-1-0">
@@ -190,8 +190,8 @@
 				<fpml:attribute>weeklyRollConventionScheme</fpml:attribute>
 				<fpml:default>weeklyRollConventionSchemeDefault</fpml:default>
 			</fpml:defaultAttribute>
-			<fpml:schemes>files/data/schemes1-0.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes1-0.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</dtdRelease>
 		<dtdRelease xsi:type="fpml:DtdRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLDTDReleaseLoader"/>
@@ -420,8 +420,8 @@
 				<fpml:attribute>weeklyRollConventionScheme</fpml:attribute>
 				<fpml:default>weeklyRollConventionSchemeDefault</fpml:default>
 			</fpml:defaultAttribute>
-			<fpml:schemes>files/data/schemes2-0.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes2-0.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</dtdRelease>
 		<dtdRelease xsi:type="fpml:DtdRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLDTDReleaseLoader"/>
@@ -854,8 +854,8 @@
 				<fpml:attribute>weeklyRollConventionScheme</fpml:attribute>
 				<fpml:default>weeklyRollConventionSchemeDefault</fpml:default>
 			</fpml:defaultAttribute>
-			<fpml:schemes>files/data/schemes3-0.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes3-0.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</dtdRelease>
 		<schemaRelease id="fpml-4-0" xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -950,8 +950,8 @@
 				<fpml:attribute>settlementPriceSourceScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/spec/2002/settlement-price-source-1-0</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-0.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-0.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -1130,8 +1130,8 @@
 				<fpml:attribute>valuationSetDetailScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/spec/2004/valuation-set-detail-1-0</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-1.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-1.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease id="fpml-4-2" xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -1330,8 +1330,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status-1-0</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-2.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-2.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -1550,8 +1550,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status-1-0</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-3.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-3.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -1774,8 +1774,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status-1-0</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-4.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-4.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -2030,8 +2030,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-5.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-5.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -2330,8 +2330,8 @@
 				<fpml:attribute>tzLocationScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/external/tzdatabase</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-6.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-6.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -2642,8 +2642,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-7.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-7.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -2958,8 +2958,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-8.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-8.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -3274,8 +3274,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes4-9.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes4-9.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -3627,8 +3627,8 @@
 				<fpml:attribute>timezoneLocationScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/external/tzdatabase</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-0.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-0.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -3996,8 +3996,8 @@
 				<fpml:attribute>timezoneLocationScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/external/tzdatabase</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-0.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-0.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -4349,8 +4349,8 @@
 				<fpml:attribute>timezoneLocationScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/external/tzdatabase</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-1.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-1.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -4741,8 +4741,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-1.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-1.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -5144,8 +5144,8 @@
 				<fpml:attribute>timezoneLocationScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/external/tzdatabase</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-2.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-2.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -5591,8 +5591,8 @@
 				<fpml:attribute>tradeCashflowsStatusScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/trade-cashflows-status</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-2.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-2.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -5952,8 +5952,8 @@
 				<fpml:attribute>timezoneLocationScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/external/tzdatabase</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-2.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-2.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 		<schemaRelease xsi:type="fpml:SchemaRelease">
 			<classLoader platform="Java" class="com.handcoded.fpml.meta.FpMLSchemaReleaseLoader"/>
@@ -6216,8 +6216,8 @@
 				<fpml:attribute>timezoneLocationScheme</fpml:attribute>
 				<fpml:schemeUri>http://www.fpml.org/coding-scheme/external/tzdatabase</fpml:schemeUri>
 			</fpml:schemeDefault>
-			<fpml:schemes>files/data/schemes5-2.xml</fpml:schemes>
-			<fpml:schemes>files/data/additionalDefinitions.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/schemes5-2.xml</fpml:schemes>
+			<fpml:schemes>files-fpml/data/additionalDefinitions.xml</fpml:schemes>
 		</schemaRelease>
 	</specification>
 	<!-- HandCoded ACME extensions: Used by the HandCoded WebServices -->
