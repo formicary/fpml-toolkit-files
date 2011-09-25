@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/swaps/trade-id">DEUTDEFF</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-01-23Z</tradeDate>
+      <tradeDate>2002-01-23</tradeDate>
     </tradeHeader>
     <fxSwap>
       <productType>FxSwap</productType>
@@ -52,8 +52,8 @@
           </paymentAmount>
         </exchangedCurrency2>
 <!--invalid fx-50: then currency1ValueDate must not be equal to currency2ValueDate. currency1ValueDate should be 2002-01-25Z -->
-        <currency1ValueDate>2002-02-25Z</currency1ValueDate>
-        <currency2ValueDate>2002-02-25Z</currency2ValueDate>
+        <currency1ValueDate>2002-02-25</currency1ValueDate>
+        <currency2ValueDate>2002-02-25</currency2ValueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>
@@ -80,7 +80,7 @@
             <amount>15000000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-        <valueDate>2002-02-25Z</valueDate>
+        <valueDate>2002-02-25</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>

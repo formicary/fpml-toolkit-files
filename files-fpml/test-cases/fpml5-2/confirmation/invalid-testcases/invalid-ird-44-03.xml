@@ -34,7 +34,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id">123</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-04-29Z</tradeDate>
+      <tradeDate>2001-04-29</tradeDate>
     </tradeHeader>
     <swap>
       <swapStream>
@@ -42,13 +42,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="CalcPeriodDates0">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters0">
@@ -100,13 +100,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="CalcPeriodDates1">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters1">
@@ -184,7 +184,7 @@
         <mandatoryEarlyTermination>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Added id attribute -->
           <mandatoryEarlyTerminationDate id="mandatoryEarlyTerminationDate0">
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -220,9 +220,9 @@
           </cashSettlement>
 <!-- CHANGE inserted the element below + children. Dates break ird-64. Chris Simmons 15 May 2003 -->
           <mandatoryEarlyTerminationAdjustedDates>
-            <adjustedEarlyTerminationDate>2001-09-10Z</adjustedEarlyTerminationDate>
-            <adjustedCashSettlementValuationDate>2001-09-20Z</adjustedCashSettlementValuationDate>
-            <adjustedCashSettlementPaymentDate>2001-09-05Z</adjustedCashSettlementPaymentDate>
+            <adjustedEarlyTerminationDate>2001-09-10</adjustedEarlyTerminationDate>
+            <adjustedCashSettlementValuationDate>2001-09-20</adjustedCashSettlementValuationDate>
+            <adjustedCashSettlementPaymentDate>2001-09-05</adjustedCashSettlementPaymentDate>
           </mandatoryEarlyTerminationAdjustedDates>
         </mandatoryEarlyTermination>
       </earlyTerminationProvision>

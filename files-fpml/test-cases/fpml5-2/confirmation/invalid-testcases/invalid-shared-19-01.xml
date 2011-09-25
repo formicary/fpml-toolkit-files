@@ -19,12 +19,12 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.partyA.com/trade-id">1234B6</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2005-11-03+05:00</tradeDate>
+      <tradeDate>2005-11-03</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <scheduledTerminationDate>
-          <unadjustedDate>2010-03-20+05:00</unadjustedDate>
+          <unadjustedDate>2010-03-20</unadjustedDate>
         </scheduledTerminationDate>
         <buyerPartyReference href="party2" />
         <sellerPartyReference href="party1" />
@@ -32,7 +32,7 @@
           <indexName>Dow Jones iTraxx Europe Consumers Series 2 Version 1</indexName>
           <indexSeries>2</indexSeries>
           <indexAnnexVersion>1</indexAnnexVersion>
-          <indexAnnexDate>2005-11-01+05:00</indexAnnexDate>
+          <indexAnnexDate>2005-11-01</indexAnnexDate>
           <indexAnnexSource>Publisher</indexAnnexSource>
           <excludedReferenceEntity>
             <entityName>TESCO PLC</entityName>
@@ -60,11 +60,11 @@
       <masterAgreement>
         <masterAgreementType>ISDA</masterAgreementType>
         <masterAgreementVersion>1992</masterAgreementVersion>
-        <masterAgreementDate>2000-01-01+05:00</masterAgreementDate>
+        <masterAgreementDate>2000-01-01</masterAgreementDate>
       </masterAgreement>
       <contractualTermsSupplement>
         <type contractualSupplementScheme="http://www.fpml.org/coding-scheme/contractual-supplement-4-0">iTraxxEuropeDealer</type>
-        <publicationDate>2005-09-19+05:00</publicationDate>
+        <publicationDate>2005-09-19</publicationDate>
       </contractualTermsSupplement>
     </documentation>
   </trade>

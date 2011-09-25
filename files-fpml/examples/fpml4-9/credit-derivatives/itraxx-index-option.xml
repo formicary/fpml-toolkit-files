@@ -94,8 +94,14 @@
                   <businessDayConvention>NONE</businessDayConvention>
                </dateAdjustments>
                <indexReferenceInformation>
-                  <indexName indexNameScheme="123">iTraxx Europe Series 5 Version 1</indexName>
-                  <indexId indexIdScheme="CUSIP">ExampleCUSIP4</indexId>
+                  <indexName>Dow Jones iTraxx Europe Consumers Series 2 Version 1</indexName>
+                  <indexSeries>2</indexSeries>
+                  <indexAnnexVersion>1</indexAnnexVersion>
+                  <indexAnnexDate>2006-11-01Z</indexAnnexDate>
+                  <indexAnnexSource>Publisher</indexAnnexSource>
+                  <excludedReferenceEntity>
+                     <entityName>TESCO PLC</entityName>
+                  </excludedReferenceEntity>
                </indexReferenceInformation>
             </generalTerms>
             <feeLeg>

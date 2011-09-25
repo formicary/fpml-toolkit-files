@@ -18,7 +18,7 @@
   <correlationId correlationIdScheme="http://www.recserv.com/cid">CID12345</correlationId>
   <portfolio>
     <portfolioName>fundPortfolio1</portfolioName>
-    <asOfDate>2006-04-25Z</asOfDate>
+    <asOfDate>2006-04-25</asOfDate>
     <definingParty href="dealer" />
     <matchingParty href="fund" />
   </portfolio>

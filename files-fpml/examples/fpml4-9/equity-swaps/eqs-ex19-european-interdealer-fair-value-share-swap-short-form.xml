@@ -8,7 +8,7 @@
       <messageId messageIdScheme="perFpMLReqmt">123456-002700000000001</messageId>
       <sentBy>DTCC00006441</sentBy>
       <sendTo>DTCC00006440</sendTo>
-      <creationTimestamp>2009-09-10T18:08:40.335-05:00</creationTimestamp>
+      <creationTimestamp>2010-09-10T18:08:40.335-05:00</creationTimestamp>
    </header>
    <trade>
       <tradeHeader>
@@ -20,7 +20,7 @@
             <partyReference href="party2"/>
             <tradeId tradeIdScheme="http://www.partyB.com/trade-id-1-0">299442</tradeId>
          </partyTradeIdentifier>
-         <tradeDate>2009-09-10</tradeDate>
+         <tradeDate>2010-09-10</tradeDate>
       </tradeHeader>
       <equitySwapTransactionSupplement>
          <productType>EquityShareSwap</productType>
@@ -29,7 +29,7 @@
             <receiverPartyReference href="party2"/>
             <effectiveDate id="equityEffectiveDate">
                <adjustableDate>
-                  <unadjustedDate>2009-10-12</unadjustedDate>
+                  <unadjustedDate>2010-10-12</unadjustedDate>
                   <dateAdjustments>
                      <businessDayConvention>NONE</businessDayConvention>
                   </dateAdjustments>
@@ -64,13 +64,13 @@
                </initialPrice>
                <notionalReset>true</notionalReset>
                <valuationPriceInterim>
-                  <determinationMethod>PriceAtValuation</determinationMethod>
+                  <determinationMethod>ValuationTime</determinationMethod>
                   <valuationRules id="equityValuationDates">
                      <valuationDates>
                         <periodicDates>
                            <calculationStartDate>
                               <adjustableDate>
-                                 <unadjustedDate>2009-10-12</unadjustedDate>
+                                 <unadjustedDate>2010-10-12</unadjustedDate>
                                  <dateAdjustments>
                                     <businessDayConvention>NotApplicable</businessDayConvention>
                                  </dateAdjustments>
@@ -78,7 +78,7 @@
                            </calculationStartDate>
                            <calculationEndDate>
                               <adjustableDate>
-                                 <unadjustedDate>2010-08-12</unadjustedDate>
+                                 <unadjustedDate>2011-08-12</unadjustedDate>
                                  <dateAdjustments>
                                     <businessDayConvention>NotApplicable</businessDayConvention>
                                  </dateAdjustments>
@@ -101,7 +101,7 @@
                   </valuationRules>
                </valuationPriceInterim>
                <valuationPriceFinal>
-                  <determinationMethod>PriceAtValuation</determinationMethod>
+                  <determinationMethod>ValuationTime</determinationMethod>
                </valuationPriceFinal>
                <paymentDates id="CashSettlementPaymentDate">
                   <paymentDatesInterim>
@@ -124,7 +124,7 @@
                   </paymentDateFinal>
                </paymentDates><!--Fair Value Share Swap (FVSS)  -  Designated Contract-->
                <exchangeTradedContractNearest>
-                  <instrumentId instrumentIdScheme="MonthYearId">0905</instrumentId>
+                  <instrumentId instrumentIdScheme="MonthYearId">1005</instrumentId>
                </exchangeTradedContractNearest>
             </rateOfReturn>
             <notional id="equityNotionalAmount">
@@ -183,17 +183,17 @@
                </interestLegResetDates>
                <interestLegPaymentDates>
                   <adjustableDates>
-                     <unadjustedDate>2009-10-12</unadjustedDate>
-                     <unadjustedDate>2009-11-13</unadjustedDate>
-                     <unadjustedDate>2009-12-12</unadjustedDate>
-                     <unadjustedDate>2010-01-14</unadjustedDate>
-                     <unadjustedDate>2010-02-12</unadjustedDate>
-                     <unadjustedDate>2010-03-12</unadjustedDate>
-                     <unadjustedDate>2010-04-12</unadjustedDate>
-                     <unadjustedDate>2010-05-13</unadjustedDate>
-                     <unadjustedDate>2010-06-02</unadjustedDate>
-                     <unadjustedDate>2010-07-12</unadjustedDate>
-                     <unadjustedDate>2010-08-12</unadjustedDate>
+                     <unadjustedDate>2010-10-12</unadjustedDate>
+                     <unadjustedDate>2010-11-13</unadjustedDate>
+                     <unadjustedDate>2010-12-12</unadjustedDate>
+                     <unadjustedDate>2011-01-14</unadjustedDate>
+                     <unadjustedDate>2011-02-12</unadjustedDate>
+                     <unadjustedDate>2011-03-12</unadjustedDate>
+                     <unadjustedDate>2011-04-12</unadjustedDate>
+                     <unadjustedDate>2011-05-13</unadjustedDate>
+                     <unadjustedDate>2011-06-02</unadjustedDate>
+                     <unadjustedDate>2011-07-12</unadjustedDate>
+                     <unadjustedDate>2011-08-12</unadjustedDate>
                      <dateAdjustments>
                         <businessDayConvention>NONE</businessDayConvention>
                      </dateAdjustments>
@@ -242,8 +242,10 @@
       </collateral>
       <documentation>
          <masterConfirmation><!--Fair Value Share Swap (FVSS) ISDA documentation -->
-            <masterConfirmationType>ISDA2010FairValueShareSwapEuropeanInterdealer</masterConfirmationType>
+            <masterConfirmationType>ISDA2009EquityEuropeanInterdealer</masterConfirmationType>
             <masterConfirmationDate>2009-07-20</masterConfirmationDate>
+            <masterConfirmationAnnexDate>2010-09-10</masterConfirmationAnnexDate>
+            <masterConfirmationAnnexType>ISDA2010FairValueShareSwapEuropeanInterdealer</masterConfirmationAnnexType>
          </masterConfirmation>
       </documentation>
    </trade>

@@ -33,7 +33,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.ubsw.com/fx/trade-id">UBSW20016</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-12Z</tradeDate>
+      <tradeDate>2001-11-12</tradeDate>
     </tradeHeader>
     <fxDigitalOption>
       <productType productTypeScheme="http://www.sample.com/coding-scheme/product-type-simple">OneTouch</productType>
@@ -45,7 +45,7 @@
 <!--FpML 5-1: As part of FX Product Refactoring work, made  commencementDate ofType AdjustableOrRelative instead of xsd:date -->
         <commencementDate>
           <adjustableDate>
-            <unadjustedDate>2001-11-12Z</unadjustedDate>
+            <unadjustedDate>2001-11-12</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -54,15 +54,15 @@
             </dateAdjustments>
           </adjustableDate>
         </commencementDate>
-<!--invalid rule fx-53: fxDigitalOption/americanExerciseExercise/expiryDate must be after tradeHeader/tradeDate. Correct value is <expiryDate>2001-11-26Z</expiryDate> -->
-        <expiryDate>2001-11-12Z</expiryDate>
+<!--invalid rule fx-53: fxDigitalOption/americanExerciseExercise/expiryDate must be after tradeHeader/tradeDate. Correct value is <expiryDate>2001-11-26</expiryDate> -->
+        <expiryDate>2001-11-12</expiryDate>
         <expiryTime>
           <hourMinuteTime>14:00:00</hourMinuteTime>
           <businessCenter>GBLO</businessCenter>
         </expiryTime>
         <cutName>LondonEveningPgm</cutName>
 <!--FpML 5-1: As part of FX Product Refactoring work, In americanExercise style, renamed valueDate  to latestValueDate-->
-        <latestValueDate>2001-11-26Z</latestValueDate>
+        <latestValueDate>2001-11-26</latestValueDate>
       </americanExercise>
 <!--FpML 5-1: As part of FX Product Refactoring work, expiryDateTime: expiryDate,  expiryTime, cutName was moved inside exercise style type (e.g. americanExercise)-->
 <!--FpML 5-1: As part of FX Product Refactoring work, created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -83,8 +83,8 @@
           <rateSourcePage>GBP=</rateSourcePage>
         </informationSource>
 <!--FpML 5-1: As part of FX Product Refactoring work, the elements observationStartDate and observationEndDate are grouped together in the sequence, making the sequence optional, but once one of the elements is selected, the second one is required.-->
-        <observationStartDate>2001-11-12Z</observationStartDate>
-        <observationEndDate>2001-11-26Z</observationEndDate>
+        <observationStartDate>2001-11-12</observationStartDate>
+        <observationEndDate>2001-11-26</observationEndDate>
       </touch>
 <!--FpML 5-1: As part of FX Product Refactoring work, renamed  triggerPayout to payout-->
       <payout>
@@ -100,7 +100,7 @@
 <!--FpML 5-1: As part of FX Product Refactoring work, renamed from settlementDate to paymentDate/adjustableDate/unadjustedDate; moved before paymentAmount; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-11-14Z</unadjustedDate>
+            <unadjustedDate>2001-11-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

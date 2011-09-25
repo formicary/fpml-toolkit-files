@@ -36,7 +36,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.abn.com/swaps/trade-id">AA9876</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2008-06-24Z</tradeDate>
+      <tradeDate>2008-06-24</tradeDate>
     </tradeHeader>
 <!--FpML 5-1 can represent DualCurrencyDeposit using the 'termDeposit' product's 'features', instead of the 'strategy' - [termDeposit]  and [fxSimpleOption] products-->
     <termDeposit>

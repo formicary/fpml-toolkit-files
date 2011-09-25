@@ -27,7 +27,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.barclays.com/swaps/trade-id">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2003-11-15+05:00</tradeDate>
+      <tradeDate>2003-11-15</tradeDate>
     </tradeHeader>
     <swap>
       <swapStream>
@@ -35,7 +35,7 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="N104F4">
           <effectiveDate>
-            <unadjustedDate>2003-11-20+05:00</unadjustedDate>
+            <unadjustedDate>2003-11-20</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters>
@@ -44,7 +44,7 @@
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2007-11-20+05:00</unadjustedDate>
+            <unadjustedDate>2007-11-20</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters>
@@ -59,7 +59,7 @@
             </businessCenters>
           </calculationPeriodDatesAdjustments>
           <firstPeriodStartDate>
-            <unadjustedDate>2003-11-12+05:00</unadjustedDate>
+            <unadjustedDate>2003-11-12</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters>
@@ -79,7 +79,7 @@
             <periodMultiplier>1</periodMultiplier>
             <period>Y</period>
           </paymentFrequency>
-          <firstPaymentDate>2004-11-20+05:00</firstPaymentDate>
+          <firstPaymentDate>2004-11-20</firstPaymentDate>
           <payRelativeTo>CalculationPeriodEndDate</payRelativeTo>
           <paymentDatesAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
@@ -108,7 +108,7 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="N101C1">
           <effectiveDate>
-            <unadjustedDate>2003-11-20+05:00</unadjustedDate>
+            <unadjustedDate>2003-11-20</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters>
@@ -117,7 +117,7 @@
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2007-11-20+05:00</unadjustedDate>
+            <unadjustedDate>2007-11-20</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters>
@@ -132,7 +132,7 @@
             </businessCenters>
           </calculationPeriodDatesAdjustments>
           <firstPeriodStartDate>
-            <unadjustedDate>2003-11-12+05:00</unadjustedDate>
+            <unadjustedDate>2003-11-12</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters>
@@ -152,7 +152,7 @@
             <periodMultiplier>1</periodMultiplier>
             <period>Y</period>
           </paymentFrequency>
-          <firstPaymentDate>2004-11-20+05:00</firstPaymentDate>
+          <firstPaymentDate>2004-11-20</firstPaymentDate>
           <payRelativeTo>CalculationPeriodEndDate</payRelativeTo>
           <paymentDatesAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
@@ -221,7 +221,7 @@
           <amount>10000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2003-11-20+05:00</unadjustedDate>
+          <unadjustedDate>2003-11-20</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCenters>

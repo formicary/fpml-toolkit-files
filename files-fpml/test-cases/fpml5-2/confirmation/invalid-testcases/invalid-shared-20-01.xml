@@ -19,7 +19,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.hedgeco.com/swaps/trade-id">total-ret-swap-02</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="r13">2004-12-12+05:00</tradeDate>
+      <tradeDate id="r13">2004-12-12</tradeDate>
     </tradeHeader>
     <returnSwap>
       <productType>TotalReturnSwap</productType>
@@ -37,7 +37,7 @@
                                 </paymentFrequency-->
         <effectiveDate id="r2">
           <adjustableDate>
-            <unadjustedDate>2004-12-14+05:00</unadjustedDate>
+            <unadjustedDate>2004-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -45,7 +45,7 @@
         </effectiveDate>
         <terminationDate id="r3">
           <adjustableDate>
-            <unadjustedDate>2004-12-14+05:00</unadjustedDate>
+            <unadjustedDate>2004-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -67,7 +67,7 @@
               <dividendPayout>
                 <dividendPayoutRatio>0.85</dividendPayoutRatio>
                 <dividendPayment>
-                  <paymentDate>2004-01-01+05:00</paymentDate>
+                  <paymentDate>2004-01-01</paymentDate>
                   <amount>
                     <currency>USD</currency>
                     <amount>123456.00</amount>
@@ -105,7 +105,7 @@
               <dividendPayout>
                 <dividendPayoutRatio>0.85</dividendPayoutRatio>
                 <dividendPayment>
-                  <paymentDate>2004-01-01+05:00</paymentDate>
+                  <paymentDate>2004-01-01</paymentDate>
                   <amount>
                     <currency>USD</currency>
                     <amount>123456.00</amount>
@@ -156,7 +156,7 @@
             <valuationRules>
               <valuationDates id="r6">
                 <adjustableDates>
-                  <unadjustedDate>2004-12-17+05:00</unadjustedDate>
+                  <unadjustedDate>2004-12-17</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -175,7 +175,7 @@
             <valuationRules>
               <valuationDate id="r7">
                 <adjustableDate>
-                  <unadjustedDate>2006-01-17+05:00</unadjustedDate>
+                  <unadjustedDate>2006-01-17</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -187,10 +187,10 @@
             <paymentDatesInterim id="r11">
               <adjustableDates>
 <!--shared-20:Each unadjustedDate must be distinct. -->
-                <unadjustedDate>2004-12-14+05:00</unadjustedDate>
+                <unadjustedDate>2004-12-14</unadjustedDate>
 <!--shared-20: Changed the unadjustedDate from (2005-12-14+05:00) to not to be distinct. -->
-                <unadjustedDate>2006-12-14+05:00</unadjustedDate>
-                <unadjustedDate>2006-12-14+05:00</unadjustedDate>
+                <unadjustedDate>2006-12-14</unadjustedDate>
+                <unadjustedDate>2006-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>FOLLOWING</businessDayConvention>
                   <businessCenters>
@@ -202,7 +202,7 @@
             </paymentDatesInterim>
             <paymentDateFinal id="r12">
               <adjustableDate>
-                <unadjustedDate>2006-12-14+05:00</unadjustedDate>
+                <unadjustedDate>2006-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>FOLLOWING</businessDayConvention>
                   <businessCenters>
@@ -261,7 +261,7 @@
         <interestLegCalculationPeriodDates id="r120">
           <effectiveDate>
             <adjustableDate>
-              <unadjustedDate>2004-12-14+05:00</unadjustedDate>
+              <unadjustedDate>2004-12-14</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -269,7 +269,7 @@
           </effectiveDate>
           <terminationDate>
             <adjustableDate>
-              <unadjustedDate>2006-12-14+05:00</unadjustedDate>
+              <unadjustedDate>2006-12-14</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -281,9 +281,9 @@
           </interestLegResetDates>
           <interestLegPaymentDates>
             <adjustableDates>
-              <unadjustedDate>2004-12-14+05:00</unadjustedDate>
-              <unadjustedDate>2005-12-14+05:00</unadjustedDate>
-              <unadjustedDate>2006-12-14+05:00</unadjustedDate>
+              <unadjustedDate>2004-12-14</unadjustedDate>
+              <unadjustedDate>2005-12-14</unadjustedDate>
+              <unadjustedDate>2006-12-14</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -322,7 +322,7 @@
         <partyReference href="party2" />
         <startingDate>
           <adjustableDate>
-            <unadjustedDate>2004-12-14+05:00</unadjustedDate>
+            <unadjustedDate>2004-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -333,7 +333,7 @@
         <partyReference href="party1" />
         <startingDate>
           <adjustableDate>
-            <unadjustedDate>2004-12-14+05:00</unadjustedDate>
+            <unadjustedDate>2004-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -378,7 +378,7 @@
         <paymentDetail>
           <paymentDate>
             <adjustableDate>
-              <unadjustedDate>2004-01-01+05:00</unadjustedDate>
+              <unadjustedDate>2004-01-01</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>

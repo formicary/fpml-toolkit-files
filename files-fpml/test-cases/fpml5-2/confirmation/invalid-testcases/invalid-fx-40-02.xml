@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/swaps/trade-id">DEUTDEFF</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-01-23Z</tradeDate>
+      <tradeDate>2002-01-23</tradeDate>
     </tradeHeader>
     <fxSwap>
       <productType>FxSwap</productType>
@@ -52,8 +52,8 @@
           </paymentAmount>
         </exchangedCurrency2>
 <!--invalid fx-40: The value of all fxSwap/nearLeg/valueDate, or the value of both fxsSwap/nearLeg/currency1ValueDate and fxSwap/nearLeg/currency2ValueDate must be after tradeHeader/tradeDate. -->
-        <currency1ValueDate>2002-01-22Z</currency1ValueDate>
-        <currency2ValueDate>2002-01-25Z</currency2ValueDate>
+        <currency1ValueDate>2002-01-22</currency1ValueDate>
+        <currency2ValueDate>2002-01-25</currency2ValueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>
@@ -80,7 +80,7 @@
             <amount>15000000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-        <valueDate>2002-02-25Z</valueDate>
+        <valueDate>2002-02-25</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>

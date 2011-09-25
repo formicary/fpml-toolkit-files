@@ -19,18 +19,18 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">37206</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-11-29Z</tradeDate>
+      <tradeDate>2002-11-29</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2002-11-30Z</unadjustedDate>
+          <unadjustedDate>2002-11-30</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2005-11-30Z</unadjustedDate>
+          <unadjustedDate>2005-11-30</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCenters>
@@ -70,7 +70,7 @@
             <periodMultiplier>3</periodMultiplier>
             <period>M</period>
           </paymentFrequency>
-          <firstPaymentDate>2003-02-28Z</firstPaymentDate>
+          <firstPaymentDate>2003-02-28</firstPaymentDate>
           <rollConvention>30</rollConvention>
           <fixedAmountCalculation>
             <calculationAmount>

@@ -35,7 +35,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id-1-0">299442</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2009-09-01Z</tradeDate>
+      <tradeDate>2009-09-01</tradeDate>
     </tradeHeader>
     <equitySwapTransactionSupplement>
       <interestLeg id="interestLeg">
@@ -47,7 +47,7 @@
         <interestLegCalculationPeriodDates id="interestCalcPeriodDates">
           <effectiveDate id="interestEffectiveDate">
             <adjustableDate>
-              <unadjustedDate>2009-09-03Z</unadjustedDate>
+              <unadjustedDate>2009-09-03</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -58,7 +58,7 @@
           </effectiveDate>
           <terminationDate id="interestTerminationDate">
             <adjustableDate>
-              <unadjustedDate>2010-03-04Z</unadjustedDate>
+              <unadjustedDate>2010-03-04</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -148,7 +148,7 @@
         <receiverPartyReference href="party2" />
         <effectiveDate id="equityEffectiveDate">
           <adjustableDate>
-            <unadjustedDate>2009-09-01Z</unadjustedDate>
+            <unadjustedDate>2009-09-01</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -159,7 +159,7 @@
         </effectiveDate>
         <terminationDate>
           <adjustableDate>
-            <unadjustedDate>2010-03-02Z</unadjustedDate>
+            <unadjustedDate>2010-03-02</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -233,7 +233,7 @@
             <valuationRules>
               <valuationDate id="finalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2010-03-02Z</unadjustedDate>
+                  <unadjustedDate>2010-03-02</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>FOLLOWING</businessDayConvention>
                     <businessCenters>
@@ -329,8 +329,8 @@
     <documentation>
       <masterConfirmation>
         <masterConfirmationType>ISDA2009EquityPanAsia</masterConfirmationType>
-        <masterConfirmationDate>2009-09-01Z</masterConfirmationDate>
-        <masterConfirmationAnnexDate>2009-09-01Z</masterConfirmationAnnexDate>
+        <masterConfirmationDate>2009-09-01</masterConfirmationDate>
+        <masterConfirmationAnnexDate>2009-09-01</masterConfirmationAnnexDate>
         <masterConfirmationAnnexType>ISDA2009ShareSwapPanAsia</masterConfirmationAnnexType>
       </masterConfirmation>
     </documentation>

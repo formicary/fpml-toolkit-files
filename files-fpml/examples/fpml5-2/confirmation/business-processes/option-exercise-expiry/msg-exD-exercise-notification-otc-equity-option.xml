@@ -41,9 +41,10 @@
         </quantity>
 <!-- the price of the trade is the strike of the option -->
         <pricing>
-          <price>
-            <gross>32.00</gross>
-          </price>
+          <quote>
+            <value>32.00</value>
+            <measureType>CleanGrossCurrentMarketPrice</measureType>
+          </quote>
         </pricing>
       </instrumentTradeDetails>
     </physicalSettlement>

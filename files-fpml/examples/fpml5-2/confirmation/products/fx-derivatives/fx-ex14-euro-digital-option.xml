@@ -33,7 +33,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.ubsw.com/fx/trade-id">UBSW20014</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-12Z</tradeDate>
+      <tradeDate>2001-11-12</tradeDate>
     </tradeHeader>
     <fxDigitalOption>
       <productType productTypeScheme="http://www.sample.com/coding-scheme/product-type-simple">EuroBinary</productType>
@@ -41,13 +41,13 @@
       <sellerPartyReference href="party1" />
 <!--FpML-5-0 Created specific exercise type e.g. europeanExercise, americanExercise. 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' and  'valueDate' was moved in here-->
       <europeanExercise>
-        <expiryDate>2001-11-26Z</expiryDate>
+        <expiryDate>2001-11-26</expiryDate>
         <expiryTime>
           <hourMinuteTime>14:00:00</hourMinuteTime>
           <businessCenter>GBLO</businessCenter>
         </expiryTime>
         <cutName>LondonEveningPgm</cutName>
-        <valueDate>2001-11-28Z</valueDate>
+        <valueDate>2001-11-28</valueDate>
       </europeanExercise>
 <!--FpML-5-1 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. europeanExercise)-->
 <!--FpML-5-1 Ceated specific exercise type e.g. europeanExercise, americanExercise-->
@@ -82,7 +82,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-11-14Z</unadjustedDate>
+            <unadjustedDate>2001-11-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

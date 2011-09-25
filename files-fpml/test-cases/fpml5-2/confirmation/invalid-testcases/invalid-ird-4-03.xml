@@ -34,7 +34,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.barclays.com/swaps/trade-id">SW2000</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>1994-12-12Z</tradeDate>
+      <tradeDate>1994-12-12</tradeDate>
     </tradeHeader>
     <swap>
 <!-- Bank A pays the floating rate every 6 months, based on 6M DEM-LIBOR-BBA,
@@ -44,13 +44,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="floatingCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>1994-12-14Z</unadjustedDate>
+            <unadjustedDate>1994-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>1999-12-14Z</unadjustedDate>
+            <unadjustedDate>1999-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="primaryBusinessCenters">
@@ -62,8 +62,8 @@
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCentersReference href="primaryBusinessCenters" />
           </calculationPeriodDatesAdjustments>
-          <firstRegularPeriodStartDate>1995-06-14Z</firstRegularPeriodStartDate>
-          <lastRegularPeriodEndDate>1999-06-14Z</lastRegularPeriodEndDate>
+          <firstRegularPeriodStartDate>1995-06-14</firstRegularPeriodStartDate>
+          <lastRegularPeriodEndDate>1999-06-14</lastRegularPeriodEndDate>
           <calculationPeriodFrequency>
             <periodMultiplier>6</periodMultiplier>
             <period>M</period>
@@ -79,7 +79,7 @@
 <!-- CHANGE, Modified by: Christian Date: 10-06-2003 
      Changed from: 1996-12-14. This exceeds the lastRegularPeriodEndDate,
      even though it is equal to the terminationDate. -->
-          <lastRegularPaymentDate>1999-12-14Z</lastRegularPaymentDate>
+          <lastRegularPaymentDate>1999-12-14</lastRegularPaymentDate>
           <payRelativeTo>CalculationPeriodEndDate</payRelativeTo>
           <paymentDatesAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
@@ -133,13 +133,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="fixedCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>1994-12-14Z</unadjustedDate>
+            <unadjustedDate>1994-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>1999-12-14Z</unadjustedDate>
+            <unadjustedDate>1999-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCentersReference href="primaryBusinessCenters" />

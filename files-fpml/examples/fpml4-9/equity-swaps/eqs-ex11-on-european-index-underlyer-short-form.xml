@@ -93,7 +93,7 @@
                   </valuationRules>
                </valuationPriceInterim>
                <valuationPriceFinal>
-                  <determinationMethod>HedgeUnwind</determinationMethod>
+                  <determinationMethod>HedgeExecution</determinationMethod>
                   <valuationRules>
                      <valuationDate id="FinalValuationDate">
                         <adjustableDate>

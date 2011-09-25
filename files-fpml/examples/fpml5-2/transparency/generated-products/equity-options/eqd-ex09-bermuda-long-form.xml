@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-2" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-2.xsd">
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyA.com/eqd-trade-id">LN 2962</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2002-01-17</tradeDate>
+      </tradeHeader>
+      <equityOption>
+         <productType>EquityOption</productType>
+         <assetClass>Equities</assetClass>
+         <optionType>Call</optionType>
+         <underlyer>
+            <singleUnderlyer>
+               <equity>
+                  <instrumentId instrumentIdScheme="http://www.fpml.org/schemes/4.1/instrumentId">ES0113900J37</instrumentId>
+                  <description>Ordinary Shares of Banco Santander Central Hispano
+							SA</description>
+                  <exchangeId exchangeIdScheme="http://www.fpml.org/schemes/4.1/exchangeId">MSE</exchangeId>
+                  <relatedExchangeId exchangeIdScheme="http://www.fpml.org/schemes/4.1/exchangeId">MEFF</relatedExchangeId>
+               </equity>
+               <openUnits>31000</openUnits>
+            </singleUnderlyer>
+         </underlyer>
+         <equityExercise>
+            <equityBermudaExercise>
+               <commencementDate>
+                  <adjustableDate>
+                     <unadjustedDate>2002-01-17</unadjustedDate>
+                  </adjustableDate>
+               </commencementDate>
+               <expirationDate>
+                  <adjustableDate>
+                     <unadjustedDate>2002-06-21</unadjustedDate>
+                  </adjustableDate>
+               </expirationDate>
+               <bermudaExerciseDates>
+                  <date>2002-04-21</date>
+                  <date>2002-05-21</date>
+                  <date>2002-06-21</date>
+               </bermudaExerciseDates>
+               <latestExerciseTimeType>Close</latestExerciseTimeType>
+               <equityExpirationTimeType>Close</equityExpirationTimeType>
+               <equityMultipleExercise>
+                  <integralMultipleExercise>1</integralMultipleExercise>
+                  <minimumNumberOfOptions>1</minimumNumberOfOptions>
+                  <maximumNumberOfOptions>500000</maximumNumberOfOptions>
+               </equityMultipleExercise>
+            </equityBermudaExercise>
+         </equityExercise>
+         <strike>
+            <strikePrice>8.00</strikePrice>
+         </strike>
+         <numberOfOptions>500000</numberOfOptions>
+         <optionEntitlement>1.00</optionEntitlement>
+         <equityPremium>
+            <paymentAmount>
+               <currency>EUR</currency>
+               <amount>1350000</amount>
+            </paymentAmount>
+            <pricePerOption>
+               <currency>EUR</currency>
+               <amount>2.70</amount>
+            </pricePerOption>
+         </equityPremium>
+      </equityOption>
+   </trade>
+</publicExecutionReport>

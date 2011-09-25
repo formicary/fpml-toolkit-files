@@ -13,7 +13,7 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Sample positions</dataSetName>
   <quotationCharacteristics>
     <side>Mid</side>
@@ -55,7 +55,7 @@
             <unit>San Fancisco Desk</unit>
             <trader>Joe Bloggs</trader>
           </partyTradeInformation>
-          <tradeDate>2004-12-12Z</tradeDate>
+          <tradeDate>2004-12-12</tradeDate>
         </tradeHeader>
         <swap>
 <!-- used to represent the "swap type" -->
@@ -67,7 +67,7 @@
             <payerPartyReference href="party1" />
             <calculationPeriodDates id="irs1-floatingCalcPeriodDates">
               <terminationDate>
-                <unadjustedDate>2009-12-14Z</unadjustedDate>
+                <unadjustedDate>2009-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>MODFOLLOWING</businessDayConvention>
                   <businessCenters id="irs1-primaryBusinessCenters">
@@ -116,27 +116,27 @@
                   <notionalStepSchedule>
                     <initialValue>50000000.00</initialValue>
                     <step>
-                      <stepDate>2004-12-14Z</stepDate>
+                      <stepDate>2004-12-14</stepDate>
                       <stepValue>10000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2005-12-14Z</stepDate>
+                      <stepDate>2005-12-14</stepDate>
                       <stepValue>20000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2006-12-14Z</stepDate>
+                      <stepDate>2006-12-14</stepDate>
                       <stepValue>30000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2007-12-14Z</stepDate>
+                      <stepDate>2007-12-14</stepDate>
                       <stepValue>40000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2008-12-14Z</stepDate>
+                      <stepDate>2008-12-14</stepDate>
                       <stepValue>50000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2009-12-14Z</stepDate>
+                      <stepDate>2009-12-14</stepDate>
                       <stepValue>60000000.00</stepValue>
                     </step>
                     <currency>EUR</currency>
@@ -251,7 +251,7 @@
               <amount>15000.00</amount>
             </paymentAmount>
             <paymentDate>
-              <unadjustedDate>2005-04-27Z</unadjustedDate>
+              <unadjustedDate>2005-04-27</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -266,11 +266,11 @@
             <payerPartyReference href="party2" />
             <paymentDetail>
 <!--
-              <adjustedPaymentDate>2004-01-01Z</adjustedPaymentDate>
+              <adjustedPaymentDate>2004-01-01</adjustedPaymentDate>
               -->
               <paymentDate>
                 <adjustableDate>
-                  <adjustedDate>2004-01-01Z</adjustedDate>
+                  <adjustedDate>2004-01-01</adjustedDate>
                 </adjustableDate>
               </paymentDate>
               <paymentRule xsi:type="PercentageRule">
@@ -292,7 +292,7 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2004-12-14Z</adjustedDate>
+      <adjustedDate>2004-12-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="irs1-floatingStream" />
       <associatedValue>
@@ -304,22 +304,22 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-03-14Z</adjustedDate>
+      <adjustedDate>2005-03-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FirstPayment</type>
       <assetReference href="irs1-floatingStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-03-14Z</adjustedDate>
+      <adjustedDate>2005-03-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="irs1-floatingStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-06-14Z</adjustedDate>
+      <adjustedDate>2005-06-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">NextPayment</type>
       <assetReference href="irs1-floatingStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="irs1-floatingStream" />
       <associatedValue>
@@ -331,17 +331,17 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FirstPayment</type>
       <assetReference href="irs1-fixedStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="irs1-fixedStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-01-01Z</adjustedDate>
+      <adjustedDate>2005-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">NextPayment</type>
       <assetReference href="irs1-fixedStream" />
     </scheduledDate>
@@ -408,7 +408,7 @@
           <partyTradeIdentifier>
             <tradeId tradeIdScheme="http://www.hedgeco.com/swaps/trade-id">total-ret-swap-01</tradeId>
           </partyTradeIdentifier>
-          <tradeDate id="trs-eq1-TradeDate">2004-10-10Z</tradeDate>
+          <tradeDate id="trs-eq1-TradeDate">2004-10-10</tradeDate>
         </tradeHeader>
         <returnSwap>
           <productType productTypeScheme="http://www.datastandardsworkinggroup.org/products-1-0">TRS-Equity-Single-EarlyTerm</productType>
@@ -425,7 +425,7 @@
             </paymentFrequency>
             <effectiveDate id="trs-eq1-EffectiveDate">
               <adjustableDate>
-                <unadjustedDate>2004-10-12Z</unadjustedDate>
+                <unadjustedDate>2004-10-12</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -433,7 +433,7 @@
             </effectiveDate>
             <terminationDate id="trs-eq1-TerminationDate">
               <adjustableDate>
-                <unadjustedDate>2006-10-12Z</unadjustedDate>
+                <unadjustedDate>2006-10-12</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -451,7 +451,7 @@
                 <dividendPayout>
                   <dividendPayoutRatio>0.85</dividendPayoutRatio>
                   <dividendPayment>
-                    <paymentDate>2004-01-01Z</paymentDate>
+                    <paymentDate>2004-01-01</paymentDate>
                     <amount>
                       <currency>USD</currency>
                       <amount>123456.00</amount>
@@ -480,7 +480,7 @@
                                                                         -->
 <!--
                 <couponPayment>
-                  <paymentDate>2004-01-01Z</paymentDate>
+                  <paymentDate>2004-01-01</paymentDate>
                   <amount>
                     <currency>USD</currency>
                     <amount>123456.00</amount>
@@ -516,17 +516,17 @@
                 <valuationRules>
                   <valuationDates id="trs-eq1-InterimValuationDate">
                     <adjustableDates>
-                      <unadjustedDate>2004-10-12Z</unadjustedDate>
-                      <unadjustedDate>2004-11-13Z</unadjustedDate>
-                      <unadjustedDate>2004-12-12Z</unadjustedDate>
-                      <unadjustedDate>2005-01-14Z</unadjustedDate>
-                      <unadjustedDate>2005-02-12Z</unadjustedDate>
-                      <unadjustedDate>2005-03-12Z</unadjustedDate>
-                      <unadjustedDate>2005-04-12Z</unadjustedDate>
-                      <unadjustedDate>2005-05-13Z</unadjustedDate>
-                      <unadjustedDate>2005-06-12Z</unadjustedDate>
-                      <unadjustedDate>2005-07-12Z</unadjustedDate>
-                      <unadjustedDate>2005-08-12Z</unadjustedDate>
+                      <unadjustedDate>2004-10-12</unadjustedDate>
+                      <unadjustedDate>2004-11-13</unadjustedDate>
+                      <unadjustedDate>2004-12-12</unadjustedDate>
+                      <unadjustedDate>2005-01-14</unadjustedDate>
+                      <unadjustedDate>2005-02-12</unadjustedDate>
+                      <unadjustedDate>2005-03-12</unadjustedDate>
+                      <unadjustedDate>2005-04-12</unadjustedDate>
+                      <unadjustedDate>2005-05-13</unadjustedDate>
+                      <unadjustedDate>2005-06-12</unadjustedDate>
+                      <unadjustedDate>2005-07-12</unadjustedDate>
+                      <unadjustedDate>2005-08-12</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -545,7 +545,7 @@
                 <valuationRules>
                   <valuationDate id="trs-eq1-FinalValuationDate">
                     <adjustableDate>
-                      <unadjustedDate>2005-09-24Z</unadjustedDate>
+                      <unadjustedDate>2005-09-24</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -556,9 +556,9 @@
               <paymentDates id="trs-eq1-EquityPaymentDate">
                 <paymentDatesInterim id="trs-eq1-InterimEquityPaymentDate">
                   <adjustableDates>
-                    <unadjustedDate>2004-10-14Z</unadjustedDate>
-                    <unadjustedDate>2005-10-14Z</unadjustedDate>
-                    <unadjustedDate>2006-10-14Z</unadjustedDate>
+                    <unadjustedDate>2004-10-14</unadjustedDate>
+                    <unadjustedDate>2005-10-14</unadjustedDate>
+                    <unadjustedDate>2006-10-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -570,7 +570,7 @@
                 </paymentDatesInterim>
                 <paymentDateFinal id="trs-eq1-FinalEquityPaymentDate">
                   <adjustableDate>
-                    <unadjustedDate>2006-10-14Z</unadjustedDate>
+                    <unadjustedDate>2006-10-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -627,9 +627,9 @@
               <interestLegResetDates></interestLegResetDates>
               <interestLegPaymentDates>
                 <adjustableDates>
-                  <unadjustedDate>2004-10-12Z</unadjustedDate>
-                  <unadjustedDate>2005-10-12Z</unadjustedDate>
-                  <unadjustedDate>2006-10-12Z</unadjustedDate>
+                  <unadjustedDate>2004-10-12</unadjustedDate>
+                  <unadjustedDate>2005-10-12</unadjustedDate>
+                  <unadjustedDate>2006-10-12</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>FOLLOWING</businessDayConvention>
                     <businessCenters>
@@ -667,7 +667,7 @@
           <earlyTermination>
             <startingDate>
               <adjustableDate>
-                <unadjustedDate>2005-10-12Z</unadjustedDate>
+                <unadjustedDate>2005-10-12</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -677,7 +677,7 @@
           <earlyTermination>
             <startingDate>
               <adjustableDate>
-                <unadjustedDate>2005-10-12Z</unadjustedDate>
+                <unadjustedDate>2005-10-12</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -694,12 +694,12 @@
             <paymentDetail>
                     -->
 <!--
-              <adjustedPaymentDate>2005-01-01Z</adjustedPaymentDate>
+              <adjustedPaymentDate>2005-01-01</adjustedPaymentDate>
               -->
 <!--
               <paymentDate>
                       <adjustableDate>
-                              <adjustedDate>2005-01-01Z</adjustedDate>
+                              <adjustedDate>2005-01-01</adjustedDate>
                       </adjustableDate>
               </paymentDate>
               <paymentAmount>
@@ -712,12 +712,12 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-eq1-equityLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-01-01Z</adjustedDate>
+      <adjustedDate>2005-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="trs-eq1-interestLeg" />
       <associatedValue>
@@ -729,17 +729,17 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-03-01Z</adjustedDate>
+      <adjustedDate>2005-03-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-eq1-interestLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-06-01Z</adjustedDate>
+      <adjustedDate>2005-06-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">NextPayment</type>
       <assetReference href="trs-eq1-interestLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2006-01-01Z</adjustedDate>
+      <adjustedDate>2006-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FinalPayment</type>
       <assetReference href="trs-eq1-trade" />
     </scheduledDate>
@@ -839,7 +839,7 @@
           <partyTradeIdentifier>
             <tradeId tradeIdScheme="http://www.hedgeco.com/swaps/trade-id">total-ret-swap-02</tradeId>
           </partyTradeIdentifier>
-          <tradeDate id="trs-eqbasket-TradeDate">2004-12-12Z</tradeDate>
+          <tradeDate id="trs-eqbasket-TradeDate">2004-12-12</tradeDate>
         </tradeHeader>
         <returnSwap>
           <productType productTypeScheme="http://www.datastandardsworkinggroup.org/products-1-0">TRS-Equity-Basket-EarlyTerm</productType>
@@ -856,7 +856,7 @@
             </paymentFrequency>
             <effectiveDate id="trs-eqbasket-EffectiveDate">
               <adjustableDate>
-                <unadjustedDate>2004-12-14Z</unadjustedDate>
+                <unadjustedDate>2004-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -864,7 +864,7 @@
             </effectiveDate>
             <terminationDate id="trs-eqbasket-TerminationDate">
               <adjustableDate>
-                <unadjustedDate>2004-12-14Z</unadjustedDate>
+                <unadjustedDate>2004-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -886,7 +886,7 @@
                   <dividendPayout>
                     <dividendPayoutRatio>0.85</dividendPayoutRatio>
                     <dividendPayment>
-                      <paymentDate>2004-01-01Z</paymentDate>
+                      <paymentDate>2004-01-01</paymentDate>
                       <amount>
                         <currency>USD</currency>
                         <amount>123456.00</amount>
@@ -924,7 +924,7 @@
                   <dividendPayout>
                     <dividendPayoutRatio>0.85</dividendPayoutRatio>
                     <dividendPayment>
-                      <paymentDate>2004-01-01Z</paymentDate>
+                      <paymentDate>2004-01-01</paymentDate>
                       <amount>
                         <currency>USD</currency>
                         <amount>123456.00</amount>
@@ -975,7 +975,7 @@
                 <valuationRules>
                   <valuationDates id="trs-eqbasket-InterimValuationDate">
                     <adjustableDates>
-                      <unadjustedDate>2004-12-17Z</unadjustedDate>
+                      <unadjustedDate>2004-12-17</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -994,7 +994,7 @@
                 <valuationRules>
                   <valuationDate id="trs-eqbasket-FinalValuationDate">
                     <adjustableDate>
-                      <unadjustedDate>2006-01-17Z</unadjustedDate>
+                      <unadjustedDate>2006-01-17</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -1005,9 +1005,9 @@
               <paymentDates id="trs-eqbasket-EquityPaymentDate">
                 <paymentDatesInterim id="trs-eqbasket-InterimEquityPaymentDate">
                   <adjustableDates>
-                    <unadjustedDate>2004-12-14Z</unadjustedDate>
-                    <unadjustedDate>2005-12-14Z</unadjustedDate>
-                    <unadjustedDate>2006-12-14Z</unadjustedDate>
+                    <unadjustedDate>2004-12-14</unadjustedDate>
+                    <unadjustedDate>2005-12-14</unadjustedDate>
+                    <unadjustedDate>2006-12-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -1019,7 +1019,7 @@
                 </paymentDatesInterim>
                 <paymentDateFinal id="trs-eqbasket-FinalEquityPaymentDate">
                   <adjustableDate>
-                    <unadjustedDate>2006-12-14Z</unadjustedDate>
+                    <unadjustedDate>2006-12-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -1076,9 +1076,9 @@
               <interestLegResetDates></interestLegResetDates>
               <interestLegPaymentDates>
                 <adjustableDates>
-                  <unadjustedDate>2004-12-14Z</unadjustedDate>
-                  <unadjustedDate>2005-12-14Z</unadjustedDate>
-                  <unadjustedDate>2006-12-14Z</unadjustedDate>
+                  <unadjustedDate>2004-12-14</unadjustedDate>
+                  <unadjustedDate>2005-12-14</unadjustedDate>
+                  <unadjustedDate>2006-12-14</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>FOLLOWING</businessDayConvention>
                     <businessCenters>
@@ -1116,7 +1116,7 @@
           <earlyTermination>
             <startingDate>
               <adjustableDate>
-                <unadjustedDate>2004-12-14Z</unadjustedDate>
+                <unadjustedDate>2004-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -1126,7 +1126,7 @@
           <earlyTermination>
             <startingDate>
               <adjustableDate>
-                <unadjustedDate>2004-12-14Z</unadjustedDate>
+                <unadjustedDate>2004-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
@@ -1140,12 +1140,12 @@
             <paymentDetail>
           -->
 <!--
-              <adjustedPaymentDate>2004-01-01Z</adjustedPaymentDate>
+              <adjustedPaymentDate>2004-01-01</adjustedPaymentDate>
               -->
 <!--
               <paymentDate>
                       <adjustableDate>
-                              <adjustedDate>2004-01-01Z</adjustedDate>
+                              <adjustedDate>2004-01-01</adjustedDate>
                       </adjustableDate>
               </paymentDate>
               <paymentAmount>
@@ -1158,12 +1158,12 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-eqbasket-equityLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-01-01Z</adjustedDate>
+      <adjustedDate>2005-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="trs-eqbasket-interestLeg" />
       <associatedValue>
@@ -1175,12 +1175,12 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-01-01Z</adjustedDate>
+      <adjustedDate>2005-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-eqbasket-interestLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2006-01-01Z</adjustedDate>
+      <adjustedDate>2006-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FinalPayment</type>
       <assetReference href="trs-eqbasket-trade" />
     </scheduledDate>
@@ -1325,7 +1325,7 @@
             </paymentFrequency>
             <effectiveDate id="trs-bond1-EffectiveDate">
               <adjustableDate>
-                <unadjustedDate>2004-07-20Z</unadjustedDate>
+                <unadjustedDate>2004-07-20</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NotApplicable</businessDayConvention>
                 </dateAdjustments>
@@ -1333,7 +1333,7 @@
             </effectiveDate>
             <terminationDate id="trs-bond1-TerminationDate">
               <adjustableDate>
-                <unadjustedDate>2006-07-20Z</unadjustedDate>
+                <unadjustedDate>2006-07-20</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>FOLLOWING</businessDayConvention>
                   <businessCenters>
@@ -1372,7 +1372,7 @@
                                                         -->
 <!--
                 <couponPayment>
-                  <paymentDate>2005-01-01Z</paymentDate>
+                  <paymentDate>2005-01-01</paymentDate>
                   <amount>
                     <currency>USD</currency>
                     <amount>123456.00</amount>
@@ -1395,7 +1395,7 @@
                 <valuationRules>
                   <valuationDate id="trs-bond1-FinalValuationDate">
                     <adjustableDate>
-                      <unadjustedDate>2006-01-17Z</unadjustedDate>
+                      <unadjustedDate>2006-01-17</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -1419,30 +1419,30 @@
                 <valuationRules>
                   <valuationDates id="trs-bond1-InterimValuationDates">
                     <adjustableDates>
-                      <unadjustedDate>2004-07-26Z</unadjustedDate>
-                      <unadjustedDate>2004-08-28Z</unadjustedDate>
-                      <unadjustedDate>2004-09-26Z</unadjustedDate>
-                      <unadjustedDate>2004-10-27Z</unadjustedDate>
-                      <unadjustedDate>2004-11-28Z</unadjustedDate>
-                      <unadjustedDate>2004-12-26Z</unadjustedDate>
-                      <unadjustedDate>2005-01-29Z</unadjustedDate>
-                      <unadjustedDate>2005-02-26Z</unadjustedDate>
-                      <unadjustedDate>2005-03-26Z</unadjustedDate>
-                      <unadjustedDate>2005-04-28Z</unadjustedDate>
-                      <unadjustedDate>2005-05-28Z</unadjustedDate>
-                      <unadjustedDate>2005-06-26Z</unadjustedDate>
-                      <unadjustedDate>2005-07-29Z</unadjustedDate>
-                      <unadjustedDate>2005-08-27Z</unadjustedDate>
-                      <unadjustedDate>2005-09-26Z</unadjustedDate>
-                      <unadjustedDate>2005-10-29Z</unadjustedDate>
-                      <unadjustedDate>2005-11-26Z</unadjustedDate>
-                      <unadjustedDate>2005-12-29Z</unadjustedDate>
-                      <unadjustedDate>2006-01-28Z</unadjustedDate>
-                      <unadjustedDate>2006-02-25Z</unadjustedDate>
-                      <unadjustedDate>2006-03-26Z</unadjustedDate>
-                      <unadjustedDate>2006-04-28Z</unadjustedDate>
-                      <unadjustedDate>2006-05-27Z</unadjustedDate>
-                      <unadjustedDate>2006-06-28Z</unadjustedDate>
+                      <unadjustedDate>2004-07-26</unadjustedDate>
+                      <unadjustedDate>2004-08-28</unadjustedDate>
+                      <unadjustedDate>2004-09-26</unadjustedDate>
+                      <unadjustedDate>2004-10-27</unadjustedDate>
+                      <unadjustedDate>2004-11-28</unadjustedDate>
+                      <unadjustedDate>2004-12-26</unadjustedDate>
+                      <unadjustedDate>2005-01-29</unadjustedDate>
+                      <unadjustedDate>2005-02-26</unadjustedDate>
+                      <unadjustedDate>2005-03-26</unadjustedDate>
+                      <unadjustedDate>2005-04-28</unadjustedDate>
+                      <unadjustedDate>2005-05-28</unadjustedDate>
+                      <unadjustedDate>2005-06-26</unadjustedDate>
+                      <unadjustedDate>2005-07-29</unadjustedDate>
+                      <unadjustedDate>2005-08-27</unadjustedDate>
+                      <unadjustedDate>2005-09-26</unadjustedDate>
+                      <unadjustedDate>2005-10-29</unadjustedDate>
+                      <unadjustedDate>2005-11-26</unadjustedDate>
+                      <unadjustedDate>2005-12-29</unadjustedDate>
+                      <unadjustedDate>2006-01-28</unadjustedDate>
+                      <unadjustedDate>2006-02-25</unadjustedDate>
+                      <unadjustedDate>2006-03-26</unadjustedDate>
+                      <unadjustedDate>2006-04-28</unadjustedDate>
+                      <unadjustedDate>2006-05-27</unadjustedDate>
+                      <unadjustedDate>2006-06-28</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -1461,7 +1461,7 @@
                 <valuationRules>
                   <valuationDate>
                     <adjustableDate>
-                      <unadjustedDate>2006-07-15Z</unadjustedDate>
+                      <unadjustedDate>2006-07-15</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -1472,9 +1472,9 @@
               <paymentDates id="trs-bond1-EquityPaymentDate">
                 <paymentDatesInterim id="trs-bond1-InterimEquityPaymentDate">
                   <adjustableDates>
-                    <unadjustedDate>2004-12-14Z</unadjustedDate>
-                    <unadjustedDate>2005-12-14Z</unadjustedDate>
-                    <unadjustedDate>2006-12-14Z</unadjustedDate>
+                    <unadjustedDate>2004-12-14</unadjustedDate>
+                    <unadjustedDate>2005-12-14</unadjustedDate>
+                    <unadjustedDate>2006-12-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -1486,7 +1486,7 @@
                 </paymentDatesInterim>
                 <paymentDateFinal id="trs-bond1-FinalEquityPaymentDate">
                   <adjustableDate>
-                    <unadjustedDate>2006-12-14Z</unadjustedDate>
+                    <unadjustedDate>2006-12-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -1531,9 +1531,9 @@
               <interestLegResetDates></interestLegResetDates>
               <interestLegPaymentDates>
                 <adjustableDates>
-                  <unadjustedDate>2004-12-14Z</unadjustedDate>
-                  <unadjustedDate>2005-12-14Z</unadjustedDate>
-                  <unadjustedDate>2006-12-14Z</unadjustedDate>
+                  <unadjustedDate>2004-12-14</unadjustedDate>
+                  <unadjustedDate>2005-12-14</unadjustedDate>
+                  <unadjustedDate>2006-12-14</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>FOLLOWING</businessDayConvention>
                     <businessCenters>
@@ -1572,7 +1572,7 @@
                 <stubRate>0.02125</stubRate>
                 <stubStartDate>
                   <adjustableDate>
-                    <unadjustedDate>2004-07-20Z</unadjustedDate>
+                    <unadjustedDate>2004-07-20</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>NotApplicable</businessDayConvention>
                     </dateAdjustments>
@@ -1580,7 +1580,7 @@
                 </stubStartDate>
                 <stubEndDate>
                   <adjustableDate>
-                    <unadjustedDate>2004-08-01Z</unadjustedDate>
+                    <unadjustedDate>2004-08-01</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>NotApplicable</businessDayConvention>
                     </dateAdjustments>
@@ -1600,7 +1600,7 @@
                 </floatingRate>
                 <stubStartDate>
                   <adjustableDate>
-                    <unadjustedDate>2006-07-01Z</unadjustedDate>
+                    <unadjustedDate>2006-07-01</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>NotApplicable</businessDayConvention>
                     </dateAdjustments>
@@ -1608,7 +1608,7 @@
                 </stubStartDate>
                 <stubEndDate>
                   <adjustableDate>
-                    <unadjustedDate>2006-07-20Z</unadjustedDate>
+                    <unadjustedDate>2006-07-20</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -1629,10 +1629,10 @@
           <independentAmount>
             <payerPartyReference href="party2" />
             <paymentDetail>
-              <adjustedPaymentDate>2006-01-01Z</adjustedPaymentDate>
+              <adjustedPaymentDate>2006-01-01</adjustedPaymentDate>
               <paymentDate>
                       <adjustableDate>
-                              <adjustedDate>2006-01-01Z</adjustedDate>
+                              <adjustedDate>2006-01-01</adjustedDate>
                       </adjustableDate>
               </paymentDate>
               <paymentAmount>
@@ -1645,12 +1645,12 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-bond1-equityLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-01-01Z</adjustedDate>
+      <adjustedDate>2005-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="trs-bond1-interestLeg" />
       <associatedValue>
@@ -1662,12 +1662,12 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-bond1-interestLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2006-01-01Z</adjustedDate>
+      <adjustedDate>2006-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FinalPayment</type>
       <assetReference href="trs-bond1-trade" />
     </scheduledDate>
@@ -1788,7 +1788,7 @@
           <partyTradeIdentifier>
             <tradeId tradeIdScheme="http://www.hedgeco.com/swaps/trade-id">total-ret-swap-04</tradeId>
           </partyTradeIdentifier>
-          <tradeDate id="trs-bondbasket-TradeDate">2004-07-17Z</tradeDate>
+          <tradeDate id="trs-bondbasket-TradeDate">2004-07-17</tradeDate>
         </tradeHeader>
         <returnSwap>
           <productType productTypeScheme="http://www.datastandardsworkinggroup.org/products-1-0">TRS-Hybrid-Basket</productType>
@@ -1801,7 +1801,7 @@
             </paymentFrequency>
             <effectiveDate id="trs-bondbasket-EffectiveDate">
               <adjustableDate>
-                <unadjustedDate>2004-07-20Z</unadjustedDate>
+                <unadjustedDate>2004-07-20</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NotApplicable</businessDayConvention>
                 </dateAdjustments>
@@ -1809,7 +1809,7 @@
             </effectiveDate>
             <terminationDate id="trs-bondbasket-TerminationDate">
               <adjustableDate>
-                <unadjustedDate>2006-07-20Z</unadjustedDate>
+                <unadjustedDate>2006-07-20</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>FOLLOWING</businessDayConvention>
                   <businessCenters>
@@ -1848,7 +1848,7 @@
                     </quotationCharacteristics>
                   </underlyerPrice>
                   <couponPayment>
-                    <paymentDate>2005-01-01Z</paymentDate>
+                    <paymentDate>2005-01-01</paymentDate>
                     <amount>
                       <currency>USD</currency>
                       <amount>123456.00</amount>
@@ -1891,7 +1891,7 @@
                     </quotationCharacteristics>
                   </underlyerPrice>
                   <couponPayment>
-                    <paymentDate>2005-01-01Z</paymentDate>
+                    <paymentDate>2005-01-01</paymentDate>
                     <amount>
                       <currency>USD</currency>
                       <amount>123456.00</amount>
@@ -1915,7 +1915,7 @@
                 <valuationRules>
                   <valuationDate>
                     <adjustableDate>
-                      <unadjustedDate>2006-07-15Z</unadjustedDate>
+                      <unadjustedDate>2006-07-15</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -1939,30 +1939,30 @@
                 <valuationRules>
                   <valuationDates id="trs-bondbasket-InterimValuationDates">
                     <adjustableDates>
-                      <unadjustedDate>2004-07-26Z</unadjustedDate>
-                      <unadjustedDate>2004-08-28Z</unadjustedDate>
-                      <unadjustedDate>2004-09-26Z</unadjustedDate>
-                      <unadjustedDate>2004-10-27Z</unadjustedDate>
-                      <unadjustedDate>2004-11-28Z</unadjustedDate>
-                      <unadjustedDate>2004-12-26Z</unadjustedDate>
-                      <unadjustedDate>2005-01-29Z</unadjustedDate>
-                      <unadjustedDate>2005-02-26Z</unadjustedDate>
-                      <unadjustedDate>2005-03-26Z</unadjustedDate>
-                      <unadjustedDate>2005-04-28Z</unadjustedDate>
-                      <unadjustedDate>2005-05-28Z</unadjustedDate>
-                      <unadjustedDate>2005-06-26Z</unadjustedDate>
-                      <unadjustedDate>2005-07-29Z</unadjustedDate>
-                      <unadjustedDate>2005-08-27Z</unadjustedDate>
-                      <unadjustedDate>2005-09-26Z</unadjustedDate>
-                      <unadjustedDate>2005-10-29Z</unadjustedDate>
-                      <unadjustedDate>2005-11-26Z</unadjustedDate>
-                      <unadjustedDate>2005-12-29Z</unadjustedDate>
-                      <unadjustedDate>2006-01-28Z</unadjustedDate>
-                      <unadjustedDate>2006-02-25Z</unadjustedDate>
-                      <unadjustedDate>2006-03-26Z</unadjustedDate>
-                      <unadjustedDate>2006-04-28Z</unadjustedDate>
-                      <unadjustedDate>2006-05-27Z</unadjustedDate>
-                      <unadjustedDate>2006-06-28Z</unadjustedDate>
+                      <unadjustedDate>2004-07-26</unadjustedDate>
+                      <unadjustedDate>2004-08-28</unadjustedDate>
+                      <unadjustedDate>2004-09-26</unadjustedDate>
+                      <unadjustedDate>2004-10-27</unadjustedDate>
+                      <unadjustedDate>2004-11-28</unadjustedDate>
+                      <unadjustedDate>2004-12-26</unadjustedDate>
+                      <unadjustedDate>2005-01-29</unadjustedDate>
+                      <unadjustedDate>2005-02-26</unadjustedDate>
+                      <unadjustedDate>2005-03-26</unadjustedDate>
+                      <unadjustedDate>2005-04-28</unadjustedDate>
+                      <unadjustedDate>2005-05-28</unadjustedDate>
+                      <unadjustedDate>2005-06-26</unadjustedDate>
+                      <unadjustedDate>2005-07-29</unadjustedDate>
+                      <unadjustedDate>2005-08-27</unadjustedDate>
+                      <unadjustedDate>2005-09-26</unadjustedDate>
+                      <unadjustedDate>2005-10-29</unadjustedDate>
+                      <unadjustedDate>2005-11-26</unadjustedDate>
+                      <unadjustedDate>2005-12-29</unadjustedDate>
+                      <unadjustedDate>2006-01-28</unadjustedDate>
+                      <unadjustedDate>2006-02-25</unadjustedDate>
+                      <unadjustedDate>2006-03-26</unadjustedDate>
+                      <unadjustedDate>2006-04-28</unadjustedDate>
+                      <unadjustedDate>2006-05-27</unadjustedDate>
+                      <unadjustedDate>2006-06-28</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -1981,7 +1981,7 @@
                 <valuationRules id="trs-bondbasket-FinalValuationDate">
                   <valuationDate>
                     <adjustableDate>
-                      <unadjustedDate>2006-07-15Z</unadjustedDate>
+                      <unadjustedDate>2006-07-15</unadjustedDate>
                       <dateAdjustments>
                         <businessDayConvention>NotApplicable</businessDayConvention>
                       </dateAdjustments>
@@ -1992,9 +1992,9 @@
               <paymentDates id="trs-bondbasket-EquityPaymentDate">
                 <paymentDatesInterim id="trs-bondbasket-InterimEquityPaymentDate">
                   <adjustableDates>
-                    <unadjustedDate>2004-12-14Z</unadjustedDate>
-                    <unadjustedDate>2005-12-14Z</unadjustedDate>
-                    <unadjustedDate>2006-12-14Z</unadjustedDate>
+                    <unadjustedDate>2004-12-14</unadjustedDate>
+                    <unadjustedDate>2005-12-14</unadjustedDate>
+                    <unadjustedDate>2006-12-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -2006,7 +2006,7 @@
                 </paymentDatesInterim>
                 <paymentDateFinal id="trs-bondbasket-FinalEquityPaymentDate">
                   <adjustableDate>
-                    <unadjustedDate>2006-12-14Z</unadjustedDate>
+                    <unadjustedDate>2006-12-14</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -2051,9 +2051,9 @@
               <interestLegResetDates></interestLegResetDates>
               <interestLegPaymentDates>
                 <adjustableDates>
-                  <unadjustedDate>2004-10-12Z</unadjustedDate>
-                  <unadjustedDate>2005-10-12Z</unadjustedDate>
-                  <unadjustedDate>2006-10-12Z</unadjustedDate>
+                  <unadjustedDate>2004-10-12</unadjustedDate>
+                  <unadjustedDate>2005-10-12</unadjustedDate>
+                  <unadjustedDate>2006-10-12</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>FOLLOWING</businessDayConvention>
                     <businessCenters>
@@ -2092,7 +2092,7 @@
                 <stubRate>0.02125</stubRate>
                 <stubStartDate>
                   <adjustableDate>
-                    <unadjustedDate>2004-07-20Z</unadjustedDate>
+                    <unadjustedDate>2004-07-20</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>NotApplicable</businessDayConvention>
                     </dateAdjustments>
@@ -2100,7 +2100,7 @@
                 </stubStartDate>
                 <stubEndDate>
                   <adjustableDate>
-                    <unadjustedDate>2004-08-01Z</unadjustedDate>
+                    <unadjustedDate>2004-08-01</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>NotApplicable</businessDayConvention>
                     </dateAdjustments>
@@ -2120,7 +2120,7 @@
                 </floatingRate>
                 <stubStartDate>
                   <adjustableDate>
-                    <unadjustedDate>2006-07-01Z</unadjustedDate>
+                    <unadjustedDate>2006-07-01</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>NotApplicable</businessDayConvention>
                     </dateAdjustments>
@@ -2128,7 +2128,7 @@
                 </stubStartDate>
                 <stubEndDate>
                   <adjustableDate>
-                    <unadjustedDate>2006-07-20Z</unadjustedDate>
+                    <unadjustedDate>2006-07-20</unadjustedDate>
                     <dateAdjustments>
                       <businessDayConvention>FOLLOWING</businessDayConvention>
                       <businessCenters>
@@ -2149,10 +2149,10 @@
           <independentAmount>
             <payerPartyReference href="party2" />
             <paymentDetail>
-              <adjustedPaymentDate>2004-01-01Z</adjustedPaymentDate>
+              <adjustedPaymentDate>2004-01-01</adjustedPaymentDate>
               <paymentDate>
                       <adjustableDate>
-                              <adjustedDate>2004-01-01Z</adjustedDate>
+                              <adjustedDate>2004-01-01</adjustedDate>
                       </adjustableDate>
               </paymentDate>
               <paymentAmount>
@@ -2165,12 +2165,12 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-bondbasket-equityLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-01-01Z</adjustedDate>
+      <adjustedDate>2005-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="trs-bondbasket-interestLeg" />
       <associatedValue>
@@ -2182,12 +2182,12 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="trs-bondbasket-interestLeg" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2006-01-01Z</adjustedDate>
+      <adjustedDate>2006-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FinalPayment</type>
       <assetReference href="trs-bondbasket-trade" />
     </scheduledDate>
@@ -2340,14 +2340,14 @@
           <partyTradeIdentifier>
             <tradeId tradeIdScheme="http://www.hedgeco.com/swaps/trade-id">cds-01</tradeId>
           </partyTradeIdentifier>
-          <tradeDate>2002-12-02Z</tradeDate>
+          <tradeDate>2002-12-02</tradeDate>
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.datastandardsworkinggroup.org/products-1-0">CDS-U</productType>
           <generalTerms>
             <scheduledTerminationDate>
 <!--<adjustableDate> -->
-              <unadjustedDate>2007-09-06Z</unadjustedDate>
+              <unadjustedDate>2007-09-06</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -2370,7 +2370,7 @@
                 <bond>
                   <instrumentId instrumentIdScheme="http://www.fpml.org/spec/2002/instrument-id-CUSIP-1-0">008916AB4</instrumentId>
                   <couponRate>0.077</couponRate>
-                  <maturity>2017-02-01Z</maturity>
+                  <maturity>2017-02-01</maturity>
                 </bond>
                 <primaryObligorReference href="cds-referenceEntity" />
               </referenceObligation>
@@ -2381,7 +2381,7 @@
           <feeLeg>
             <initialPayment>
               <payerPartyReference href="party1" />
-              <adjustablePaymentDate>2005-01-01Z</adjustablePaymentDate>
+              <adjustablePaymentDate>2005-01-01</adjustablePaymentDate>
               <paymentAmount>
                 <currency>EUR</currency>
                 <amount>10000</amount>
@@ -2392,7 +2392,7 @@
                 <periodMultiplier>3</periodMultiplier>
                 <period>M</period>
               </paymentFrequency>
-              <firstPaymentDate>2003-03-06Z</firstPaymentDate>
+              <firstPaymentDate>2003-03-06</firstPaymentDate>
               <fixedAmountCalculation>
                 <calculationAmount>
                   <currency>USD</currency>
@@ -2438,10 +2438,10 @@
           <independentAmount>
             <payerPartyReference href="party2" />
             <paymentDetail>
-<!--<adjustedPaymentDate>2004-01-01Z</adjustedPaymentDate>-->
+<!--<adjustedPaymentDate>2004-01-01</adjustedPaymentDate>-->
               <paymentDate>
                 <adjustableDate>
-                  <adjustedDate>2004-01-01Z</adjustedDate>
+                  <adjustedDate>2004-01-01</adjustedDate>
                 </adjustableDate>
               </paymentDate>
               <paymentRule xsi:type="PercentageRule">
@@ -2458,7 +2458,7 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2005-03-14Z</adjustedDate>
+      <adjustedDate>2005-03-14</adjustedDate>
       <type>FirstPayment</type>
       <assetReference href="cds-trade" />
     </scheduledDate>

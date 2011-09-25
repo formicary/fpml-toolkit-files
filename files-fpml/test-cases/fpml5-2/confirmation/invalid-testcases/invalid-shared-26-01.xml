@@ -30,7 +30,7 @@
         <partyReference href="Party1" />
         <tradeId tradeIdScheme="http://www.partyA.com/coding-scheme/trade-id">Trade234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TRADEDATE">2006-05-10-05:00</tradeDate>
+      <tradeDate id="TRADEDATE">2006-05-10</tradeDate>
     </tradeHeader>
     <bondOption>
       <buyerPartyReference href="Party1" />
@@ -45,7 +45,7 @@
         </paymentAmount>
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2006-05-15-05:00</unadjustedDate>
+            <unadjustedDate>2006-05-15</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -59,7 +59,7 @@
       <europeanExercise>
         <expirationDate>
           <adjustableDate>
-            <unadjustedDate>2006-06-19-05:00</unadjustedDate>
+            <unadjustedDate>2006-06-19</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -98,7 +98,7 @@
       <settlementType>Physical</settlementType>
       <settlementDate>
         <adjustableDate>
-          <unadjustedDate>2006-06-22-05:00</unadjustedDate>
+          <unadjustedDate>2006-06-22</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>
@@ -117,7 +117,7 @@
 <!--Made rule shared-26 (When the parValue exists therefore the currency must also exist. This is a workaround because parValue is not defined as a Money type) invalid by removing <currency>JPY</currency>-->
         <clearanceSystem>Clearstream</clearanceSystem>
         <couponRate>0.014</couponRate>
-        <maturity>2011-03-20-05:00</maturity>
+        <maturity>2011-03-20</maturity>
         <parValue>10000000000</parValue>
         <faceAmount>10000000000</faceAmount>
       </bond>

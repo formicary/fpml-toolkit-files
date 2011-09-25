@@ -31,7 +31,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.partyA.com/eqd-trade-id">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2001-07-13Z</tradeDate>
+      <tradeDate id="TradeDate">2001-07-13</tradeDate>
     </tradeHeader>
     <equityOption>
       <productType>americanCallStock</productType>
@@ -51,7 +51,7 @@
         <equityAmericanExercise>
           <commencementDate>
             <adjustableDate>
-              <unadjustedDate>2001-07-13Z</unadjustedDate>
+              <unadjustedDate>2001-07-13</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -59,7 +59,7 @@
           </commencementDate>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2005-09-27Z</unadjustedDate>
+              <unadjustedDate>2005-09-27</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -86,7 +86,7 @@
         <settlementType>Election</settlementType>
         <settlementMethodElectionDate>
           <adjustableDate>
-            <unadjustedDate>2004-09-27Z</unadjustedDate>
+            <unadjustedDate>2004-09-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -139,7 +139,7 @@
           <amount>405000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2001-07-17Z</unadjustedDate>
+          <unadjustedDate>2001-07-17</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>

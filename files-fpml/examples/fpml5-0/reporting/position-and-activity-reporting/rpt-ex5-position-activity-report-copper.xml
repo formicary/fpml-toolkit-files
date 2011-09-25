@@ -31,12 +31,27 @@
             <tradeDate>2002-12-02Z</tradeDate>
           </tradeHeader>
           <creditDefaultSwap>
-            <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
+            <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
             <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
             <generalTerms>
+              <scheduledTerminationDate>
+                <unadjustedDate>2007-12-05</unadjustedDate>
+              </scheduledTerminationDate>
               <buyerPartyReference href="party1" />
               <sellerPartyReference href="party2" />
+              <referenceInformation>
+                <referenceEntity id="referenceEntity1">
+                  <entityName>ACOM CO., LTD.</entityName>
+                </referenceEntity>
+              </referenceInformation>
             </generalTerms>
+            <feeLeg>
+              <periodicPayment>
+                <fixedAmountCalculation>
+                  <fixedRate>0.007</fixedRate>
+                </fixedAmountCalculation>
+              </periodicPayment>
+            </feeLeg>
             <protectionTerms>
               <calculationAmount>
                 <currency>EUR</currency>
@@ -63,12 +78,27 @@
             <tradeDate>2004-06-02Z</tradeDate>
           </tradeHeader>
           <creditDefaultSwap>
-            <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
+            <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
             <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
             <generalTerms>
+              <scheduledTerminationDate>
+                <unadjustedDate>2007-12-05</unadjustedDate>
+              </scheduledTerminationDate>
               <buyerPartyReference href="party1" />
               <sellerPartyReference href="party2" />
+              <referenceInformation>
+                <referenceEntity id="referenceEntity2">
+                  <entityName>ACOM CO., LTD.</entityName>
+                </referenceEntity>
+              </referenceInformation>
             </generalTerms>
+            <feeLeg>
+              <periodicPayment>
+                <fixedAmountCalculation>
+                  <fixedRate>0.007</fixedRate>
+                </fixedAmountCalculation>
+              </periodicPayment>
+            </feeLeg>
             <protectionTerms>
               <calculationAmount>
                 <currency>EUR</currency>
@@ -95,12 +125,27 @@
             <tradeDate>2004-06-02Z</tradeDate>
           </tradeHeader>
           <creditDefaultSwap>
-            <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
+            <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
             <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
             <generalTerms>
+              <scheduledTerminationDate>
+                <unadjustedDate>2007-12-05</unadjustedDate>
+              </scheduledTerminationDate>
               <buyerPartyReference href="party1" />
               <sellerPartyReference href="party2" />
+              <referenceInformation>
+                <referenceEntity id="referenceEntity3">
+                  <entityName>ACOM CO., LTD.</entityName>
+                </referenceEntity>
+              </referenceInformation>
             </generalTerms>
+            <feeLeg>
+              <periodicPayment>
+                <fixedAmountCalculation>
+                  <fixedRate>0.007</fixedRate>
+                </fixedAmountCalculation>
+              </periodicPayment>
+            </feeLeg>
             <protectionTerms>
               <calculationAmount>
                 <currency>EUR</currency>

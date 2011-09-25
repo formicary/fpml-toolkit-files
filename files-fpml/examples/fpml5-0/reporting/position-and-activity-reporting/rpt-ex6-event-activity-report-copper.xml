@@ -27,17 +27,35 @@
       </partyTradeInformation>
       <tradeDate>2004-06-02</tradeDate>
     </tradeHeader>
-    <nonSchemaProduct>
-      <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
+    <creditDefaultSwap>
+      <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
       <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
-      <multiLeg>true</multiLeg>
-      <buyerPartyReference href="party1" />
-      <sellerPartyReference href="party2" />
-      <notional>
-        <currency>EUR</currency>
-        <amount>5000</amount>
-      </notional>
-    </nonSchemaProduct>
+      <generalTerms>
+        <scheduledTerminationDate>
+          <unadjustedDate>2007-12-05</unadjustedDate>
+        </scheduledTerminationDate>
+        <buyerPartyReference href="party1" />
+        <sellerPartyReference href="party2" />
+        <referenceInformation>
+          <referenceEntity id="referenceEntity1">
+            <entityName>ACOM CO., LTD.</entityName>
+          </referenceEntity>
+        </referenceInformation>
+      </generalTerms>
+      <feeLeg>
+        <periodicPayment>
+          <fixedAmountCalculation>
+            <fixedRate>0.007</fixedRate>
+          </fixedAmountCalculation>
+        </periodicPayment>
+      </feeLeg>
+      <protectionTerms>
+        <calculationAmount>
+          <currency>EUR</currency>
+          <amount>5000</amount>
+        </calculationAmount>
+      </protectionTerms>
+    </creditDefaultSwap>
   </trade>
   <amendment>
     <trade>
@@ -51,17 +69,38 @@
         </partyTradeInformation>
         <tradeDate>2004-06-02</tradeDate>
       </tradeHeader>
-      <nonSchemaProduct>
-        <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
+      <creditDefaultSwap>
+        <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
         <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
-        <multiLeg>true</multiLeg>
-        <buyerPartyReference href="party1" />
-        <sellerPartyReference href="party2" />
-        <notional>
-          <currency>EUR</currency>
-          <amount>10000</amount>
-        </notional>
-      </nonSchemaProduct>
+<!--
+                                <multiLeg>true</multiLeg>
+                        -->
+        <generalTerms>
+          <scheduledTerminationDate>
+            <unadjustedDate>2007-12-05</unadjustedDate>
+          </scheduledTerminationDate>
+          <buyerPartyReference href="party1" />
+          <sellerPartyReference href="party2" />
+          <referenceInformation>
+            <referenceEntity id="referenceEntity2">
+              <entityName>ACOM CO., LTD.</entityName>
+            </referenceEntity>
+          </referenceInformation>
+        </generalTerms>
+        <feeLeg>
+          <periodicPayment>
+            <fixedAmountCalculation>
+              <fixedRate>0.008</fixedRate>
+            </fixedAmountCalculation>
+          </periodicPayment>
+        </feeLeg>
+        <protectionTerms>
+          <calculationAmount>
+            <currency>EUR</currency>
+            <amount>5000</amount>
+          </calculationAmount>
+        </protectionTerms>
+      </creditDefaultSwap>
     </trade>
     <agreementDate>2004-06-02</agreementDate>
     <effectiveDate>2004-06-02</effectiveDate>

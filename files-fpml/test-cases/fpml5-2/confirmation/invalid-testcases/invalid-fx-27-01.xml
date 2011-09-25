@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.csfb.com/fx/trade-id">CSFB9842</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-01-09Z</tradeDate>
+      <tradeDate>2002-01-09</tradeDate>
     </tradeHeader>
     <fxSingleLeg>
       <exchangedCurrency1>
@@ -49,7 +49,7 @@
           <amount>434000000</amount>
         </paymentAmount>
       </exchangedCurrency2>
-      <valueDate>2002-04-11Z</valueDate>
+      <valueDate>2002-04-11</valueDate>
       <exchangeRate>
         <quotedCurrencyPair>
           <currency1>USD</currency1>
@@ -70,7 +70,7 @@
             <currency2>INR</currency2>
             <quoteBasis>Currency2PerCurrency1</quoteBasis>
           </quotedCurrencyPair>
-          <fixingDate>2002-04-09Z</fixingDate>
+          <fixingDate>2002-04-09</fixingDate>
 <!--07-08-2010 Refactoring: instead of extending "FxSpotRateSource" complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" that way eliminating dependency on the rate source-->
           <fxSpotRateSource>
             <primaryRateSource>

@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/swaps/trade-id">DEUTDEFF</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-01-23Z</tradeDate>
+      <tradeDate>2002-01-23</tradeDate>
     </tradeHeader>
     <fxSwap>
       <productType>FxSwap</productType>
@@ -51,7 +51,7 @@
             <amount>14800000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-        <valueDate>2002-01-25Z</valueDate>
+        <valueDate>2002-01-25</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>
@@ -78,7 +78,7 @@
             <amount>15000000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-        <valueDate>2002-02-25Z</valueDate>
+        <valueDate>2002-02-25</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>

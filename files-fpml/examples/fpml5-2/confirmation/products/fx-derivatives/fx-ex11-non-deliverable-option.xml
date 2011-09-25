@@ -48,7 +48,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.markets.Reuters.com/rss/spec/2001/trade-id-2-0">IBFXO-0123456789</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-01-15Z</tradeDate>
+      <tradeDate>2001-01-15</tradeDate>
     </tradeHeader>
 <!--FpML-5-0 Renamed from 'fxSimpleOption' to 'fxOption'-->
     <fxOption>
@@ -57,12 +57,12 @@
       <sellerPartyReference href="party2" />
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise. 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' and  'valueDate' was moved in here-->
       <europeanExercise>
-        <expiryDate>2001-04-09Z</expiryDate>
+        <expiryDate>2001-04-09</expiryDate>
         <expiryTime>
           <hourMinuteTime>10:00:00</hourMinuteTime>
           <businessCenter>USNY</businessCenter>
         </expiryTime>
-        <valueDate>2001-04-11Z</valueDate>
+        <valueDate>2001-04-11</valueDate>
       </europeanExercise>
 <!--FpML-5-0 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. europeanExercise)-->
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -88,7 +88,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-01-17Z</unadjustedDate>
+            <unadjustedDate>2001-01-17</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -111,7 +111,7 @@
             <currency2>USD</currency2>
             <quoteBasis>Currency1PerCurrency2</quoteBasis>
           </quotedCurrencyPair>
-          <fixingDate>2001-04-09Z</fixingDate>
+          <fixingDate>2001-04-09</fixingDate>
           <fxSpotRateSource>
             <primaryRateSource>
               <rateSource>Reuters</rateSource>

@@ -28,13 +28,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="floatingCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2000-04-27Z</unadjustedDate>
+            <unadjustedDate>2000-04-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2002-04-27Z</unadjustedDate>
+            <unadjustedDate>2002-04-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="primaryBusinessCenters">
@@ -114,13 +114,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="fixedCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2000-04-27Z</unadjustedDate>
+            <unadjustedDate>2000-04-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2002-04-27Z</unadjustedDate>
+            <unadjustedDate>2002-04-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCentersReference href="primaryBusinessCenters" />
@@ -158,7 +158,7 @@
             <fixedRateSchedule>
               <initialValue>0.06</initialValue>
               <step>
-                <stepDate>2001-04-27Z</stepDate>
+                <stepDate>2001-04-27</stepDate>
                 <stepValue>0.065</stepValue>
               </step>
             </fixedRateSchedule>
@@ -174,7 +174,7 @@
           <amount>15000.00</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2000-04-27Z</unadjustedDate>
+          <unadjustedDate>2000-04-27</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCentersReference href="primaryBusinessCenters" />

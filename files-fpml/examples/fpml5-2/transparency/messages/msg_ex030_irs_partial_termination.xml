@@ -40,12 +40,16 @@
 <!-- NEW: cleared or uncleared = "C" in CFTC doc -->
           <nonStandardTerms>false</nonStandardTerms>
 <!-- NEW: indication of other price-affecting term -->
-          <largeNotionalTrade>false</largeNotionalTrade>
+          <offMarketPrice>false</offMarketPrice>
+<!-- NEW -->
+          <largeSizeTrade>false</largeSizeTrade>
 <!-- NEW: block trades and large notional swaps -->
-          <executionVenue>SwapsMarket</executionVenue>
+          <executionType>Electronic</executionType>
+<!-- NEW -->
+          <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc -->
         </tradeInformation>
-        <tradeDate>2011-02-04Z</tradeDate>
+        <tradeDate>2011-02-04</tradeDate>
 <!-- original trade date -->
       </tradeHeader>
       <swap>
@@ -57,11 +61,11 @@
         <swapStream>
           <calculationPeriodDates id="floatingCalcPeriodDates">
             <effectiveDate id="start">
-              <unadjustedDate>2011-02-08Z</unadjustedDate>
+              <unadjustedDate>2011-02-08</unadjustedDate>
 <!-- start date  -->
             </effectiveDate>
             <terminationDate>
-              <unadjustedDate>2016-02-08Z</unadjustedDate>
+              <unadjustedDate>2016-02-08</unadjustedDate>
 <!-- end date  -->
             </terminationDate>
           </calculationPeriodDates>
@@ -104,11 +108,11 @@
         <swapStream>
           <calculationPeriodDates>
             <effectiveDate>
-              <unadjustedDate>2011-02-08Z</unadjustedDate>
+              <unadjustedDate>2011-02-08</unadjustedDate>
 <!-- start date  -->
             </effectiveDate>
             <terminationDate>
-              <unadjustedDate>2016-02-08Z</unadjustedDate>
+              <unadjustedDate>2016-02-08</unadjustedDate>
 <!-- end date  -->
             </terminationDate>
           </calculationPeriodDates>
@@ -151,10 +155,10 @@
       <amount>7500000</amount>
     </outstandingNotionalAmount>
   </termination>
-  <priceNotation>
+  <quote>
     <value>0.0268</value>
     <measureType>MarketQuote</measureType>
 <!-- price equivalent -->
-  </priceNotation>
+  </quote>
 </publicExecutionReport>
 

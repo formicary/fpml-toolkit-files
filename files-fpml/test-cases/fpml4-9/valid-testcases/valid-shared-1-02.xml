@@ -89,7 +89,7 @@
                   </equityValuation>
                </valuationPriceInterim>
                <valuationPriceFinal><!-- C24 (http://www.c24.biz) Simon Heinrich: Removed the commission element and its children -->
-                  <determinationMethod>HedgeUnwind</determinationMethod><!-- C24 (http://www.c24.biz) Simon Heinrich: Changed the element name from equityValuationDate to equityValuation -->
+                  <determinationMethod>HedgeExecution</determinationMethod><!-- C24 (http://www.c24.biz) Simon Heinrich: Changed the element name from equityValuationDate to equityValuation -->
                   <equityValuation><!-- C24 (http://www.c24.biz) Simon Heinrich: Inserted the valuationDate element -->
                      <valuationDate id="FinalValuationDate">
                         <adjustableDate><!-- C24 (http://www.c24.biz) Simon Heinrich: Changed the unadjustedDate element value from 2003-10-17 to 2002-09-24 -->

@@ -45,12 +45,16 @@
 <!-- NEW: cleared or uncleared = "C" in CFTC doc -->
         <nonStandardTerms>false</nonStandardTerms>
 <!-- NEW: indication of other price-affecting term -->
-        <largeNotionalTrade>false</largeNotionalTrade>
+        <offMarketPrice>false</offMarketPrice>
+<!-- NEW -->
+        <largeSizeTrade>false</largeSizeTrade>
 <!-- NEW: block trades and large notional swaps -->
-        <executionVenue>SwapsMarket</executionVenue>
+        <executionType>Electronic</executionType>
+<!-- NEW -->
+        <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc -->
       </tradeInformation>
-      <tradeDate id="TradeDate">2011-02-04Z</tradeDate>
+      <tradeDate id="TradeDate">2011-02-04</tradeDate>
     </tradeHeader>
     <returnSwap>
       <productType>EquityTotalReturnSwap</productType>
@@ -100,17 +104,17 @@
             <valuationRules>
               <valuationDates id="InterimValuationDate">
                 <adjustableDates>
-                  <unadjustedDate>2001-10-12Z</unadjustedDate>
-                  <unadjustedDate>2001-11-13Z</unadjustedDate>
-                  <unadjustedDate>2001-12-12Z</unadjustedDate>
-                  <unadjustedDate>2002-01-14Z</unadjustedDate>
-                  <unadjustedDate>2002-02-12Z</unadjustedDate>
-                  <unadjustedDate>2002-03-12Z</unadjustedDate>
-                  <unadjustedDate>2002-04-12Z</unadjustedDate>
-                  <unadjustedDate>2002-05-13Z</unadjustedDate>
-                  <unadjustedDate>2002-06-12Z</unadjustedDate>
-                  <unadjustedDate>2002-07-12Z</unadjustedDate>
-                  <unadjustedDate>2002-08-12Z</unadjustedDate>
+                  <unadjustedDate>2001-10-12</unadjustedDate>
+                  <unadjustedDate>2001-11-13</unadjustedDate>
+                  <unadjustedDate>2001-12-12</unadjustedDate>
+                  <unadjustedDate>2002-01-14</unadjustedDate>
+                  <unadjustedDate>2002-02-12</unadjustedDate>
+                  <unadjustedDate>2002-03-12</unadjustedDate>
+                  <unadjustedDate>2002-04-12</unadjustedDate>
+                  <unadjustedDate>2002-05-13</unadjustedDate>
+                  <unadjustedDate>2002-06-12</unadjustedDate>
+                  <unadjustedDate>2002-07-12</unadjustedDate>
+                  <unadjustedDate>2002-08-12</unadjustedDate>
                 </adjustableDates>
               </valuationDates>
               <valuationTimeType>Close</valuationTimeType>
@@ -121,7 +125,7 @@
             <valuationRules>
               <valuationDate id="FinalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2002-09-24Z</unadjustedDate>
+                  <unadjustedDate>2002-09-24</unadjustedDate>
                 </adjustableDate>
               </valuationDate>
             </valuationRules>

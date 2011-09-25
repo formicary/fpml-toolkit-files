@@ -28,7 +28,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.PartyA.com/eqd-trade-id">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2000-06-28Z</tradeDate>
+      <tradeDate>2000-06-28</tradeDate>
     </tradeHeader>
     <equityOption>
       <productType>europeanCallBasket</productType>
@@ -65,7 +65,7 @@
         <equityEuropeanExercise>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2002-07-01Z</unadjustedDate>
+              <unadjustedDate>2002-07-01</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -138,7 +138,7 @@
           <amount>213.5675511</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2000-07-03Z</unadjustedDate>
+          <unadjustedDate>2000-07-03</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>

@@ -16,7 +16,7 @@
   </header>
   <portfolio>
     <portfolioName>fundPortfolio1</portfolioName>
-    <asOfDate>2006-04-26Z</asOfDate>
+    <asOfDate>2006-04-26</asOfDate>
     <definingParty href="dealer" />
     <matchingParty href="fund" />
     <newPortfolioDefinition>true</newPortfolioDefinition>

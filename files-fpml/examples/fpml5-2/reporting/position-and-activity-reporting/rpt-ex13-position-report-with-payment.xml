@@ -13,7 +13,7 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Copper</dataSetName>
   <position>
     <positionId positionIdScheme="http://www.abc.com/positionId">CDS-POS-01</positionId>
@@ -23,7 +23,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2002-12-02Z</tradeDate>
+          <tradeDate>2002-12-02</tradeDate>
         </tradeHeader>
         <nonSchemaProduct>
           <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
@@ -60,8 +60,8 @@
         </grossCashflow>
         <calculationElements>
           <calculationPeriod>
-            <adjustedStartDate>2004-03-20Z</adjustedStartDate>
-            <adjustedEndDate>2004-06-20Z</adjustedEndDate>
+            <adjustedStartDate>2004-03-20</adjustedStartDate>
+            <adjustedEndDate>2004-06-20</adjustedEndDate>
             <numberOfDays>92</numberOfDays>
             <dayCountFraction>ACT/360</dayCountFraction>
             <dayCountYearFraction>0.2555</dayCountYearFraction>

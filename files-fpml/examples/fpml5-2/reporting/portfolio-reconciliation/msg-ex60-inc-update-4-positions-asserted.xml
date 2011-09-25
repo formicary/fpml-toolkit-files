@@ -16,7 +16,7 @@
   </header>
   <portfolio>
     <portfolioName>fundPortfolio1</portfolioName>
-    <asOfDate>2006-04-25Z</asOfDate>
+    <asOfDate>2006-04-25</asOfDate>
     <definingParty href="dealer" />
     <matchingParty href="fund" />
     <newPortfolioDefinition>false</newPortfolioDefinition>
@@ -36,15 +36,15 @@
             <partyReference href="dealer" />
             <tradeId tradeIdScheme="http://www.abc.com/ird">2222</tradeId>
           </partyTradeIdentifier>
-          <tradeDate>2006-05-14Z</tradeDate>
+          <tradeDate>2006-05-14</tradeDate>
         </tradeHeader>
         <fra>
           <buyerPartyReference href="fund" />
           <sellerPartyReference href="dealer" />
-          <adjustedEffectiveDate id="resetDate">2006-07-17Z</adjustedEffectiveDate>
-          <adjustedTerminationDate>2007-03-17Z</adjustedTerminationDate>
+          <adjustedEffectiveDate id="resetDate">2006-07-17</adjustedEffectiveDate>
+          <adjustedTerminationDate>2007-03-17</adjustedTerminationDate>
           <paymentDate>
-            <unadjustedDate>2006-07-17Z</unadjustedDate>
+            <unadjustedDate>2006-07-17</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>

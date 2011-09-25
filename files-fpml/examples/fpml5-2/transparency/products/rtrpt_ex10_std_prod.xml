@@ -39,12 +39,16 @@
 <!-- NEW: cleared or uncleared = "C" in CFTC doc -->
         <nonStandardTerms>false</nonStandardTerms>
 <!-- NEW: indication of other price-affecting term -->
-        <largeNotionalTrade>false</largeNotionalTrade>
+        <offMarketPrice>false</offMarketPrice>
+<!-- NEW -->
+        <largeSizeTrade>false</largeSizeTrade>
 <!-- NEW: block trades and large notional swaps -->
-        <executionVenue>SwapsMarket</executionVenue>
+        <executionType>Electronic</executionType>
+<!-- NEW -->
+        <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc -->
       </tradeInformation>
-      <tradeDate>2011-02-04Z</tradeDate>
+      <tradeDate>2011-02-04</tradeDate>
     </tradeHeader>
     <standardProduct>
       <productType>InterestRateSwap</productType>
@@ -58,9 +62,9 @@
         <currency>USD</currency>
         <amount>10000000.00</amount>
       </notional>
-      <priceNotation>
+      <quote>
         <value>0.0253</value>
-      </priceNotation>
+      </quote>
 <!-- we assume that other key terms, such as term/tenor of the trade, currency, index, etc. are defined in the product Id -->
     </standardProduct>
   </trade>

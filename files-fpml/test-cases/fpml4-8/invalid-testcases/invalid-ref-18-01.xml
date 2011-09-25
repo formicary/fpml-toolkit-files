@@ -457,8 +457,8 @@
                <value>0.11</value>
             </point>
             <point id="USD-LIBOR-vals-dp-pt2">
-               <coordinate>
-                  <generic name="" href="USD-LIBOR-input-2"/>
+               <coordinate><!-- Should be<generic name="" href="USD-LIBOR-input-2"/>-->
+                  <generic name="" href="party1"/>
                   <expiration>
                      <tenor>
                         <periodMultiplier>1</periodMultiplier>

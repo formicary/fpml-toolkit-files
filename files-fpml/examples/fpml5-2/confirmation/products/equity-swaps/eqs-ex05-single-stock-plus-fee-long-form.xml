@@ -35,7 +35,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/eqs-trade-id">5978</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2002-09-10Z</tradeDate>
+      <tradeDate id="TradeDate">2002-09-10</tradeDate>
     </tradeHeader>
     <returnSwap>
       <productType>SingleStockSwap</productType>
@@ -44,7 +44,7 @@
         <receiverPartyReference href="party2" />
         <effectiveDate id="EffectiveDate">
           <adjustableDate>
-            <unadjustedDate>2002-09-12Z</unadjustedDate>
+            <unadjustedDate>2002-09-12</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NotApplicable</businessDayConvention>
             </dateAdjustments>
@@ -103,7 +103,7 @@
             <valuationRules>
               <valuationDate id="FinalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2004-03-12Z</unadjustedDate>
+                  <unadjustedDate>2004-03-12</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>FOLLOWING</businessDayConvention>
                     <businessCentersReference href="PrimaryBusinessCenter" />
@@ -295,7 +295,7 @@
         <amount>1000</amount>
       </paymentAmount>
       <paymentDate>
-        <unadjustedDate id="BrokerageFeePaymentDate">2002-09-30Z</unadjustedDate>
+        <unadjustedDate id="BrokerageFeePaymentDate">2002-09-30</unadjustedDate>
         <dateAdjustments>
           <businessDayConvention>NotApplicable</businessDayConvention>
         </dateAdjustments>

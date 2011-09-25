@@ -34,7 +34,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id">123</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-04-29Z</tradeDate>
+      <tradeDate>2001-04-29</tradeDate>
     </tradeHeader>
     <swap>
       <swapStream>
@@ -42,13 +42,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="CalcPeriodDates0">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters0">
@@ -100,13 +100,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="CalcPeriodDates1">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters1">
@@ -185,7 +185,7 @@
         <europeanExercise>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2006-08-15Z</unadjustedDate>
+              <unadjustedDate>2006-08-15</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -197,7 +197,7 @@
           </expirationDate>
           <relevantUnderlyingDate>
             <adjustableDates>
-              <unadjustedDate>2011-08-30Z</unadjustedDate>
+              <unadjustedDate>2011-08-30</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -224,8 +224,8 @@
 <!-- ird62: extensionEvent: adjustedExerciseDate > adjustedExtendedTerminationDate -->
         <extendibleProvisionAdjustedDates>
           <extensionEvent>
-            <adjustedExerciseDate>2005-10-30Z</adjustedExerciseDate>
-            <adjustedExtendedTerminationDate>2005-09-30Z</adjustedExtendedTerminationDate>
+            <adjustedExerciseDate>2005-10-30</adjustedExerciseDate>
+            <adjustedExtendedTerminationDate>2005-09-30</adjustedExtendedTerminationDate>
           </extensionEvent>
         </extendibleProvisionAdjustedDates>
       </extendibleProvision>

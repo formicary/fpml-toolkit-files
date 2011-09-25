@@ -40,13 +40,11 @@
           <instrumentId instrumentIdScheme="CUSIP">ExampleCUSIP1</instrumentId>
           <currency>JPY</currency>
           <couponRate>0.014</couponRate>
-          <maturity>2011-03-20-05:00</maturity>
+          <maturity>2011-03-20</maturity>
         </bond>
 <!-- it was a call option on JPY 10000000000 
                                 so the transaction is to buy that much of the bond -->
         <quantity>
-<!-- here we show the notional value - should we show then number of bonds?  
-                                                face amount listed above seems to be total, not per bond -->
           <nominal>
 <!-- Lyteck 3/15/2011: renamed from notional to nominal per BPWG 3/04/2011 -->
             <currency>JPY</currency>
@@ -55,10 +53,14 @@
         </quantity>
 <!-- the price of the trade is the strike of the option -->
         <pricing>
-          <price>
-            <gross>99.7</gross>
-<!-- of par -->
-          </price>
+          <quote>
+            <value>99.7</value>
+            <measureType>CleanGrossCurrentMarketPrice</measureType>
+          </quote>
+          <quote>
+            <value>101.25</value>
+            <measureType>DirtyGrossCurrentMarketPrice</measureType>
+          </quote>
         </pricing>
       </instrumentTradeDetails>
     </physicalSettlement>

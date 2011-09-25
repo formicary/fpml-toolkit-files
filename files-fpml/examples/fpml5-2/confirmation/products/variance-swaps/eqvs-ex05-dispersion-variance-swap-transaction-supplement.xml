@@ -31,7 +31,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.xyz.com/coding-scheme/trade-id">280234089</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="td">2000-06-28Z</tradeDate>
+      <tradeDate id="td">2000-06-28</tradeDate>
     </tradeHeader>
 <!-- Transaction Supplement DVS  ( Dispersion Variance Swap )-->
     <varianceSwapTransactionSupplement>
@@ -66,7 +66,7 @@
 <!-- valuation date: -->
           <valuationDate>
             <adjustableDate id="vd">
-              <unadjustedDate>2008-10-10Z</unadjustedDate>
+              <unadjustedDate>2008-10-10</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters>

@@ -36,7 +36,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/eqs-trade-id">4569</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2002-07-17Z</tradeDate>
+      <tradeDate id="TradeDate">2002-07-17</tradeDate>
     </tradeHeader>
     <returnSwap>
       <productType>CompositeBasketSwap</productType>
@@ -175,7 +175,7 @@
             <valuationRules>
               <valuationDates id="InterimValuationDate">
                 <adjustableDates>
-                  <unadjustedDate>2002-10-17Z</unadjustedDate>
+                  <unadjustedDate>2002-10-17</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -189,7 +189,7 @@
             <valuationRules>
               <valuationDate id="FinalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2004-01-17Z</unadjustedDate>
+                  <unadjustedDate>2004-01-17</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -309,7 +309,7 @@
             <spreadSchedule id="US_NOKIV.HE">
               <initialValue>0.0050</initialValue>
               <step>
-                <stepDate>2002-03-17Z</stepDate>
+                <stepDate>2002-03-17</stepDate>
                 <stepValue>0.0055</stepValue>
               </step>
             </spreadSchedule>
@@ -319,21 +319,21 @@
             <spreadSchedule>
               <initialValue>0.0050</initialValue>
               <step id="US_TEF.MC">
-                <stepDate>2002-04-17Z</stepDate>
+                <stepDate>2002-04-17</stepDate>
                 <stepValue>0.0042</stepValue>
               </step>
             </spreadSchedule>
             <spreadSchedule>
               <initialValue>0.0050</initialValue>
               <step id="US_PTCO.IN">
-                <stepDate>2002-03-20Z</stepDate>
+                <stepDate>2002-03-20</stepDate>
                 <stepValue>0.0065</stepValue>
               </step>
             </spreadSchedule>
             <spreadSchedule>
               <initialValue>0.0050</initialValue>
               <step id="US_VOD.L">
-                <stepDate>2002-02-22Z</stepDate>
+                <stepDate>2002-02-22</stepDate>
                 <stepValue>0.0022</stepValue>
               </step>
             </spreadSchedule>

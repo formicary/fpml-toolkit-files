@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-== Copyright (c) 2002-2011. All rights reserved. 
+== Copyright (c) 2002-2011 All rights reserved. 
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 7989 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8171 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-shared-5-2.xsd" />
   <xsd:complexType name="ActualPrice">
     <xsd:sequence>
@@ -327,9 +327,9 @@
           <xsd:documentation xml:lang="en">The relative weight of each respective basket constituent, expressed in percentage. A basket percentage of 5% would be represented as 0.05.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="basketAmount" type="Money" minOccurs="0">
+      <xsd:element name="basketAmount" type="Money" fpml-annotation:deprecated="true" fpml-annotation:deprecatedReason="Basket Amount is not present in ISDA documentation or otherwise, basket is weighted on percentage (relative weight) or open units (absolute weight), both of which are stable expressions." minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">The relative weight of each respective basket constituent, expressed as a monetary amount.</xsd:documentation>
+          <xsd:documentation xml:lang="en">DEPRECATED. The relative weight of each respective basket constituent, expressed as a monetary amount.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:choice>

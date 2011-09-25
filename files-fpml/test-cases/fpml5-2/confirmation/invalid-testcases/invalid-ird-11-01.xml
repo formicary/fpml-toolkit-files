@@ -19,7 +19,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.barclays.com/swaps/trade-id">SW2000</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>1994-12-12Z</tradeDate>
+      <tradeDate>1994-12-12</tradeDate>
     </tradeHeader>
     <swap>
 <!-- Bank A pays the floating rate every 6 months, based on 6M DEM-LIBOR-BBA,
@@ -30,13 +30,13 @@
         <calculationPeriodDates id="floatingCalcPeriodDates">
           <effectiveDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed unadjustedDate from 1994-12-14 to 1994-12-15 -->
-            <unadjustedDate>1994-12-15Z</unadjustedDate>
+            <unadjustedDate>1994-12-15</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>1999-12-14Z</unadjustedDate>
+            <unadjustedDate>1999-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="primaryBusinessCenters">
@@ -116,13 +116,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="fixedCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>1994-12-14Z</unadjustedDate>
+            <unadjustedDate>1994-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>1999-12-14Z</unadjustedDate>
+            <unadjustedDate>1999-12-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCentersReference href="primaryBusinessCenters" />

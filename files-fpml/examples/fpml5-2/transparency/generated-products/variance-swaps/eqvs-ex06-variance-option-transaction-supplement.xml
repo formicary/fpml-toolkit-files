@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-2" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-2.xsd">
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">166555</tradeId>
+         </partyTradeIdentifier>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">166555</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2009-01-27</tradeDate>
+      </tradeHeader>
+      <varianceOptionTransactionSupplement>
+         <productType>VarianceOption</productType>
+         <assetClass>Equities</assetClass>
+         <optionType>Call</optionType>
+         <equityPremium>
+            <paymentAmount>
+               <currency>GBP</currency>
+               <amount>1500000</amount>
+            </paymentAmount>
+         </equityPremium>
+         <equityExercise>
+            <equityEuropeanExercise>
+               <expirationDate>
+                  <adjustableDate>
+                     <unadjustedDate>2015-03-20</unadjustedDate>
+                  </adjustableDate>
+               </expirationDate>
+               <equityExpirationTimeType>OSP</equityExpirationTimeType>
+            </equityEuropeanExercise>
+         </equityExercise>
+         <varianceSwapTransactionSupplement>
+            <varianceLeg>
+               <underlyer>
+                  <singleUnderlyer>
+                     <index>
+                        <instrumentId instrumentIdScheme="http://www.fpml.org/spec/2003/instrument-id-Reuters-RIC-1-0">.FTSE</instrumentId>
+                        <description>FTSE 100 INDEX</description>
+                        <exchangeId exchangeIdScheme="http://www.fpml.org/spec/2002/exchange-id-REC-1-0">LSE</exchangeId>
+                        <relatedExchangeId exchangeIdScheme="http://www.fpml.org/spec/2002/exchange-id-REC-1-0">LIF</relatedExchangeId>
+                     </index>
+                  </singleUnderlyer>
+               </underlyer>
+               <valuation>
+                  <valuationDate>
+                     <adjustableDate>
+                        <unadjustedDate>2011-03-18</unadjustedDate>
+                     </adjustableDate>
+                  </valuationDate>
+                  <futuresPriceValuation>true</futuresPriceValuation>
+               </valuation>
+               <amount>
+                  <observationStartDate>
+                     <adjustableDate>
+                        <unadjustedDate>2009-01-27</unadjustedDate>
+                     </adjustableDate>
+                  </observationStartDate>
+                  <variance>
+                     <closingLevel>true</closingLevel>
+                     <expectedN>542</expectedN>
+                     <varianceAmount>
+                        <currency>GBP</currency>
+                        <amount>33333.33</amount>
+                     </varianceAmount>
+                     <varianceStrikePrice>225</varianceStrikePrice>
+                     <varianceCap>false</varianceCap>
+                     <vegaNotionalAmount>1000000</vegaNotionalAmount>
+                  </variance>
+               </amount>
+            </varianceLeg>
+         </varianceSwapTransactionSupplement>
+      </varianceOptionTransactionSupplement>
+   </trade>
+</publicExecutionReport>

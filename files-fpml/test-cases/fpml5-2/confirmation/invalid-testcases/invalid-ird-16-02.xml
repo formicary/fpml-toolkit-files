@@ -34,7 +34,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.ubsw.com/swaps/trade-id">204334</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2000-04-03Z</tradeDate>
+      <tradeDate>2000-04-03</tradeDate>
     </tradeHeader>
     <swap>
 <!-- Bank A pays the floating rate every 6 months, based on 6M EUR-EURIBOR-Telerate
@@ -44,7 +44,7 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="floatingCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2000-04-05Z</unadjustedDate>
+            <unadjustedDate>2000-04-05</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -52,7 +52,7 @@
           <terminationDate>
 <!-- CHANGE Date below increased, was 2005, breaks IRD-41.  Chris Simmons, 14 May 2003 -->
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed date from 1995-01-05 -->
-            <unadjustedDate>2000-09-05Z</unadjustedDate>
+            <unadjustedDate>2000-09-05</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters id="primaryBusinessCenters">
@@ -65,14 +65,14 @@
             <businessCentersReference href="primaryBusinessCenters" />
           </calculationPeriodDatesAdjustments>
           <firstPeriodStartDate>
-            <unadjustedDate>2000-03-05Z</unadjustedDate>
+            <unadjustedDate>2000-03-05</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </firstPeriodStartDate>
-          <firstRegularPeriodStartDate>2000-10-05Z</firstRegularPeriodStartDate>
+          <firstRegularPeriodStartDate>2000-10-05</firstRegularPeriodStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed date from 2004-10-05 -->
-          <lastRegularPeriodEndDate>2000-08-05Z</lastRegularPeriodEndDate>
+          <lastRegularPeriodEndDate>2000-08-05</lastRegularPeriodEndDate>
           <calculationPeriodFrequency>
             <periodMultiplier>6</periodMultiplier>
             <period>M</period>
@@ -157,13 +157,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="fixedCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2000-04-05Z</unadjustedDate>
+            <unadjustedDate>2000-04-05</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2005-01-05Z</unadjustedDate>
+            <unadjustedDate>2005-01-05</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCentersReference href="primaryBusinessCenters" />
@@ -174,13 +174,13 @@
             <businessCentersReference href="primaryBusinessCenters" />
           </calculationPeriodDatesAdjustments>
           <firstPeriodStartDate>
-            <unadjustedDate>2000-03-05Z</unadjustedDate>
+            <unadjustedDate>2000-03-05</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </firstPeriodStartDate>
-          <firstRegularPeriodStartDate>2000-10-05Z</firstRegularPeriodStartDate>
-          <lastRegularPeriodEndDate>2004-10-05Z</lastRegularPeriodEndDate>
+          <firstRegularPeriodStartDate>2000-10-05</firstRegularPeriodStartDate>
+          <lastRegularPeriodEndDate>2004-10-05</lastRegularPeriodEndDate>
           <calculationPeriodFrequency>
             <periodMultiplier>1</periodMultiplier>
             <period>Y</period>

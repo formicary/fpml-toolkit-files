@@ -13,7 +13,7 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Valuation</dataSetName>
 <!-- IR Cap -->
   <position>
@@ -24,7 +24,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2009-08-12Z</tradeDate>
+          <tradeDate>2009-08-12</tradeDate>
         </tradeHeader>
         <capFloor>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">InterestRateCap</productType>
@@ -36,7 +36,7 @@
                 <unadjustedDate>2009-08-12</unadjustedDate>
               </effectiveDate>
               <terminationDate>
-                <unadjustedDate>2013-02-10Z</unadjustedDate>
+                <unadjustedDate>2013-02-10</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 </dateAdjustments>
@@ -140,7 +140,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2009-08-04Z</tradeDate>
+          <tradeDate>2009-08-04</tradeDate>
         </tradeHeader>
         <swap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">InterestRateSwap</productType>
@@ -150,10 +150,10 @@
             <payerPartyReference href="hedge_global" />
             <calculationPeriodDates id="floatingCalcPeriodDates">
               <effectiveDate>
-                <unadjustedDate>2009-08-04Z</unadjustedDate>
+                <unadjustedDate>2009-08-04</unadjustedDate>
               </effectiveDate>
               <terminationDate>
-                <unadjustedDate>2021-03-01Z</unadjustedDate>
+                <unadjustedDate>2021-03-01</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 </dateAdjustments>
@@ -406,10 +406,10 @@
             <payerPartyReference href="hedge_global" />
             <calculationPeriodDates>
               <effectiveDate>
-                <unadjustedDate>2009-07-01Z</unadjustedDate>
+                <unadjustedDate>2009-07-01</unadjustedDate>
               </effectiveDate>
               <terminationDate>
-                <unadjustedDate>2011-07-01Z</unadjustedDate>
+                <unadjustedDate>2011-07-01</unadjustedDate>
               </terminationDate>
               <calculationPeriodFrequency>
                 <periodMultiplier>6</periodMultiplier>

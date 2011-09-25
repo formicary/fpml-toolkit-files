@@ -54,6 +54,7 @@
         </quotedCurrencyPair>
         <rate>21.3766</rate>
         <spotRate>21.2531</spotRate>
+<!--invalid rule fx-30: rate must be equal to the sum of spotRate and forwardPoints. The corrcet value would be <forwardPoints>0.0913</forwardPoints> -->
         <forwardPoints>0.1235</forwardPoints>
         <crossRate>
           <currency1>MXN</currency1>
@@ -65,10 +66,7 @@
           <currency1>USD</currency1>
           <currency2>EUR</currency2>
           <quoteBasis>Currency1PerCurrency2</quoteBasis>
-<!--invalid rule fx-30: rate must be equal to the sum of spotRate and forwardPoints. -->
           <rate>1.9951</rate>
-          <spotRate>1.0000</spotRate>
-          <forwardPoints>2.000</forwardPoints>
         </crossRate>
       </exchangeRate>
     </fxSingleLeg>

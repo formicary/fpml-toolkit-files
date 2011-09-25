@@ -142,7 +142,7 @@
                      <commissionAmount>60</commissionAmount>
                      <commissionPerTrade>1234</commissionPerTrade>
                   </commission>
-                  <determinationMethod>HedgeUnwind</determinationMethod>
+                  <determinationMethod>HedgeExecution</determinationMethod>
                   <valuationRules>
                      <valuationDate id="d5">
                         <adjustableDate>

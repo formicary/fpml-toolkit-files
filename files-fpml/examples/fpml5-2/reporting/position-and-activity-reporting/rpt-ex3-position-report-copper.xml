@@ -13,7 +13,7 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Copper</dataSetName>
   <position>
     <positionId positionIdScheme="http://www.abc.com/positionId">CDS-POS-01</positionId>
@@ -23,7 +23,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2002-12-02Z</tradeDate>
+          <tradeDate>2002-12-02</tradeDate>
         </tradeHeader>
         <nonSchemaProduct>
           <productType productTypeScheme="http://www.fpml.org/product-type-copper">StructuredTransaction</productType>

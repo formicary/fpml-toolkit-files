@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-== Copyright (c) 2002-2011. All rights reserved. 
+== Copyright (c) 2002-2011 All rights reserved. 
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 8015 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 8235 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-asset-5-2.xsd" />
   <xsd:simpleType name="QueryParameterValue">
     <xsd:annotation>
@@ -353,6 +353,11 @@
           <xsd:documentation xml:lang="en">Trade execution date time provided by a central execution facility.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+      <xsd:element name="timestamps" type="TradeProcessingTimestamps" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Allows timing information about a trade to be recorded.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
 <!-- added BAL 2011-02-20 to address CFTC reporting requirements -->
       <xsd:element name="cleared" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
@@ -366,17 +371,32 @@
       </xsd:element>
       <xsd:element name="nonStandardTerms" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies whether the trade contains terms that affect pricing that are not represented by the standard reportable data fields</xsd:documentation>
+          <xsd:documentation xml:lang="en">Specifies whether the trade contains terms that affect pricing that are not represented by the standard reportable data fields, that is, it indicates a bespoke trade that might otherwise appear from its characteristics to be a standardized trade but is really non-standard. The flag indicates that the price for this trade is not to be construed as being indicative of the market.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="largeNotionalTrade" type="xsd:boolean" minOccurs="0">
+      <xsd:element name="offMarketPrice" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Specifies whether the sender of this trade considers it to be a large notional trade or block trade for reporting purposes</xsd:documentation>
+          <xsd:documentation xml:lang="en">Indicates that the price does not reflect the current market. For example, in a credit trade where the two counterparties are not of equal credit standing, there is no initial margin and one party pays collateral to the other in the form of an add-on to the price (say a price that would otherwise be 100 at the market is struck at 105 to include the collateral, resulting in a very off-market looking price.)</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="executionVenue" type="ExecutionVenue" minOccurs="0">
+      <xsd:element name="largeSizeTrade" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Used to describe where the trade was executed.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Specifies whether the sender of this trade considers it to be a large notional trade or block trade for reporting purposes, and thus eligible for delayed public reporting.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="executionType" type="ExecutionType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Used to describe how the trade was executed, e.g. via voice or electronically.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="executionVenueType" type="ExecutionVenueType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Used to describe the type of venue where trade was executed, e.g via an execution facility or privately.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="confirmationType" type="ExecutionType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Used to describe how the trade was confirmed, e.g via a confirmation facility, via private electronic service, or via written documentation.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="counterpartyTypes" type="CounterpartyTypes" minOccurs="0">
@@ -396,6 +416,103 @@
                         </xsd:element>
 -->
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TradeProcessingTimestamps">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Allows timing information about when a trade was processed and reported to be recorded.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="publiclyReported" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When the public report of this was created or received by this party.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="publicReportUpdated" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When the public report of this was most recently corrected or corrections were received by this party.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="nonpubliclyReported" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When the non-public report of this was created or received by this party.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="nonpublicReportUpdated" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When the non-public report of this was most recently corrected or corrections were received by this party.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="submittedForConfirmation" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When this trade was supplied to a confirmation service or counterparty for confirmation.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="updatedForConfirmation" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When the most recent correction to this trade was supplied to a confirmation service or counterparty for confirmation.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="confirmed" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When this trade was confirmed.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="submittedForClearing" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When this trade was supplied to a clearing service for clearing.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="updatedForClearing" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When the most recent correction to this trade was supplied to a clearing service for clearing.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="cleared" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When this trade was cleared.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="allocationsSubmitted" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When allocations for this trade were submitted or received by this party.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="allocationsUpdated" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When allocations for this trade were most recently corrected.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="allocationsCompleted" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When allocations for this trade were completely processed.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- TODO:  should we add an update type for that? -->
+      <xsd:element name="timestamp" type="TradeTimestamp" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Other timestamps for this trade.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TradeTimestamp">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A generic trade timestamp</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="type" type="TimestampTypeScheme" />
+      <xsd:element name="value" type="xsd:dateTime" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TimestampTypeScheme">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type or meaning of a timestamp.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="timestampScheme" type="xsd:anyURI" />
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="CounterpartyTypes">
     <xsd:annotation>
@@ -418,13 +535,24 @@
     </xsd:simpleContent>
   </xsd:complexType>
 <!-- added BAL 2011-02-20 to address CFTC reporting requirements -->
-  <xsd:complexType name="ExecutionVenue">
+  <xsd:complexType name="ExecutionVenueType">
     <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type used to represent the market where a trade was executed.</xsd:documentation>
+      <xsd:documentation xml:lang="en">A type used to represent the type of market where a trade can be executed.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
-        <xsd:attribute name="venueScheme" type="xsd:anyURI" />
+        <xsd:attribute name="executionVenueTypeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/execution-venue-type" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+<!-- added BAL 2011-06-13 to address CFTC reporting requirements -->
+  <xsd:complexType name="ExecutionType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type used to represent the type of market where a trade can be executed.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="executionTypeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/execution-type" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -728,12 +856,38 @@
       <xsd:documentation>A structure describing the price paid for the instrument.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:element name="price" type="NetAndGross">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument. (NB: adjust description to accommodate price factors. What about net price vs. gross price? Cf. "Price" in fpml-asset).</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
+      <xsd:element name="quote" type="BasicQuotation" maxOccurs="unbounded" />
     </xsd:sequence>
+<!--
+                <xsd:choice>
+                        <xsd:element name="price" type="NetAndGross" >
+                                <xsd:annotation>
+                                <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument. </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                        <xsd:sequence>
+                                <xsd:element name="cleanPrice" type="NetAndGross" >
+                                        <xsd:annotation>
+                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, exclusive of accrued interest.</xsd:documentation>
+                                        </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="dirtyPrice" type="NetAndGross" minOccurs="0">
+                                        <xsd:annotation>
+                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, inclusive of accrued interest.</xsd:documentation>
+                                        </xsd:annotation>
+                                </xsd:element>
+                        </xsd:sequence>
+                        <xsd:element name="dirtyPrice" type="NetAndGross" >
+                                <xsd:annotation>
+                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, inclusive of accrued interest.</xsd:documentation>
+                                        <xsd:appinfo>
+                                                <view:skip view="reporting"/>
+                                                <view:skip view="transparency"/>
+                                        </xsd:appinfo>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:choice>
+-->
   </xsd:complexType>
   <xsd:complexType name="InstrumentTradePrincipal">
     <xsd:annotation>
@@ -981,7 +1135,7 @@
         <xsd:documentation xml:lang="en">This optional attribute can be supplied by a message creator in an FpML instance to specify which build number of the schema was used to define the message when it was generated.</xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
-    <xsd:attribute name="actualBuild" fixed="1" type="xsd:positiveInteger">
+    <xsd:attribute name="actualBuild" fixed="3" type="xsd:positiveInteger">
       <xsd:annotation>
         <xsd:documentation xml:lang="en">The specific build number of this schema version. This attribute is not included in an instance document. Instead, it is supplied by the XML parser when the document is validated against the FpML schema and indicates the build number of the schema file. Every time FpML publishes a change to the schema, validation rules, or examples within a version (e.g., version 4.2) the actual build number is incremented. If no changes have been made between releases within a version (i.e. from Trial Recommendation to Recommendation) the actual build number stays the same.</xsd:documentation>
       </xsd:annotation>

@@ -43,7 +43,7 @@
             <amount>14800000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-        <valueDate>2001-10-25Z</valueDate>
+        <valueDate>2001-10-25</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>GBP</currency1>

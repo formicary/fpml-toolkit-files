@@ -13,17 +13,17 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Copper</dataSetName>
-  <fromDateTime>2004-06-01T21:23:00Z</fromDateTime>
-  <toDateTime>2004-06-02T21:47:00Z</toDateTime>
+  <fromDateTime>2004-06-01T21:23:00</fromDateTime>
+  <toDateTime>2004-06-02T21:47:00</toDateTime>
   <trade>
     <tradeHeader>
       <partyTradeIdentifier>
         <tradeId tradeIdScheme="http://www.abc.com/positionId">CDS-POS-01</tradeId>
       </partyTradeIdentifier>
       <partyTradeInformation>
-        <executionDateTime>2004-06-02T08:01:23Z</executionDateTime>
+        <executionDateTime>2004-06-02T08:01:23</executionDateTime>
       </partyTradeInformation>
       <tradeDate>2004-06-02</tradeDate>
     </tradeHeader>
@@ -64,7 +64,7 @@
           <tradeId tradeIdScheme="http://www.abc.com/positionId">CDS-POS-01</tradeId>
         </partyTradeIdentifier>
         <partyTradeInformation>
-          <executionDateTime>2004-06-02T08:01:23Z</executionDateTime>
+          <executionDateTime>2004-06-02T08:01:23</executionDateTime>
 <!-- do we need an execution timestamp for the amendment? -->
         </partyTradeInformation>
         <tradeDate>2004-06-02</tradeDate>

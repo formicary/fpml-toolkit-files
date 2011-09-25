@@ -29,7 +29,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.PartyA.com/eqd-trade-id">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-03-25Z</tradeDate>
+      <tradeDate>2002-03-25</tradeDate>
     </tradeHeader>
     <equityOption>
       <productType>europeanCallIndex</productType>
@@ -54,7 +54,7 @@
         <equityEuropeanExercise>
           <expirationDate id="expirationDate">
             <adjustableDate>
-              <unadjustedDate>2002-06-25Z</unadjustedDate>
+              <unadjustedDate>2002-06-25</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -149,7 +149,7 @@
           <amount>5000000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2002-03-25Z</unadjustedDate>
+          <unadjustedDate>2002-03-25</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>

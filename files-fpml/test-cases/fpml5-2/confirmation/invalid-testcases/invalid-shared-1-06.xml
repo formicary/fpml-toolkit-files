@@ -33,7 +33,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id">123</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2000-08-30Z</tradeDate>
+      <tradeDate>2000-08-30</tradeDate>
     </tradeHeader>
     <swaption>
       <buyerPartyReference href="party1" />
@@ -46,7 +46,7 @@
           <amount>100000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2000-08-30Z</unadjustedDate>
+          <unadjustedDate>2000-08-30</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>
@@ -58,7 +58,7 @@
       <europeanExercise id="europeanExercise0">
         <expirationDate>
           <adjustableDate>
-            <unadjustedDate>2001-08-28Z</unadjustedDate>
+            <unadjustedDate>2001-08-28</unadjustedDate>
             <dateAdjustments>
 <!-- CHANGE, Modified by: Christian Date: 13/05/2003
      Changed from FOLLOWING to NONE -->
@@ -110,13 +110,13 @@
           <receiverPartyReference href="party2" />
           <calculationPeriodDates id="CalcPeriodDates0">
             <effectiveDate>
-              <unadjustedDate>2001-08-30Z</unadjustedDate>
+              <unadjustedDate>2001-08-30</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
             </effectiveDate>
             <terminationDate>
-              <unadjustedDate>2006-08-30Z</unadjustedDate>
+              <unadjustedDate>2006-08-30</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters id="accrualBusinessCenters0">
@@ -168,13 +168,13 @@
           <receiverPartyReference href="party1" />
           <calculationPeriodDates id="CalcPeriodDates1">
             <effectiveDate>
-              <unadjustedDate>2001-08-30Z</unadjustedDate>
+              <unadjustedDate>2001-08-30</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
             </effectiveDate>
             <terminationDate>
-              <unadjustedDate>2006-08-30Z</unadjustedDate>
+              <unadjustedDate>2006-08-30</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters id="accrualBusinessCenters1">

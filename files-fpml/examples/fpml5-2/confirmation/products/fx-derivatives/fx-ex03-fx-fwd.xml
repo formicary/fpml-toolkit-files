@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/fx/trade-id">DB5678</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-19Z</tradeDate>
+      <tradeDate>2001-11-19</tradeDate>
     </tradeHeader>
     <fxSingleLeg>
       <exchangedCurrency1>
@@ -49,7 +49,7 @@
           <amount>9175000</amount>
         </paymentAmount>
       </exchangedCurrency2>
-      <valueDate>2001-12-21Z</valueDate>
+      <valueDate>2001-12-21</valueDate>
       <exchangeRate>
         <quotedCurrencyPair>
           <currency1>EUR</currency1>

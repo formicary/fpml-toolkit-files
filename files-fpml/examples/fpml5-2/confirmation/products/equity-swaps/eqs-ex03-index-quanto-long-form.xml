@@ -36,7 +36,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/eqs-trade-id">5648</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2002-07-19Z</tradeDate>
+      <tradeDate id="TradeDate">2002-07-19</tradeDate>
     </tradeHeader>
     <returnSwap>
       <productType>IndexQuantoSwap</productType>
@@ -114,9 +114,9 @@
             <valuationRules>
               <valuationDates id="InterimValuationDate">
                 <adjustableDates>
-                  <unadjustedDate>2002-10-21Z</unadjustedDate>
-                  <unadjustedDate>2004-01-20Z</unadjustedDate>
-                  <unadjustedDate>2004-04-22Z</unadjustedDate>
+                  <unadjustedDate>2002-10-21</unadjustedDate>
+                  <unadjustedDate>2004-01-20</unadjustedDate>
+                  <unadjustedDate>2004-04-22</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -130,7 +130,7 @@
             <valuationRules>
               <valuationDate id="FinalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2004-07-21Z</unadjustedDate>
+                  <unadjustedDate>2004-07-21</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>

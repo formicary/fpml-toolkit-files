@@ -21,8 +21,8 @@
       <partyReference href="party1" />
       <tradeId tradeIdScheme="http://www.drkw.com/tradeId/OTC">1234</tradeId>
     </tradeIdentifier>
-    <agreementDate>2004-04-28Z</agreementDate>
-    <effectiveDate>2004-04-30Z</effectiveDate>
+    <agreementDate>2004-04-28</agreementDate>
+    <effectiveDate>2004-04-30</effectiveDate>
     <changeInNotionalAmount>
       <currency>USD</currency>
       <amount>-1000000</amount>

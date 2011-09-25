@@ -13,25 +13,40 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Copper</dataSetName>
   <position>
     <positionId positionIdScheme="http://www.abc.com/positionId">CDS-POS-01</positionId>
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2002-12-02Z</tradeDate>
+          <tradeDate>2002-12-02</tradeDate>
         </tradeHeader>
         <creditDefaultSwap>
-          <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
+          <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
           <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
 <!--
                 <multiLeg>true</multiLeg>
                 -->
           <generalTerms>
+            <scheduledTerminationDate>
+              <unadjustedDate>2007-12-05</unadjustedDate>
+            </scheduledTerminationDate>
             <buyerPartyReference href="party1" />
             <sellerPartyReference href="party2" />
+            <referenceInformation>
+              <referenceEntity id="referenceEntity">
+                <entityName>ACOM CO., LTD.</entityName>
+              </referenceEntity>
+            </referenceInformation>
           </generalTerms>
+          <feeLeg>
+            <periodicPayment>
+              <fixedAmountCalculation>
+                <fixedRate>0.007</fixedRate>
+              </fixedAmountCalculation>
+            </periodicPayment>
+          </feeLeg>
           <protectionTerms>
             <calculationAmount>
               <currency>EUR</currency>

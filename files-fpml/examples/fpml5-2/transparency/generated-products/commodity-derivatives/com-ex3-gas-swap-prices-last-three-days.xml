@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-2" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-2.xsd">
+   <header>
+      <messageId messageIdScheme="http://abc.com/message-id">123</messageId>
+      <sentBy>abc</sentBy>
+      <sendTo>sdr</sendTo>
+      <creationTimestamp>2011-01-01T00:00:00</creationTimestamp>
+   </header>
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyA.com/com-trade-id">1234</tradeId>
+         </partyTradeIdentifier>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyB.com/com-trade-id">2345</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2006-08-24</tradeDate>
+      </tradeHeader>
+      <commoditySwap>
+         <productType>CommoditySwap</productType>
+         <assetClass>Commodities</assetClass>
+         <effectiveDate>
+            <adjustableDate>
+               <unadjustedDate>2009-01-01</unadjustedDate>
+            </adjustableDate>
+         </effectiveDate>
+         <terminationDate>
+            <adjustableDate>
+               <unadjustedDate>2009-12-31</unadjustedDate>
+            </adjustableDate>
+         </terminationDate>
+         <fixedLeg>
+            <fixedPrice>
+               <price>9.64</price>
+               <priceCurrency>USD</priceCurrency>
+               <priceUnit>MMBTU</priceUnit>
+            </fixedPrice>
+            <notionalQuantity>
+               <quantityUnit>MMBTU</quantityUnit>
+            </notionalQuantity>
+            <totalNotionalQuantity>1825000.0</totalNotionalQuantity>
+         </fixedLeg>
+         <floatingLeg>
+            <commodity>
+               <instrumentId instrumentIdScheme="http://www.fpml.org/coding-scheme/commodity-reference-price-1-0">NATURAL GAS-HENRY HUB-NYMEX</instrumentId>
+               <specifiedPrice>Settlement</specifiedPrice>
+               <deliveryDates>FirstNearby</deliveryDates>
+            </commodity>
+            <notionalQuantity>
+               <quantityUnit>MMBTU</quantityUnit>
+            </notionalQuantity>
+            <totalNotionalQuantity>182500.0</totalNotionalQuantity>
+            <calculation>
+               <pricingDates>
+                  <dayDistribution>Last</dayDistribution>
+                  <dayCount>3</dayCount>
+               </pricingDates>
+            </calculation>
+         </floatingLeg>
+      </commoditySwap>
+   </trade>
+</publicExecutionReport>

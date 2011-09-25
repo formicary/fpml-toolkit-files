@@ -13,7 +13,7 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Valuation</dataSetName>
 <!-- TRS on equity (USD) -->
   <position>
@@ -267,7 +267,7 @@
             <equityAmericanExercise>
               <expirationDate>
                 <adjustableDate>
-                  <unadjustedDate>2010-01-15Z</unadjustedDate>
+                  <unadjustedDate>2010-01-15</unadjustedDate>
                 </adjustableDate>
               </expirationDate>
             </equityAmericanExercise>

@@ -63,8 +63,12 @@
             <hourMinuteTime>10:00:00</hourMinuteTime>
             <businessCenter>USNY</businessCenter>
           </fixingTime>
-          <strike>109.48</strike>
+          <strike>
+            <rate>109.48</rate>
+            <strikeQuoteBasis>AlternateCurrencyPerDepositCurrency</strikeQuoteBasis>
+          </strike>
           <spotRate>107.85</spotRate>
+          <interestAtRisk>false</interestAtRisk>
         </dualCurrency>
       </features>
       <interest>

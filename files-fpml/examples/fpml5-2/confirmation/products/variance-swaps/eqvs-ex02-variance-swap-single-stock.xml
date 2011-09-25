@@ -35,7 +35,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/coding-scheme/trade-id">6569</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="d989">2001-09-24Z</tradeDate>
+      <tradeDate id="d989">2001-09-24</tradeDate>
     </tradeHeader>
     <varianceSwap>
       <varianceLeg>
@@ -54,7 +54,7 @@
         <valuation>
           <valuationDate id="FinalValuationDate">
             <adjustableDate>
-              <unadjustedDate>2004-07-21Z</unadjustedDate>
+              <unadjustedDate>2004-07-21</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NotApplicable</businessDayConvention>
               </dateAdjustments>
@@ -81,7 +81,7 @@
               <contractReference>CBOE SEP04 IBM EUROPEAN OPTION</contractReference>
               <expirationDate>
                 <adjustableDate>
-                  <unadjustedDate>2004-09-23Z</unadjustedDate>
+                  <unadjustedDate>2004-09-23</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NONE</businessDayConvention>
                   </dateAdjustments>

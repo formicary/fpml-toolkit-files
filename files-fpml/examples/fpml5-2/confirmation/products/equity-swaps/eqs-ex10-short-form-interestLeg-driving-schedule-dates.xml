@@ -18,7 +18,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id">124897</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2008-06-02Z</tradeDate>
+      <tradeDate>2008-06-02</tradeDate>
     </tradeHeader>
     <equitySwapTransactionSupplement>
 <!--FpML 5-0 renamed from  <interestLeg legIdentifier="interestLeg">-->
@@ -28,7 +28,7 @@
         <interestLegCalculationPeriodDates id="interestCalcPeriodDates">
           <effectiveDate>
             <adjustableDate>
-              <unadjustedDate>2008-06-04Z</unadjustedDate>
+              <unadjustedDate>2008-06-04</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -39,7 +39,7 @@
           </effectiveDate>
           <terminationDate>
             <adjustableDate>
-              <unadjustedDate>2009-06-04Z</unadjustedDate>
+              <unadjustedDate>2009-06-04</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -60,7 +60,7 @@
             <periodicDates>
               <calculationStartDate>
                 <adjustableDate>
-                  <unadjustedDate>2008-06-04Z</unadjustedDate>
+                  <unadjustedDate>2008-06-04</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>MODFOLLOWING</businessDayConvention>
                     <businessCenters>
@@ -107,7 +107,7 @@
         <receiverPartyReference href="party1" />
         <effectiveDate>
           <adjustableDate>
-            <unadjustedDate>2008-06-02Z</unadjustedDate>
+            <unadjustedDate>2008-06-02</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NotApplicable</businessDayConvention>
             </dateAdjustments>
@@ -115,7 +115,7 @@
         </effectiveDate>
         <terminationDate>
           <adjustableDate>
-            <unadjustedDate>2008-06-04Z</unadjustedDate>
+            <unadjustedDate>2008-06-04</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NotApplicable</businessDayConvention>
             </dateAdjustments>
@@ -160,7 +160,7 @@
             <valuationRules>
               <valuationDate id="finalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2009-06-02Z</unadjustedDate>
+                  <unadjustedDate>2009-06-02</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>

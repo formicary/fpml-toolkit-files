@@ -99,7 +99,7 @@
             <calculationPeriodsScheduleReference href="floatingLeg1CalculationPeriods" />
             <dayType>Calendar</dayType>
             <dayDistribution>Each</dayDistribution>
-            <businessCalendar>DOW JONES POWER</businessCalendar>
+            <businessCalendar>DowJonesPower</businessCalendar>
           </pricingDates>
           <averagingMethod>Unweighted</averagingMethod>
 <!-- TBD: What is the correct factor for MWH to MMBTU? -->

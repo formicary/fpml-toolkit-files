@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.ubsw.com/fx/trade-id">FXD2002987</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-12Z</tradeDate>
+      <tradeDate>2001-11-12</tradeDate>
     </tradeHeader>
     <fxSingleLeg>
       <exchangedCurrency1>
@@ -87,8 +87,8 @@
           </settlementInstruction>
         </settlementInformation>
       </exchangedCurrency2>
-<!--invalid rule fx-39: the value of fxSingleLeg/valueDate or the value of both fxSingleLeg/currency1ValueDate and fxSingleLeg/currency2ValueDate must be after tradeHeader/tradeDate. Correct value is <valueDate>2002-04-01Z</valueDate>-->
-      <valueDate>2000-04-01Z</valueDate>
+<!--invalid rule fx-39: the value of fxSingleLeg/valueDate or the value of both fxSingleLeg/currency1ValueDate and fxSingleLeg/currency2ValueDate must be after tradeHeader/tradeDate. Correct value is <valueDate>2002-04-01</valueDate>-->
+      <valueDate>2000-04-01</valueDate>
       <exchangeRate>
         <quotedCurrencyPair>
           <currency1>GBP</currency1>

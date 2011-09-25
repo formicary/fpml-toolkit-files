@@ -15,14 +15,14 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.partyA.com/eqd-trade-id">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-07-01Z</tradeDate>
+      <tradeDate>2002-07-01</tradeDate>
     </tradeHeader>
     <equityOption>
       <productType>europeanCallIndex</productType>
       <buyerPartyReference href="party2" />
       <sellerPartyReference href="party1" />
       <optionType>Call</optionType>
-      <equityEffectiveDate>2002-07-26Z</equityEffectiveDate>
+      <equityEffectiveDate>2002-07-26</equityEffectiveDate>
       <underlyer>
         <singleUnderlyer>
           <index>
@@ -40,7 +40,7 @@
         <equityEuropeanExercise>
           <expirationDate id="expirationDate">
             <adjustableDate>
-              <unadjustedDate>2005-10-11Z</unadjustedDate>
+              <unadjustedDate>2005-10-11</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -75,8 +75,8 @@
             <schedule>
 <!-- CHANGE, Modified by: Christian
                                                                 Changed from 2002-02-29, now after end date -->
-              <startDate>2002-07-29Z</startDate>
-              <endDate>2002-07-12Z</endDate>
+              <startDate>2002-07-29</startDate>
+              <endDate>2002-07-12</endDate>
               <averagingPeriodFrequency>
                 <periodMultiplier>1</periodMultiplier>
                 <period>D</period>
@@ -98,8 +98,8 @@
         <knock>
           <knockOut>
             <schedule>
-              <startDate>2002-07-26Z</startDate>
-              <endDate>2005-10-11Z</endDate>
+              <startDate>2002-07-26</startDate>
+              <endDate>2005-10-11</endDate>
               <averagingPeriodFrequency>
                 <periodMultiplier>1</periodMultiplier>
                 <period>D</period>
@@ -168,7 +168,7 @@
           <amount>400000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2002-07-30Z</unadjustedDate>
+          <unadjustedDate>2002-07-30</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>

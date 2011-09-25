@@ -13,12 +13,12 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Copper</dataSetName>
-  <fromDateTime>2004-06-01T21:23:00Z</fromDateTime>
-  <toDateTime>2004-06-02T21:47:00Z</toDateTime>
+  <fromDateTime>2004-06-01T21:23:00</fromDateTime>
+  <toDateTime>2004-06-02T21:47:00</toDateTime>
   <positionUpdate>
-    <timestamp>2004-06-02T08:01:23Z</timestamp>
+    <timestamp>2004-06-02T08:01:23</timestamp>
     <type>Created</type>
     <reason>
       <code>NewTrade</code>
@@ -28,7 +28,7 @@
       <constituent>
         <trade>
           <tradeHeader>
-            <tradeDate>2002-12-02Z</tradeDate>
+            <tradeDate>2002-12-02</tradeDate>
           </tradeHeader>
           <creditDefaultSwap>
             <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
@@ -64,7 +64,7 @@
     </position>
   </positionUpdate>
   <positionUpdate>
-    <timestamp>2004-06-02T08:04:01Z</timestamp>
+    <timestamp>2004-06-02T08:04:01</timestamp>
     <type>Modified</type>
     <reason>
       <code>Correction</code>
@@ -75,7 +75,7 @@
       <constituent>
         <trade>
           <tradeHeader>
-            <tradeDate>2004-06-02Z</tradeDate>
+            <tradeDate>2004-06-02</tradeDate>
           </tradeHeader>
           <creditDefaultSwap>
             <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>
@@ -122,7 +122,7 @@
       <constituent>
         <trade>
           <tradeHeader>
-            <tradeDate>2004-06-02Z</tradeDate>
+            <tradeDate>2004-06-02</tradeDate>
           </tradeHeader>
           <creditDefaultSwap>
             <productType productTypeScheme="http://www.fpml.org/product-type-copper">CreditDefaultSwapShort</productType>

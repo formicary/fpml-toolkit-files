@@ -36,7 +36,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://http://www.partyB.com/eqs-trade-id">5678</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2002-07-17+05:00</tradeDate>
+      <tradeDate id="TradeDate">2002-07-17</tradeDate>
     </tradeHeader>
     <returnSwap>
       <productType>CompositeBasketSwap</productType>
@@ -45,7 +45,7 @@
         <receiverPartyReference href="party2" />
         <effectiveDate id="EffectiveDate">
           <adjustableDate>
-            <unadjustedDate>2002-07-20+05:00</unadjustedDate>
+            <unadjustedDate>2002-07-20</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NotApplicable</businessDayConvention>
             </dateAdjustments>
@@ -53,7 +53,7 @@
         </effectiveDate>
         <terminationDate id="TerminationDate">
           <adjustableDate>
-            <unadjustedDate>2004-07-20+05:00</unadjustedDate>
+            <unadjustedDate>2004-07-20</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -168,30 +168,30 @@
             <valuationRules>
               <valuationDates id="InterimValuationDates">
                 <adjustableDates>
-                  <unadjustedDate>2002-07-26+05:00</unadjustedDate>
-                  <unadjustedDate>2002-08-28+05:00</unadjustedDate>
-                  <unadjustedDate>2002-09-26+05:00</unadjustedDate>
-                  <unadjustedDate>2002-10-27+05:00</unadjustedDate>
-                  <unadjustedDate>2002-11-28+05:00</unadjustedDate>
-                  <unadjustedDate>2002-12-26+05:00</unadjustedDate>
-                  <unadjustedDate>2003-01-29+05:00</unadjustedDate>
-                  <unadjustedDate>2003-02-26+05:00</unadjustedDate>
-                  <unadjustedDate>2003-03-26+05:00</unadjustedDate>
-                  <unadjustedDate>2003-04-28+05:00</unadjustedDate>
-                  <unadjustedDate>2003-05-28+05:00</unadjustedDate>
-                  <unadjustedDate>2003-06-26+05:00</unadjustedDate>
-                  <unadjustedDate>2003-07-29+05:00</unadjustedDate>
-                  <unadjustedDate>2003-08-27+05:00</unadjustedDate>
-                  <unadjustedDate>2003-09-26+05:00</unadjustedDate>
-                  <unadjustedDate>2003-10-29+05:00</unadjustedDate>
-                  <unadjustedDate>2003-11-26+05:00</unadjustedDate>
-                  <unadjustedDate>2003-12-29+05:00</unadjustedDate>
-                  <unadjustedDate>2004-01-28+05:00</unadjustedDate>
-                  <unadjustedDate>2004-02-25+05:00</unadjustedDate>
-                  <unadjustedDate>2004-03-26+05:00</unadjustedDate>
-                  <unadjustedDate>2004-04-28+05:00</unadjustedDate>
-                  <unadjustedDate>2004-05-27+05:00</unadjustedDate>
-                  <unadjustedDate>2004-06-28+05:00</unadjustedDate>
+                  <unadjustedDate>2002-07-26</unadjustedDate>
+                  <unadjustedDate>2002-08-28</unadjustedDate>
+                  <unadjustedDate>2002-09-26</unadjustedDate>
+                  <unadjustedDate>2002-10-27</unadjustedDate>
+                  <unadjustedDate>2002-11-28</unadjustedDate>
+                  <unadjustedDate>2002-12-26</unadjustedDate>
+                  <unadjustedDate>2003-01-29</unadjustedDate>
+                  <unadjustedDate>2003-02-26</unadjustedDate>
+                  <unadjustedDate>2003-03-26</unadjustedDate>
+                  <unadjustedDate>2003-04-28</unadjustedDate>
+                  <unadjustedDate>2003-05-28</unadjustedDate>
+                  <unadjustedDate>2003-06-26</unadjustedDate>
+                  <unadjustedDate>2003-07-29</unadjustedDate>
+                  <unadjustedDate>2003-08-27</unadjustedDate>
+                  <unadjustedDate>2003-09-26</unadjustedDate>
+                  <unadjustedDate>2003-10-29</unadjustedDate>
+                  <unadjustedDate>2003-11-26</unadjustedDate>
+                  <unadjustedDate>2003-12-29</unadjustedDate>
+                  <unadjustedDate>2004-01-28</unadjustedDate>
+                  <unadjustedDate>2004-02-25</unadjustedDate>
+                  <unadjustedDate>2004-03-26</unadjustedDate>
+                  <unadjustedDate>2004-04-28</unadjustedDate>
+                  <unadjustedDate>2004-05-27</unadjustedDate>
+                  <unadjustedDate>2004-06-28</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -205,7 +205,7 @@
             <valuationRules>
               <valuationDate id="FinalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2004-07-15+05:00</unadjustedDate>
+                  <unadjustedDate>2004-07-15</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -329,7 +329,7 @@
             </stubStartDate>
             <stubEndDate>
               <adjustableDate>
-                <unadjustedDate>2002-08-01+05:00</unadjustedDate>
+                <unadjustedDate>2002-08-01</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NotApplicable</businessDayConvention>
                 </dateAdjustments>
@@ -349,7 +349,7 @@
             </floatingRate>
             <stubStartDate>
               <adjustableDate>
-                <unadjustedDate>2004-07-01+05:00</unadjustedDate>
+                <unadjustedDate>2004-07-01</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NotApplicable</businessDayConvention>
                 </dateAdjustments>

@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/fx/trade-id">DB-98765</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-08-16Z</tradeDate>
+      <tradeDate>2001-08-16</tradeDate>
     </tradeHeader>
 <!--FpML 5-1 - fxAverageRateOption is part of 'fxOption'  - 'features'-->
     <fxOption>
@@ -38,12 +38,12 @@
       <sellerPartyReference href="party1" />
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise. 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' and  'valueDate' was moved in here-->
       <europeanExercise>
-        <expiryDate>2001-11-30Z</expiryDate>
+        <expiryDate>2001-11-30</expiryDate>
         <expiryTime>
           <hourMinuteTime>12:30:00</hourMinuteTime>
           <businessCenter>MXMC</businessCenter>
         </expiryTime>
-        <valueDate>2001-12-04Z</valueDate>
+        <valueDate>2001-12-04</valueDate>
       </europeanExercise>
 <!--FpML-5-0 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. europeanExercise)-->
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -77,9 +77,9 @@
 <!--FpML 5-1 fxAverageRateOption product, Renamed 'averageRateObservationSchedule' to 'observationSchedule'-->
           <observationSchedule>
 <!--FpML 5-1 fxAverageRateOption product, Renamed 'observationStartDate' to 'startDate'-->
-            <startDate>2001-11-01Z</startDate>
+            <startDate>2001-11-01</startDate>
 <!--FpML 5-1 fxAverageRateOption product, Renamed 'observationEndDate' to 'endDate'-->
-            <endDate>2001-11-30Z</endDate>
+            <endDate>2001-11-30</endDate>
             <calculationPeriodFrequency>
               <periodMultiplier>1</periodMultiplier>
 <!-- Invalid rule fx-10: The observation period defined by startDate and endDate should be an integer multiple of the calculationPeriodFrequency. The correct value should be <period>M</period>-->
@@ -97,7 +97,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-08-18Z</unadjustedDate>
+            <unadjustedDate>2001-08-18</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

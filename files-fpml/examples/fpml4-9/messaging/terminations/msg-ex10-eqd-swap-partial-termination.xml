@@ -82,7 +82,7 @@
                      </equityValuation>
                   </valuationPriceInterim>
                   <valuationPriceFinal>
-                     <determinationMethod>HedgeUnwind</determinationMethod>
+                     <determinationMethod>HedgeExecution</determinationMethod>
                      <equityValuation>
                         <valuationDate id="FinalValuationDate">
                            <adjustableDate>

@@ -34,14 +34,18 @@
 <!-- NEW: cleared or uncleared = "C" in CFTC doc -->
         <nonStandardTerms>false</nonStandardTerms>
 <!-- NEW: indication of other price-affecting term -->
-        <largeNotionalTrade>false</largeNotionalTrade>
+        <offMarketPrice>false</offMarketPrice>
+<!-- NEW -->
+        <largeSizeTrade>false</largeSizeTrade>
 <!-- NEW: block trades and large notional swaps -->
-        <executionVenue>SwapsMarket</executionVenue>
+        <executionType>Electronic</executionType>
+<!-- NEW -->
+        <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc -->
         <counterpartyTypes>InterDealer</counterpartyTypes>
 <!-- NEW -->
       </tradeInformation>
-      <tradeDate>2002-12-02Z</tradeDate>
+      <tradeDate>2002-12-02</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <productType>CreditDefaultSwap</productType>
@@ -51,10 +55,10 @@
 <!-- asset class -->
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2002-12-03Z</unadjustedDate>
+          <unadjustedDate>2002-12-03</unadjustedDate>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2008-01-15Z</unadjustedDate>
+          <unadjustedDate>2008-01-15</unadjustedDate>
         </scheduledTerminationDate>
         <referenceInformation>
           <referenceEntity id="referenceEntity">
@@ -82,6 +86,13 @@
         </calculationAmount>
       </protectionTerms>
     </creditDefaultSwap>
+<!--
+                <documentation>
+                        <masterConfirmation>
+                                <masterConfirmationType>ISDA2003CreditNorthAmerican</masterConfirmationType>
+                        </masterConfirmation>
+                </documentation>
+                -->
   </trade>
 </publicExecutionReport>
 

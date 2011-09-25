@@ -16,7 +16,7 @@
   </header>
   <portfolio>
     <portfolioName>fundPortfolio1</portfolioName>
-    <asOfDate>2006-04-25Z</asOfDate>
+    <asOfDate>2006-04-25</asOfDate>
     <definingParty href="fund" />
     <matchingParty href="dealer" />
     <newPortfolioDefinition>true</newPortfolioDefinition>
@@ -36,7 +36,7 @@
             <partyReference href="fund" />
             <tradeId tradeIdScheme="http://www.hedgeco.com/fx-id">HEDG-0001</tradeId>
           </partyTradeIdentifier>
-          <tradeDate>2006-04-24Z</tradeDate>
+          <tradeDate>2006-04-24</tradeDate>
         </tradeHeader>
         <fxSingleLeg>
           <exchangedCurrency1>
@@ -55,7 +55,7 @@
               <amount>14700000</amount>
             </paymentAmount>
           </exchangedCurrency2>
-          <valueDate>2006-04-26Z</valueDate>
+          <valueDate>2006-04-26</valueDate>
           <exchangeRate>
             <quotedCurrencyPair>
               <currency1>GBP</currency1>

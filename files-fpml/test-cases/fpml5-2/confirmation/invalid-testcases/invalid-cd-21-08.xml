@@ -19,19 +19,19 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.abcbank.com/cd-trade-id">abc1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-12-04Z</tradeDate>
+      <tradeDate>2002-12-04</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2002-12-05Z</unadjustedDate>
+          <unadjustedDate>2002-12-05</unadjustedDate>
 <!-- CHANGE, Added by: Christian Nentwich
                       Added bogus dateAdustmentsReference (illegal in short form). It references a party
                       but that does not matter, still breaks the rule. -->
           <dateAdjustmentsReference href="party1" />
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2007-12-05Z</unadjustedDate>
+          <unadjustedDate>2007-12-05</unadjustedDate>
         </scheduledTerminationDate>
         <buyerPartyReference href="party1" />
         <sellerPartyReference href="party2" />
@@ -56,7 +56,7 @@
             <periodMultiplier>3</periodMultiplier>
             <period>M</period>
           </paymentFrequency>
-          <firstPaymentDate>2003-03-05Z</firstPaymentDate>
+          <firstPaymentDate>2003-03-05</firstPaymentDate>
           <rollConvention>5</rollConvention>
           <fixedAmountCalculation>
             <fixedRate>0.007</fixedRate>
@@ -79,7 +79,7 @@
     <documentation>
       <masterConfirmation>
         <masterConfirmationType>ISDA2003CreditJapan</masterConfirmationType>
-        <masterConfirmationDate>2003-06-06Z</masterConfirmationDate>
+        <masterConfirmationDate>2003-06-06</masterConfirmationDate>
       </masterConfirmation>
     </documentation>
   </trade>

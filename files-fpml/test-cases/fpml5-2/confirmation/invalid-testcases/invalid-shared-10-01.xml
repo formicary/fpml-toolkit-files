@@ -19,7 +19,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.mizuhocap.com/swaps/trade-id">TRN13000</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-01-25Z</tradeDate>
+      <tradeDate>2001-01-25</tradeDate>
     </tradeHeader>
     <swap>
 <!-- Citibank pays the EUR-EONIA-OIS-COMPOUND stream, on an ACT/360 basis -->
@@ -28,13 +28,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="floatingCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2001-01-29Z</unadjustedDate>
+            <unadjustedDate>2001-01-29</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2001-04-29Z</unadjustedDate>
+            <unadjustedDate>2001-04-29</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="primaryBusinessCenters">
@@ -111,13 +111,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="fixedCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2001-01-29Z</unadjustedDate>
+            <unadjustedDate>2001-01-29</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2001-04-29Z</unadjustedDate>
+            <unadjustedDate>2001-04-29</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCentersReference href="primaryBusinessCenters" />

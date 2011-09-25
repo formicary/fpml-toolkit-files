@@ -66,15 +66,21 @@
 <!-- NEW: cleared or uncleared = "C" in CFTC doc -->
             <nonStandardTerms>false</nonStandardTerms>
 <!-- NEW: indication of other price-affecting term -->
-            <largeNotionalTrade>false</largeNotionalTrade>
+            <offMarketPrice>false</offMarketPrice>
+<!-- NEW -->
+            <largeSizeTrade>false</largeSizeTrade>
 <!-- NEW: block trades and large notional swaps -->
-            <executionVenue>SwapsMarket</executionVenue>
+            <executionType>Electronic</executionType>
+<!-- NEW -->
+            <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc; do we need a more specific refeence? -->
+            <confirmationType>Facility</confirmationType>
+<!-- NEW -->
             <counterpartyTypes>InterDealer</counterpartyTypes>
 <!-- NEW : this includes several of the CFTC indicators, including
                                                 whether the trade is inter-dealer, inter-MSP, and whether either party is a dealer or MSP. -->
           </partyTradeInformation>
-          <tradeDate>2011-02-12Z</tradeDate>
+          <tradeDate>2011-02-12</tradeDate>
         </tradeHeader>
         <swap>
 <!-- Party A pays the floating rate every 3 months, based on 3M USD-LIBOR-BBA,
@@ -94,13 +100,13 @@
             <receiverPartyReference href="party2" />
             <calculationPeriodDates id="floatingCalcPeriodDates">
               <effectiveDate>
-                <unadjustedDate>2011-02-08Z</unadjustedDate>
+                <unadjustedDate>2011-02-08</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
               </effectiveDate>
               <terminationDate>
-                <unadjustedDate>2016-02-08Z</unadjustedDate>
+                <unadjustedDate>2016-02-08</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>MODFOLLOWING</businessDayConvention>
                   <businessCenters id="primaryBusinessCenters">
@@ -177,13 +183,13 @@
             <receiverPartyReference href="party1" />
             <calculationPeriodDates id="fixedCalcPeriodDates">
               <effectiveDate>
-                <unadjustedDate>2011-02-08Z</unadjustedDate>
+                <unadjustedDate>2011-02-08</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>NONE</businessDayConvention>
                 </dateAdjustments>
               </effectiveDate>
               <terminationDate>
-                <unadjustedDate>2016-02-08Z</unadjustedDate>
+                <unadjustedDate>2016-02-08</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>MODFOLLOWING</businessDayConvention>
                   <businessCentersReference href="primaryBusinessCenters" />
@@ -228,11 +234,11 @@
           </swapStream>
         </swap>
       </trade>
-      <priceNotation>
+      <quote>
         <value>1235</value>
         <measureType>NPV</measureType>
         <currency>USD</currency>
-      </priceNotation>
+      </quote>
       <party id="party1">
         <partyId>CPTY123456</partyId>
 <!-- unique counterparty identifier of reporting party -->

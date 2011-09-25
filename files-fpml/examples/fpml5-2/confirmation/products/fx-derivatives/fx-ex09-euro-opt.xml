@@ -46,7 +46,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.markets.Reuters.com/rss/spec/2001/trade-id-2-0">IBFXO-0123456789</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-01-04Z</tradeDate>
+      <tradeDate>2002-01-04</tradeDate>
     </tradeHeader>
 <!--FpML-5-0 Renamed from 'fxSimpleOption' to 'fxOption'-->
     <fxOption>
@@ -55,13 +55,13 @@
       <sellerPartyReference href="party2" />
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise. 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' and  'valueDate' was moved in here-->
       <europeanExercise>
-        <expiryDate>2002-06-04Z</expiryDate>
+        <expiryDate>2002-06-04</expiryDate>
         <expiryTime>
           <hourMinuteTime>14:00:00</hourMinuteTime>
           <businessCenter id="primarybusinesscenter">USNY</businessCenter>
         </expiryTime>
         <cutName>NewYork</cutName>
-        <valueDate>2002-06-06Z</valueDate>
+        <valueDate>2002-06-06</valueDate>
       </europeanExercise>
 <!--FpML-5-1 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. europeanExercise)-->
 <!--FpML-5-1 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -96,7 +96,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-12-06Z</unadjustedDate>
+            <unadjustedDate>2001-12-06</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

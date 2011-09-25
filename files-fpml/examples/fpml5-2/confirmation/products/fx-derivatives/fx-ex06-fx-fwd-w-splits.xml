@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.abn.com/fx/trade-id">USABC023</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-12Z</tradeDate>
+      <tradeDate>2001-11-12</tradeDate>
     </tradeHeader>
     <fxSingleLeg>
       <exchangedCurrency1>
@@ -130,7 +130,7 @@
           </settlementInstruction>
         </settlementInformation>
       </exchangedCurrency2>
-      <valueDate>2002-02-14Z</valueDate>
+      <valueDate>2002-02-14</valueDate>
       <exchangeRate>
         <quotedCurrencyPair>
           <currency1>USD</currency1>

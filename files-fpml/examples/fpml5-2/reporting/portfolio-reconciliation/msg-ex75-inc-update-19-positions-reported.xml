@@ -14,7 +14,7 @@
     <sendTo>ABCDUS33</sendTo>
     <creationTimestamp>2006-04-28T15:39:10Z</creationTimestamp>
   </header>
-  <asOfDate>2006-04-26Z</asOfDate>
+  <asOfDate>2006-04-26</asOfDate>
   <dataSetName>GBP FX Spot/Forward</dataSetName>
   <submissionsComplete>true</submissionsComplete>
   <position>
@@ -31,7 +31,7 @@
             <partyReference href="dealer" />
             <tradeId tradeIdScheme="http://www.abc.com/fx/trade-id">111</tradeId>
           </partyTradeIdentifier>
-          <tradeDate>2006-04-24Z</tradeDate>
+          <tradeDate>2006-04-24</tradeDate>
         </tradeHeader>
         <fxSingleLeg>
           <exchangedCurrency1>
@@ -50,7 +50,7 @@
               <amount>14700000</amount>
             </paymentAmount>
           </exchangedCurrency2>
-          <valueDate>2006-04-26Z</valueDate>
+          <valueDate>2006-04-26</valueDate>
           <exchangeRate>
             <quotedCurrencyPair>
               <currency1>GBP</currency1>

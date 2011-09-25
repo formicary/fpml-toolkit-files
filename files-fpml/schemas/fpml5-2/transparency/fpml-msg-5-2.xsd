@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 
-== Copyright (c) 2002-2011. All rights reserved. 
+== Copyright (c) 2002-2011 All rights reserved. 
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/transparency" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/transparency" ecore:documentRoot="FpML" ecore:nsPrefix="trnsp" ecore:package="org.fpml.transparency" version="$Revision: 7918 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/transparency" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/transparency" ecore:documentRoot="FpML" ecore:nsPrefix="trnsp" ecore:package="org.fpml.transparency" version="$Revision: 8119 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd" />
   <xsd:include schemaLocation="fpml-doc-5-2.xsd" />
   <xsd:complexType name="Acknowledgement">
@@ -68,8 +68,11 @@
               <xsd:documentation>Indicates if this message corrects an earlier request.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="Correlation.model" />
-          <xsd:group ref="Sequence.model" />
+          <xsd:group ref="CorrelationAndSequence.model" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation>This provides a mechanism for the requester to assign an ID that can be used for subsequent corrections and retractions, without requiring any acknowledgement or reply from the message recipient. The FpML architecture recommends that services support this feature, because otherwise requesters cannot correct or retract requests until they receive a reply from the service. If the correlation ID is not supplied by the requester, the recipient should provide a correlation ID in its response, which the requester should retain in case subsequent corrections or retractions are required. In this case, the "inReplyTo" element in the message header may be used to link the response to the request.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:group>
           <xsd:group ref="OnBehalfOf.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
@@ -87,8 +90,7 @@
               <xsd:documentation>Indicates if this message corrects an earlier request.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="Correlation.model" />
-          <xsd:group ref="Sequence.model" />
+          <xsd:group ref="CorrelationAndSequence.model" minOccurs="0" />
           <xsd:group ref="OnBehalfOf.model" minOccurs="0" maxOccurs="2" />
         </xsd:sequence>
       </xsd:extension>
@@ -119,8 +121,7 @@
       <xsd:documentation xml:lang="en">Identification of a business event through its correlation id.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:group ref="Correlation.model" />
-      <xsd:group ref="Sequence.model" minOccurs="0" />
+      <xsd:group ref="CorrelationAndOptionalSequence.model" />
     </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="EventStatusItem">
@@ -161,8 +162,7 @@
       <xsd:extension base="Message">
         <xsd:sequence>
           <xsd:element name="header" type="ExceptionMessageHeader" minOccurs="0" />
-          <xsd:group ref="Correlation.model" minOccurs="0" />
-          <xsd:group ref="Sequence.model" minOccurs="0" />
+          <xsd:group ref="CorrelationAndOptionalSequence.model" minOccurs="0" />
           <xsd:group ref="Exception.model" />
         </xsd:sequence>
       </xsd:extension>
@@ -240,8 +240,7 @@
     <xsd:complexContent>
       <xsd:extension base="RequestMessage">
         <xsd:sequence>
-          <xsd:group ref="Correlation.model" />
-          <xsd:group ref="Sequence.model" />
+          <xsd:group ref="CorrelationAndSequence.model" minOccurs="0" />
           <xsd:group ref="OnBehalfOf.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
@@ -255,8 +254,7 @@
       <xsd:extension base="Message">
         <xsd:sequence>
           <xsd:element name="header" type="NotificationMessageHeader" minOccurs="0" />
-          <xsd:group ref="Correlation.model" minOccurs="0" />
-          <xsd:group ref="Sequence.model" minOccurs="0" />
+          <xsd:group ref="CorrelationAndOptionalSequence.model" minOccurs="0" />
           <xsd:group ref="OnBehalfOf.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
@@ -392,8 +390,7 @@
       <xsd:extension base="Message">
         <xsd:sequence>
           <xsd:element name="header" type="ResponseMessageHeader" minOccurs="0" />
-          <xsd:group ref="Correlation.model" />
-          <xsd:group ref="Sequence.model" minOccurs="0" />
+          <xsd:group ref="CorrelationAndOptionalSequence.model" />
           <xsd:group ref="OnBehalfOf.model" minOccurs="0" />
         </xsd:sequence>
       </xsd:extension>
@@ -418,7 +415,7 @@
   </xsd:complexType>
   <xsd:group name="Correlation.model">
     <xsd:annotation>
-      <xsd:documentation>A model group defining the element used for process correlation</xsd:documentation>
+      <xsd:documentation>A model group defining the element used for process correlation. The correlation ID is used to link followup corrections and retractions to the original request, and to help identify which replies link to which requests. A second correlation ID may be provided to allow a service/recipient to provide its business object ID that corresponds to the submitter's ID. Where this is used, either correlation ID could be used to refer to the same business object.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
       <xsd:element name="correlationId" type="CorrelationId" maxOccurs="2" minOccurs="0">
@@ -426,6 +423,24 @@
           <xsd:documentation>A qualified identifier used to correlate between messages</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="CorrelationAndSequence.model">
+    <xsd:annotation>
+      <xsd:documentation>A model group defining the full messsage correlation mechanism. The correlation ID is used to link followup corrections and retractions to the original request, and to help identify which replies link to which requests. (The "inReplyTo" element may also be used for this purpose, but it contains a message identifier rather than a business object identifier.) The sequence ID is used to establish an ordering between multiple messages related to the same business object (identified by the same correlation identifier). It contains a value the must ascend (possibly with gaps) messages on the same correlation ID.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:group ref="Correlation.model" />
+      <xsd:group ref="Sequence.model" />
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="CorrelationAndOptionalSequence.model">
+    <xsd:annotation>
+      <xsd:documentation>A model group defining the full messsage correlation mechanism, but with optional sequence</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:group ref="Correlation.model" />
+      <xsd:group ref="Sequence.model" minOccurs="0" />
     </xsd:sequence>
   </xsd:group>
   <xsd:group name="Exception.model">

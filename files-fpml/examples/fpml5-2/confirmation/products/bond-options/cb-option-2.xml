@@ -28,7 +28,7 @@
         <partyReference href="PartyA" />
         <tradeId tradeIdScheme="http://www.PartyA.com/eqd-trade-id">Bond1</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2004-12-24-05:00</tradeDate>
+      <tradeDate>2004-12-24</tradeDate>
     </tradeHeader>
     <bondOption>
       <buyerPartyReference href="PartyB" />
@@ -37,7 +37,7 @@
       <americanExercise id="EXERCISE">
         <commencementDate>
           <adjustableDate>
-            <unadjustedDate>2004-12-29-05:00</unadjustedDate>
+            <unadjustedDate>2004-12-29</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -49,7 +49,7 @@
         </commencementDate>
         <expirationDate>
           <adjustableDate>
-            <unadjustedDate>2009-06-01-05:00</unadjustedDate>
+            <unadjustedDate>2009-06-01</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -119,12 +119,12 @@
         <clearanceSystem>DTCC</clearanceSystem>
         <issuerName>DEF Holdings</issuerName>
         <couponRate>0.0</couponRate>
-        <maturity>2009-06-15-05:00</maturity>
+        <maturity>2009-06-15</maturity>
         <paymentFrequency>
           <periodMultiplier>6</periodMultiplier>
           <period>M</period>
         </paymentFrequency>
-        <redemptionDate>2009-06-15-05:00</redemptionDate>
+        <redemptionDate>2009-06-15</redemptionDate>
       </convertibleBond>
     </bondOption>
     <calculationAgent>

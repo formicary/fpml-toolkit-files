@@ -30,18 +30,18 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/fx/trade-id">DB-89080</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2010-08-16Z</tradeDate>
+      <tradeDate>2010-08-16</tradeDate>
     </tradeHeader>
     <fxOption>
       <buyerPartyReference href="party2" />
       <sellerPartyReference href="party1" />
       <europeanExercise>
-        <expiryDate>2010-11-30Z</expiryDate>
+        <expiryDate>2010-11-30</expiryDate>
         <expiryTime>
           <hourMinuteTime>12:30:00</hourMinuteTime>
           <businessCenter>MXMC</businessCenter>
         </expiryTime>
-        <valueDate>2010-12-04Z</valueDate>
+        <valueDate>2010-12-04</valueDate>
       </europeanExercise>
       <putCurrencyAmount>
         <currency>MXN</currency>
@@ -66,8 +66,8 @@
             <businessCenter>MXMC</businessCenter>
           </fixingTime>
           <observationSchedule>
-            <startDate>2010-11-01Z</startDate>
-            <endDate>2010-11-30Z</endDate>
+            <startDate>2010-11-01</startDate>
+            <endDate>2010-11-30</endDate>
             <calculationPeriodFrequency>
               <periodMultiplier>1</periodMultiplier>
               <period>D</period>
@@ -75,27 +75,27 @@
             </calculationPeriodFrequency>
           </observationSchedule>
           <rateObservation>
-            <date>2010-11-01Z</date>
+            <date>2010-11-01</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.34527</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-02Z</date>
+            <date>2010-11-02</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.34527</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-03Z</date>
+            <date>2010-11-03</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.26109</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-04Z</date>
+            <date>2010-11-04</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.21616</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-05Z</date>
+            <date>2010-11-05</date>
             <averageRateWeightingFactor>3</averageRateWeightingFactor>
             <rate>12.24930</rate>
           </rateObservation>
@@ -110,7 +110,7 @@
 <!--FpML 5-1: As part of FX Product Refactoring work, renamed from settlementDate to paymentDate/adjustableDate/unadjustedDate; moved before paymentAmount; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2010-08-18Z</unadjustedDate>
+            <unadjustedDate>2010-08-18</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

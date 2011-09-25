@@ -18,7 +18,7 @@
   <correlationId correlationIdScheme="http://www.recserv.com/cid">CID12345</correlationId>
   <portfolio>
     <portfolioName>fundPortfolio1</portfolioName>
-    <asOfDate>2006-04-25Z</asOfDate>
+    <asOfDate>2006-04-25</asOfDate>
     <definingParty href="dealer" />
     <matchingParty href="fund" />
   </portfolio>
@@ -38,7 +38,7 @@
               <partyReference href="fund" />
               <tradeId tradeIdScheme="http://www.abc.com/fx/trade-id">111</tradeId>
             </partyTradeIdentifier>
-            <tradeDate>2006-04-24Z</tradeDate>
+            <tradeDate>2006-04-24</tradeDate>
           </tradeHeader>
           <fxSingleLeg>
             <exchangedCurrency1>
@@ -57,7 +57,7 @@
                 <amount>14700000</amount>
               </paymentAmount>
             </exchangedCurrency2>
-            <valueDate>2006-04-26Z</valueDate>
+            <valueDate>2006-04-26</valueDate>
             <exchangeRate>
               <quotedCurrencyPair>
                 <currency1>GBP</currency1>

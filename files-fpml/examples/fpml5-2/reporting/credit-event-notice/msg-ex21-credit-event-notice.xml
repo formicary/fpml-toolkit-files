@@ -49,8 +49,8 @@
     </publiclyAvailableInformation>
     <notifyingPartyReference href="party1" />
     <notifiedPartyReference href="party2" />
-    <creditEventNoticeDate>2004-01-05Z</creditEventNoticeDate>
-    <creditEventDate>2003-12-17Z</creditEventDate>
+    <creditEventNoticeDate>2004-01-05</creditEventNoticeDate>
+    <creditEventDate>2003-12-17</creditEventDate>
   </creditEventNotice>
   <party id="party1">
     <partyId>GSI</partyId>

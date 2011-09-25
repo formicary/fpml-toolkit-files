@@ -34,7 +34,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id">123</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-04-29Z</tradeDate>
+      <tradeDate>2001-04-29</tradeDate>
     </tradeHeader>
     <swap>
       <swapStream>
@@ -42,13 +42,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="CalcPeriodDates0">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters0">
@@ -98,47 +98,47 @@
           <cashflowsMatchParameters>true</cashflowsMatchParameters>
           <paymentCalculationPeriod>
 <!-- CHANGE removed adjustedPaymentDate.  Chris Simmons,15 May 2003.  Violates ird-50
-            <adjustedPaymentDate>2002-08-20Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2002-08-20</adjustedPaymentDate>
 -->
             <calculationPeriod>
-              <adjustedStartDate>2001-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2002-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2001-08-30</adjustedStartDate>
+              <adjustedEndDate>2002-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2003-08-29Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2003-08-29</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2002-08-28Z</adjustedStartDate>
-              <adjustedEndDate>2003-08-29Z</adjustedEndDate>
+              <adjustedStartDate>2002-08-28</adjustedStartDate>
+              <adjustedEndDate>2003-08-29</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2004-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2004-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2003-08-29Z</adjustedStartDate>
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2003-08-29</adjustedStartDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2005-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2005-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2004-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2004-08-30</adjustedStartDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2006-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2006-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2005-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2006-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2005-08-30</adjustedStartDate>
+              <adjustedEndDate>2006-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
@@ -150,13 +150,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="CalcPeriodDates1">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters1">
@@ -231,140 +231,140 @@
         <cashflows>
           <cashflowsMatchParameters>true</cashflowsMatchParameters>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2002-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2002-02-28</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2001-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2002-02-28Z</adjustedEndDate>
+              <adjustedStartDate>2001-08-30</adjustedStartDate>
+              <adjustedEndDate>2002-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2001-08-28Z</adjustedFixingDate>
+                  <adjustedFixingDate>2001-08-28</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2002-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2002-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2002-02-28Z</adjustedStartDate>
-              <adjustedEndDate>2002-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2002-02-28</adjustedStartDate>
+              <adjustedEndDate>2002-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2002-02-26Z</adjustedFixingDate>
+                  <adjustedFixingDate>2002-02-26</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2003-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2003-02-28</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2002-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2003-02-28Z</adjustedEndDate>
+              <adjustedStartDate>2002-08-30</adjustedStartDate>
+              <adjustedEndDate>2003-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2002-08-28Z</adjustedFixingDate>
+                  <adjustedFixingDate>2002-08-28</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2003-08-29Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2003-08-29</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2003-02-28Z</adjustedStartDate>
-              <adjustedEndDate>2003-08-29Z</adjustedEndDate>
+              <adjustedStartDate>2003-02-28</adjustedStartDate>
+              <adjustedEndDate>2003-08-29</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2003-02-26Z</adjustedFixingDate>
+                  <adjustedFixingDate>2003-02-26</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2004-02-27Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2004-02-27</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2003-08-29Z</adjustedStartDate>
-              <adjustedEndDate>2004-02-27Z</adjustedEndDate>
+              <adjustedStartDate>2003-08-29</adjustedStartDate>
+              <adjustedEndDate>2004-02-27</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2003-08-27Z</adjustedFixingDate>
+                  <adjustedFixingDate>2003-08-27</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2004-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2004-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2004-02-27Z</adjustedStartDate>
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2004-02-27</adjustedStartDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2004-02-25Z</adjustedFixingDate>
+                  <adjustedFixingDate>2004-02-25</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2005-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2005-02-28</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2004-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2005-02-28Z</adjustedEndDate>
+              <adjustedStartDate>2004-08-30</adjustedStartDate>
+              <adjustedEndDate>2005-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2004-08-27Z</adjustedFixingDate>
+                  <adjustedFixingDate>2004-08-27</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2005-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2005-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2005-02-28Z</adjustedStartDate>
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2005-02-28</adjustedStartDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2005-02-24Z</adjustedFixingDate>
+                  <adjustedFixingDate>2005-02-24</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2006-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2006-02-28</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2005-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2006-02-28Z</adjustedEndDate>
+              <adjustedStartDate>2005-08-30</adjustedStartDate>
+              <adjustedEndDate>2006-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2005-08-26Z</adjustedFixingDate>
+                  <adjustedFixingDate>2005-08-26</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2006-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2006-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2006-02-28Z</adjustedStartDate>
-              <adjustedEndDate>2006-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2006-02-28</adjustedStartDate>
+              <adjustedEndDate>2006-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2006-02-24Z</adjustedFixingDate>
+                  <adjustedFixingDate>2006-02-24</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -433,8 +433,8 @@
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Added id attribute -->
             <cashSettlementPaymentDate id="cashSettlement0">
               <adjustableDates>
-                <unadjustedDate>2003-08-30Z</unadjustedDate>
-                <unadjustedDate>2004-08-30Z</unadjustedDate>
+                <unadjustedDate>2003-08-30</unadjustedDate>
+                <unadjustedDate>2004-08-30</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>FOLLOWING</businessDayConvention>
                   <businessCenters>
@@ -451,16 +451,16 @@
           </cashSettlement>
           <optionalEarlyTerminationAdjustedDates>
             <earlyTerminationEvent>
-              <adjustedExerciseDate>2003-08-25Z</adjustedExerciseDate>
-              <adjustedEarlyTerminationDate>2003-09-01Z</adjustedEarlyTerminationDate>
-              <adjustedCashSettlementValuationDate>2003-08-28Z</adjustedCashSettlementValuationDate>
-              <adjustedCashSettlementPaymentDate>2003-09-01Z</adjustedCashSettlementPaymentDate>
+              <adjustedExerciseDate>2003-08-25</adjustedExerciseDate>
+              <adjustedEarlyTerminationDate>2003-09-01</adjustedEarlyTerminationDate>
+              <adjustedCashSettlementValuationDate>2003-08-28</adjustedCashSettlementValuationDate>
+              <adjustedCashSettlementPaymentDate>2003-09-01</adjustedCashSettlementPaymentDate>
             </earlyTerminationEvent>
             <earlyTerminationEvent>
-              <adjustedExerciseDate>2003-08-23Z</adjustedExerciseDate>
-              <adjustedEarlyTerminationDate>2004-08-30Z</adjustedEarlyTerminationDate>
-              <adjustedCashSettlementValuationDate>2004-08-26Z</adjustedCashSettlementValuationDate>
-              <adjustedCashSettlementPaymentDate>2004-08-30Z</adjustedCashSettlementPaymentDate>
+              <adjustedExerciseDate>2003-08-23</adjustedExerciseDate>
+              <adjustedEarlyTerminationDate>2004-08-30</adjustedEarlyTerminationDate>
+              <adjustedCashSettlementValuationDate>2004-08-26</adjustedCashSettlementValuationDate>
+              <adjustedCashSettlementPaymentDate>2004-08-30</adjustedCashSettlementPaymentDate>
             </earlyTerminationEvent>
           </optionalEarlyTerminationAdjustedDates>
         </optionalEarlyTermination>

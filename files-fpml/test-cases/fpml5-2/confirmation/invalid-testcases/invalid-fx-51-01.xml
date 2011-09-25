@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/swaps/trade-id">DEUTDEFF</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-01-23Z</tradeDate>
+      <tradeDate>2002-01-23</tradeDate>
     </tradeHeader>
     <fxSwap>
       <productType>FxSwap</productType>
@@ -51,7 +51,7 @@
             <amount>434000000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-        <valueDate>2002-01-25Z</valueDate>
+        <valueDate>2002-01-25</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>USD</currency1>
@@ -71,7 +71,7 @@
               <currency2>INR</currency2>
               <quoteBasis>Currency2PerCurrency1</quoteBasis>
             </quotedCurrencyPair>
-            <fixingDate>2002-01-23Z</fixingDate>
+            <fixingDate>2002-01-23</fixingDate>
 <!--FpML 5-1: As part of FX Product Refactoring work, instead of extending FxSpotRateSource complex type, added an optional element fxSpotRateSource of Type FxSpotRateSource -->
             <fxSpotRateSource>
               <primaryRateSource>
@@ -103,7 +103,7 @@
             <amount>434000000</amount>
           </paymentAmount>
         </exchangedCurrency2>
-        <valueDate>2002-02-25Z</valueDate>
+        <valueDate>2002-02-25</valueDate>
         <exchangeRate>
           <quotedCurrencyPair>
             <currency1>USD</currency1>
@@ -123,7 +123,7 @@
               <currency2>INR</currency2>
               <quoteBasis>Currency2PerCurrency1</quoteBasis>
             </quotedCurrencyPair>
-            <fixingDate>2002-02-23Z</fixingDate>
+            <fixingDate>2002-02-23</fixingDate>
 <!--FpML 5-1: As part of FX Product Refactoring work, instead of extending "FxSpotRateSource" complex type, added an optional element "fxSpotRateSource" of Type "FxSpotRateSource" -->
             <fxSpotRateSource>
               <primaryRateSource>

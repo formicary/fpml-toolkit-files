@@ -22,7 +22,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.drkw.com/tradeId/OTC">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2002-07-13Z</tradeDate>
+      <tradeDate id="TradeDate">2002-07-13</tradeDate>
     </tradeHeader>
     <equityOptionTransactionSupplement>
       <productType>americanCallStock</productType>
@@ -42,7 +42,7 @@
         <equityAmericanExercise>
           <commencementDate>
             <adjustableDate>
-              <unadjustedDate>2002-07-13Z</unadjustedDate>
+              <unadjustedDate>2002-07-13</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -50,7 +50,7 @@
           </commencementDate>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2002-09-27Z</unadjustedDate>
+              <unadjustedDate>2002-09-27</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -84,7 +84,7 @@
           <amount>405000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2002-07-17Z</unadjustedDate>
+          <unadjustedDate>2002-07-17</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>

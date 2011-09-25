@@ -60,7 +60,7 @@
           <approver>Robert Smith</approver>
         </approval>
       </approvals>
-      <masterConfirmationDate>2003-09-25Z</masterConfirmationDate>
+      <masterConfirmationDate>2003-09-25</masterConfirmationDate>
     </allocation>
     <allocation>
       <allocationTradeId>
@@ -92,7 +92,7 @@
           <status>Pre-Approved</status>
         </approval>
       </approvals>
-      <masterConfirmationDate>2003-03-14Z</masterConfirmationDate>
+      <masterConfirmationDate>2003-03-14</masterConfirmationDate>
     </allocation>
   </allocations>
   <party id="party1">

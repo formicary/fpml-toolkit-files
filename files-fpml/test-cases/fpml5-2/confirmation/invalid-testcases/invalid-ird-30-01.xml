@@ -39,7 +39,7 @@
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id">123</tradeId>
       </partyTradeIdentifier>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed tradeDate from 2000-04-25 to 2001-04-29 -->
-      <tradeDate>2001-04-29Z</tradeDate>
+      <tradeDate>2001-04-29</tradeDate>
     </tradeHeader>
     <swap>
       <swapStream>
@@ -51,14 +51,14 @@
         <calculationPeriodDates id="CalcPeriodDates0">
           <effectiveDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed unadjustedDate value from 2000-04-27 to 2001-08-30 -->
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed unadjustedDate value from 2002-04-27 to 2006-08-30 -->
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed id value from primaryBusinessCenters to accrualBusinessCenters0 -->
@@ -111,48 +111,48 @@
         <cashflows>
           <cashflowsMatchParameters>true</cashflowsMatchParameters>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2002-08-20Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2002-08-20</adjustedPaymentDate>
             <calculationPeriod>
 <!-- CHANGE Removed commented element.  Chris Simmons, 16 May 2003. NOTE wont validate against present version of schema
-              <adjustedStartDate>2001-08-30Z</adjustedStartDate>
+              <adjustedStartDate>2001-08-30</adjustedStartDate>
 end CHANGE -->
-              <adjustedEndDate>2002-08-30Z</adjustedEndDate>
+              <adjustedEndDate>2002-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2003-08-29Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2003-08-29</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2002-08-28Z</adjustedStartDate>
-              <adjustedEndDate>2003-08-29Z</adjustedEndDate>
+              <adjustedStartDate>2002-08-28</adjustedStartDate>
+              <adjustedEndDate>2003-08-29</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2004-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2004-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2003-08-29Z</adjustedStartDate>
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2003-08-29</adjustedStartDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2005-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2005-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2004-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2004-08-30</adjustedStartDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2006-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2006-08-30</adjustedPaymentDate>
             <calculationPeriod>
-              <adjustedStartDate>2005-08-30Z</adjustedStartDate>
-              <adjustedEndDate>2006-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2005-08-30</adjustedStartDate>
+              <adjustedEndDate>2006-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <fixedRate>0.05</fixedRate>
             </calculationPeriod>
@@ -164,13 +164,13 @@ end CHANGE -->
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="CalcPeriodDates1">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2006-08-30Z</unadjustedDate>
+            <unadjustedDate>2006-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters1">
@@ -263,17 +263,17 @@ end CHANGE -->
           <cashflowsMatchParameters>true</cashflowsMatchParameters>
           <paymentCalculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedPaymentDate from 2000-11-03 to 2002-02-28 -->
-            <adjustedPaymentDate>2002-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2002-02-28</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2000-04-27 to 2001-08-30 -->
-              <adjustedStartDate>2001-08-30Z</adjustedStartDate>
+              <adjustedStartDate>2001-08-30</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2000-07-27 to 2002-02-28 -->
-              <adjustedEndDate>2002-02-28Z</adjustedEndDate>
+              <adjustedEndDate>2002-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2000-04-25 to 2001-08-28 -->
-                  <adjustedFixingDate>2001-08-28Z</adjustedFixingDate>
+                  <adjustedFixingDate>2001-08-28</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -281,17 +281,17 @@ end CHANGE -->
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Wrapped paymentCalculationPeriod elements around calculationPeriod element -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2002-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2002-08-30</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2000-07-27 to 2002-02-28 -->
-              <adjustedStartDate>2002-02-28Z</adjustedStartDate>
+              <adjustedStartDate>2002-02-28</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2000-10-27 to 2002-08-30 -->
-              <adjustedEndDate>2002-08-30Z</adjustedEndDate>
+              <adjustedEndDate>2002-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2000-07-25 to 2002-02-26 -->
-                  <adjustedFixingDate>2002-02-26Z</adjustedFixingDate>
+                  <adjustedFixingDate>2002-02-26</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -299,17 +299,17 @@ end CHANGE -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedPaymentDate from 2001-05-04 to 2003-02-28 -->
-            <adjustedPaymentDate>2003-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2003-02-28</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2000-10-27 to 2002-08-30 -->
-              <adjustedStartDate>2002-08-30Z</adjustedStartDate>
+              <adjustedStartDate>2002-08-30</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2001-01-29 to 2003-02-28 -->
-              <adjustedEndDate>2003-02-28Z</adjustedEndDate>
+              <adjustedEndDate>2003-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2000-10-25 to 2002-08-28 -->
-                  <adjustedFixingDate>2002-08-28Z</adjustedFixingDate>
+                  <adjustedFixingDate>2002-08-28</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -317,17 +317,17 @@ end CHANGE -->
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Wrapped paymentCalculationPeriod elements around calculationPeriod element -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2003-08-29Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2003-08-29</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2001-01-29 to 2003-02-28 -->
-              <adjustedStartDate>2003-02-28Z</adjustedStartDate>
+              <adjustedStartDate>2003-02-28</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2001-04-27 to 2003-08-29 -->
-              <adjustedEndDate>2003-08-29Z</adjustedEndDate>
+              <adjustedEndDate>2003-08-29</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2001-01-25 to 2003-02-26 -->
-                  <adjustedFixingDate>2003-02-26Z</adjustedFixingDate>
+                  <adjustedFixingDate>2003-02-26</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -335,17 +335,17 @@ end CHANGE -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedPaymentDate from 2001-11-05 to 2004-02-27 -->
-            <adjustedPaymentDate>2004-02-27Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2004-02-27</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2001-04-27 to 2003-08-29 -->
-              <adjustedStartDate>2003-08-29Z</adjustedStartDate>
+              <adjustedStartDate>2003-08-29</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2001-07-27 to 2004-02-27 -->
-              <adjustedEndDate>2004-02-27Z</adjustedEndDate>
+              <adjustedEndDate>2004-02-27</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2001-04-25 to 2003-08-27 -->
-                  <adjustedFixingDate>2003-08-27Z</adjustedFixingDate>
+                  <adjustedFixingDate>2003-08-27</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -353,17 +353,17 @@ end CHANGE -->
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Wrapped paymentCalculationPeriod elements around calculationPeriod element -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2004-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2004-08-30</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2004-02-27 to 2001-07-27 -->
-              <adjustedStartDate>2001-07-27Z</adjustedStartDate>
+              <adjustedStartDate>2001-07-27</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2001-10-29 to 2005-08-30 -->
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2001-07-25 to 2004-02-25 -->
-                  <adjustedFixingDate>2004-02-25Z</adjustedFixingDate>
+                  <adjustedFixingDate>2004-02-25</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -371,17 +371,17 @@ end CHANGE -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedPaymentDate from 2002-05-06 to 2005-02-28 -->
-            <adjustedPaymentDate>2005-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2005-02-28</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2001-04-27 to 2003-08-29 -->
-              <adjustedStartDate>2004-08-30Z</adjustedStartDate>
+              <adjustedStartDate>2004-08-30</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2002-01-29 to 2005-02-28 -->
-              <adjustedEndDate>2005-02-28Z</adjustedEndDate>
+              <adjustedEndDate>2005-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2001-10-25 to 2004-08-27 -->
-                  <adjustedFixingDate>2004-08-27Z</adjustedFixingDate>
+                  <adjustedFixingDate>2004-08-27</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -389,17 +389,17 @@ end CHANGE -->
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Wrapped paymentCalculationPeriod elements around calculationPeriod element -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
-            <adjustedPaymentDate>2005-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2005-08-30</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2002-01-29 to 2005-02-28 -->
-              <adjustedStartDate>2005-02-28Z</adjustedStartDate>
+              <adjustedStartDate>2005-02-28</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2002-04-29 to 2005-08-30 -->
-              <adjustedEndDate>2005-08-30Z</adjustedEndDate>
+              <adjustedEndDate>2005-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
               <floatingRateDefinition>
                 <rateObservation>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedFixingDate from 2002-01-25 to 2005-02-24 -->
-                  <adjustedFixingDate>2005-02-24Z</adjustedFixingDate>
+                  <adjustedFixingDate>2005-02-24</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -408,17 +408,17 @@ end CHANGE -->
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Removed swapStream and it child elements -->
           <paymentCalculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedPaymentDate from 2001-11-05 to 2006-02-28 -->
-            <adjustedPaymentDate>2006-02-28Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2006-02-28</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2001-04-27 to 2005-08-30 -->
-              <adjustedStartDate>2005-08-30Z</adjustedStartDate>
+              <adjustedStartDate>2005-08-30</adjustedStartDate>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedEndDate from 2001-10-29 to 2006-02-28 -->
-              <adjustedEndDate>2006-02-28Z</adjustedEndDate>
+              <adjustedEndDate>2006-02-28</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Replaced fixedRate element with floatingRateDefinition and children -->
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2005-08-26Z</adjustedFixingDate>
+                  <adjustedFixingDate>2005-08-26</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -426,16 +426,16 @@ end CHANGE -->
           </paymentCalculationPeriod>
           <paymentCalculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedPaymentDate from 2002-05-06 to 2006-02-28 -->
-            <adjustedPaymentDate>2006-08-30Z</adjustedPaymentDate>
+            <adjustedPaymentDate>2006-08-30</adjustedPaymentDate>
             <calculationPeriod>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Changed the adjustedStartDate from 2001-10-29 to 2006-02-28 -->
-              <adjustedStartDate>2006-02-28Z</adjustedStartDate>
-              <adjustedEndDate>2006-08-30Z</adjustedEndDate>
+              <adjustedStartDate>2006-02-28</adjustedStartDate>
+              <adjustedEndDate>2006-08-30</adjustedEndDate>
               <notionalAmount>100000000</notionalAmount>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: Replaced fixedRate element with floatingRateDefinition and children -->
               <floatingRateDefinition>
                 <rateObservation>
-                  <adjustedFixingDate>2006-02-24Z</adjustedFixingDate>
+                  <adjustedFixingDate>2006-02-24</adjustedFixingDate>
                   <observationWeight>1</observationWeight>
                 </rateObservation>
               </floatingRateDefinition>
@@ -503,8 +503,8 @@ end CHANGE -->
             </cashSettlementValuationDate>
             <cashSettlementPaymentDate id="cashSettlement0">
               <adjustableDates>
-                <unadjustedDate>2003-08-30Z</unadjustedDate>
-                <unadjustedDate>2004-08-30Z</unadjustedDate>
+                <unadjustedDate>2003-08-30</unadjustedDate>
+                <unadjustedDate>2004-08-30</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>FOLLOWING</businessDayConvention>
                   <businessCenters>
@@ -521,16 +521,16 @@ end CHANGE -->
           </cashSettlement>
           <optionalEarlyTerminationAdjustedDates>
             <earlyTerminationEvent>
-              <adjustedExerciseDate>2003-08-25Z</adjustedExerciseDate>
-              <adjustedEarlyTerminationDate>2003-09-01Z</adjustedEarlyTerminationDate>
-              <adjustedCashSettlementValuationDate>2003-08-28Z</adjustedCashSettlementValuationDate>
-              <adjustedCashSettlementPaymentDate>2003-09-01Z</adjustedCashSettlementPaymentDate>
+              <adjustedExerciseDate>2003-08-25</adjustedExerciseDate>
+              <adjustedEarlyTerminationDate>2003-09-01</adjustedEarlyTerminationDate>
+              <adjustedCashSettlementValuationDate>2003-08-28</adjustedCashSettlementValuationDate>
+              <adjustedCashSettlementPaymentDate>2003-09-01</adjustedCashSettlementPaymentDate>
             </earlyTerminationEvent>
             <earlyTerminationEvent>
-              <adjustedExerciseDate>2003-08-23Z</adjustedExerciseDate>
-              <adjustedEarlyTerminationDate>2004-08-30Z</adjustedEarlyTerminationDate>
-              <adjustedCashSettlementValuationDate>2004-08-26Z</adjustedCashSettlementValuationDate>
-              <adjustedCashSettlementPaymentDate>2004-08-30Z</adjustedCashSettlementPaymentDate>
+              <adjustedExerciseDate>2003-08-23</adjustedExerciseDate>
+              <adjustedEarlyTerminationDate>2004-08-30</adjustedEarlyTerminationDate>
+              <adjustedCashSettlementValuationDate>2004-08-26</adjustedCashSettlementValuationDate>
+              <adjustedCashSettlementPaymentDate>2004-08-30</adjustedCashSettlementPaymentDate>
             </earlyTerminationEvent>
           </optionalEarlyTerminationAdjustedDates>
         </optionalEarlyTermination>

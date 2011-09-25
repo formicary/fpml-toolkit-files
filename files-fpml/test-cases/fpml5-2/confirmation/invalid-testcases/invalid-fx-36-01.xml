@@ -30,7 +30,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/fx/trade-id">DB-89080</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-08-16Z</tradeDate>
+      <tradeDate>2001-08-16</tradeDate>
     </tradeHeader>
 <!--FpML 5-1 - fxAverageRateOption is part of 'fxOption'  - 'features'-->
     <fxOption>
@@ -38,13 +38,13 @@
       <sellerPartyReference href="party1" />
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise. 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' and  'valueDate' was moved in here-->
       <europeanExercise>
-<!--invalid rule fx-36: fxOption/europeanExercise/expiryDate must be after tradeHeader/tradeDate. Correct value is <expiryDate>2001-11-30Z</expiryDate> -->
-        <expiryDate>2001-07-30Z</expiryDate>
+<!--invalid rule fx-36: fxOption/europeanExercise/expiryDate must be after tradeHeader/tradeDate. Correct value is <expiryDate>2001-11-30</expiryDate> -->
+        <expiryDate>2001-07-30</expiryDate>
         <expiryTime>
           <hourMinuteTime>12:30:00</hourMinuteTime>
           <businessCenter>MXMC</businessCenter>
         </expiryTime>
-        <valueDate>2001-12-04Z</valueDate>
+        <valueDate>2001-12-04</valueDate>
       </europeanExercise>
 <!--FpML-5-0 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. europeanExercise)-->
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -75,83 +75,83 @@
           </fixingTime>
 <!--FpML 5-1 fxAverageRateOption product, Renamed 'averageRaterateObservation' to 'rateObservation'-->
           <rateObservation>
-            <date>2001-11-01Z</date>
+            <date>2001-11-01</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-02Z</date>
+            <date>2001-11-02</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-05Z</date>
+            <date>2001-11-05</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-06Z</date>
+            <date>2001-11-06</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-07Z</date>
+            <date>2001-11-07</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-08Z</date>
+            <date>2001-11-08</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-09Z</date>
+            <date>2001-11-09</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-13Z</date>
+            <date>2001-11-13</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-14Z</date>
+            <date>2001-11-14</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-15Z</date>
+            <date>2001-11-15</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-16Z</date>
+            <date>2001-11-16</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-19Z</date>
+            <date>2001-11-19</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-20Z</date>
+            <date>2001-11-20</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-21Z</date>
+            <date>2001-11-21</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-23Z</date>
+            <date>2001-11-23</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-26Z</date>
+            <date>2001-11-26</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-27Z</date>
+            <date>2001-11-27</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-28Z</date>
+            <date>2001-11-28</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-29Z</date>
+            <date>2001-11-29</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2001-11-30Z</date>
+            <date>2001-11-30</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
         </asian>
@@ -164,7 +164,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-08-18Z</unadjustedDate>
+            <unadjustedDate>2001-08-18</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

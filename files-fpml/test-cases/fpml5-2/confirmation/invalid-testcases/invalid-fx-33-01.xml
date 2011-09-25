@@ -33,7 +33,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.abnamro.com/swaps/trade-id">AA9876</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-02-14Z</tradeDate>
+      <tradeDate>2002-02-14</tradeDate>
     </tradeHeader>
     <termDeposit>
       <productType productTypeScheme="http://www.sample.com/coding-scheme/product-type-simple">OvernightTermDeposit</productType>
@@ -41,9 +41,9 @@
       <payerPartyReference href="party1" />
 <!--In FpML 5-1, 09-23-2010 FXWG appr. - to rename element from 'initialReceiverReference' to 'receiverPartyReference' (diposit taker)-->
       <receiverPartyReference href="party2" />
-      <startDate>2002-02-14Z</startDate>
-<!--invalid rule fx-33: maturityDate must be after startDate. Correct value - <maturityDate>2002-02-15Z</maturityDate>-->
-      <maturityDate>2002-02-14Z</maturityDate>
+      <startDate>2002-02-14</startDate>
+<!--invalid rule fx-33: maturityDate must be after startDate. Correct value - <maturityDate>2002-02-15</maturityDate>-->
+      <maturityDate>2002-02-14</maturityDate>
       <principal>
         <currency>CHF</currency>
         <amount>25000000.00</amount>

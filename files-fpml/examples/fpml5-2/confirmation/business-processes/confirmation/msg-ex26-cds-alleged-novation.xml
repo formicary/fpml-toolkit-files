@@ -31,12 +31,12 @@
       <transferor href="party2" />
       <transferee href="party1" />
       <remainingParty href="party3" />
-      <novationDate>2006-01-08+05:00</novationDate>
+      <novationDate>2006-01-08</novationDate>
       <novatedAmount>
         <currency>USD</currency>
         <amount>5000000.00</amount>
       </novatedAmount>
-      <firstPeriodStartDate href="party3">2006-01-15+05:00</firstPeriodStartDate>
+      <firstPeriodStartDate href="party3">2006-01-15</firstPeriodStartDate>
       <creditDerivativesNotices>
         <creditEvent>true</creditEvent>
         <publiclyAvailableInformation>false</publiclyAvailableInformation>

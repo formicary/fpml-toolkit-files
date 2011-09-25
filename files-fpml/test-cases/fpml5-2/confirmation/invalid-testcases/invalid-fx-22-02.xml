@@ -29,7 +29,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.markets.Reuters.com/rss/spec/2001/trade-id-3-0">123456789</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-20Z</tradeDate>
+      <tradeDate>2001-11-20</tradeDate>
     </tradeHeader>
     <strategy>
       <productType>Straddle</productType>
@@ -39,13 +39,13 @@
         <sellerPartyReference href="party2" />
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise. 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' and  'valueDate' was moved in here-->
         <europeanExercise>
-          <expiryDate>2001-12-20Z</expiryDate>
+          <expiryDate>2001-12-20</expiryDate>
           <expiryTime>
             <hourMinuteTime>14:00:00</hourMinuteTime>
             <businessCenter id="primarybusinesscenter">USNY</businessCenter>
           </expiryTime>
           <cutName>NewYork</cutName>
-          <valueDate>2001-12-24Z</valueDate>
+          <valueDate>2001-12-24</valueDate>
         </europeanExercise>
 <!--FpML-5-1 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. europeanExercise)-->
 <!--FpML-5-1 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -79,7 +79,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
           <paymentDate>
             <adjustableDate>
-              <unadjustedDate>2001-11-23Z</unadjustedDate>
+              <unadjustedDate>2001-11-23</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -102,13 +102,13 @@
         <sellerPartyReference href="party2" />
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise. 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' and  'valueDate' was moved in here-->
         <europeanExercise>
-          <expiryDate>2001-12-20Z</expiryDate>
+          <expiryDate>2001-12-20</expiryDate>
           <expiryTime>
             <hourMinuteTime>14:00:00</hourMinuteTime>
             <businessCenter id="primarybusinesscenter2">USNY</businessCenter>
           </expiryTime>
           <cutName>NewYork</cutName>
-          <valueDate>2001-12-24Z</valueDate>
+          <valueDate>2001-12-24</valueDate>
         </europeanExercise>
         <putCurrencyAmount>
           <currency>USD</currency>
@@ -139,7 +139,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
           <paymentDate>
             <adjustableDate>
-              <unadjustedDate>2001-11-23Z</unadjustedDate>
+              <unadjustedDate>2001-11-23</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>

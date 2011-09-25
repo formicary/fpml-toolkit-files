@@ -16,7 +16,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.partyA.com/eqd-trade-id">LN 2962</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-01-17Z</tradeDate>
+      <tradeDate>2002-01-17</tradeDate>
     </tradeHeader>
 <!-- AP 2004.04.22 Bermuda not Bermudan -->
     <equityOption>
@@ -39,7 +39,7 @@
         <equityBermudaExercise>
           <commencementDate>
             <adjustableDate>
-              <unadjustedDate>2002-01-17Z</unadjustedDate>
+              <unadjustedDate>2002-01-17</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -47,7 +47,7 @@
           </commencementDate>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2002-06-21Z</unadjustedDate>
+              <unadjustedDate>2002-06-21</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -56,11 +56,11 @@
           <bermudaExerciseDates>
 <!-- CHANGE, changed year. Now it's smaller than commencementDate/adjustableDate/unadjustedDate -->
 <!--  C24 (http://www.c24.biz) Simon Heinrich: date changed from 2002-01-01 to 2001-04-21 -->
-            <date>2001-04-21Z</date>
+            <date>2001-04-21</date>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: date changed from 2002-05-21 to 2001-04-21 -->
-            <date>2001-05-21Z</date>
+            <date>2001-05-21</date>
 <!--  C24 (http://www.c24.biz) Simon Heinrich: date changed from 2002-06-21 to 2001-06-21 -->
-            <date>2001-06-21Z</date>
+            <date>2001-06-21</date>
           </bermudaExerciseDates>
           <latestExerciseTimeType>Close</latestExerciseTimeType>
           <equityExpirationTimeType>Close</equityExpirationTimeType>
@@ -120,7 +120,7 @@
           <amount>1350000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2002-01-22Z</unadjustedDate>
+          <unadjustedDate>2002-01-22</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>
@@ -138,7 +138,7 @@
       <masterAgreement>
         <masterAgreementType>ISDA</masterAgreementType>
         <masterAgreementVersion>2002</masterAgreementVersion>
-        <masterAgreementDate>2002-03-15Z</masterAgreementDate>
+        <masterAgreementDate>2002-03-15</masterAgreementDate>
       </masterAgreement>
       <contractualDefinitions>ISDA2000</contractualDefinitions>
       <contractualDefinitions>ISDA2002Equity</contractualDefinitions>

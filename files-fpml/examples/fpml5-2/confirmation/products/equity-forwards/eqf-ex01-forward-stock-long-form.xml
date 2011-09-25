@@ -28,7 +28,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.Party1.com/eqd-trade-id">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2001-07-13Z</tradeDate>
+      <tradeDate id="TradeDate">2001-07-13</tradeDate>
     </tradeHeader>
     <equityForward>
       <productType>forwardStock</productType>
@@ -54,7 +54,7 @@
         <equityEuropeanExercise>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2004-07-13Z</unadjustedDate>
+              <unadjustedDate>2004-07-13</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -71,7 +71,7 @@
             <amount>40500</amount>
           </prePaymentAmount>
           <prePaymentDate>
-            <unadjustedDate>2004-07-13Z</unadjustedDate>
+            <unadjustedDate>2004-07-13</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
@@ -80,7 +80,7 @@
         <equityValuation>
           <valuationDate id="FinalValuationDate">
             <adjustableDate>
-              <unadjustedDate>2004-07-13Z</unadjustedDate>
+              <unadjustedDate>2004-07-13</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NotApplicable</businessDayConvention>
               </dateAdjustments>
@@ -107,14 +107,14 @@
           <averagingInOut>Out</averagingInOut>
           <averagingPeriodOut>
             <averagingDateTimes>
-              <dateTime>2000-08-01T08:57:00Z</dateTime>
-              <dateTime>2000-09-01T08:57:00Z</dateTime>
-              <dateTime>2000-10-01T08:57:00Z</dateTime>
-              <dateTime>2000-11-01T08:57:00Z</dateTime>
-              <dateTime>2000-12-01T08:57:00Z</dateTime>
-              <dateTime>2001-01-04T08:57:00Z</dateTime>
-              <dateTime>2001-02-01T08:57:00Z</dateTime>
-              <dateTime>2001-03-01T08:57:00Z</dateTime>
+              <dateTime>2000-08-01T08:57:00</dateTime>
+              <dateTime>2000-09-01T08:57:00</dateTime>
+              <dateTime>2000-10-01T08:57:00</dateTime>
+              <dateTime>2000-11-01T08:57:00</dateTime>
+              <dateTime>2000-12-01T08:57:00</dateTime>
+              <dateTime>2001-01-04T08:57:00</dateTime>
+              <dateTime>2001-02-01T08:57:00</dateTime>
+              <dateTime>2001-03-01T08:57:00</dateTime>
             </averagingDateTimes>
             <marketDisruption>ModifiedPostponement</marketDisruption>
           </averagingPeriodOut>

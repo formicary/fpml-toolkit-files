@@ -32,7 +32,7 @@
         <partyReference href="kow029" />
         <tradeId tradeIdScheme="http://www.partyB.com/eqs-trade-id">5648</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2002-07-19Z</tradeDate>
+      <tradeDate id="TradeDate">2002-07-19</tradeDate>
     </tradeHeader>
 <!-- as per final dividend index swap master confirm ISDA -->
     <dividendSwapTransactionSupplement>
@@ -57,8 +57,8 @@
         <declaredCashDividendPercentage>1.0</declaredCashDividendPercentage>
         <declaredCashEquivalentDividendPercentage>1.0</declaredCashEquivalentDividendPercentage>
         <dividendPeriod id="d1">
-          <unadjustedStartDate id="s1">2010-12-20Z</unadjustedStartDate>
-          <unadjustedEndDate id="e1">2011-12-19Z</unadjustedEndDate>
+          <unadjustedStartDate id="s1">2010-12-20</unadjustedStartDate>
+          <unadjustedEndDate id="e1">2011-12-19</unadjustedEndDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>
@@ -77,8 +77,8 @@
           </paymentDate>
         </dividendPeriod>
         <dividendPeriod id="d2">
-          <unadjustedStartDate id="s2">2011-12-20Z</unadjustedStartDate>
-          <unadjustedEndDate id="e2">2012-12-19Z</unadjustedEndDate>
+          <unadjustedStartDate id="s2">2011-12-20</unadjustedStartDate>
+          <unadjustedEndDate id="e2">2012-12-19</unadjustedEndDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>

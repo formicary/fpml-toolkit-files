@@ -28,7 +28,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2009-08-31Z</tradeDate>
+          <tradeDate>2009-08-31</tradeDate>
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CreditDefaultSwap</productType>
@@ -86,7 +86,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2009-08-31Z</tradeDate>
+          <tradeDate>2009-08-31</tradeDate>
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CreditDefaultIndex</productType>
@@ -153,7 +153,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2009-08-31Z</tradeDate>
+          <tradeDate>2009-08-31</tradeDate>
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">CreditDefaultIndexTranche</productType>
@@ -221,7 +221,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2009-08-12Z</tradeDate>
+          <tradeDate>2009-08-12</tradeDate>
         </tradeHeader>
         <capFloor>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">InterestRateCap</productType>
@@ -278,7 +278,7 @@
     <constituent>
       <trade>
         <tradeHeader>
-          <tradeDate>2009-08-04Z</tradeDate>
+          <tradeDate>2009-08-04</tradeDate>
         </tradeHeader>
         <swap>
           <productType productTypeScheme="http://www.fpml.org/product-type-simple">InterestRateSwap</productType>

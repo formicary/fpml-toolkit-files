@@ -25,7 +25,7 @@
       <partyReference href="clearer" />
       <tradeId tradeIdScheme="http://www.lch.com/coding-scheme/clearing-id">CL000001</tradeId>
     </tradeIdentifier>
-    <effectiveDate>2010-11-06Z</effectiveDate>
+    <effectiveDate>2010-11-06</effectiveDate>
   </deClear>
   <party id="clearer">
     <partyId partyIdScheme="http://www.fpml.org/ext/iso9362">LCHLGB2LXXX</partyId>

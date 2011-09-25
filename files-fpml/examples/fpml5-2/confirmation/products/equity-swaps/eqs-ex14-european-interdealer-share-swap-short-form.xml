@@ -45,7 +45,7 @@
         <interestLegCalculationPeriodDates id="interestCalcPeriodDates">
           <effectiveDate id="interestEffectiveDate">
             <adjustableDate>
-              <unadjustedDate>2009-09-11Z</unadjustedDate>
+              <unadjustedDate>2009-09-11</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -56,7 +56,7 @@
           </effectiveDate>
           <terminationDate id="interestTerminationDate">
             <adjustableDate>
-              <unadjustedDate>2009-12-11Z</unadjustedDate>
+              <unadjustedDate>2009-12-11</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -144,7 +144,7 @@
         <receiverPartyReference href="partyB" />
         <effectiveDate id="equityEffectiveDate">
           <adjustableDate>
-            <unadjustedDate>2009-09-09Z</unadjustedDate>
+            <unadjustedDate>2009-09-09</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -155,7 +155,7 @@
         </effectiveDate>
         <terminationDate>
           <adjustableDate>
-            <unadjustedDate>2009-12-09Z</unadjustedDate>
+            <unadjustedDate>2009-12-09</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -231,7 +231,7 @@
             <valuationRules>
               <valuationDate id="finalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2009-12-09Z</unadjustedDate>
+                  <unadjustedDate>2009-12-09</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>FOLLOWING</businessDayConvention>
                     <businessCenters>
@@ -305,8 +305,8 @@
     <documentation>
       <masterConfirmation>
         <masterConfirmationType>ISDA2009EquityEuropeanInterdealer</masterConfirmationType>
-        <masterConfirmationDate>2009-09-01Z</masterConfirmationDate>
-        <masterConfirmationAnnexDate>2009-09-01Z</masterConfirmationAnnexDate>
+        <masterConfirmationDate>2009-09-01</masterConfirmationDate>
+        <masterConfirmationAnnexDate>2009-09-01</masterConfirmationAnnexDate>
         <masterConfirmationAnnexType>ISDA2009EquityEuropeanInterdealerSS</masterConfirmationAnnexType>
       </masterConfirmation>
     </documentation>

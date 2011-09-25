@@ -26,7 +26,7 @@
 <!-- substitution receiver -->
   <creditSupportAgreement>
     <type creditSupportAgreementTypeScheme="http://www.fpml.org/coding-scheme/credit-support-agreement-type">ISDA1994CreditSupportAnnexNewYorkLaw</type>
-    <date>2009-07-14Z</date>
+    <date>2009-07-14</date>
     <identifier creditSupportAgreementIdScheme="http://www.abcbank.com/csa-Id">999ABC777</identifier>
   </creditSupportAgreement>
   <variationMargin>

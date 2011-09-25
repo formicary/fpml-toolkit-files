@@ -227,8 +227,9 @@
             <allocationTradeId>
                <partyReference href="party2"/>
                <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">30002</tradeId>
-            </allocationTradeId>
-            <accountReference href="ACC3"/>
+            </allocationTradeId><!-- rule ref-25 is invalid  as the @href attribute is not equal to the @id attribute of an "account" element of type Account
+<accountReference href="ACC3"/>-->
+            <accountReference href="party3"/>
             <allocatedFraction>0.60</allocatedFraction>
             <collateral>
                <independentAmount>

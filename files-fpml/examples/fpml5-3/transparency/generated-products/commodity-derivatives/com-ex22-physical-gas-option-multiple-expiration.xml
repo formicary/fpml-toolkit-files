@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-3" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-3.xsd">
+   <header>
+      <messageId messageIdScheme="http://abc.com/message-id">123</messageId>
+      <sentBy>abc</sentBy>
+      <sendTo>sdr</sendTo>
+      <creationTimestamp>2011-01-01T00:00:00</creationTimestamp>
+   </header>
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyA.com/com-trade-id">1234</tradeId>
+         </partyTradeIdentifier>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyB.com/com-trade-id">2345</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2009-04-22</tradeDate>
+      </tradeHeader>
+      <commodityOption>
+         <productType>CommodityOption</productType>
+         <assetClass>Commodities</assetClass>
+         <optionType>Call</optionType>
+         <commoditySwap>
+            <productType>CommoditySwap</productType>
+            <assetClass>Commodities</assetClass>
+            <effectiveDate id="physicalEffectiveDate">
+               <adjustableDate>
+                  <unadjustedDate>2010-01-01</unadjustedDate>
+               </adjustableDate>
+            </effectiveDate>
+            <terminationDate id="physicalTerminationDate">
+               <adjustableDate>
+                  <unadjustedDate>2010-12-31</unadjustedDate>
+               </adjustableDate>
+            </terminationDate>
+            <fixedLeg>
+               <fixedPrice>
+                  <price>45.6</price>
+                  <priceCurrency>USD</priceCurrency>
+                  <priceUnit>MMBTU</priceUnit>
+               </fixedPrice>
+               <quantityReference href="deliveryQuantity"/>
+            </fixedLeg>
+            <gasPhysicalLeg>
+               <deliveryPeriods>
+                  <supplyStartTime>
+                     <hourMinuteTime>00:00:00</hourMinuteTime>
+                     <location>Europe/Amsterdam</location>
+                  </supplyStartTime>
+                  <supplyEndTime>
+                     <hourMinuteTime>23:00:00</hourMinuteTime>
+                     <location>Europe/Amsterdam</location>
+                  </supplyEndTime>
+               </deliveryPeriods>
+               <gas>
+                  <type>NaturalGas</type>
+               </gas>
+               <deliveryQuantity id="deliveryQuantity">
+                  <totalPhysicalQuantity>
+                     <quantityUnit>MMBTU</quantityUnit>
+                     <quantity>36500.0</quantity>
+                  </totalPhysicalQuantity>
+               </deliveryQuantity>
+            </gasPhysicalLeg>
+         </commoditySwap>
+         <physicalExercise>
+            <europeanExercise>
+               <expirationDates>
+                  <periodicDates>
+                     <calculationStartDate>
+                        <relativeDate>
+                           <periodMultiplier>-5</periodMultiplier>
+                           <period>D</period>
+                           <dateRelativeTo href="physicalEffectiveDate"/>
+                        </relativeDate>
+                     </calculationStartDate>
+                     <calculationEndDate>
+                        <relativeDate>
+                           <periodMultiplier>-5</periodMultiplier>
+                           <period>D</period>
+                           <dateRelativeTo href="physicalTerminationDate"/>
+                        </relativeDate>
+                     </calculationEndDate>
+                  </periodicDates>
+               </expirationDates>
+            </europeanExercise>
+         </physicalExercise>
+         <premium>
+            <paymentAmount>
+               <currency>USD</currency>
+               <amount>36500.0</amount>
+            </paymentAmount>
+            <premiumPerUnit>
+               <currency>USD</currency>
+               <amount>1.0</amount>
+            </premiumPerUnit>
+         </premium>
+      </commodityOption>
+   </trade>
+</publicExecutionReport>

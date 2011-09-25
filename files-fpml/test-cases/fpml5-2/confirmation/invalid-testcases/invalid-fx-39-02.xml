@@ -26,7 +26,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.handcoded.com/trade-id">TQ2453-3</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2008-03-31Z</tradeDate>
+      <tradeDate>2008-03-31</tradeDate>
     </tradeHeader>
     <fxSingleLeg>
       <exchangedCurrency1>
@@ -46,8 +46,8 @@
         </paymentAmount>
       </exchangedCurrency2>
 <!--invalid rule fx-39: the value of fxSingleLeg/valueDate or the value of both fxSingleLeg/currency1ValueDate and fxSingleLeg/currency2ValueDate must be after tradeHeader/tradeDate. -->
-      <currency1ValueDate>2008-03-31Z</currency1ValueDate>
-      <currency2ValueDate>2008-04-02Z</currency2ValueDate>
+      <currency1ValueDate>2008-03-31</currency1ValueDate>
+      <currency2ValueDate>2008-04-02</currency2ValueDate>
       <exchangeRate>
         <quotedCurrencyPair>
           <currency1>MXN</currency1>

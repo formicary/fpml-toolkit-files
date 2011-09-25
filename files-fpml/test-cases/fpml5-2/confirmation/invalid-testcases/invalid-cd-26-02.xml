@@ -19,18 +19,18 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">37205</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-12-02Z</tradeDate>
+      <tradeDate>2002-12-02</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2002-12-03Z</unadjustedDate>
+          <unadjustedDate>2002-12-03</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2007-12-03Z</unadjustedDate>
+          <unadjustedDate>2007-12-03</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCenters>
@@ -68,7 +68,7 @@
 <!-- CHANGE, Modified by: Christian Nentwich, Date: 2004-03-29
                Payment date is before effective date, breaks rule. -->
         <singlePayment>
-          <adjustablePaymentDate>2002-09-03Z</adjustablePaymentDate>
+          <adjustablePaymentDate>2002-09-03</adjustablePaymentDate>
           <fixedAmount>
             <currency>USD</currency>
             <amount>20000000</amount>

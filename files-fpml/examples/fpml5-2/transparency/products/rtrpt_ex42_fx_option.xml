@@ -45,12 +45,16 @@
 <!-- NEW: cleared or uncleared = "C" in CFTC doc -->
         <nonStandardTerms>false</nonStandardTerms>
 <!-- NEW: indication of other price-affecting term -->
-        <largeNotionalTrade>false</largeNotionalTrade>
+        <offMarketPrice>false</offMarketPrice>
+<!-- NEW -->
+        <largeSizeTrade>false</largeSizeTrade>
 <!-- NEW: block trades and large notional swaps -->
-        <executionVenue>SwapsMarket</executionVenue>
+        <executionType>Electronic</executionType>
+<!-- NEW -->
+        <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc -->
       </tradeInformation>
-      <tradeDate>2011-02-04Z</tradeDate>
+      <tradeDate>2011-02-04</tradeDate>
     </tradeHeader>
     <fxOption>
       <productType>FxOption</productType>
@@ -79,7 +83,7 @@
       <premium>
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-12-06Z</unadjustedDate>
+            <unadjustedDate>2001-12-06</unadjustedDate>
           </adjustableDate>
         </paymentDate>
         <paymentAmount>

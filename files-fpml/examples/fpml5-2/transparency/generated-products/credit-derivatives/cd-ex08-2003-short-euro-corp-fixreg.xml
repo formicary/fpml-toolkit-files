@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-2" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-2.xsd">
+   <header>
+      <messageId messageIdScheme="http://abc.com/message-id">123</messageId>
+      <sentBy>abc</sentBy>
+      <sendTo>sdr</sendTo>
+      <creationTimestamp>2011-01-01T00:00:00</creationTimestamp>
+   </header>
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.xyzbank.com/cd-trade-id">xyz1234</tradeId>
+         </partyTradeIdentifier>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.abcbank.com/cd-trade-id">abc1234</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2002-12-02Z</tradeDate>
+      </tradeHeader>
+      <creditDefaultSwap>
+         <productType>CreditDefaultSwap</productType>
+         <assetClass>Credit</assetClass>
+         <generalTerms>
+            <effectiveDate>
+               <unadjustedDate>2002-12-03Z</unadjustedDate>
+            </effectiveDate>
+            <scheduledTerminationDate>
+               <unadjustedDate>2008-01-15Z</unadjustedDate>
+            </scheduledTerminationDate>
+            <referenceInformation>
+               <referenceEntity id="referenceEntity">
+                  <entityName>Abbey National PLC</entityName>
+                  <entityId entityIdScheme="http://www.fpml.org/spec/2003/entity-id-RED-1-0">002BB2</entityId>
+               </referenceEntity>
+               <referenceObligation>
+                  <bond>
+                     <instrumentId instrumentIdScheme="http://www.fpml.org/spec/2002/instrument-id-ISIN-1-0">XS009316049</instrumentId>
+                     <couponRate>0.05375</couponRate>
+                     <maturity>2009-12-30</maturity>
+                  </bond>
+               </referenceObligation>
+            </referenceInformation>
+         </generalTerms>
+         <feeLeg>
+            <periodicPayment>
+               <fixedAmountCalculation>
+                  <fixedRate>0.009</fixedRate>
+               </fixedAmountCalculation>
+            </periodicPayment>
+         </feeLeg>
+         <protectionTerms>
+            <calculationAmount>
+               <currency>EUR</currency>
+               <amount>5000000</amount>
+            </calculationAmount>
+         </protectionTerms>
+      </creditDefaultSwap>
+   </trade>
+</publicExecutionReport>

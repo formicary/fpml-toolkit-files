@@ -37,7 +37,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/eqs-trade-id">6569</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2007-09-24Z</tradeDate>
+      <tradeDate id="TradeDate">2007-09-24</tradeDate>
     </tradeHeader>
     <equitySwapTransactionSupplement>
       <productType>SingleStockExecutionSwap</productType>
@@ -89,17 +89,17 @@
             <valuationRules>
               <valuationDates id="InterimValuationDate">
                 <adjustableDates>
-                  <unadjustedDate>2007-10-12Z</unadjustedDate>
-                  <unadjustedDate>2007-11-13Z</unadjustedDate>
-                  <unadjustedDate>2007-12-12Z</unadjustedDate>
-                  <unadjustedDate>2008-01-14Z</unadjustedDate>
-                  <unadjustedDate>2008-02-12Z</unadjustedDate>
-                  <unadjustedDate>2008-03-12Z</unadjustedDate>
-                  <unadjustedDate>2008-04-12Z</unadjustedDate>
-                  <unadjustedDate>2008-05-13Z</unadjustedDate>
-                  <unadjustedDate>2008-06-12Z</unadjustedDate>
-                  <unadjustedDate>2008-07-12Z</unadjustedDate>
-                  <unadjustedDate>2008-08-12Z</unadjustedDate>
+                  <unadjustedDate>2007-10-12</unadjustedDate>
+                  <unadjustedDate>2007-11-13</unadjustedDate>
+                  <unadjustedDate>2007-12-12</unadjustedDate>
+                  <unadjustedDate>2008-01-14</unadjustedDate>
+                  <unadjustedDate>2008-02-12</unadjustedDate>
+                  <unadjustedDate>2008-03-12</unadjustedDate>
+                  <unadjustedDate>2008-04-12</unadjustedDate>
+                  <unadjustedDate>2008-05-13</unadjustedDate>
+                  <unadjustedDate>2008-06-12</unadjustedDate>
+                  <unadjustedDate>2008-07-12</unadjustedDate>
+                  <unadjustedDate>2008-08-12</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -113,7 +113,7 @@
             <valuationRules>
               <valuationDate id="FinalValuationDate">
                 <adjustableDate>
-                  <unadjustedDate>2008-09-24Z</unadjustedDate>
+                  <unadjustedDate>2008-09-24</unadjustedDate>
                   <dateAdjustments>
                     <businessDayConvention>NotApplicable</businessDayConvention>
                   </dateAdjustments>
@@ -246,7 +246,7 @@
     <documentation>
       <masterConfirmation>
         <masterConfirmationType>ISDA2007EquityEuropean</masterConfirmationType>
-        <masterConfirmationDate>2007-09-24Z</masterConfirmationDate>
+        <masterConfirmationDate>2007-09-24</masterConfirmationDate>
       </masterConfirmation>
       <contractualDefinitions>ISDA2002Equity</contractualDefinitions>
     </documentation>

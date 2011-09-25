@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-2" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-2.xsd">
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyA.com/eqd-trade-id">1234</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2000-06-28</tradeDate>
+      </tradeHeader>
+      <equityOption>
+         <productType>EquityOption</productType>
+         <assetClass>Equities</assetClass>
+         <optionType>Call</optionType>
+         <underlyer>
+            <basket>
+               <basketConstituent>
+                  <equity>
+                     <instrumentId instrumentIdScheme="http://www.fpml.org/schemes/4.1/instrumentId">AHLD.NA</instrumentId>
+                     <description>Ahold</description>
+                     <currency>EUR</currency>
+                     <exchangeId exchangeIdScheme="http://www.fpml.org/schemes/4.1/exchangeId">ASE</exchangeId>
+                  </equity>
+                  <constituentWeight>
+                     <basketPercentage>0.40</basketPercentage>
+                  </constituentWeight>
+               </basketConstituent>
+               <basketConstituent>
+                  <equity>
+                     <instrumentId instrumentIdScheme="http://www.fpml.org/schemes/4.1/instrumentId">RD.NA</instrumentId>
+                     <description>Royal Dutch</description>
+                     <currency>EUR</currency>
+                     <exchangeId exchangeIdScheme="http://www.fpml.org/schemes/4.1/exchangeId">ASE</exchangeId>
+                  </equity>
+                  <constituentWeight>
+                     <basketPercentage>0.60</basketPercentage>
+                  </constituentWeight>
+               </basketConstituent>
+            </basket>
+         </underlyer>
+         <equityExercise>
+            <equityEuropeanExercise>
+               <expirationDate>
+                  <adjustableDate>
+                     <unadjustedDate>2002-07-01</unadjustedDate>
+                  </adjustableDate>
+               </expirationDate>
+               <equityExpirationTimeType>Close</equityExpirationTimeType>
+            </equityEuropeanExercise>
+         </equityExercise>
+         <numberOfOptions>79.099093</numberOfOptions>
+         <optionEntitlement>1.00</optionEntitlement>
+         <equityPremium>
+            <paymentAmount>
+               <currency>EUR</currency>
+               <amount>213.5675511</amount>
+            </paymentAmount>
+            <pricePerOption>
+               <currency>EUR</currency>
+               <amount>2.70</amount>
+            </pricePerOption>
+         </equityPremium>
+      </equityOption>
+   </trade>
+</publicExecutionReport>

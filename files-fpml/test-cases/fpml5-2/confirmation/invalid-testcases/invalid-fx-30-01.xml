@@ -26,7 +26,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.handcoded.com/trade-id">TQ2453-3</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2008-03-31Z</tradeDate>
+      <tradeDate>2008-03-31</tradeDate>
     </tradeHeader>
     <fxSingleLeg>
       <exchangedCurrency1>
@@ -45,7 +45,7 @@
           <amount>21376606</amount>
         </paymentAmount>
       </exchangedCurrency2>
-      <valueDate>2008-04-04Z</valueDate>
+      <valueDate>2008-04-04</valueDate>
       <exchangeRate>
         <quotedCurrencyPair>
           <currency1>MXN</currency1>

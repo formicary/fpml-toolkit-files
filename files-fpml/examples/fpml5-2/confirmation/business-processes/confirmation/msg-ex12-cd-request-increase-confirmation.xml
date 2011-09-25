@@ -25,8 +25,8 @@
       <partyReference href="party2" />
       <tradeId tradeIdScheme="http://www.abcbank.com/cd-trade-id">abc1234</tradeId>
     </tradeIdentifier>
-    <agreementDate>2004-04-28+05:00</agreementDate>
-    <effectiveDate>2004-04-30+05:00</effectiveDate>
+    <agreementDate>2004-04-28</agreementDate>
+    <effectiveDate>2004-04-30</effectiveDate>
     <payment>
       <payerPartyReference href="party1" />
       <receiverPartyReference href="party2" />
@@ -35,7 +35,7 @@
         <amount>100000</amount>
       </paymentAmount>
       <paymentDate>
-        <adjustedDate>2004-04-30+05:00</adjustedDate>
+        <adjustedDate>2004-04-30</adjustedDate>
       </paymentDate>
     </payment>
     <changeInNotionalAmount>

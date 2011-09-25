@@ -30,18 +30,18 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.db.com/fx/trade-id">DB-89080</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2010-08-16Z</tradeDate>
+      <tradeDate>2010-08-16</tradeDate>
     </tradeHeader>
     <fxOption>
       <buyerPartyReference href="party2" />
       <sellerPartyReference href="party1" />
       <europeanExercise>
-        <expiryDate>2010-11-30Z</expiryDate>
+        <expiryDate>2010-11-30</expiryDate>
         <expiryTime>
           <hourMinuteTime>12:30:00</hourMinuteTime>
           <businessCenter>MXMC</businessCenter>
         </expiryTime>
-        <valueDate>2010-12-04Z</valueDate>
+        <valueDate>2010-12-04</valueDate>
       </europeanExercise>
       <putCurrencyAmount>
         <currency>MXN</currency>
@@ -66,96 +66,96 @@
             <businessCenter>MXMC</businessCenter>
           </fixingTime>
           <rateObservation>
-            <date>2010-11-01Z</date>
+            <date>2010-11-01</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.34527</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-02Z</date>
+            <date>2010-11-02</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.34527</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-03Z</date>
+            <date>2010-11-03</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.26109</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-04Z</date>
+            <date>2010-11-04</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
             <rate>12.21616</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-05Z</date>
+            <date>2010-11-05</date>
             <averageRateWeightingFactor>3</averageRateWeightingFactor>
             <rate>12.24930</rate>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-08Z</date>
+            <date>2010-11-08</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-09Z</date>
+            <date>2010-11-09</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-10Z</date>
+            <date>2010-11-10</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-11Z</date>
+            <date>2010-11-11</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-12Z</date>
+            <date>2010-11-12</date>
             <averageRateWeightingFactor>3</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-15Z</date>
+            <date>2010-11-15</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-16Z</date>
+            <date>2010-11-16</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-17Z</date>
+            <date>2010-11-17</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-18Z</date>
+            <date>2010-11-18</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-19Z</date>
+            <date>2010-11-19</date>
             <averageRateWeightingFactor>3</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-22Z</date>
+            <date>2010-11-22</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-23Z</date>
+            <date>2010-11-23</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-24Z</date>
+            <date>2010-11-24</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-25Z</date>
+            <date>2010-11-25</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-26Z</date>
+            <date>2010-11-26</date>
             <averageRateWeightingFactor>3</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-29Z</date>
+            <date>2010-11-29</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservation>
-            <date>2010-11-30Z</date>
+            <date>2010-11-30</date>
             <averageRateWeightingFactor>1</averageRateWeightingFactor>
           </rateObservation>
           <rateObservationQuoteBasis>PutCurrencyPerCallCurrency</rateObservationQuoteBasis>
@@ -168,7 +168,7 @@
 <!--FpML 5-1: As part of FX Product Refactoring work, renamed from settlementDate to paymentDate/adjustableDate/unadjustedDate; moved before paymentAmount; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2010-08-18Z</unadjustedDate>
+            <unadjustedDate>2010-08-18</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

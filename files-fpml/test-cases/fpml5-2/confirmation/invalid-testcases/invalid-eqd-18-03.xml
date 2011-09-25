@@ -19,7 +19,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.example.com/trade-id-1-0">2</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2006-02-09+05:00</tradeDate>
+      <tradeDate>2006-02-09</tradeDate>
     </tradeHeader>
     <equityOptionTransactionSupplement>
       <buyerPartyReference href="party1" />
@@ -39,7 +39,7 @@
         <equityAmericanExercise>
           <commencementDate>
             <adjustableDate>
-              <unadjustedDate>2006-02-09+05:00</unadjustedDate>
+              <unadjustedDate>2006-02-09</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NotApplicable</businessDayConvention>
               </dateAdjustments>
@@ -47,7 +47,7 @@
           </commencementDate>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2006-09-18+05:00</unadjustedDate>
+              <unadjustedDate>2006-09-18</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NotApplicable</businessDayConvention>
               </dateAdjustments>
@@ -92,7 +92,7 @@
           <amount>750000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2006-09-20+05:00</unadjustedDate>
+          <unadjustedDate>2006-09-20</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NotApplicable</businessDayConvention>
           </dateAdjustments>
@@ -107,7 +107,7 @@
     <documentation>
       <masterConfirmation>
         <masterConfirmationType>ISDA2005EquityAsiaExcludingJapanInterdealer</masterConfirmationType>
-        <masterConfirmationDate>2006-01-20+05:00</masterConfirmationDate>
+        <masterConfirmationDate>2006-01-20</masterConfirmationDate>
       </masterConfirmation>
     </documentation>
   </trade>

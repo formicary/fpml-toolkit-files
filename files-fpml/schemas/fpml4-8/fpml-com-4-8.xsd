@@ -1229,34 +1229,10 @@
             <xsd:documentation xml:lang="en">The point at which delivery of the electricity will occur.</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
-        <xsd:element name="deliveryType" minOccurs="0">
+        <xsd:element name="deliveryType" type="ElectricityDeliveryType" minOccurs="0">
           <xsd:annotation>
             <xsd:documentation xml:lang="en">Indicates the under what conditions the Parties' delivery obligations apply.</xsd:documentation>
           </xsd:annotation>
-          <xsd:complexType>
-            <xsd:choice>
-              <xsd:element name="firm" type="ElectricityDeliveryFirm">
-                <xsd:annotation>
-                  <xsd:documentation xml:lang="en">Indicates under what condtitions the Parties' delivery obligations apply.</xsd:documentation>
-                </xsd:annotation>
-              </xsd:element>
-              <xsd:element name="nonFirm" type="xsd:boolean">
-                <xsd:annotation>
-                  <xsd:documentation xml:lang="en">If present and set to true, indicates that delivery or receipt of the electricity may be interrupted for any reason or for no reason, without liability on the part of either Party. This element should never have a value of false.</xsd:documentation>
-                </xsd:annotation>
-              </xsd:element>
-              <xsd:element name="systemFirm" type="ElectricityDeliverySystemFirm">
-                <xsd:annotation>
-                  <xsd:documentation xml:lang="en">Indicates that the electricity is intended to be supplied from the owned or controlled generation or pre-existing purchased power assets of the system specified.</xsd:documentation>
-                </xsd:annotation>
-              </xsd:element>
-              <xsd:element name="unitFirm" type="ElectricityDeliveryUnitFirm">
-                <xsd:annotation>
-                  <xsd:documentation xml:lang="en">Indicates that the electricity is intended to be supplied from a generation asset which can optionally be specified.</xsd:documentation>
-                </xsd:annotation>
-              </xsd:element>
-            </xsd:choice>
-          </xsd:complexType>
         </xsd:element>
         <xsd:element name="transmissionContingency" type="ElectricityTransmissionContingency" minOccurs="0">
           <xsd:annotation>
@@ -1331,6 +1307,30 @@
       </xsd:element>
       <xsd:element name="system" type="CommodityDeliveryPoint" minOccurs="0" />
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ElectricityDeliveryType">
+    <xsd:choice>
+      <xsd:element name="firm" type="ElectricityDeliveryFirm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates under what condtitions the Parties' delivery obligations apply.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="nonFirm" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">If present and set to true, indicates that delivery or receipt of the electricity may be interrupted for any reason or for no reason, without liability on the part of either Party. This element should never have a value of false.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="systemFirm" type="ElectricityDeliverySystemFirm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates that the electricity is intended to be supplied from the owned or controlled generation or pre-existing purchased power assets of the system specified.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="unitFirm" type="ElectricityDeliveryUnitFirm">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates that the electricity is intended to be supplied from a generation asset which can optionally be specified.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
   </xsd:complexType>
   <xsd:complexType name="ElectricityDeliveryUnitFirm">
     <xsd:annotation>
@@ -1986,16 +1986,6 @@
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="PhysicalDeliveryDatesReference">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A pointer style reference to single-day-duration physical delivery dates defined elsewhere - note that this schedule consists of a parameterised schedule in a calculationPeriodsSchedule container.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="Reference">
-        <xsd:attribute name="href" type="xsd:IDREF" use="required" ecore:reference="CommodityCalculationPeriodsSchedule" />
-      </xsd:extension>
-    </xsd:complexContent>
   </xsd:complexType>
   <xsd:complexType name="PhysicalLeg" abstract="true">
     <xsd:annotation>

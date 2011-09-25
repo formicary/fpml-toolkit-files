@@ -19,15 +19,15 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.abcbank.com/cd-trade-id">abc1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-12-04Z</tradeDate>
+      <tradeDate>2002-12-04</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2002-12-05Z</unadjustedDate>
+          <unadjustedDate>2002-12-05</unadjustedDate>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2007-12-05Z</unadjustedDate>
+          <unadjustedDate>2007-12-05</unadjustedDate>
         </scheduledTerminationDate>
         <buyerPartyReference href="party1" />
         <sellerPartyReference href="party2" />
@@ -52,7 +52,7 @@
             <periodMultiplier>3</periodMultiplier>
             <period>M</period>
           </paymentFrequency>
-          <firstPaymentDate>2003-03-05Z</firstPaymentDate>
+          <firstPaymentDate>2003-03-05</firstPaymentDate>
           <rollConvention>5</rollConvention>
           <fixedAmountCalculation>
             <fixedRate>0.007</fixedRate>
@@ -76,7 +76,7 @@
     <documentation>
       <contractualTermsSupplement>
         <type>CDXTranche</type>
-        <publicationDate>2005-09-19Z</publicationDate>
+        <publicationDate>2005-09-19</publicationDate>
       </contractualTermsSupplement>
     </documentation>
   </trade>

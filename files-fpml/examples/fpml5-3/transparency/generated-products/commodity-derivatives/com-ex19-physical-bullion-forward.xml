@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-3" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-3.xsd">
+   <header>
+      <messageId messageIdScheme="http://abc.com/message-id">123</messageId>
+      <sentBy>abc</sentBy>
+      <sendTo>sdr</sendTo>
+      <creationTimestamp>2011-01-01T00:00:00</creationTimestamp>
+   </header>
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyA.com/com-trade-id">1234</tradeId>
+         </partyTradeIdentifier>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyB.com/com-trade-id">2345</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2009-01-28</tradeDate>
+      </tradeHeader>
+      <commodityForward>
+         <productType>CommodityForward</productType>
+         <assetClass>Commodities</assetClass>
+         <valueDate id="valueDate">
+            <adjustableDate>
+               <unadjustedDate>2009-05-12</unadjustedDate>
+            </adjustableDate>
+         </valueDate>
+         <fixedLeg id="fixedLeg">
+            <fixedPrice>
+               <price>987.12</price>
+               <priceCurrency>USD</priceCurrency>
+               <priceUnit>ozt</priceUnit>
+            </fixedPrice>
+         </fixedLeg>
+         <bullionPhysicalLeg id="bullionLeg">
+            <bullionType>Gold</bullionType>
+            <deliveryLocation>London</deliveryLocation>
+            <totalPhysicalQuantity id="deliveryQuantity">
+               <quantityUnit>ozt</quantityUnit>
+               <quantity>1000.0</quantity>
+            </totalPhysicalQuantity>
+         </bullionPhysicalLeg>
+      </commodityForward>
+   </trade>
+</publicExecutionReport>

@@ -91,8 +91,10 @@
                <sellerPartyReference href="Party1"/>
                <buyerPartyReference href="Party2"/>
                <indexReferenceInformation>
-                  <indexName indexNameScheme="234">Dow Jones CDX.NA.XO.6</indexName>
-                  <indexId indexIdScheme="CUSIP">ExampleCUSIP3</indexId>
+                  <indexName>Dow Jones CDX NA IG.2</indexName>
+                  <indexSeries>2</indexSeries>
+                  <indexAnnexDate>2005-07-06Z</indexAnnexDate>
+                  <indexAnnexSource>Publisher</indexAnnexSource>
                </indexReferenceInformation>
             </generalTerms>
             <feeLeg>

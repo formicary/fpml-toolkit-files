@@ -26,11 +26,14 @@
           <tradeDate>2002-12-02Z</tradeDate>
         </tradeHeader>
         <nonSchemaProduct>
-          <productType productTypeScheme="http://www.fpml.org/product-type-copper">Single</productType>
+          <productType productTypeScheme="http://www.fpml.org/product-type-copper">StructuredTransaction</productType>
           <assetClass assetClassScheme="http://www.fpml.org/asset-class-simple">Credit</assetClass>
           <multiLeg>true</multiLeg>
           <buyerPartyReference href="party1" />
           <sellerPartyReference href="party2" />
+          <terminationDate>
+            <unadjustedDate>2007-12-05</unadjustedDate>
+          </terminationDate>
           <notional>
             <currency>EUR</currency>
             <amount>10000</amount>

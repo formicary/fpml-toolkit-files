@@ -17,7 +17,7 @@
   <isCorrection>false</isCorrection>
   <correlationId correlationIdScheme="http://www.recserv.com/cid">CID12345</correlationId>
   <sequenceNumber>1</sequenceNumber>
-  <asOfDate>2006-04-26Z</asOfDate>
+  <asOfDate>2006-04-26</asOfDate>
   <requestedPositions>
     <queryPortfolio>
       <queryParameter>

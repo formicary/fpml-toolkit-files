@@ -18,7 +18,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id">123</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-04-29Z</tradeDate>
+      <tradeDate>2001-04-29</tradeDate>
     </tradeHeader>
     <bulletPayment>
       <payment>
@@ -29,7 +29,7 @@
           <amount>15000.00</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2001-07-27Z</unadjustedDate>
+          <unadjustedDate>2001-07-27</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCenters id="businessCenters0">

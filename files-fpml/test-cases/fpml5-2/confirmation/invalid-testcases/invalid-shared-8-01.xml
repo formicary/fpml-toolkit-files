@@ -33,7 +33,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/trade-id">123</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-04-29Z</tradeDate>
+      <tradeDate>2001-04-29</tradeDate>
     </tradeHeader>
     <swap>
       <swapStream>
@@ -41,13 +41,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="CalcPeriodDates0">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2011-08-30Z</unadjustedDate>
+            <unadjustedDate>2011-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters0">
@@ -99,13 +99,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="CalcPeriodDates1">
           <effectiveDate>
-            <unadjustedDate>2001-08-30Z</unadjustedDate>
+            <unadjustedDate>2001-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2011-08-30Z</unadjustedDate>
+            <unadjustedDate>2011-08-30</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="accrualBusinessCenters1">
@@ -213,8 +213,8 @@
                 <dateRelativeTo href="cashSettlement0" />
 <!-- CHANGED, Added by: Keith Date: 14-05-2003 -->
                 <scheduleBounds>
-                  <unadjustedFirstDate>1999-12-12Z</unadjustedFirstDate>
-                  <unadjustedLastDate>1999-12-12Z</unadjustedLastDate>
+                  <unadjustedFirstDate>1999-12-12</unadjustedFirstDate>
+                  <unadjustedLastDate>1999-12-12</unadjustedLastDate>
                 </scheduleBounds>
 <!-- end of changes -->
               </relativeDates>
@@ -257,8 +257,8 @@
             </cashSettlementValuationDate>
             <cashSettlementPaymentDate id="cashPayment0">
               <businessDateRange>
-                <unadjustedFirstDate>2001-08-30Z</unadjustedFirstDate>
-                <unadjustedLastDate>2006-08-30Z</unadjustedLastDate>
+                <unadjustedFirstDate>2001-08-30</unadjustedFirstDate>
+                <unadjustedLastDate>2006-08-30</unadjustedLastDate>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>
                   <businessCenter>GBLO</businessCenter>

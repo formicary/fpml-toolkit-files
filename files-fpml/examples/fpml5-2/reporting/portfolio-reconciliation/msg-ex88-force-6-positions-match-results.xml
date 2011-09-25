@@ -18,7 +18,7 @@
   <correlationId correlationIdScheme="http://www.recserv.com/cid">CID12345</correlationId>
   <portfolio>
     <portfolioName>fundPortfolio33</portfolioName>
-    <asOfDate>2006-06-14Z</asOfDate>
+    <asOfDate>2006-06-14</asOfDate>
     <definingParty href="fund" />
   </portfolio>
   <positionMatchResult>
@@ -37,7 +37,7 @@
               <partyReference href="dealer" />
               <tradeId tradeIdScheme="http://www.abc.com/trade-id">ABC-0001</tradeId>
             </partyTradeIdentifier>
-            <tradeDate>2001-10-23Z</tradeDate>
+            <tradeDate>2001-10-23</tradeDate>
           </tradeHeader>
           <fxSingleLeg>
             <exchangedCurrency1>
@@ -56,7 +56,7 @@
                 <amount>14700000</amount>
               </paymentAmount>
             </exchangedCurrency2>
-            <valueDate>2001-10-25Z</valueDate>
+            <valueDate>2001-10-25</valueDate>
             <exchangeRate>
               <quotedCurrencyPair>
                 <currency1>GBP</currency1>
@@ -95,15 +95,15 @@
               <partyReference href="dealer" />
               <tradeId tradeIdScheme="http://www.abc.com/ird">2222</tradeId>
             </partyTradeIdentifier>
-            <tradeDate>1991-05-14Z</tradeDate>
+            <tradeDate>1991-05-14</tradeDate>
           </tradeHeader>
           <fra>
             <buyerPartyReference href="fund" />
             <sellerPartyReference href="dealer" />
-            <adjustedEffectiveDate id="resetDate">1991-07-17Z</adjustedEffectiveDate>
-            <adjustedTerminationDate>1992-01-17Z</adjustedTerminationDate>
+            <adjustedEffectiveDate id="resetDate">1991-07-17</adjustedEffectiveDate>
+            <adjustedTerminationDate>1992-01-17</adjustedTerminationDate>
             <paymentDate>
-              <unadjustedDate>1991-07-17Z</unadjustedDate>
+              <unadjustedDate>1991-07-17</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>FOLLOWING</businessDayConvention>
                 <businessCenters>

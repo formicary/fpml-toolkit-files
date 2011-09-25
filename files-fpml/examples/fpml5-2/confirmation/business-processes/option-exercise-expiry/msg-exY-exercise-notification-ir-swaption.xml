@@ -23,7 +23,7 @@
       <tradeId tradeIdScheme="http://www.PartyA.com/tradeId/OTC">1234</tradeId>
     </tradeIdentifier>
     <exerciseDate>2008-09-26</exerciseDate>
-    <exerciseTime>12:00:00Z</exerciseTime>
+    <exerciseTime>12:00:00</exerciseTime>
     <fullExercise>true</fullExercise>
     <physicalSettlement>
       <swap>
@@ -34,13 +34,13 @@
           <receiverPartyReference href="party2" />
           <calculationPeriodDates id="floatingCalcPeriodDates">
             <effectiveDate>
-              <unadjustedDate>1994-12-14Z</unadjustedDate>
+              <unadjustedDate>1994-12-14</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
             </effectiveDate>
             <terminationDate>
-              <unadjustedDate>1999-12-14Z</unadjustedDate>
+              <unadjustedDate>1999-12-14</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters id="primaryBusinessCenters">
@@ -117,13 +117,13 @@
           <receiverPartyReference href="party1" />
           <calculationPeriodDates id="fixedCalcPeriodDates">
             <effectiveDate>
-              <unadjustedDate>1994-12-14Z</unadjustedDate>
+              <unadjustedDate>1994-12-14</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
             </effectiveDate>
             <terminationDate>
-              <unadjustedDate>1999-12-14Z</unadjustedDate>
+              <unadjustedDate>1999-12-14</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCentersReference href="primaryBusinessCenters" />

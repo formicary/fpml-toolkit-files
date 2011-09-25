@@ -23,7 +23,7 @@
         <partyReference href="party1" />
         <tradeId tradeIdScheme="http://www.PartyA.com/tradeId/OTC">1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2008-07-13Z</tradeDate>
+      <tradeDate id="TradeDate">2008-07-13</tradeDate>
     </tradeHeader>
     <equityOptionTransactionSupplement>
       <productType>Call</productType>
@@ -43,7 +43,7 @@
         <equityAmericanExercise>
           <commencementDate>
             <adjustableDate>
-              <unadjustedDate>2008-07-13Z</unadjustedDate>
+              <unadjustedDate>2008-07-13</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -51,7 +51,7 @@
           </commencementDate>
           <expirationDate>
             <adjustableDate>
-              <unadjustedDate>2008-09-27Z</unadjustedDate>
+              <unadjustedDate>2008-09-27</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -85,7 +85,7 @@
           <amount>405000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2008-07-17Z</unadjustedDate>
+          <unadjustedDate>2008-07-17</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>

@@ -32,15 +32,15 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.abn.com/swaps/trade-id">AA9876</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-02-14Z</tradeDate>
+      <tradeDate>2002-02-14</tradeDate>
     </tradeHeader>
     <termDeposit>
       <productType productTypeScheme="http://www.sample.com/coding-scheme/product-type-simple">OvernightDeposit</productType>
       <payerPartyReference href="party1" />
 <!--invalid rule fx-32: The @href attribute of payerPartyReference must not be equal to the @href attribute of receiverPartyReference. Correct value is <receiverPartyReference href="party2"/>-->
       <receiverPartyReference href="party1" />
-      <startDate>2002-02-14Z</startDate>
-      <maturityDate>2002-02-15Z</maturityDate>
+      <startDate>2002-02-14</startDate>
+      <maturityDate>2002-02-15</maturityDate>
       <principal>
         <currency>CHF</currency>
         <amount>25000000.00</amount>

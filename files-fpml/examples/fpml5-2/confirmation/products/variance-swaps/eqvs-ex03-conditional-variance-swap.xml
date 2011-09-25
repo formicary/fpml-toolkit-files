@@ -32,7 +32,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/coding-scheme/trade-id">6569</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="d989">2007-01-05Z</tradeDate>
+      <tradeDate id="d989">2007-01-05</tradeDate>
     </tradeHeader>
     <varianceSwap>
       <varianceLeg>
@@ -51,7 +51,7 @@
         <valuation>
           <valuationDate id="FinalValuationDate">
             <adjustableDate>
-              <unadjustedDate>2004-07-21Z</unadjustedDate>
+              <unadjustedDate>2004-07-21</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NotApplicable</businessDayConvention>
               </dateAdjustments>

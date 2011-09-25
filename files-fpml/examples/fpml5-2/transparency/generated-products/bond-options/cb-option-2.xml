@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publicExecutionReport xmlns:saxon="http://saxon.sf.net/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.fpml.org/FpML-5/transparency" fpmlVersion="5-2" xsi:schemaLocation="http://www.fpml.org/FpML-5/transparency ../../fpml-main-5-2.xsd">
+   <isCorrection>false</isCorrection>
+   <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+   <sequenceNumber>1</sequenceNumber>
+   <originatingEvent>NewTrade</originatingEvent>
+   <trade>
+      <tradeHeader>
+         <partyTradeIdentifier>
+            <tradeId tradeIdScheme="http://www.PartyA.com/eqd-trade-id">Bond1</tradeId>
+         </partyTradeIdentifier>
+         <tradeInformation>
+            <executionDateTime>2011-01-01T09:12:34</executionDateTime>
+            <cleared>false</cleared>
+            <nonStandardTerms>true</nonStandardTerms>
+            <offMarketPrice>true</offMarketPrice>
+            <largeSizeTrade>false</largeSizeTrade>
+            <executionType>Electronic</executionType>
+            <executionVenueType>SEF</executionVenueType>
+         </tradeInformation>
+         <tradeDate>2004-12-24</tradeDate>
+      </tradeHeader>
+      <bondOption>
+         <productType>BondOption</productType>
+         <assetClass>InterestRates</assetClass>
+         <optionType>Call</optionType>
+         <premium>
+            <paymentAmount>
+               <currency/>
+               <amount>0</amount>
+            </paymentAmount>
+         </premium>
+         <americanExercise id="EXERCISE">
+            <commencementDate>
+               <adjustableDate>
+                  <unadjustedDate>2004-12-29</unadjustedDate>
+               </adjustableDate>
+            </commencementDate>
+            <expirationDate>
+               <adjustableDate>
+                  <unadjustedDate>2009-06-01</unadjustedDate>
+               </adjustableDate>
+            </expirationDate>
+         </americanExercise>
+         <optionEntitlement>10000000</optionEntitlement>
+         <entitlementCurrency>JPY</entitlementCurrency>
+         <numberOfOptions>200</numberOfOptions>
+         <strike>
+            <referenceSwapCurve>
+               <swapUnwindValue>
+                  <floatingRateIndex>JPY-LIBOR-BBA</floatingRateIndex>
+                  <indexTenor>
+                     <periodMultiplier>6</periodMultiplier>
+                     <period>M</period>
+                  </indexTenor>
+                  <spread>27</spread>
+               </swapUnwindValue>
+            </referenceSwapCurve>
+         </strike>
+         <convertibleBond>
+            <instrumentId instrumentIdScheme="ISIN">ExampleISIN2</instrumentId>
+            <currency>JPY</currency>
+            <clearanceSystem>DTCC</clearanceSystem>
+            <issuerName>DEF Holdings</issuerName>
+            <couponRate>0.0</couponRate>
+            <maturity>2009-06-15</maturity>
+            <paymentFrequency>
+               <periodMultiplier>6</periodMultiplier>
+               <period>M</period>
+            </paymentFrequency>
+            <redemptionDate>2009-06-15</redemptionDate>
+         </convertibleBond>
+      </bondOption>
+   </trade>
+</publicExecutionReport>

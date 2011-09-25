@@ -33,7 +33,7 @@
         <partyReference href="kow029" />
         <tradeId tradeIdScheme="http://www.partyB.com/eqs-trade-id">5648</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TradeDate">2002-07-19Z</tradeDate>
+      <tradeDate id="TradeDate">2002-07-19</tradeDate>
     </tradeHeader>
     <dividendSwapTransactionSupplement>
       <dividendLeg>
@@ -54,8 +54,8 @@
         <settlementType>Cash</settlementType>
         <settlementCurrency>JPY</settlementCurrency>
         <dividendPeriod id="d1">
-          <unadjustedStartDate>2010-12-20Z</unadjustedStartDate>
-          <unadjustedEndDate id="e1">2011-12-19Z</unadjustedEndDate>
+          <unadjustedStartDate>2010-12-20</unadjustedStartDate>
+          <unadjustedEndDate id="e1">2011-12-19</unadjustedEndDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>
@@ -83,8 +83,8 @@
           </valuationDate>
         </dividendPeriod>
         <dividendPeriod id="d2">
-          <unadjustedStartDate>2011-12-20Z</unadjustedStartDate>
-          <unadjustedEndDate id="e2">2012-12-19Z</unadjustedEndDate>
+          <unadjustedStartDate>2011-12-20</unadjustedStartDate>
+          <unadjustedEndDate id="e2">2012-12-19</unadjustedEndDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>

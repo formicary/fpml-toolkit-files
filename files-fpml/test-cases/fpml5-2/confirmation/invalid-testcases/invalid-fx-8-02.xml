@@ -33,7 +33,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.ubsw.com/fx/trade-id">UBSW20018</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-12Z</tradeDate>
+      <tradeDate>2001-11-12</tradeDate>
     </tradeHeader>
     <fxDigitalOption>
       <productType productTypeScheme="http://www.sample.com/coding-scheme/product-type-simple">NoTouch</productType>
@@ -45,7 +45,7 @@
 <!--FpML 5-1 08-19-2010 FXWG agreed to make  'commencementDate' ofType 'AdjustableOrRelative' instead of "date" -->
         <commencementDate>
           <adjustableDate>
-            <unadjustedDate>2001-11-12Z</unadjustedDate>
+            <unadjustedDate>2001-11-12</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -54,14 +54,14 @@
             </dateAdjustments>
           </adjustableDate>
         </commencementDate>
-        <expiryDate>2001-11-26Z</expiryDate>
+        <expiryDate>2001-11-26</expiryDate>
         <expiryTime>
           <hourMinuteTime>14:00:00</hourMinuteTime>
           <businessCenter>GBLO</businessCenter>
         </expiryTime>
         <cutName>LondonEveningPgm</cutName>
 <!--In americanExercise style, renamed 'valueDate'  to 'latestValueDate'-->
-        <latestValueDate>2001-11-26Z</latestValueDate>
+        <latestValueDate>2001-11-26</latestValueDate>
       </americanExercise>
 <!--FpML-5-1 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. americanExercise)-->
 <!--FpML-5-1 Created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -82,9 +82,9 @@
           <rateSourcePage>GBP=</rateSourcePage>
         </informationSource>
 <!--the elements 'observationStartDate' and 'observationEndDate' are grouped together in the sequence, making the sequence optional, but once one of the elements is selected, the second one is required.-->
-<!-- Invalid rule fx-8: observationStartDate must be before observationEndDate. The correct value should be <observationStartDate>2001-11-12Z</observationStartDate> and <observationEndDate>2001-11-26Z</observationEndDate>-->
-        <observationStartDate>2001-11-26Z</observationStartDate>
-        <observationEndDate>2001-11-12Z</observationEndDate>
+<!-- Invalid rule fx-8: observationStartDate must be before observationEndDate. The correct value should be <observationStartDate>2001-11-12</observationStartDate> and <observationEndDate>2001-11-26</observationEndDate>-->
+        <observationStartDate>2001-11-26</observationStartDate>
+        <observationEndDate>2001-11-12</observationEndDate>
       </touch>
 <!--FpML-5-1 renamed  'triggerPayout' to 'payout'-->
       <payout>
@@ -100,7 +100,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-11-14Z</unadjustedDate>
+            <unadjustedDate>2001-11-14</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

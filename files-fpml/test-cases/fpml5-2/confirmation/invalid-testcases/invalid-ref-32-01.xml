@@ -48,7 +48,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.markets.Reuters.com/rss/spec/2001/trade-id-3-0">123456789</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-11-20Z</tradeDate>
+      <tradeDate>2001-11-20</tradeDate>
     </tradeHeader>
     <strategy id="strategy">
       <productType>Straddle</productType>
@@ -58,12 +58,12 @@
         <buyerPartyReference href="party1" />
         <sellerPartyReference href="party2" />
         <europeanExercise>
-          <expiryDate>2001-12-20Z</expiryDate>
+          <expiryDate>2001-12-20</expiryDate>
           <expiryTime>
             <hourMinuteTime>14:00:00</hourMinuteTime>
             <businessCenter>USNY</businessCenter>
           </expiryTime>
-          <valueDate>2001-12-24Z</valueDate>
+          <valueDate>2001-12-24</valueDate>
         </europeanExercise>
         <putCurrencyAmount>
           <currency>AUD</currency>
@@ -82,7 +82,7 @@
           <receiverPartyReference href="party2" />
           <paymentDate>
             <adjustableDate>
-              <unadjustedDate>2001-11-23Z</unadjustedDate>
+              <unadjustedDate>2001-11-23</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -102,13 +102,13 @@
         <buyerPartyReference href="party1" />
         <sellerPartyReference href="party2" />
         <europeanExercise>
-          <expiryDate>2001-12-20Z</expiryDate>
+          <expiryDate>2001-12-20</expiryDate>
           <expiryTime>
             <hourMinuteTime>14:00:00</hourMinuteTime>
             <businessCenter>USNY</businessCenter>
           </expiryTime>
           <cutName>NewYork</cutName>
-          <valueDate>2001-12-24Z</valueDate>
+          <valueDate>2001-12-24</valueDate>
         </europeanExercise>
         <putCurrencyAmount>
           <currency>USD</currency>
@@ -127,7 +127,7 @@
           <receiverPartyReference href="party2" />
           <paymentDate>
             <adjustableDate>
-              <unadjustedDate>2001-11-23Z</unadjustedDate>
+              <unadjustedDate>2001-11-23</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>

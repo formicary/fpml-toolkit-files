@@ -13,7 +13,7 @@
     <sendTo>HEDGUS33</sendTo>
     <creationTimestamp>2004-08-02T15:38:00Z</creationTimestamp>
   </header>
-  <asOfDate>2004-06-02Z</asOfDate>
+  <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Sample positions</dataSetName>
   <quotationCharacteristics>
     <side>Mid</side>
@@ -55,7 +55,7 @@
             <unit>San Fancisco Desk</unit>
             <trader>Joe Bloggs</trader>
           </partyTradeInformation>
-          <tradeDate>2004-12-12Z</tradeDate>
+          <tradeDate>2004-12-12</tradeDate>
         </tradeHeader>
         <swap>
 <!-- used to represent the "swap type" -->
@@ -67,7 +67,7 @@
             <payerPartyReference href="party1" />
             <calculationPeriodDates id="irs1-floatingCalcPeriodDates">
               <terminationDate>
-                <unadjustedDate>2009-12-14Z</unadjustedDate>
+                <unadjustedDate>2009-12-14</unadjustedDate>
                 <dateAdjustments>
                   <businessDayConvention>MODFOLLOWING</businessDayConvention>
                   <businessCenters id="irs1-primaryBusinessCenters">
@@ -116,27 +116,27 @@
                   <notionalStepSchedule>
                     <initialValue>50000000.00</initialValue>
                     <step>
-                      <stepDate>2004-12-14Z</stepDate>
+                      <stepDate>2004-12-14</stepDate>
                       <stepValue>10000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2005-12-14Z</stepDate>
+                      <stepDate>2005-12-14</stepDate>
                       <stepValue>20000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2006-12-14Z</stepDate>
+                      <stepDate>2006-12-14</stepDate>
                       <stepValue>30000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2007-12-14Z</stepDate>
+                      <stepDate>2007-12-14</stepDate>
                       <stepValue>40000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2008-12-14Z</stepDate>
+                      <stepDate>2008-12-14</stepDate>
                       <stepValue>50000000.00</stepValue>
                     </step>
                     <step>
-                      <stepDate>2009-12-14Z</stepDate>
+                      <stepDate>2009-12-14</stepDate>
                       <stepValue>60000000.00</stepValue>
                     </step>
                     <currency>EUR</currency>
@@ -251,7 +251,7 @@
               <amount>15000.00</amount>
             </paymentAmount>
             <paymentDate>
-              <unadjustedDate>2005-04-27Z</unadjustedDate>
+              <unadjustedDate>2005-04-27</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>MODFOLLOWING</businessDayConvention>
                 <businessCenters>
@@ -266,11 +266,11 @@
             <payerPartyReference href="party2" />
             <paymentDetail>
 <!--
-              <adjustedPaymentDate>2004-01-01Z</adjustedPaymentDate>
+              <adjustedPaymentDate>2004-01-01</adjustedPaymentDate>
               -->
               <paymentDate>
                 <adjustableDate>
-                  <adjustedDate>2004-01-01Z</adjustedDate>
+                  <adjustedDate>2004-01-01</adjustedDate>
                 </adjustableDate>
               </paymentDate>
               <paymentRule xsi:type="PercentageRule">
@@ -292,7 +292,7 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2004-12-14Z</adjustedDate>
+      <adjustedDate>2004-12-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="irs1-floatingStream" />
       <associatedValue>
@@ -304,22 +304,22 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-03-14Z</adjustedDate>
+      <adjustedDate>2005-03-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FirstPayment</type>
       <assetReference href="irs1-floatingStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-03-14Z</adjustedDate>
+      <adjustedDate>2005-03-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="irs1-floatingStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-06-14Z</adjustedDate>
+      <adjustedDate>2005-06-14</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">NextPayment</type>
       <assetReference href="irs1-floatingStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousReset</type>
       <assetReference href="irs1-floatingStream" />
       <associatedValue>
@@ -331,17 +331,17 @@
       </associatedValue>
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">FirstPayment</type>
       <assetReference href="irs1-fixedStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2004-01-01Z</adjustedDate>
+      <adjustedDate>2004-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">PreviousPayment</type>
       <assetReference href="irs1-fixedStream" />
     </scheduledDate>
     <scheduledDate>
-      <adjustedDate>2005-01-01Z</adjustedDate>
+      <adjustedDate>2005-01-01</adjustedDate>
       <type scheduledDateTypeScheme="http://www.fpml.org/coding-scheme/scheduled-date-type-1-0">NextPayment</type>
       <assetReference href="irs1-fixedStream" />
     </scheduledDate>
@@ -408,14 +408,14 @@
           <partyTradeIdentifier>
             <tradeId tradeIdScheme="http://www.hedgeco.com/swaps/trade-id">cds-01</tradeId>
           </partyTradeIdentifier>
-          <tradeDate>2002-12-02Z</tradeDate>
+          <tradeDate>2002-12-02</tradeDate>
         </tradeHeader>
         <creditDefaultSwap>
           <productType productTypeScheme="http://www.datastandardsworkinggroup.org/products-1-0">CDS-U</productType>
           <generalTerms>
             <scheduledTerminationDate>
 <!--<adjustableDate> -->
-              <unadjustedDate>2007-09-06Z</unadjustedDate>
+              <unadjustedDate>2007-09-06</unadjustedDate>
               <dateAdjustments>
                 <businessDayConvention>NONE</businessDayConvention>
               </dateAdjustments>
@@ -438,7 +438,7 @@
                 <bond>
                   <instrumentId instrumentIdScheme="http://www.fpml.org/spec/2002/instrument-id-CUSIP-1-0">008916AB4</instrumentId>
                   <couponRate>0.077</couponRate>
-                  <maturity>2017-02-01Z</maturity>
+                  <maturity>2017-02-01</maturity>
                 </bond>
                 <primaryObligorReference href="cds-referenceEntity" />
               </referenceObligation>
@@ -449,7 +449,7 @@
           <feeLeg>
             <initialPayment>
               <payerPartyReference href="party1" />
-              <adjustablePaymentDate>2005-01-01Z</adjustablePaymentDate>
+              <adjustablePaymentDate>2005-01-01</adjustablePaymentDate>
               <paymentAmount>
                 <currency>EUR</currency>
                 <amount>10000</amount>
@@ -460,7 +460,7 @@
                 <periodMultiplier>3</periodMultiplier>
                 <period>M</period>
               </paymentFrequency>
-              <firstPaymentDate>2003-03-06Z</firstPaymentDate>
+              <firstPaymentDate>2003-03-06</firstPaymentDate>
               <fixedAmountCalculation>
                 <calculationAmount>
                   <currency>USD</currency>
@@ -506,10 +506,10 @@
           <independentAmount>
             <payerPartyReference href="party2" />
             <paymentDetail>
-<!--<adjustedPaymentDate>2004-01-01Z</adjustedPaymentDate>-->
+<!--<adjustedPaymentDate>2004-01-01</adjustedPaymentDate>-->
               <paymentDate>
                 <adjustableDate>
-                  <adjustedDate>2004-01-01Z</adjustedDate>
+                  <adjustedDate>2004-01-01</adjustedDate>
                 </adjustableDate>
               </paymentDate>
               <paymentRule xsi:type="PercentageRule">
@@ -526,7 +526,7 @@
       </trade>
     </constituent>
     <scheduledDate>
-      <adjustedDate>2005-03-14Z</adjustedDate>
+      <adjustedDate>2005-03-14</adjustedDate>
       <type>FirstPayment</type>
       <assetReference href="cds-trade" />
     </scheduledDate>

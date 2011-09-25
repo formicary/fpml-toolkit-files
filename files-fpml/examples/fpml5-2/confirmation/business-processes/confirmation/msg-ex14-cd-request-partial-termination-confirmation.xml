@@ -21,8 +21,8 @@
       <partyReference href="party1" />
       <tradeId tradeIdScheme="http://www.xyzbank.com/cd-trade-id">xyz1234</tradeId>
     </tradeIdentifier>
-    <agreementDate>2004-04-28Z</agreementDate>
-    <effectiveDate>2004-04-30Z</effectiveDate>
+    <agreementDate>2004-04-28</agreementDate>
+    <effectiveDate>2004-04-30</effectiveDate>
     <payment>
       <payerPartyReference href="party1" />
       <receiverPartyReference href="party2" />
@@ -31,7 +31,7 @@
         <amount>100000</amount>
       </paymentAmount>
       <paymentDate>
-        <adjustedDate>2004-04-30Z</adjustedDate>
+        <adjustedDate>2004-04-30</adjustedDate>
       </paymentDate>
     </payment>
     <changeInNotionalAmount>

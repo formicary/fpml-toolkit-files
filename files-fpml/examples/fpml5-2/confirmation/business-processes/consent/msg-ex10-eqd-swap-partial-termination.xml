@@ -21,8 +21,8 @@
       <partyReference href="party1" />
       <tradeId tradeIdScheme="http://www.drkw.com/tradeId/OTC">1234</tradeId>
     </tradeIdentifier>
-    <agreementDate>2004-04-28+05:00</agreementDate>
-    <effectiveDate>2004-04-30+05:00</effectiveDate>
+    <agreementDate>2004-04-28</agreementDate>
+    <effectiveDate>2004-04-30</effectiveDate>
     <payment>
       <payerPartyReference href="party2" />
       <receiverPartyReference href="party1" />
@@ -31,7 +31,7 @@
         <amount>200000</amount>
       </paymentAmount>
       <paymentDate>
-        <unadjustedDate>2004-04-28+05:00</unadjustedDate>
+        <unadjustedDate>2004-04-28</unadjustedDate>
         <dateAdjustments>
           <businessDayConvention>NONE</businessDayConvention>
         </dateAdjustments>

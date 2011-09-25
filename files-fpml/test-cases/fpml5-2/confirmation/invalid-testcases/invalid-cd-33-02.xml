@@ -19,18 +19,18 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.swapswire.com/spec/2001/trade-id-1-0">37205</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2002-12-02Z</tradeDate>
+      <tradeDate>2002-12-02</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2002-12-03Z</unadjustedDate>
+          <unadjustedDate>2002-12-03</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </dateAdjustments>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2007-12-03Z</unadjustedDate>
+          <unadjustedDate>2007-12-03</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCenters>
@@ -70,11 +70,11 @@
             <periodMultiplier>3</periodMultiplier>
             <period>M</period>
           </paymentFrequency>
-          <firstPaymentDate>2003-03-03Z</firstPaymentDate>
+          <firstPaymentDate>2003-03-03</firstPaymentDate>
 <!-- CHANGE, Modified by Christian
                   Changed from 2007-09-03 -->
 <!-- C24 (http://www.c24.biz) Simon Heinrich: Changed lastRegularPaymentDate from 2005-04-03 to 2005-09-02 -->
-          <lastRegularPaymentDate>2005-09-02Z</lastRegularPaymentDate>
+          <lastRegularPaymentDate>2005-09-02</lastRegularPaymentDate>
           <rollConvention>3</rollConvention>
           <fixedAmountCalculation>
             <calculationAmount>

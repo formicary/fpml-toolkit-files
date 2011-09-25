@@ -19,7 +19,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.msdw/swaps/trade-id">56990</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2000-04-25Z</tradeDate>
+      <tradeDate>2000-04-25</tradeDate>
     </tradeHeader>
     <swap>
 <!-- Morgan Stanley Dean Witter pays the floating rate quarterly,
@@ -29,13 +29,13 @@
         <receiverPartyReference href="party1" />
         <calculationPeriodDates id="floatingCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2000-04-27Z</unadjustedDate>
+            <unadjustedDate>2000-04-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2002-04-27Z</unadjustedDate>
+            <unadjustedDate>2002-04-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="primaryBusinessCenters">
@@ -115,13 +115,13 @@
         <receiverPartyReference href="party2" />
         <calculationPeriodDates id="fixedCalcPeriodDates">
           <effectiveDate>
-            <unadjustedDate>2000-03-27Z</unadjustedDate>
+            <unadjustedDate>2000-03-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>
           </effectiveDate>
           <terminationDate>
-            <unadjustedDate>2002-04-27Z</unadjustedDate>
+            <unadjustedDate>2002-04-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCentersReference href="primaryBusinessCenters" />
@@ -130,7 +130,7 @@
           <calculationPeriodDatesAdjustments>
             <businessDayConvention>NONE</businessDayConvention>
           </calculationPeriodDatesAdjustments>
-          <firstRegularPeriodStartDate>2000-04-27Z</firstRegularPeriodStartDate>
+          <firstRegularPeriodStartDate>2000-04-27</firstRegularPeriodStartDate>
           <calculationPeriodFrequency>
             <periodMultiplier>6</periodMultiplier>
             <period>M</period>
@@ -163,7 +163,7 @@
 <!-- CHANGE, Modified by: Christian, Date: 29/07/2003
                      Changed from 2001-04-27. Matches effectiveDate, but
                      firstRegularPeriodStartDate overrides that. -->
-                <stepDate>2000-03-27Z</stepDate>
+                <stepDate>2000-03-27</stepDate>
                 <stepValue>0.065</stepValue>
               </step>
             </fixedRateSchedule>
@@ -179,7 +179,7 @@
           <amount>15000</amount>
         </paymentAmount>
         <paymentDate>
-          <unadjustedDate>2000-04-27Z</unadjustedDate>
+          <unadjustedDate>2000-04-27</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>MODFOLLOWING</businessDayConvention>
             <businessCentersReference href="primaryBusinessCenters" />

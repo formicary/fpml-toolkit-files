@@ -43,7 +43,7 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://adnamro.com/trade-ids">ABN1789</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2001-12-04Z</tradeDate>
+      <tradeDate>2001-12-04</tradeDate>
     </tradeHeader>
 <!--FpML-5-0 Renamed from 'fxSimpleOption' to 'fxOption'-->
     <fxOption>
@@ -56,7 +56,7 @@
 <!--FpML 5-1 08-19-2010 FXWG agreed to make  'commencementDate' ofType 'AdjustableOrRelative' instead of "date" -->
         <commencementDate>
           <adjustableDate>
-            <unadjustedDate>2001-12-04Z</unadjustedDate>
+            <unadjustedDate>2001-12-04</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>FOLLOWING</businessDayConvention>
               <businessCenters>
@@ -65,14 +65,14 @@
             </dateAdjustments>
           </adjustableDate>
         </commencementDate>
-        <expiryDate>2002-06-04Z</expiryDate>
+        <expiryDate>2002-06-04</expiryDate>
         <expiryTime>
           <hourMinuteTime>14:00:00</hourMinuteTime>
           <businessCenter>USNY</businessCenter>
         </expiryTime>
         <cutName>NewYork</cutName>
 <!--FpML-5-0 'latestValueDate' was renamed from 'valueDate' moved inside exercise style type (e.g. americanExercise)-->
-        <latestValueDate>2002-06-06Z</latestValueDate>
+        <latestValueDate>2002-06-06</latestValueDate>
       </americanExercise>
 <!--FpML-5-0 'expiryDateTime': 'expiryDate',  'expiryTime', 'cutName' was moved inside exercise style type (e.g. americanExercise)-->
 <!--FpML-5-0 Instead of  'exerciseStyle' Enum, created specific exercise type e.g. europeanExercise, americanExercise-->
@@ -107,7 +107,7 @@
 <!--09-02-2010 - renamed from 'settlementDate' to 'paymentDate/adjustableDate/unadjustedDate'; moved before 'paymentAmount'; allows dateAdjustments and relativeDate reference-->
         <paymentDate>
           <adjustableDate>
-            <unadjustedDate>2001-12-06Z</unadjustedDate>
+            <unadjustedDate>2001-12-06</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NONE</businessDayConvention>
             </dateAdjustments>

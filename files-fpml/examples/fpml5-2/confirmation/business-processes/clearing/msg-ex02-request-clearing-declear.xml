@@ -33,7 +33,7 @@
       <partyReference href="clearer" />
       <tradeId tradeIdScheme="http://www.lch.com/coding-scheme/clearing-id">CL000001</tradeId>
     </tradeIdentifier>
-    <effectiveDate>2010-11-06Z</effectiveDate>
+    <effectiveDate>2010-11-06</effectiveDate>
   </deClear>
   <party id="clearer">
     <partyId partyIdScheme="http://www.lch.com/coding-scheme/party">LCH</partyId>
