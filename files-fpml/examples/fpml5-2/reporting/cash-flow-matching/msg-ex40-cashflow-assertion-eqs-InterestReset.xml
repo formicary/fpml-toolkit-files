@@ -24,12 +24,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId/">EH40N4000000100</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2004-03-18Z</tradeDate>
+      <tradeDate>2004-03-18</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2004-03-25Z</unadjustedDate>
+        <unadjustedDate>2004-03-25</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2009-03-25Z</unadjustedDate>
+        <unadjustedDate>2009-03-25</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">TotalReturnSwap</productType>
       <underlyer id="VJBK.NS">
@@ -52,7 +52,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2004-04-01Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2004-04-01</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">PS0HV5XYM-D34Q-00NS20040401USD</identifier>
     <payerPartyReference href="party2" />
@@ -74,7 +74,7 @@
       </grossCashflow>
       <observationElements id="observation_USD-LIBOR-BBA">
         <underlyerReference href="USD-LIBOR-BBA" />
-        <observationDate>2004-03-25Z</observationDate>
+        <observationDate>2004-03-25</observationDate>
         <observedValue>
           <value>0.010900</value>
         </observedValue>
@@ -90,8 +90,8 @@
           <spread>0.0040</spread>
         </calculatedRate>
         <calculationPeriod>
-          <adjustedStartDate>2004-03-25Z</adjustedStartDate>
-          <adjustedEndDate>2004-04-01Z</adjustedEndDate>
+          <adjustedStartDate>2004-03-25</adjustedStartDate>
+          <adjustedEndDate>2004-04-01</adjustedEndDate>
           <numberOfDays>7</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
           <dayCountYearFraction>0.01944</dayCountYearFraction>

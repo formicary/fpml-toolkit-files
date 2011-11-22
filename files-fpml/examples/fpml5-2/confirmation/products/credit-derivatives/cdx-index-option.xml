@@ -23,7 +23,7 @@
         <partyReference href="Party1" />
         <tradeId tradeIdScheme="http://www.PartyA.com/coding-scheme/trade-id">Trade234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate id="TRADEDATE">2006-01-16Z</tradeDate>
+      <tradeDate id="TRADEDATE">2006-01-16</tradeDate>
     </tradeHeader>
     <creditDefaultSwapOption>
       <buyerPartyReference href="Party2" />
@@ -54,7 +54,7 @@
       <europeanExercise>
         <expirationDate>
           <adjustableDate>
-            <unadjustedDate>2006-08-20Z</unadjustedDate>
+            <unadjustedDate>2006-08-20</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>NotApplicable</businessDayConvention>
             </dateAdjustments>
@@ -88,17 +88,17 @@
       <creditDefaultSwap>
         <generalTerms>
           <effectiveDate>
-            <unadjustedDate>2006-03-21Z</unadjustedDate>
+            <unadjustedDate>2006-03-21</unadjustedDate>
           </effectiveDate>
           <scheduledTerminationDate>
-            <unadjustedDate>2011-06-20Z</unadjustedDate>
+            <unadjustedDate>2011-06-20</unadjustedDate>
           </scheduledTerminationDate>
           <buyerPartyReference href="Party2" />
           <sellerPartyReference href="Party1" />
           <indexReferenceInformation>
             <indexName>Dow Jones CDX NA IG.2</indexName>
             <indexSeries>2</indexSeries>
-            <indexAnnexDate>2005-07-06Z</indexAnnexDate>
+            <indexAnnexDate>2005-07-06</indexAnnexDate>
             <indexAnnexSource>Publisher</indexAnnexSource>
           </indexReferenceInformation>
         </generalTerms>
@@ -108,8 +108,8 @@
               <periodMultiplier>3</periodMultiplier>
               <period>M</period>
             </paymentFrequency>
-            <firstPaymentDate>2006-06-20Z</firstPaymentDate>
-            <lastRegularPaymentDate>2011-03-20Z</lastRegularPaymentDate>
+            <firstPaymentDate>2006-06-20</firstPaymentDate>
+            <lastRegularPaymentDate>2011-03-20</lastRegularPaymentDate>
             <rollConvention>20</rollConvention>
             <fixedAmountCalculation>
               <calculationAmount>
@@ -133,11 +133,11 @@
       <masterAgreement>
         <masterAgreementType>ISDA</masterAgreementType>
         <masterAgreementVersion>1992</masterAgreementVersion>
-        <masterAgreementDate>1997-11-05Z</masterAgreementDate>
+        <masterAgreementDate>1997-11-05</masterAgreementDate>
       </masterAgreement>
       <masterConfirmation>
         <masterConfirmationType>DJ.CDX.NA</masterConfirmationType>
-        <masterConfirmationDate>2004-09-20Z</masterConfirmationDate>
+        <masterConfirmationDate>2004-09-20</masterConfirmationDate>
       </masterConfirmation>
       <contractualDefinitions>ISDA2000</contractualDefinitions>
       <contractualDefinitions>ISDA2003Credit</contractualDefinitions>

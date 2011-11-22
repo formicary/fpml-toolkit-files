@@ -4,7 +4,7 @@
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8457 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8648 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-asset-5-3.xsd" />
   <xsd:simpleType name="QueryParameterValue">
     <xsd:annotation>
@@ -193,23 +193,6 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
-  <xsd:group name="ProcessingIndicator.model">
-    <xsd:annotation>
-      <xsd:documentation>Elements that describe how this document is intended to be processed (in the absence of a full messaging framework).</xsd:documentation>
-    </xsd:annotation>
-    <xsd:choice>
-      <xsd:element name="isCorrection" type="xsd:boolean" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation>Indicates if this message corrects an earlier request.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="isCancellation" type="xsd:boolean" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation>Indicates if this message corrects an earlier request.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:choice>
-  </xsd:group>
   <xsd:complexType name="Document" abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">The abstract base type from which all FpML compliant messages and documents must be derived.</xsd:documentation>
@@ -247,6 +230,105 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
+  <xsd:complexType name="InstrumentTradeDetails">
+    <xsd:annotation>
+      <xsd:documentation>The economics of a trade of a multiply traded instrument.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Product">
+        <xsd:sequence>
+          <xsd:group ref="BuyerSeller.model" />
+          <xsd:element ref="underlyingAsset" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The FpML asset description for the asset.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="quantity" type="InstrumentTradeQuantity" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">A description of how much of the instrument was traded.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="pricing" type="InstrumentTradePricing" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The price paid for the instrument.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="principal" type="InstrumentTradePrincipal" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The value, in instrument currency, of the amount of the instrument that was traded.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="InstrumentTradeQuantity">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing the amount of an instrument that was traded.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="number" type="xsd:decimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The (absolute) number of units of the underlying instrument that were traded.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="nominal" type="Money" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The monetary value of the security (eg. fixed income security) that was traded).</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
+  </xsd:complexType>
+  <xsd:complexType name="InstrumentTradePricing">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing the price paid for the instrument.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="quote" type="BasicQuotation" maxOccurs="unbounded" minOccurs="0" />
+    </xsd:sequence>
+<!--
+                <xsd:choice>
+                        <xsd:element name="price" type="NetAndGross" >
+                                <xsd:annotation>
+                                <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument. </xsd:documentation>
+                                </xsd:annotation>
+                        </xsd:element>
+                        <xsd:sequence>
+                                <xsd:element name="cleanPrice" type="NetAndGross" >
+                                        <xsd:annotation>
+                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, exclusive of accrued interest.</xsd:documentation>
+                                        </xsd:annotation>
+                                </xsd:element>
+                                <xsd:element name="dirtyPrice" type="NetAndGross" minOccurs="0">
+                                        <xsd:annotation>
+                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, inclusive of accrued interest.</xsd:documentation>
+                                        </xsd:annotation>
+                                </xsd:element>
+                        </xsd:sequence>
+                        <xsd:element name="dirtyPrice" type="NetAndGross" >
+                                <xsd:annotation>
+                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, inclusive of accrued interest.</xsd:documentation>
+                                        <xsd:appinfo>
+                                                <view:skip view="reporting"/>
+                                                <view:skip view="transparency"/>
+                                        </xsd:appinfo>
+                                </xsd:annotation>
+                        </xsd:element>
+                </xsd:choice>
+-->
+  </xsd:complexType>
+  <xsd:complexType name="InstrumentTradePrincipal">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing the value in "native" currency of an instrument that was traded.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="principalAmount" type="NetAndGross" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The net and/or gross value of the amount traded in native currency.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
   <xsd:complexType name="LinkId">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">The data type used for link identifiers.</xsd:documentation>
@@ -257,6 +339,18 @@
         <xsd:attribute name="linkIdScheme" type="xsd:anyURI" use="required" />
       </xsd:extension>
     </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="NetAndGross">
+    <xsd:annotation>
+      <xsd:documentation>A structure including a net and/or a gross amount and possibly fees and commissions.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:group ref="NetAndOrGross.model">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Net and/or gross amount.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:group>
+    </xsd:sequence>
   </xsd:complexType>
   <xsd:complexType name="PartyPortfolioName">
     <xsd:annotation>
@@ -313,7 +407,7 @@
     <xsd:sequence>
       <xsd:group ref="PartyAndAccountReferences.model">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Identifies that party that has ownership of this information.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Identifies that party that has ownership of this information. For shared trade information, this will reference the originator of the date (for example, an execution facility or clearinghouse).</xsd:documentation>
         </xsd:annotation>
       </xsd:group>
       <xsd:element name="relatedParty" type="RelatedParty" minOccurs="0" maxOccurs="unbounded">
@@ -335,6 +429,17 @@
       <xsd:element name="unit" type="Unit" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Identifies the unit/division/desk etc. that executed or supports this trade</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- BAL 2011-10 - work on modeling people and org units -->
+      <xsd:element name="relatedBusinessUnit" type="RelatedBusinessUnit" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Provides information about a unit/division/desk etc. that executed or supports this trade</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="relatedPerson" type="RelatedPerson" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Provides information about a person that executed or supports this trade</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="isAccountingHedge" type="xsd:boolean" minOccurs="0">
@@ -369,11 +474,25 @@
           <xsd:documentation xml:lang="en">Specifies whether the trade is anticipated to be cleared via a derivative clearing organization</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+<!-- added BAL 2011-10-18 for DTCC gap analysis -->
+      <xsd:element name="collateralized" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies whether the trade is included under a collateral agreement. NOTE: This field is provisional, and may subsequently be replaced, for example by the trade/documentation/creditSupportAgreement element.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- end BAL 2011-10-18 additions for DTCC gap analysis -->
       <xsd:element name="endUserException" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Specifies whether the trade is not obligated to be cleared via a derivative clearing organization because the "End User Exception" was invoked.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
+<!-- added BAL 2011-10-18 for DTCC gap analysis -->
+      <xsd:element name="boardOfDirectorsApproval" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">If the exempted counterparties are registered with the SEC did their Board of Directors (or alternative governance body for non-corporate end users) approve the exemption from clearing?. This field is provisional and may be removed from a subsequent draft.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- end BAL 2011-10-18 additions for DTCC gap analysis -->
       <xsd:element name="nonStandardTerms" type="xsd:boolean" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Specifies whether the trade contains terms that affect pricing that are not represented by the standard reportable data fields, that is, it indicates a bespoke trade that might otherwise appear from its characteristics to be a standardized trade but is really non-standard. The flag indicates that the price for this trade is not to be construed as being indicative of the market.</xsd:documentation>
@@ -399,9 +518,16 @@
           <xsd:documentation xml:lang="en">Used to describe the type of venue where trade was executed, e.g via an execution facility or privately.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="confirmationType" type="ConfirmationType" minOccurs="0">
+<!-- added BAL 2011-10-18 for DTCC gap analysis -->
+      <xsd:element name="verificationMethod" type="ConfirmationMethod" minOccurs="0">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Used to describe how the trade was confirmed, e.g via a confirmation facility, via private electronic service, or via written documentation.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Used to describe how the trade was or will be verified, e.g via a confirmation facility, via private electronic service, or via written documentation. This affect the timing of real-time reporting requirements. This field is provisional pending detailed confirmation of the data requirements, and may not be included in subsequent working drafts.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- end BAL 2011-10-18 additions for DTCC gap analysis -->
+      <xsd:element name="confirmationMethod" type="ConfirmationMethod" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Used to describe how the trade was confirmed, e.g via a confirmation facility, via private electronic service, or via written documentation. This affects the process flow for confirmation messages. This field is provisional pending detailed confirmation of the data requirements, and may not be included in subsequent working drafts.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element name="counterpartyTypes" type="CounterpartyTypes" minOccurs="0">
@@ -427,6 +553,18 @@
       <xsd:documentation xml:lang="en">Allows timing information about when a trade was processed and reported to be recorded.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
+<!-- additional DTCC gaps -->
+      <xsd:element name="orderEntered" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When an order is entered by a person or generated by a trading algorithm.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="orderSubmitted" type="xsd:dateTime" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">When an order is submitted by a market participant to an execution facility.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- end additional DTCC gaps -->
       <xsd:element name="publiclyReported" type="xsd:dateTime" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">When the public report of this was created or received by this party.</xsd:documentation>
@@ -492,10 +630,10 @@
           <xsd:documentation xml:lang="en">When allocations for this trade were completely processed.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!-- TODO:  should we add an update type for that? -->
+<!-- TODO:  We are currently not including this in SDR reporting views, in order to encourange standardization of timestamp fields -->
       <xsd:element name="timestamp" type="TradeTimestamp" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">Other timestamps for this trade.</xsd:documentation>
+          <xsd:documentation xml:lang="en">Other timestamps for this trade. This is provisional in Recordkeeping and Transparency view and may be reviewed in a subsequent draft.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -562,13 +700,13 @@
     </xsd:simpleContent>
   </xsd:complexType>
 <!-- end BAL 2011-02-20 -->
-  <xsd:complexType name="ConfirmationType">
+  <xsd:complexType name="ConfirmationMethod">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type used to represent the type of mechanism that can be used to confirm a trade.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
-        <xsd:attribute name="confirmationTypeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/confirmation-type" />
+        <xsd:attribute name="confirmationMethodScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/confirmation-method" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -737,20 +875,7 @@
           <xsd:documentation xml:lang="en">The information on the trade which is not product specific, e.g. trade date.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-<!-- replaced with the TradeEconomics.model group, which can hold either an OTC product or a trade of a security.
-                        <xsd:element ref="product">
-                                <xsd:annotation>
-                                        <xsd:appinfo>
-                                                <view:override view="transparency" minOccurs="1"/>
-                                        </xsd:appinfo>
-                                </xsd:annotation>
-                        </xsd:element>
-                        -->
-      <xsd:group ref="TradeEconomics.model">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The economics of the trade. In the case of an OTC trade, this is the OTC derivative product. In the case of a trade of a security, it is the instrument trade economoics.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:group>
+      <xsd:element ref="product" minOccurs="0"></xsd:element>
       <xsd:element name="otherPartyPayment" type="Payment" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Other fees or additional payments associated with the trade, e.g. broker commissions, where one or more of the parties involved are not principal parties involved in the trade.</xsd:documentation>
@@ -795,165 +920,13 @@
     </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID" />
   </xsd:complexType>
-  <xsd:group name="TradeEconomics.model">
-    <xsd:annotation>
-      <xsd:documentation>A model group representing the economics of an FpML trade.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:choice>
-      <xsd:element ref="product" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation>A substitution group for OTC derivative products.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="instrumentTradeDetails" type="InstrumentTradeDetails" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation>A type to hold trades of multiply-traded instruments. Typically this will be used to represent the trade resulting from a physically-settled OTC product where the underlying is a security, for example the exercise of a physically-settled option.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:choice>
-  </xsd:group>
-  <xsd:complexType name="InstrumentTradeDetails">
-    <xsd:annotation>
-      <xsd:documentation>The economics of a trade of a multiply traded instrument.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:complexContent>
-      <xsd:extension base="Product">
-        <xsd:sequence>
-          <xsd:group ref="BuyerSeller.model" />
-          <xsd:element ref="underlyingAsset" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">The FpML asset description for the asset.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="quantity" type="InstrumentTradeQuantity" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">A description of how much of the instrument was traded.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="pricing" type="InstrumentTradePricing" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">The price paid for the instrument.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-          <xsd:element name="principal" type="InstrumentTradePrincipal" minOccurs="0">
-            <xsd:annotation>
-              <xsd:documentation xml:lang="en">The value, in instrument currency, of the amount of the instrument that was traded.</xsd:documentation>
-            </xsd:annotation>
-          </xsd:element>
-        </xsd:sequence>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:complexType name="InstrumentTradeQuantity">
-    <xsd:annotation>
-      <xsd:documentation>A structure describing the amount of an instrument that was traded.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:choice>
-      <xsd:element name="number" type="xsd:decimal" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The (absolute) number of units of the underlying instrument that were traded.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="nominal" type="Money" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The monetary value of the security (eg. fixed income security) that was traded).</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:choice>
-  </xsd:complexType>
-  <xsd:complexType name="InstrumentTradePricing">
-    <xsd:annotation>
-      <xsd:documentation>A structure describing the price paid for the instrument.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="quote" type="BasicQuotation" maxOccurs="unbounded" minOccurs="0" />
-    </xsd:sequence>
-<!--
-                <xsd:choice>
-                        <xsd:element name="price" type="NetAndGross" >
-                                <xsd:annotation>
-                                <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument. </xsd:documentation>
-                                </xsd:annotation>
-                        </xsd:element>
-                        <xsd:sequence>
-                                <xsd:element name="cleanPrice" type="NetAndGross" >
-                                        <xsd:annotation>
-                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, exclusive of accrued interest.</xsd:documentation>
-                                        </xsd:annotation>
-                                </xsd:element>
-                                <xsd:element name="dirtyPrice" type="NetAndGross" minOccurs="0">
-                                        <xsd:annotation>
-                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, inclusive of accrued interest.</xsd:documentation>
-                                        </xsd:annotation>
-                                </xsd:element>
-                        </xsd:sequence>
-                        <xsd:element name="dirtyPrice" type="NetAndGross" >
-                                <xsd:annotation>
-                                        <xsd:documentation xml:lang="en">The amount of money paid per unit of the traded instrument, inclusive of accrued interest.</xsd:documentation>
-                                        <xsd:appinfo>
-                                                <view:skip view="reporting"/>
-                                                <view:skip view="transparency"/>
-                                        </xsd:appinfo>
-                                </xsd:annotation>
-                        </xsd:element>
-                </xsd:choice>
--->
-  </xsd:complexType>
-  <xsd:complexType name="InstrumentTradePrincipal">
-    <xsd:annotation>
-      <xsd:documentation>A structure describing the value in "native" currency of an instrument that was traded.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="principalAmount" type="NetAndGross" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The net and/or gross value of the amount traded in native currency.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="NetAndGross">
-    <xsd:annotation>
-      <xsd:documentation>A structure including a net and/or a gross amount and possibly fees and commissions.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:group ref="NetAndOrGross.model">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Net and/or gross amount.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:group>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:group name="NetAndOrGross.model">
-    <xsd:annotation>
-      <xsd:documentation>A group including a net and/or a gross amount.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:choice>
-      <xsd:element name="net" type="xsd:decimal" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Value including fees and commissions.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:sequence>
-        <xsd:element name="gross" type="xsd:decimal">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Value excluding fees and commissions.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="net" type="xsd:decimal" minOccurs="0">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Value including fees and commissions.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-      </xsd:sequence>
-    </xsd:choice>
-  </xsd:group>
   <xsd:complexType name="TradeCategory">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A scheme used to categorize positions.</xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
-        <xsd:attribute name="categoryScheme" type="xsd:anyURI" />
+        <xsd:attribute name="categoryScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/org-type-category" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -1118,16 +1091,6 @@
       </xsd:group>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="Unit">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type used to record information about a unit, subdivision, desk, or other similar business entity.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="unitScheme" type="xsd:anyURI" use="optional" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
   <xsd:attributeGroup name="VersionAttributes.atts">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Set of attributes that define versioning information.</xsd:documentation>
@@ -1138,10 +1101,7 @@
       </xsd:annotation>
       <xsd:simpleType>
         <xsd:restriction base="xsd:token">
-          <xsd:enumeration value="5-0" />
-          <xsd:enumeration value="5-1" />
-          <xsd:enumeration value="5-2" />
-          <xsd:enumeration value="5-3" />
+          <xsd:pattern value="5-[0-9]+" />
         </xsd:restriction>
       </xsd:simpleType>
     </xsd:attribute>
@@ -1150,12 +1110,17 @@
         <xsd:documentation xml:lang="en">This optional attribute can be supplied by a message creator in an FpML instance to specify which build number of the schema was used to define the message when it was generated.</xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
-    <xsd:attribute name="actualBuild" fixed="1" type="xsd:positiveInteger">
+    <xsd:attribute name="actualBuild" fixed="2" type="xsd:positiveInteger">
       <xsd:annotation>
         <xsd:documentation xml:lang="en">The specific build number of this schema version. This attribute is not included in an instance document. Instead, it is supplied by the XML parser when the document is validated against the FpML schema and indicates the build number of the schema file. Every time FpML publishes a change to the schema, validation rules, or examples within a version (e.g., version 4.2) the actual build number is incremented. If no changes have been made between releases within a version (i.e. from Trial Recommendation to Recommendation) the actual build number stays the same.</xsd:documentation>
       </xsd:annotation>
     </xsd:attribute>
   </xsd:attributeGroup>
+  <xsd:element name="instrumentTradeDetails" type="InstrumentTradeDetails" substitutionGroup="product">
+    <xsd:annotation>
+      <xsd:documentation>A type to hold trades of multiply-traded instruments. Typically this will be used to represent the trade resulting from a physically-settled OTC product where the underlying is a security, for example the exercise of a physically-settled option.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:element>
   <xsd:element name="strategy" type="Strategy" substitutionGroup="product">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A strategy product.</xsd:documentation>
@@ -1226,6 +1191,47 @@
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="NetAndOrGross.model">
+    <xsd:annotation>
+      <xsd:documentation>A group including a net and/or a gross amount.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="net" type="xsd:decimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Value including fees and commissions.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:sequence>
+        <xsd:element name="gross" type="xsd:decimal">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Value excluding fees and commissions.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="net" type="xsd:decimal" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Value including fees and commissions.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="ProcessingIndicator.model">
+    <xsd:annotation>
+      <xsd:documentation>Elements that describe how this document is intended to be processed (in the absence of a full messaging framework).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:choice>
+      <xsd:element name="isCorrection" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Indicates if this message corrects an earlier request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="isCancellation" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Indicates if this message corrects an earlier request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:choice>
   </xsd:group>
   <xsd:group name="TradeOrTradeReference.model">
     <xsd:annotation>

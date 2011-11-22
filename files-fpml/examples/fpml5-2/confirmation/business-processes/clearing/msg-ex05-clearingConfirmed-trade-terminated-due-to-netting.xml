@@ -18,12 +18,12 @@ Describes a trade that was removed because of a netting operation
     <creationTimestamp>2010-01-04T08:57:00Z</creationTimestamp>
   </header>
   <correlationId correlationIdScheme="http://www.rbs.com/coding-scheme/trade-id">TRD0001</correlationId>
-  <amalgamationActivity>
-    <amalgamationType>Netting</amalgamationType>
+  <compressionActivity>
+    <compressionType>Netting</compressionType>
     <replacementTradeId tradeIdScheme="http://www.lch.com/coding-scheme/clearing-id">&gt;CL000003</replacementTradeId>
     <originatingTradeId tradeIdScheme="http://www.lch.com/coding-scheme/clearing-id">&gt;CL000001</originatingTradeId>
     <originatingTradeId tradeIdScheme="http://www.lch.com/coding-scheme/clearing-id">&gt;CL000002</originatingTradeId>
-  </amalgamationActivity>
+  </compressionActivity>
   <terminatingEvent>Netting</terminatingEvent>
   <termination>
     <originalTrade>

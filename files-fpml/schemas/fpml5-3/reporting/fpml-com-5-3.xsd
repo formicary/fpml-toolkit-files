@@ -6,7 +6,7 @@
 -->
 <!-- Transparency open questions -->
 <!-- Commodity delivery dates ??? s/b pricing dates? -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8457 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8642 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-option-shared-5-3.xsd" />
   <xsd:complexType name="AbsoluteTolerance">
     <xsd:annotation>
@@ -2123,8 +2123,8 @@
     </xsd:sequence>
     <xsd:attribute name="id" type="xsd:ID" />
   </xsd:complexType>
-  <xsd:element name="additionalCommodityForwardLeg" abstract="true" />
-  <xsd:element name="additionalCommoditySwapLeg" abstract="true" />
+  <xsd:element name="additionalCommodityForwardLeg" type="Leg" abstract="true" />
+  <xsd:element name="additionalCommoditySwapLeg" type="Leg" abstract="true" />
   <xsd:element name="commodityForward" type="CommodityForward" substitutionGroup="product">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Defines a commodity forward product.</xsd:documentation>

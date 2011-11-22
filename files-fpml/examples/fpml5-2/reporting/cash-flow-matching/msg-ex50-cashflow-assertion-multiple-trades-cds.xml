@@ -27,12 +27,12 @@ Example of a cashflow assertion related to an equity option.
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">SDB1502376013</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2005-12-21Z</tradeDate>
+      <tradeDate>2005-12-21</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2005-12-21Z</unadjustedDate>
+        <unadjustedDate>2005-12-21</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2014-12-19Z</unadjustedDate>
+        <unadjustedDate>2014-12-19</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">EquityOption</productType>
       <underlyer>
@@ -52,12 +52,12 @@ Example of a cashflow assertion related to an equity option.
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">SDB1502376014</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2005-12-22Z</tradeDate>
+      <tradeDate>2005-12-22</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2005-12-21Z</unadjustedDate>
+        <unadjustedDate>2005-12-21</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2014-12-19Z</unadjustedDate>
+        <unadjustedDate>2014-12-19</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">EquityOption</productType>
       <underlyer>
@@ -77,12 +77,12 @@ Example of a cashflow assertion related to an equity option.
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">SDB1502376015</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2005-12-23Z</tradeDate>
+      <tradeDate>2005-12-23</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2005-12-21Z</unadjustedDate>
+        <unadjustedDate>2005-12-21</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2014-12-19Z</unadjustedDate>
+        <unadjustedDate>2014-12-19</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">CreditDefaultSwap</productType>
       <underlyer>
@@ -96,7 +96,7 @@ Example of a cashflow assertion related to an equity option.
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-12-21Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-12-21</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">SDB1502376013.0.0-1502376013.USD.20051223</identifier>
     <payerPartyReference href="party2" />

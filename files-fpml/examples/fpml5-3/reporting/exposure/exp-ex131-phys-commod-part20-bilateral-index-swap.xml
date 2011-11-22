@@ -40,7 +40,7 @@ Example of a swap based on index as reported by a dealer.
       </commodity>
     </underlyingAsset>
     <exposureType>Index</exposureType>
-    <futuresEquivalentMonth>2012-02</futuresEquivalentMonth>
+    <priceReferenceMonth>2012-02</priceReferenceMonth>
     <quote>
       <value>16.25</value>
       <measureType>ShortSwapPosition</measureType>

@@ -28,12 +28,12 @@
         <tradeId tradeIdScheme="http://www.abc.com/tradeId">LSSS0052O0130000000</tradeId>
       </partyTradeIdentifier>
       <tradeDetails>
-        <tradeDate>2000-05-17Z</tradeDate>
+        <tradeDate>2000-05-17</tradeDate>
         <effectiveDate>
-          <unadjustedDate>2000-05-19Z</unadjustedDate>
+          <unadjustedDate>2000-05-19</unadjustedDate>
         </effectiveDate>
         <terminationDate>
-          <unadjustedDate>2009-05-19Z</unadjustedDate>
+          <unadjustedDate>2009-05-19</unadjustedDate>
         </terminationDate>
         <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">InterestRateSwap</productType>
         <underlyer id="SEK-STIBOR-SIDE">
@@ -56,7 +56,7 @@
         </notional>
       </tradeDetails>
     </tradeIdentifyingItems>
-    <adjustedPaymentDate>2005-08-19Z</adjustedPaymentDate>
+    <adjustedPaymentDate>2005-08-19</adjustedPaymentDate>
     <payment>
       <identifier paymentIdScheme="http://www.abc.com/netPaymentId">7819930</identifier>
       <payerPartyReference href="party1" />
@@ -78,8 +78,8 @@
         </grossCashflow>
         <calculationElements>
           <calculationPeriod>
-            <adjustedStartDate>2004-05-19Z</adjustedStartDate>
-            <adjustedEndDate>2005-05-19Z</adjustedEndDate>
+            <adjustedStartDate>2004-05-19</adjustedStartDate>
+            <adjustedEndDate>2005-05-19</adjustedEndDate>
             <numberOfDays>360</numberOfDays>
             <dayCountFraction>30/360</dayCountFraction>
           </calculationPeriod>
@@ -98,7 +98,7 @@
         </grossCashflow>
         <observationElements id="observation-SEK-STIBOR-SIDE">
           <underlyerReference href="SEK-STIBOR-SIDE" />
-          <observationDate>2005-02-17Z</observationDate>
+          <observationDate>2005-02-17</observationDate>
           <observedValue>
             <value>0.02120000</value>
           </observedValue>
@@ -110,8 +110,8 @@
             <spread>0</spread>
           </calculatedRate>
           <calculationPeriod>
-            <adjustedStartDate>2005-02-22Z</adjustedStartDate>
-            <adjustedEndDate>2005-05-19Z</adjustedEndDate>
+            <adjustedStartDate>2005-02-22</adjustedStartDate>
+            <adjustedEndDate>2005-05-19</adjustedEndDate>
             <numberOfDays>87</numberOfDays>
             <dayCountFraction>ACT/360</dayCountFraction>
             <dayCountYearFraction>0.2417</dayCountYearFraction>
@@ -128,12 +128,12 @@
         <tradeId tradeIdScheme="http://www.def.com/tradeId">DEF789594509400052</tradeId>
       </partyTradeIdentifier>
       <tradeDetails>
-        <tradeDate>2000-05-17Z</tradeDate>
+        <tradeDate>2000-05-17</tradeDate>
         <effectiveDate>
-          <unadjustedDate>2000-05-19Z</unadjustedDate>
+          <unadjustedDate>2000-05-19</unadjustedDate>
         </effectiveDate>
         <terminationDate>
-          <unadjustedDate>2009-05-19Z</unadjustedDate>
+          <unadjustedDate>2009-05-19</unadjustedDate>
         </terminationDate>
         <productType>InterestRateSwap</productType>
         <underlyer id="SEK-STIBOR-SIDE-PROP">
@@ -156,7 +156,7 @@
         </notional>
       </tradeDetails>
     </tradeIdentifyingItems>
-    <adjustedPaymentDate>2005-08-19Z</adjustedPaymentDate>
+    <adjustedPaymentDate>2005-08-19</adjustedPaymentDate>
     <payment>
       <identifier paymentIdScheme="http://www.def.com/netPaymentId">645291910</identifier>
       <payerPartyReference href="party1" />
@@ -178,8 +178,8 @@
         </grossCashflow>
         <calculationElements>
           <calculationPeriod>
-            <adjustedStartDate>2004-05-19Z</adjustedStartDate>
-            <adjustedEndDate>2005-05-19Z</adjustedEndDate>
+            <adjustedStartDate>2004-05-19</adjustedStartDate>
+            <adjustedEndDate>2005-05-19</adjustedEndDate>
             <numberOfDays>360</numberOfDays>
             <dayCountFraction>30/360</dayCountFraction>
           </calculationPeriod>
@@ -198,7 +198,7 @@
         </grossCashflow>
         <observationElements id="observation-SEK-STIBOR-SIDE_PROP">
           <underlyerReference href="SEK-STIBOR-SIDE" />
-          <observationDate>2005-02-17Z</observationDate>
+          <observationDate>2005-02-17</observationDate>
           <observedValue>
             <value>0.02120000</value>
           </observedValue>
@@ -210,8 +210,8 @@
             <spread>0</spread>
           </calculatedRate>
           <calculationPeriod>
-            <adjustedStartDate>2005-02-22Z</adjustedStartDate>
-            <adjustedEndDate>2005-05-19Z</adjustedEndDate>
+            <adjustedStartDate>2005-02-22</adjustedStartDate>
+            <adjustedEndDate>2005-05-19</adjustedEndDate>
             <numberOfDays>87</numberOfDays>
             <dayCountFraction>ACT/360</dayCountFraction>
             <dayCountYearFraction>0.2417</dayCountYearFraction>

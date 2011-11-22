@@ -15,8 +15,11 @@
     <sendTo messageAddressScheme="http://www.clearingsvc.com/partyId">ABC</sendTo>
     <creationTimestamp>2006-01-01T09:07:00+05:00</creationTimestamp>
   </header>
-  <correlationId correlationIdScheme="http://www.clearingsvc.com/portfolioId">Port1</correlationId>
+  <correlationId correlationIdScheme="http://www.clearingsvc.com/portfolioId">123456</correlationId>
   <sequenceNumber>1</sequenceNumber>
+  <portfolioReference>
+    <portfolioName portfolioNameScheme="http://www.clearingsvc.com/portfolioId">Port1</portfolioName>
+  </portfolioReference>
   <party id="clearing-svc">
     <partyId>CLEARCO</partyId>
   </party>

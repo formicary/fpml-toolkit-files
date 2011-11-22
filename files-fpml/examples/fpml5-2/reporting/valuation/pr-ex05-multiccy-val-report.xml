@@ -19,7 +19,7 @@
   <valuationSet id="val1">
     <valuationScenario id="valscen1">
       <name>EOD Valuation</name>
-      <valuationDate>2003-10-29Z</valuationDate>
+      <valuationDate>2003-10-29</valuationDate>
     </valuationScenario>
     <baseParty href="party1" />
     <quotationCharacteristics>

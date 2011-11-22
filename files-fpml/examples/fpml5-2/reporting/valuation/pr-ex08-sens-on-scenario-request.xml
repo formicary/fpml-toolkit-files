@@ -45,12 +45,12 @@
 <!--Base Valuation Scenario-->
       <valuationScenario id="valscen1">
         <name>EOD Valuation</name>
-        <valuationDate>2004-05-01Z</valuationDate>
+        <valuationDate>2004-05-01</valuationDate>
       </valuationScenario>
 <!--Scenario: USD Libor shocked up 100bp-->
       <valuationScenario id="valscen2">
         <name>USDLibor up 100bp</name>
-        <valuationDate>2004-05-01Z</valuationDate>
+        <valuationDate>2004-05-01</valuationDate>
         <shift>
           <parameterReference href="USD-LIBOR" />
           <shift>100</shift>

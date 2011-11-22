@@ -4,48 +4,8 @@
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 8189 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 8314 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-business-events-5-2.xsd" />
-  <xsd:complexType name="PortfolioRequest">
-    <xsd:annotation>
-      <xsd:documentation>A structure used to group together individual messages that can be acted on at a group level.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="portfolioId" type="PortfolioIdentifier">
-        <xsd:annotation>
-          <xsd:documentation>An identifier that is unique for each portfolio-level request, and which can be used to group together the individual messages in the portfolio request.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="sequenceNumber" type="xsd:positiveInteger">
-        <xsd:annotation>
-          <xsd:documentation>A numeric, sequentially ascending (i.e. gapless) value (starting at 1) that can be used to identify and distinguish the individual constituents of a portfolio request. A recipient should ensure that all sequence numbers from 1 to the final sequence number (where submissionsComplete is true) have arrived before completing the portfolio request.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="submissionsComplete" type="xsd:boolean">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Indicates whether all individual requests have been submitted for this portfolio request.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="PortfolioIdentifier">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A type that can be used to identify portfolio requests.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="portfolioIdScheme" type="xsd:anyURI" use="required" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:group name="PortfolioRequest.model">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines a model group that allows a portfolio request structure to be included in a message.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="portfolioRequest" type="PortfolioRequest" />
-    </xsd:sequence>
-  </xsd:group>
   <xsd:complexType name="AllocationApproved">
     <xsd:complexContent>
       <xsd:extension base="ResponseMessage">
@@ -73,7 +33,8 @@
     <xsd:complexContent>
       <xsd:extension base="NotificationMessage">
         <xsd:sequence>
-          <xsd:group ref="Amalgamation.model" minOccurs="0" />
+          <xsd:group ref="Compression.model" minOccurs="0" />
+          <xsd:group ref="PortfolioReferenceFull.model" minOccurs="0" />
           <xsd:group ref="ClearingResults.model" minOccurs="0" />
           <xsd:group ref="EventValuation.model" />
           <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
@@ -229,6 +190,7 @@
     <xsd:complexContent>
       <xsd:extension base="ResponseMessage">
         <xsd:sequence>
+          <xsd:group ref="PortfolioReference.model" minOccurs="0" />
           <xsd:group ref="EventsOrInfo.model" minOccurs="0" />
           <xsd:group ref="PartiesAndAccounts.model" minOccurs="0" />
         </xsd:sequence>
@@ -325,6 +287,56 @@
       </xsd:extension>
     </xsd:complexContent>
   </xsd:complexType>
+  <xsd:complexType name="PortfolioReferenceFull">
+    <xsd:annotation>
+      <xsd:documentation>A structure used to group together individual messages that can be acted on at a group level.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="portfolioName" type="PortfolioName">
+        <xsd:annotation>
+          <xsd:documentation>An identifier that is unique for each portfolio-level request, and which can be used to group together the individual messages in the portfolio request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="sequenceNumber" type="xsd:positiveInteger">
+        <xsd:annotation>
+          <xsd:documentation>A numeric, sequentially ascending (i.e. gapless) value (starting at 1) that can be used to identify and distinguish the individual constituents of a portfolio request. A recipient should ensure that all sequence numbers from 1 to the final sequence number (where submissionsComplete is true) have arrived before completing the portfolio request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="submissionsComplete" type="xsd:boolean" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates whether all individual requests have been submitted for this portfolio request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="PortfolioReference">
+    <xsd:annotation>
+      <xsd:documentation>A structure used to identify a portfolio in a response message.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="portfolioName" type="PortfolioName">
+        <xsd:annotation>
+          <xsd:documentation>An identifier that is unique for each portfolio-level request, and which can be used to group together the individual messages in the portfolio request.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:group name="PortfolioReferenceFull.model">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Defines a model group that allows a portfolio reference request structure to be included in a message.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="portfolioReference" type="PortfolioReferenceFull" />
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="PortfolioReference.model">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Defines a model group that allows a portfolio reference response structure to be included in a message.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="portfolioReference" type="PortfolioReference" />
+    </xsd:sequence>
+  </xsd:group>
   <xsd:complexType name="RequestAllocation">
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
@@ -356,7 +368,7 @@
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessageMediated">
         <xsd:sequence>
-          <xsd:group ref="PortfolioRequest.model" minOccurs="0" />
+          <xsd:group ref="PortfolioReferenceFull.model" minOccurs="0" />
           <xsd:group ref="Events.model" />
           <xsd:group ref="EventValuation.model" />
           <xsd:group ref="PartiesAndAccounts.model" />
@@ -393,8 +405,8 @@
               <xsd:documentation>The reason the consent was requested.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:group ref="PortfolioRequest.model" minOccurs="0" />
-          <xsd:group ref="Amalgamation.model" minOccurs="0" />
+          <xsd:group ref="PortfolioReferenceFull.model" minOccurs="0" />
+          <xsd:group ref="Compression.model" minOccurs="0" />
           <xsd:group ref="Events.model" />
           <xsd:group ref="EventValuation.model" />
           <xsd:group ref="PartiesAndAccounts.model" />

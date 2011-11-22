@@ -24,12 +24,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">SDB531064443</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2004-06-11Z</tradeDate>
+      <tradeDate>2004-06-11</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2004-03-27Z</unadjustedDate>
+        <unadjustedDate>2004-03-27</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2010-09-27Z</unadjustedDate>
+        <unadjustedDate>2010-09-27</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">AssetSwap</productType>
 <!-- One of the interesting features of this example is that we have 3 underlyer references:
@@ -59,7 +59,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-09-27Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-09-27</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">15649772</identifier>
     <payerPartyReference href="party2" />
@@ -85,8 +85,8 @@
           <amount>10000000.00</amount>
         </notional>
         <calculationPeriod>
-          <adjustedStartDate>2005-03-27Z</adjustedStartDate>
-          <adjustedEndDate>2005-09-27Z</adjustedEndDate>
+          <adjustedStartDate>2005-03-27</adjustedStartDate>
+          <adjustedEndDate>2005-09-27</adjustedEndDate>
           <numberOfDays>180</numberOfDays>
           <dayCountFraction>30/360</dayCountFraction>
         </calculationPeriod>
@@ -105,7 +105,7 @@
       </grossCashflow>
       <observationElements id="observation-USD-LIBOR-BBA">
         <underlyerReference href="USD-LIBOR-BBA" />
-        <observationDate>2005-06-23Z</observationDate>
+        <observationDate>2005-06-23</observationDate>
         <observedValue>
           <value>0.0347000</value>
         </observedValue>
@@ -121,8 +121,8 @@
           <spread>0.00730000</spread>
         </calculatedRate>
         <calculationPeriod>
-          <adjustedStartDate>2005-06-27Z</adjustedStartDate>
-          <adjustedEndDate>2005-09-27Z</adjustedEndDate>
+          <adjustedStartDate>2005-06-27</adjustedStartDate>
+          <adjustedEndDate>2005-09-27</adjustedEndDate>
           <numberOfDays>92</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
           <dayCountYearFraction>0.25555</dayCountYearFraction>

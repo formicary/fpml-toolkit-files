@@ -72,7 +72,7 @@
 <!-- NEW -->
             <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc; do we need a more specific refeence? -->
-            <confirmationType>Facility</confirmationType>
+            <confirmationMethod>Facility</confirmationMethod>
 <!-- NEW -->
             <counterpartyTypes>InterDealer</counterpartyTypes>
 <!-- NEW : this includes several of the CFTC indicators, including

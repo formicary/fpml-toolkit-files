@@ -18,11 +18,11 @@
   <correlationId correlationIdScheme="http://www.clearingsvc.com/conversationId/OTC">457</correlationId>
   <sequenceNumber>1</sequenceNumber>
   <requestedAction>Clearing</requestedAction>
-  <portfolioRequest>
-    <portfolioId portfolioIdScheme="http://www.clearingsvc.com/portfolioId">Port1</portfolioId>
+  <portfolioReference>
+    <portfolioName portfolioNameScheme="http://www.clearingsvc.com/portfolioId">Port1</portfolioName>
     <sequenceNumber>2</sequenceNumber>
     <submissionsComplete>true</submissionsComplete>
-  </portfolioRequest>
+  </portfolioReference>
   <trade>
     <tradeHeader>
       <partyTradeIdentifier>

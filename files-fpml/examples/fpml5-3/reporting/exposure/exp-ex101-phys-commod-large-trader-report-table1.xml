@@ -32,7 +32,7 @@ Preliminary example based on 17 CFR Parts 15 and 20, Table 1 in Appendix B, p. 4
       <role>ClearingFirm</role>
     </relatedParty>
     <cleared>true</cleared>
-    <category categoryScheme="http://www.fpml.org/coding-scheme/account-type-category">Customer</category>
+    <category categoryScheme="http://www.fpml.org/coding-scheme/org-type-category">Customer</category>
     <productId productIdScheme="http://www.fpml.org/coding-scheme-external/product-id-clearorg1">CP_04</productId>
     <underlyingAsset>
       <commodity>
@@ -53,7 +53,7 @@ Preliminary example based on 17 CFR Parts 15 and 20, Table 1 in Appendix B, p. 4
       <role>ClearingFirm</role>
     </relatedParty>
     <cleared>true</cleared>
-    <category categoryScheme="http://www.fpml.org/coding-scheme/account-type-category">Customer</category>
+    <category categoryScheme="http://www.fpml.org/coding-scheme/org-type-category">Customer</category>
     <productId productIdScheme="http://www.fpml.org/coding-scheme-external/product-id-clearorg1">CP_04</productId>
     <underlyingAsset>
       <commodity>
@@ -74,7 +74,7 @@ Preliminary example based on 17 CFR Parts 15 and 20, Table 1 in Appendix B, p. 4
       <role>ClearingFirm</role>
     </relatedParty>
     <cleared>true</cleared>
-    <category categoryScheme="http://www.fpml.org/coding-scheme/account-type-category">Customer</category>
+    <category categoryScheme="http://www.fpml.org/coding-scheme/org-type-category">Customer</category>
     <productId productIdScheme="http://www.fpml.org/coding-scheme-external/product-id-clearorg1">CP_02</productId>
     <underlyingAsset>
       <commodity>

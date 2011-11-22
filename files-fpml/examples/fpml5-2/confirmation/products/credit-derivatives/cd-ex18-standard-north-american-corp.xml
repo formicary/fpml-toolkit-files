@@ -19,15 +19,15 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.abcbank.com/cd-trade-id">abc1234</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2009-03-25Z</tradeDate>
+      <tradeDate>2009-03-25</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2009-03-26Z</unadjustedDate>
+          <unadjustedDate>2009-03-26</unadjustedDate>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2014-06-20Z</unadjustedDate>
+          <unadjustedDate>2014-06-20</unadjustedDate>
         </scheduledTerminationDate>
         <buyerPartyReference href="party1" />
         <sellerPartyReference href="party2" />
@@ -47,8 +47,8 @@
         <initialPayment>
           <payerPartyReference href="party1" />
           <receiverPartyReference href="party2" />
-          <adjustablePaymentDate>2009-03-28Z</adjustablePaymentDate>
-          <adjustedPaymentDate>2009-03-30Z</adjustedPaymentDate>
+          <adjustablePaymentDate>2009-03-28</adjustablePaymentDate>
+          <adjustedPaymentDate>2009-03-30</adjustedPaymentDate>
           <paymentAmount>
             <currency>USD</currency>
             <amount>1000</amount>
@@ -59,8 +59,8 @@
             <periodMultiplier>3</periodMultiplier>
             <period>M</period>
           </paymentFrequency>
-          <firstPeriodStartDate>2009-03-20Z</firstPeriodStartDate>
-          <firstPaymentDate>2009-06-20Z</firstPaymentDate>
+          <firstPeriodStartDate>2009-03-20</firstPeriodStartDate>
+          <firstPaymentDate>2009-06-20</firstPaymentDate>
           <rollConvention>20</rollConvention>
           <fixedAmountCalculation>
             <fixedRate>0.01</fixedRate>

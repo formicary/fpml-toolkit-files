@@ -4,7 +4,7 @@
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8461 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8644 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-enum-5-3.xsd" />
   <xsd:simpleType name="CorrelationValue">
     <xsd:annotation>
@@ -169,6 +169,143 @@
       <xsd:element name="postalCode" type="xsd:string" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The code, required for computerised mail sorting systems, that is allocated to a physical address by a national postal authority.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BusinessUnit">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type that represents information about a unit within an organization.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A name used to describe the organization unit</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="id" type="Unit" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An identifier used to uniquely identify organization unit</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="contactInfo" type="ContactInformation" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Information on how to contact the unit using various means.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="country" type="CountryCode" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ISO 3166 standard code for the country where the individual works.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID" />
+  </xsd:complexType>
+  <xsd:complexType name="Person">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type that represents information about a person connected with a trade or business process.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:sequence minOccurs="0">
+        <xsd:element name="honorific" type="xsd:normalizedString" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">An honorific title, such as Mr., Ms., Dr. etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="firstName" type="xsd:normalizedString" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Given name, such as John or Mary.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="surname" type="xsd:normalizedString" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Family name, such as Smith or Jones.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="suffix" type="xsd:normalizedString" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Name suffix, such as Jr., III, etc.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:element name="id" type="PersonId" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An identifier assigned by a system for uniquely identifying the individual</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="businessUnitReference" type="BusinessUnitReference" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The unit for which the indvidual works.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="contactInfo" type="ContactInformation" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Information on how to contact the individual using various means.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="country" type="CountryCode" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The ISO 3166 standard code for the country where the individual works.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:ID" />
+  </xsd:complexType>
+  <xsd:complexType name="PersonId">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An identifier used to identify an individual person.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="personIdScheme" type="xsd:anyURI" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Unit">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type used to record information about a unit, subdivision, desk, or other similar business entity.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="unitScheme" type="xsd:anyURI" use="optional" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ContactInformation">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type that represents how to contact an individual or organization.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="telephone" type="TelephoneNumber" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A telephonic contact.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="email" type="xsd:normalizedString" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">An address on an electronic mail or messaging sysem .</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="address" type="Address" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A postal or street address.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TelephoneNumber">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type that represents a telephonic contact.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="type" type="TelephoneTypeEnum" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The type of telephone number (work, personal, mobile).</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="number" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A telephonic contact.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -868,6 +1005,16 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
+  <xsd:complexType name="CreditRating">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A party's credit rating.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="creditRatingScheme" type="xsd:anyURI" default="http://www.fpml.org/ext/moodys" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
   <xsd:complexType name="Currency">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">The code representation of a currency or fund. By default it is a valid currency code as defined by the ISO standard 4217 - Codes for representation of currencies and funds http://www.iso.org/iso/en/prods-services/popstds/currencycodeslist.html.</xsd:documentation>
@@ -1010,9 +1157,9 @@
           <xsd:documentation xml:lang="en">The agreement executed between the parties and intended to govern collateral arrangement for all OTC derivatives transactions between those parties.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="attachment" type="Resource" minOccurs="0">
+      <xsd:element name="attachment" type="Resource" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
-          <xsd:documentation xml:lang="en">A human readable document related to this transaction, for example a confirmation..</xsd:documentation>
+          <xsd:documentation xml:lang="en">A human readable document related to this transaction, for example a confirmation.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -1641,6 +1788,16 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
+  <xsd:complexType name="IndustryClassification">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A party's industry sector classification.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="industryClassificationScheme" type="xsd:anyURI" default="http://www.fpml.org/ext/north-american-industry-classification-system" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
   <xsd:complexType name="InformationProvider">
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
@@ -1738,6 +1895,16 @@
     <xsd:simpleContent>
       <xsd:extension base="Scheme">
         <xsd:attribute name="interpolationMethodScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/interpolation-method" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Language">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The data type used for indicating the language of the resource, described using the ISO 639-2/T Code.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="languageScheme" type="xsd:anyURI" />
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
@@ -2111,6 +2278,27 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
+  <xsd:complexType name="OnBehalfOf">
+    <xsd:sequence>
+      <xsd:element name="partyReference" type="PartyReference" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>The party for which the message reciever should work.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="accountReference" type="AccountReference" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation>Identifies the account(s) related to the party when they can be determined from the party alone, for example in a inter-book trade.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="OriginatingEvent">
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="originatingEventScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/originating-event" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
   <xsd:complexType name="PartialExercise">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A type defining partial exercise. As defined in the 2000 ISDA Definitions, Section 12.3 Partial Exercise, the buyer of the option may exercise all or less than all the notional amount of the underlying swap but may not be less than the minimum notional amount (if specified) and must be an integral multiple of the integral multiple amount if specified.</xsd:documentation>
@@ -2143,6 +2331,21 @@
       <xsd:element name="relatedParty" type="PartyRelationship" minOccurs="0" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Identifies a related party performing a role within the transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="contactInfo" type="ContactInformation" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Information on how to contact the party using various means.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="businessUnit" type="BusinessUnit" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Optional organization unit information used to describe the organization units (e.g. trading desks) involved in a transaction or business process .</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="person" type="Person" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Optional information about people involved in a transaction or busines process. (These are eomployees of the party).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -2256,6 +2459,26 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
+  <xsd:complexType name="BusinessUnitReference">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to an organizational unit.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Reference">
+        <xsd:attribute name="href" type="xsd:IDREF" use="required" ecore:reference="BusinessUnit" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonReference">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Reference to an individual.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="Reference">
+        <xsd:attribute name="href" type="xsd:IDREF" use="required" ecore:reference="Person" />
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
   <xsd:complexType name="PartyTradeIdentifierReference">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A reference to a partyTradeIdentifier object.</xsd:documentation>
@@ -2265,26 +2488,6 @@
         <xsd:attribute name="href" type="xsd:IDREF" use="required" ecore:reference="PartyTradeIdentifier" />
       </xsd:extension>
     </xsd:complexContent>
-  </xsd:complexType>
-  <xsd:complexType name="IndustryClassification">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A party's industry sector classification.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="industryClassificationScheme" type="xsd:anyURI" default="http://www.fpml.org/ext/north-american-industry-classification-system" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:complexType name="CreditRating">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A party's credit rating.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="creditRatingScheme" type="xsd:anyURI" default="http://www.fpml.org/ext/moodys" />
-      </xsd:extension>
-    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="Payment">
     <xsd:annotation>
@@ -2377,6 +2580,34 @@
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:group name="PaymentDetails.model">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A group that covers key elements used in payment reporting messages.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="identifier" type="PaymentId" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Unique identifier assigned by either party or matching service, as agreed, to a payment.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:group ref="PayerReceiver.model" />
+      <xsd:element name="paymentAmount" type="Money" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Payment amount in a given currency to be paid/received.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:complexType name="PaymentId">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">An identifier used to identify a matchable payment.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="paymentIdScheme" type="xsd:anyURI" />
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PaymentReference">
     <xsd:annotation>
@@ -2747,6 +2978,38 @@
       </xsd:extension>
     </xsd:simpleContent>
   </xsd:complexType>
+  <xsd:complexType name="RelatedBusinessUnit">
+    <xsd:sequence>
+<!--
+                        <xsd:choice>
+-->
+      <xsd:element name="businessUnitReference" type="BusinessUnitReference" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The unit that is related to this.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!--
+                                <xsd:sequence>
+                                        <xsd:element name="businessUnitId" type="Unit" minOccurs="0">
+                                                <xsd:annotation>
+                                                        <xsd:documentation xml:lang="en">The unit that is related to this.</xsd:documentation>
+                                                </xsd:annotation>
+                                        </xsd:element>
+                                        <xsd:element name="country" type="CountryCode" minOccurs="0">
+                                                <xsd:annotation>
+                                                        <xsd:documentation xml:lang="en">The location that the unit does business.</xsd:documentation>
+                                                </xsd:annotation>
+                                        </xsd:element>
+                                </xsd:sequence>
+                        </xsd:choice>
+-->
+      <xsd:element name="role" type="BusinessUnitRole" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The category of the relationship. The related unit performs the role specified in this field for the base party. For example, if the role is "Trader", the related unit acts acts or acted as the base party's trading unit.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
   <xsd:complexType name="RelatedParty">
     <xsd:sequence>
       <xsd:group ref="PartyAndAccountReferences.model" />
@@ -2761,6 +3024,40 @@
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="RelatedPerson">
+    <xsd:sequence>
+      <xsd:element name="personReference" type="PersonReference" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The individual person that is related to this.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="role" type="PersonRole" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The category of the relationship. The related individual performs the role specified in this field for the base party. For example, if the role is "Trader", the related person acts acts or acted as the base party's trader.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="BusinessUnitRole">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type describing a role played by a unit in one or more transactions. Examples include roles such as Trader, Collateral, Confirmation, Settlement, etc. This can be extended to provide custom roles.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="unitRoleScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/unit-role" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="PersonRole">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A type describing a role played by a person in one or more transactions. Examples include roles such as Trader, Broker, MiddleOffice, Legal, etc. This can be extended to provide custom roles.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="personRoleScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/person-role" />
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="RelativeDateOffset">
     <xsd:annotation>
@@ -2849,6 +3146,127 @@
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="RequestedAction">
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="requestedActionScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/requested-action" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="Resource">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Describes the resource that contains the media representation of a business event (i.e used for stating the Publicly Available Information). For example, can describe a file or a URL that represents the event. This type is an extended version of a type defined by RIXML (www.rixml.org).</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="resourceId" type="ResourceId" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The unique identifier of the resource within the event.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="resourceType" type="ResourceType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A description of the type of the resource, e.g. a confirmation.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="language" type="Language" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates the language of the resource, described using the ISO 639-2/T Code.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="sizeInBytes" type="xsd:decimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates the size of the resource in bytes. It could be used by the end user to estimate the download time and storage needs.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="length" type="ResourceLength" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates the length of the resource. For example, if the resource were a PDF file, the length would be in pages.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="mimeType" type="MimeType" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Indicates the type of media used to store the content. mimeType is used to determine the software product(s) that can read the content. MIME Types are described in RFC 2046.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="name" type="xsd:normalizedString" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The name of the resource.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="comments" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Any additional comments that are deemed necessary. For example, which software version is required to open the document? Or, how does this resource relate to the others for this event?</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+<!-- BAL 2011-10-06 set cardinality to optional for consistency with 5.2 -->
+      <xsd:choice minOccurs="0">
+        <xsd:element name="string" type="xsd:string" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Provides extra information as string. In case the extra information is in XML format, a CDATA section must be placed around the source message to prevent its interpretation as XML content.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="hexadecimalBinary" type="xsd:hexBinary" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Provides extra information as binary contents coded in hexadecimal.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="base64Binary" type="xsd:base64Binary" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Provides extra information as binary contents coded in base64.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="url" type="xsd:anyURI" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">Indicates where the resource can be found, as a URL that references the information on a web server accessible to the message recipient.</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+<!--  commented out pending business interest
+                                <xsd:element name="attachmentReference" type="HTTPAttachmentReference">
+                                        <xsd:annotation>
+                                                <xsd:documentation xml:lang="en">Provides a place to put a reference to an attachment on an HTTP message, such as is used by SOAP with Attachments and ebXML.</xsd:documentation>
+                                        </xsd:annotation>
+                                </xsd:element>
+-->
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResourceId">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The data type used for resource identifiers.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="resourceIdScheme" type="xsd:anyURI" />
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="ResourceLength">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The type that indicates the length of the resource.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="lengthUnit" type="LengthUnitEnum" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The length unit of the resource. For example, pages (pdf, text documents) or time (audio, video files).</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="lengthValue" type="xsd:decimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The length value of the resource.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="ResourceType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">The data type used for describing the type or purpose of a resource, e.g. "Confirmation".</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="resourceTypeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/resource-type" />
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ReturnSwapNotionalAmountReference">
     <xsd:annotation>
@@ -3386,6 +3804,16 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:group>
+<!-- moved OnBehalfOf to shared BAL 2011-03 for SDR reporting to allow data docs to use it -->
+  <xsd:group name="OnBehalfOf.model">
+    <xsd:sequence>
+      <xsd:element name="onBehalfOf" type="OnBehalfOf" maxOccurs="4" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Indicates which party (or parties) (and accounts) a trade or event is being processed for. Normally there will only be a maximum of 2 parties, but in the case of a novation there could be a transferor, transferee, remaining party, and other remaining party. Except for this case, there should be no more than two onABehalfOf references in a message.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
   <xsd:group name="PartialExercise.model">
     <xsd:sequence>
       <xsd:element name="notionalReference" type="NotionalReference" minOccurs="0" maxOccurs="unbounded">
@@ -3662,166 +4090,5 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:group>
-<!-- moved OnBehalfOf to shared BAL 2011-03 for SDR reporting to allow data docs to use it -->
-  <xsd:group name="OnBehalfOf.model">
-    <xsd:sequence>
-      <xsd:element name="onBehalfOf" type="OnBehalfOf" maxOccurs="4" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation>Indicates which party (or parties) (and accounts) a trade or event is being processed for. Normally there will only be a maximum of 2 parties, but in the case of a novation there could be a transferor, transferee, remaining party, and other remaining party. Except for this case, there should be no more than two onABehalfOf references in a message.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:group>
-  <xsd:complexType name="OnBehalfOf">
-    <xsd:sequence>
-      <xsd:element name="partyReference" type="PartyReference" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation>The party for which the message reciever should work.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="accountReference" type="AccountReference" minOccurs="0" maxOccurs="unbounded">
-        <xsd:annotation>
-          <xsd:documentation>Identifies the account(s) related to the party when they can be determined from the party alone, for example in a inter-book trade.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="OriginatingEvent">
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="originatingEventScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/originating-event" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:complexType name="RequestedAction">
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="requestedActionScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/requested-action" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:complexType name="Resource">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">Describes the resource that contains the media representation of a business event (i.e used for stating the Publicly Available Information). For example, can describe a file or a URL that represents the event. This type is an extended version of a type defined by RIXML (www.rixml.org).</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="resourceId" type="ResourceId" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The unique identifier of the resource within the event.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="resourceType" type="ResourceType" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">A description of the type of the resource, e.g. a confirmation.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="language" type="Language" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Indicates the language of the resource, described using the ISO 639-2/T Code.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="sizeInBytes" type="xsd:decimal" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Indicates the size of the resource in bytes. It could be used by the end user to estimate the download time and storage needs.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="length" type="ResourceLength" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Indicates the length of the resource. For example, if the resource were a PDF file, the length would be in pages.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="mimeType" type="MimeType" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Indicates the type of media used to store the content. mimeType is used to determine the software product(s) that can read the content. MIME Types are described in RFC 2046.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="name" type="xsd:normalizedString" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The name of the resource.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="comments" type="xsd:string" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Any additional comments that are deemed necessary. For example, which software version is required to open the document? Or, how does this resource relate to the others for this event?</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:choice>
-        <xsd:element name="string" type="xsd:string" minOccurs="0">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Provides extra information as string. In case the extra information is in XML format, a CDATA section must be placed around the source message to prevent its interpretation as XML content.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="hexadecimalBinary" type="xsd:hexBinary" minOccurs="0">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Provides extra information as binary contents coded in hexadecimal.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="base64Binary" type="xsd:base64Binary" minOccurs="0">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Provides extra information as binary contents coded in base64.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="url" type="xsd:anyURI" minOccurs="0">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Indicates where the resource can be found, as a URL that references the information on a web server accessible to the message recipient.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-<!--  commented out pending business interest
-                                <xsd:element name="attachmentReference" type="HTTPAttachmentReference">
-                                        <xsd:annotation>
-                                                <xsd:documentation xml:lang="en">Provides a place to put a reference to an attachment on an HTTP message, such as is used by SOAP with Attachments and ebXML.</xsd:documentation>
-                                        </xsd:annotation>
-                                </xsd:element>
--->
-      </xsd:choice>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="ResourceId">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">The data type used for resource identifiers.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="resourceIdScheme" type="xsd:anyURI" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:complexType name="ResourceType">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">The data type used for describing the type or purpose of a resource, e.g. "Confirmation".</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="resourceTypeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/resource-type" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:complexType name="ResourceLength">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">The type that indicates the length of the resource.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="lengthUnit" type="LengthUnitEnum" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The length unit of the resource. For example, pages (pdf, text documents) or time (audio, video files).</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="lengthValue" type="xsd:decimal" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The length value of the resource.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="Language">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">The data type used for indicating the language of the resource, described using the ISO 639-2/T Code.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="languageScheme" type="xsd:anyURI" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
 </xsd:schema>
 

@@ -22,12 +22,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId/">SDB530289886</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2004-08-16Z</tradeDate>
+      <tradeDate>2004-08-16</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2004-08-17Z</unadjustedDate>
+        <unadjustedDate>2004-08-17</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2014-09-20Z</unadjustedDate>
+        <unadjustedDate>2014-09-20</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">CreditDefaultSwap</productType>
       <underlyer id="DJA66E">
@@ -46,7 +46,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-12-06Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-12-06</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">531187664</identifier>
     <payerPartyReference href="party1" />

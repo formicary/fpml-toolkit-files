@@ -4,7 +4,7 @@
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 8457 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/confirmation" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/confirmation" ecore:documentRoot="FpML" ecore:nsPrefix="conf" ecore:package="org.fpml.confirmation" version="$Revision: 8627 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-asset-5-3.xsd" />
   <xsd:complexType name="BondReference">
     <xsd:annotation>
@@ -413,32 +413,37 @@
       <xsd:choice minOccurs="0">
         <xsd:element name="cashPriceMethod" type="CashPriceMethod">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2000 ISDA Definitions, Section 17.3. Cash Settlement Methods, paragraph (a).</xsd:documentation>
+            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (a).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="cashPriceAlternateMethod" type="CashPriceMethod">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2000 ISDA Definitions, Section 17.3. Cash Settlement Methods, paragraph (b).</xsd:documentation>
+            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (b).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="parYieldCurveAdjustedMethod" type="YieldCurveMethod">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2000 ISDA Definitions, Section 17.3. Cash Settlement Methods, paragraph (c).</xsd:documentation>
+            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (c).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="zeroCouponYieldAdjustedMethod" type="YieldCurveMethod">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2000 ISDA Definitions, Section 17.3. Cash Settlement Methods, paragraph (d).</xsd:documentation>
+            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (d).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="parYieldCurveUnadjustedMethod" type="YieldCurveMethod">
           <xsd:annotation>
-            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2000 ISDA Definitions, Section 17.3. Cash Settlement Methods, paragraph (e).</xsd:documentation>
+            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (e).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
         <xsd:element name="crossCurrencyMethod" type="CrossCurrencyMethod">
           <xsd:annotation>
-            <xsd:documentation>An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in Supplement number 23 to the 2006 ISDA Definitions, Section 18.2. Certain Definitions Relating to Cash Settlement.</xsd:documentation>
+            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (f) (published in Supplement number 23).</xsd:documentation>
+          </xsd:annotation>
+        </xsd:element>
+        <xsd:element name="collateralizedCashPriceMethod" type="YieldCurveMethod">
+          <xsd:annotation>
+            <xsd:documentation xml:lang="en">An ISDA defined cash settlement method used for the determination of the applicable cash settlement amount. The method is defined in the 2006 ISDA Definitions, Section 18.3. Cash Settlement Methods, paragraph (g) (published in Supplement number 28).</xsd:documentation>
           </xsd:annotation>
         </xsd:element>
       </xsd:choice>
@@ -1576,11 +1581,21 @@
               <xsd:documentation xml:lang="en">The ISDA Calculation Agent responsible for performing duties associated with an optional early termination.</xsd:documentation>
             </xsd:annotation>
           </xsd:element>
-          <xsd:element name="cashSettlement" type="CashSettlement" minOccurs="0">
+          <xsd:choice minOccurs="0">
             <xsd:annotation>
-              <xsd:documentation xml:lang="en">If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement prodcedure. If not specified, then physical settlement is applicable.</xsd:documentation>
+              <xsd:documentation>In the absence of both cashSettlement and (explicit) physicalSettlement terms, physical settlement is inferred.</xsd:documentation>
             </xsd:annotation>
-          </xsd:element>
+            <xsd:element name="cashSettlement" type="CashSettlement">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">If specified, this means that cash settlement is applicable to the transaction and defines the parameters associated with the cash settlement procedure. If not specified, then physical settlement is applicable.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="physicalSettlement" type="SwaptionPhysicalSettlement">
+              <xsd:annotation>
+                <xsd:documentation xml:lang="en">If specified, this defines physical settlement terms which apply to the transaction.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:choice>
           <xsd:element name="swaptionStraddle" type="xsd:boolean">
             <xsd:annotation>
               <xsd:documentation xml:lang="en">Whether the option is a swaption or a swaption straddle.</xsd:documentation>
@@ -1604,6 +1619,15 @@
       <xsd:element name="exerciseEvent" type="ExerciseEvent" maxOccurs="unbounded">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">The adjusted dates associated with an individual swaption exercise date.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="SwaptionPhysicalSettlement">
+    <xsd:sequence>
+      <xsd:element name="clearedPhysicalSettlement" type="xsd:boolean">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Specifies whether the swap resulting from physical settlement of the swaption transaction will clear through a clearing house. The meaning of Cleared Physical Settlement is defined in the 2006 ISDA Definitions, Section 15.2 (published in Supplement number 28).</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
@@ -1635,18 +1659,16 @@
       <xsd:documentation xml:lang="en">A type defining the parameters required for each of the ISDA defined yield curve methods for cash settlement.</xsd:documentation>
     </xsd:annotation>
     <xsd:sequence>
-      <xsd:sequence>
-        <xsd:element name="settlementRateSource" type="SettlementRateSource" minOccurs="0">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">The method for obtaining a settlement rate. This may be from some information source (e.g. Reuters) or from a set of reference banks.</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-        <xsd:element name="quotationRateType" type="QuotationRateTypeEnum">
-          <xsd:annotation>
-            <xsd:documentation xml:lang="en">Which rate quote is to be observed, either Bid, Mid, Offer or Exercising Party Pays. The meaning of Exercising Party Pays is defined in the 2000 ISDA Definitions, Section 17.2. Certain Definitions Relating to Cash Settlement, paragraph (j)</xsd:documentation>
-          </xsd:annotation>
-        </xsd:element>
-      </xsd:sequence>
+      <xsd:element name="settlementRateSource" type="SettlementRateSource" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The method for obtaining a settlement rate. This may be from some information source (e.g. Reuters) or from a set of reference banks.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="quotationRateType" type="QuotationRateTypeEnum">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Which rate quote is to be observed, either Bid, Mid, Offer or Exercising Party Pays. The meaning of Exercising Party Pays is defined in the 2000 ISDA Definitions, Section 17.2. Certain Definitions Relating to Cash Settlement, paragraph (j)</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:element name="bulletPayment" type="BulletPayment" substitutionGroup="product">

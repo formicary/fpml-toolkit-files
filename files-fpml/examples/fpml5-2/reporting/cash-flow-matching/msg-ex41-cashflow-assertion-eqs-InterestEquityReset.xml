@@ -24,12 +24,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">EN40HD000000000</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2004-03-18Z</tradeDate>
+      <tradeDate>2004-03-18</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2004-04-02Z</unadjustedDate>
+        <unadjustedDate>2004-04-02</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2006-01-06Z</unadjustedDate>
+        <unadjustedDate>2006-01-06</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">TotalReturnSwap</productType>
       <underlyer id="TRGTSX4010">
@@ -52,7 +52,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2004-07-07Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2004-07-07</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">PS0I0FL3N-4G55-006N20040707CAD</identifier>
     <payerPartyReference href="party1" />
@@ -74,7 +74,7 @@
       </grossCashflow>
       <observationElements id="observation_TRGTSX4010_1">
         <underlyerReference href="TRGTSX4010" />
-        <observationDate>2004-04-02Z</observationDate>
+        <observationDate>2004-04-02</observationDate>
         <observedValue>
           <value>1501.72</value>
           <measureType>MarketQuote</measureType>
@@ -84,7 +84,7 @@
       </observationElements>
       <observationElements id="observation_TRGTSX4010_2">
         <underlyerReference href="TRGTSX4010" />
-        <observationDate>2004-07-02Z</observationDate>
+        <observationDate>2004-07-02</observationDate>
         <observedValue>
           <value>1428.62</value>
           <measureType>MarketQuote</measureType>
@@ -112,7 +112,7 @@
       </grossCashflow>
       <observationElements id="observation_CAD-BA-CDOR">
         <underlyerReference href="CAD-BA-CDOR" />
-        <observationDate>2004-04-07Z</observationDate>
+        <observationDate>2004-04-07</observationDate>
         <observedValue>
           <value>0.0209857</value>
         </observedValue>
@@ -128,8 +128,8 @@
           <spread>-0.0038</spread>
         </calculatedRate>
         <calculationPeriod>
-          <adjustedStartDate>2004-04-07Z</adjustedStartDate>
-          <adjustedEndDate>2004-07-07Z</adjustedEndDate>
+          <adjustedStartDate>2004-04-07</adjustedStartDate>
+          <adjustedEndDate>2004-07-07</adjustedEndDate>
           <numberOfDays>91</numberOfDays>
           <dayCountFraction>ACT/365.FIXED</dayCountFraction>
           <dayCountYearFraction>0.2493</dayCountYearFraction>

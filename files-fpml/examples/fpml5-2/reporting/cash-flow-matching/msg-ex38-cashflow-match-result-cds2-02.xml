@@ -27,12 +27,12 @@
         <tradeId tradeIdScheme="http://www.abc.com/tradeId">SDB0494701620</tradeId>
       </partyTradeIdentifier>
       <tradeDetails>
-        <tradeDate>2005-02-28Z</tradeDate>
+        <tradeDate>2005-02-28</tradeDate>
         <effectiveDate>
-          <unadjustedDate>2005-03-01Z</unadjustedDate>
+          <unadjustedDate>2005-03-01</unadjustedDate>
         </effectiveDate>
         <terminationDate>
-          <unadjustedDate>2009-12-20Z</unadjustedDate>
+          <unadjustedDate>2009-12-20</unadjustedDate>
         </terminationDate>
         <underlyer>
           <fixedRate>
@@ -50,7 +50,7 @@
         </notional>
       </tradeDetails>
     </tradeIdentifyingItems>
-    <adjustedPaymentDate>2005-03-20Z</adjustedPaymentDate>
+    <adjustedPaymentDate>2005-03-20</adjustedPaymentDate>
     <payment>
       <identifier paymentIdScheme="www.abc.com/netPaymentid">8410363</identifier>
       <payerPartyReference href="party2" />
@@ -69,12 +69,12 @@
         <tradeId tradeIdScheme="http://www.def.com/tradeId">JKL0494701620</tradeId>
       </partyTradeIdentifier>
       <tradeDetails>
-        <tradeDate>2005-02-28Z</tradeDate>
+        <tradeDate>2005-02-28</tradeDate>
         <effectiveDate>
-          <unadjustedDate>2005-03-01Z</unadjustedDate>
+          <unadjustedDate>2005-03-01</unadjustedDate>
         </effectiveDate>
         <terminationDate>
-          <unadjustedDate>2009-12-20Z</unadjustedDate>
+          <unadjustedDate>2009-12-20</unadjustedDate>
         </terminationDate>
         <underlyer>
           <fixedRate>
@@ -92,7 +92,7 @@
         </notional>
       </tradeDetails>
     </tradeIdentifyingItems>
-    <adjustedPaymentDate>2005-03-20Z</adjustedPaymentDate>
+    <adjustedPaymentDate>2005-03-20</adjustedPaymentDate>
     <payment>
       <identifier paymentIdScheme="www.abc.com/netPaymentid">8410363</identifier>
       <payerPartyReference href="party2" />

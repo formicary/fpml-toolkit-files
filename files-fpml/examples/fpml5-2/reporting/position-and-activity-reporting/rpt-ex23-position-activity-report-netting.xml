@@ -16,11 +16,11 @@
   <correlationId correlationIdScheme="http://www.clearingco.com/report_id">ACT_2004-06-02_123</correlationId>
   <sequenceNumber>1</sequenceNumber>
   <asOfDate>2004-06-02</asOfDate>
-  <fromDateTime>2004-06-01T21:23:00</fromDateTime>
-  <toDateTime>2004-06-02T21:47:00</toDateTime>
+  <fromDateTime>2004-06-01T21:23:00Z</fromDateTime>
+  <toDateTime>2004-06-02T21:47:00Z</toDateTime>
   <submissionsComplete>false</submissionsComplete>
   <positionUpdate>
-    <timestamp>2004-06-02T08:01:23</timestamp>
+    <timestamp>2004-06-02T08:01:23Z</timestamp>
     <type>Created</type>
     <reason>
       <code>Netting</code>
@@ -72,7 +72,7 @@
     </position>
   </positionUpdate>
   <positionUpdate>
-    <timestamp>2004-06-02T08:01:23</timestamp>
+    <timestamp>2004-06-02T08:01:23Z</timestamp>
     <type>Deleted</type>
     <reason>
       <code>Netting</code>
@@ -124,7 +124,7 @@
     </position>
   </positionUpdate>
   <positionUpdate>
-    <timestamp>2004-06-02T08:01:23</timestamp>
+    <timestamp>2004-06-02T08:01:23Z</timestamp>
     <type>Deleted</type>
     <reason>
       <code>Netting</code>

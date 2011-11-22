@@ -31,12 +31,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">SDB0494701620</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2005-02-28Z</tradeDate>
+      <tradeDate>2005-02-28</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2005-03-01Z</unadjustedDate>
+        <unadjustedDate>2005-03-01</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2009-12-20Z</unadjustedDate>
+        <unadjustedDate>2009-12-20</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">CreditDefaultSwap</productType>
       <underlyer id="_018A99">
@@ -55,7 +55,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-09-20Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-09-20</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">8410363</identifier>
     <payerPartyReference href="party2" />
@@ -77,8 +77,8 @@
       </grossCashflow>
       <calculationElements>
         <calculationPeriod>
-          <adjustedStartDate>2005-06-20Z</adjustedStartDate>
-          <adjustedEndDate>2005-09-20Z</adjustedEndDate>
+          <adjustedStartDate>2005-06-20</adjustedStartDate>
+          <adjustedEndDate>2005-09-20</adjustedEndDate>
           <numberOfDays>92</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
           <dayCountYearFraction>0.2555</dayCountYearFraction>

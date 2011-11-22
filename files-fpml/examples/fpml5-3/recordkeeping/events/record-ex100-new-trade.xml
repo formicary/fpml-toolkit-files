@@ -47,8 +47,14 @@ pp. 76606-76607 of the Federal Register -->
           <role>Arranger</role>
 <!-- arranging broker -->
         </relatedParty>
-        <unit>NY Swaps Desk</unit>
-        <trader>jjones</trader>
+        <relatedBusinessUnit>
+          <businessUnitReference href="desk1" />
+          <role>Trader</role>
+        </relatedBusinessUnit>
+        <relatedPerson>
+          <personReference href="desk1" />
+          <role>Trader</role>
+        </relatedPerson>
         <executionDateTime>2011-02-04T16:20:47Z</executionDateTime>
 <!-- Execution timestamp -->
         <cleared>true</cleared>
@@ -63,7 +69,7 @@ pp. 76606-76607 of the Federal Register -->
 <!-- NEW -->
         <executionVenueType>SEF</executionVenueType>
 <!-- NEW: execution venue = "SWM" in CFTC doc; do we need a more specific refeence? -->
-        <confirmationType>Facility</confirmationType>
+        <confirmationMethod>Facility</confirmationMethod>
 <!-- NEW -->
         <counterpartyTypes>InterDealer</counterpartyTypes>
 <!-- NEW : this includes several of the CFTC indicators, including
@@ -232,6 +238,12 @@ pp. 76606-76607 of the Federal Register -->
     <partyId>CPTY123456</partyId>
 <!-- unique counterparty identifier of reporting party -->
     <partyName>Bank X</partyName>
+    <businessUnit id="desk1">
+      <name>NY Swaps Desk</name>
+    </businessUnit>
+    <person>
+      <id>jjones</id>
+    </person>
   </party>
   <party id="party2">
     <partyId>CPTY11111</partyId>

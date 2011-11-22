@@ -10,12 +10,39 @@
     <xsd:complexContent>
       <xsd:extension base="CorrectableRequestMessage">
         <xsd:sequence>
+<!-- BAL - added 2011-10-18 to address gaps with DTCC requirements -->
+          <xsd:element name="asOfDate" type="IdentifiedDate" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The date for which this document reports positions and valuations.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="reportingPurpose" type="ReportingPurpose" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">The reason this message is being sent, for example Snapshot, PET, Confirmation, RealTimePublic.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:group ref="PortfolioReferenceBase.model" minOccurs="0">
+            <xsd:annotation>
+              <xsd:documentation xml:lang="en">Allows a reference to porftfolio request to be included, such as a portfolio compression request. NOTE: this is an element that is under assessment and may not be available in a subsequent working draft.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:group>
+<!-- BAL - end 2011-10-18 additions to address gaps with DTCC requirements -->
           <xsd:group ref="Events.model" />
-          <xsd:group ref="EventValuation.model" />
+          <xsd:group ref="EventValuation.model" minOccurs="0" />
           <xsd:group ref="PartiesAndAccounts.model" />
         </xsd:sequence>
       </xsd:extension>
     </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType name="ReportingPurpose">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A value that explains the reason or purpose of this report message.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="reportingPurposeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/reporting-purpose" />
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="NonPublicExecutionReportRetracted">
     <xsd:complexContent>

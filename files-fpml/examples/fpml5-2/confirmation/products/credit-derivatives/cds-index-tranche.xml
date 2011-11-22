@@ -19,12 +19,12 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.massivebank.com/trade-id">1234B6</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2004-11-03Z</tradeDate>
+      <tradeDate>2004-11-03</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <scheduledTerminationDate>
-          <unadjustedDate>2010-03-20Z</unadjustedDate>
+          <unadjustedDate>2010-03-20</unadjustedDate>
         </scheduledTerminationDate>
         <buyerPartyReference href="party1" />
         <sellerPartyReference href="party2" />
@@ -61,7 +61,7 @@
     <documentation>
       <masterConfirmation>
         <masterConfirmationType>DJ.iTraxx.Europe</masterConfirmationType>
-        <masterConfirmationDate>2004-10-11Z</masterConfirmationDate>
+        <masterConfirmationDate>2004-10-11</masterConfirmationDate>
       </masterConfirmation>
     </documentation>
   </trade>

@@ -4,7 +4,7 @@
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8457 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/reporting" targetNamespace="http://www.fpml.org/FpML-5/reporting" ecore:documentRoot="FpML" ecore:nsPrefix="rpt" ecore:package="org.fpml.reporting" version="$Revision: 8648 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-asset-5-3.xsd" />
   <xsd:complexType name="Asian">
     <xsd:annotation>
@@ -763,6 +763,28 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:group>
+  <xsd:group name="OptionDenomination.model">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">A model group containing the option denomination components.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="optionEntitlement" type="PositiveDecimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The number of units of underlyer per option comprised in the option transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="entitlementCurrency" type="Currency" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">TODO</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="numberOfOptions" type="PositiveDecimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">The number of options comprised in the option transaction.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
   <xsd:group name="OptionFeature.model">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">A model group containing Option Base Feature Elements.</xsd:documentation>
@@ -786,28 +808,6 @@
       <xsd:element name="passThrough" type="PassThrough" minOccurs="0">
         <xsd:annotation>
           <xsd:documentation xml:lang="en">Pass through payments from the underlyer, such as dividends.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:group>
-  <xsd:group name="OptionDenomination.model">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">A model group containing the option denomination components.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="optionEntitlement" type="PositiveDecimal" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The number of units of underlyer per option comprised in the option transaction.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="entitlementCurrency" type="Currency" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">TODO</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="numberOfOptions" type="PositiveDecimal" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">The number of options comprised in the option transaction.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>

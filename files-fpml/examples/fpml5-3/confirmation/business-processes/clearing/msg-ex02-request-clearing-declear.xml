@@ -25,9 +25,6 @@
   <onBehalfOf>
     <partyReference href="party1" />
   </onBehalfOf>
-  <onBehalfOf>
-    <partyReference href="party2" />
-  </onBehalfOf>
   <deClear>
     <tradeIdentifier>
       <partyReference href="clearer" />

@@ -15,10 +15,10 @@
   </header>
   <asOfDate>2004-06-02</asOfDate>
   <dataSetName>Copper</dataSetName>
-  <fromDateTime>2004-06-01T21:23:00</fromDateTime>
-  <toDateTime>2004-06-02T21:47:00</toDateTime>
+  <fromDateTime>2004-06-01T21:23:00Z</fromDateTime>
+  <toDateTime>2004-06-02T21:47:00Z</toDateTime>
   <positionUpdate>
-    <timestamp>2004-06-02T08:01:23</timestamp>
+    <timestamp>2004-06-02T08:01:23Z</timestamp>
     <type>Created</type>
     <reason>
       <code>NewTrade</code>
@@ -64,7 +64,7 @@
     </position>
   </positionUpdate>
   <positionUpdate>
-    <timestamp>2004-06-02T08:04:01</timestamp>
+    <timestamp>2004-06-02T08:04:01Z</timestamp>
     <type>Modified</type>
     <reason>
       <code>Correction</code>
@@ -111,7 +111,7 @@
     </position>
   </positionUpdate>
   <positionUpdate>
-    <timestamp>2004-06-02T15:23:37</timestamp>
+    <timestamp>2004-06-02T15:23:37Z</timestamp>
     <type>Modified</type>
     <reason>
       <code>Amendment</code>

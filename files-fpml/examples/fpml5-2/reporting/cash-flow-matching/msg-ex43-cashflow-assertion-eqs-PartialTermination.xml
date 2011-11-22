@@ -24,12 +24,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">EN50XV000000000</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2005-07-12Z</tradeDate>
+      <tradeDate>2005-07-12</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2005-07-15Z</unadjustedDate>
+        <unadjustedDate>2005-07-15</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2006-07-17Z</unadjustedDate>
+        <unadjustedDate>2006-07-17</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">TotalReturnSwap</productType>
       <underlyer id="ASN.N">
@@ -53,7 +53,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-12-01Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-12-01</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">PS0IQOM4B-B3RJ-008U20051201USD</identifier>
     <payerPartyReference href="party2" />
@@ -80,7 +80,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </grossCashflow>
       <observationElements id="observation_ASN.N_1">
         <underlyerReference href="ASN.N" />
-        <observationDate>2005-07-20Z</observationDate>
+        <observationDate>2005-07-20</observationDate>
         <observedValue>
           <value>40.9492</value>
           <measureType>TransactedNetPrice</measureType>
@@ -90,7 +90,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </observationElements>
       <observationElements id="observation_ASN.N_2">
         <underlyerReference href="ASN.N" />
-        <observationDate>2005-11-28Z</observationDate>
+        <observationDate>2005-11-28</observationDate>
         <observedValue>
           <value>42.6481</value>
           <measureType>TransactedNetPrice</measureType>
@@ -118,7 +118,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </grossCashflow>
       <observationElements id="observation_USD-LIBOR-BBA-1">
         <underlyerReference href="USD-LIBOR-BBA" />
-        <observationDate>2005-07-20Z</observationDate>
+        <observationDate>2005-07-20</observationDate>
         <observedValue>
           <value>0.0365</value>
         </observedValue>
@@ -134,8 +134,8 @@ The approach consisted in having 7 calculation details sections: one for each eq
           <spread>0.0050</spread>
         </calculatedRate>
         <calculationPeriod>
-          <adjustedStartDate>2005-07-25Z</adjustedStartDate>
-          <adjustedEndDate>2005-11-28Z</adjustedEndDate>
+          <adjustedStartDate>2005-07-25</adjustedStartDate>
+          <adjustedEndDate>2005-11-28</adjustedEndDate>
           <numberOfDays>126</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
         </calculationPeriod>
@@ -155,7 +155,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </grossCashflow>
       <observationElements id="observation_ASN.N_3">
         <underlyerReference href="ASN.N" />
-        <observationDate>2005-08-04Z</observationDate>
+        <observationDate>2005-08-04</observationDate>
         <observedValue>
           <value>42.6552</value>
           <measureType>TransactedNetPrice</measureType>
@@ -165,7 +165,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </observationElements>
       <observationElements id="observation_ASN.N_4">
         <underlyerReference href="ASN.N" />
-        <observationDate>2005-11-28Z</observationDate>
+        <observationDate>2005-11-28</observationDate>
         <observedValue>
           <value>42.6481</value>
           <measureType>TransactedNetPrice</measureType>
@@ -193,7 +193,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </grossCashflow>
       <observationElements id="observation_USD-LIBOR-BBA-2">
         <underlyerReference href="USD-LIBOR-BBA" />
-        <observationDate>2005-08-04Z</observationDate>
+        <observationDate>2005-08-04</observationDate>
         <observedValue>
           <value>0.0374688</value>
         </observedValue>
@@ -209,8 +209,8 @@ The approach consisted in having 7 calculation details sections: one for each eq
           <spread>0.0050</spread>
         </calculatedRate>
         <calculationPeriod>
-          <adjustedStartDate>2005-08-08Z</adjustedStartDate>
-          <adjustedEndDate>2005-11-28Z</adjustedEndDate>
+          <adjustedStartDate>2005-08-08</adjustedStartDate>
+          <adjustedEndDate>2005-11-28</adjustedEndDate>
           <numberOfDays>112</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
         </calculationPeriod>
@@ -230,7 +230,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </grossCashflow>
       <observationElements id="observation_ASN.N_5">
         <underlyerReference href="ASN.N" />
-        <observationDate>2005-10-24Z</observationDate>
+        <observationDate>2005-10-24</observationDate>
         <observedValue>
           <value>38.1097</value>
           <measureType>TransactedNetPrice</measureType>
@@ -240,7 +240,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </observationElements>
       <observationElements id="observation_ASN.N_6">
         <underlyerReference href="ASN.N" />
-        <observationDate>2005-11-28Z</observationDate>
+        <observationDate>2005-11-28</observationDate>
         <observedValue>
           <value>42.6481</value>
           <measureType>TransactedNetPrice</measureType>
@@ -268,7 +268,7 @@ The approach consisted in having 7 calculation details sections: one for each eq
       </grossCashflow>
       <observationElements id="observation_USD-LIBOR-BBA-3">
         <underlyerReference href="USD-LIBOR-BBA" />
-        <observationDate>2005-10-24Z</observationDate>
+        <observationDate>2005-10-24</observationDate>
         <observedValue>
           <value>0.0420625</value>
         </observedValue>
@@ -284,8 +284,8 @@ The approach consisted in having 7 calculation details sections: one for each eq
           <spread>0.0050</spread>
         </calculatedRate>
         <calculationPeriod>
-          <adjustedStartDate>2005-10-26Z</adjustedStartDate>
-          <adjustedEndDate>2005-11-28Z</adjustedEndDate>
+          <adjustedStartDate>2005-10-26</adjustedStartDate>
+          <adjustedEndDate>2005-11-28</adjustedEndDate>
           <numberOfDays>33</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
           <dayCountYearFraction>0.09167</dayCountYearFraction>

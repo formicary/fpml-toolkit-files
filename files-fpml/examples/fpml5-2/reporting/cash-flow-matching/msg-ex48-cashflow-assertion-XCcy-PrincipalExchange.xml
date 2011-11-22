@@ -24,12 +24,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">LTAA1103196020</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2005-06-03Z</tradeDate>
+      <tradeDate>2005-06-03</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2005-06-07Z</unadjustedDate>
+        <unadjustedDate>2005-06-07</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2025-06-07Z</unadjustedDate>
+        <unadjustedDate>2025-06-07</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">CrossCurrencySwap</productType>
       <underlyer id="EUR-EURIBOR-Telerate">
@@ -60,7 +60,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-06-07Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-06-07</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">PXINITIAL20050607CROSSEUR</identifier>
     <payerPartyReference href="party2" />

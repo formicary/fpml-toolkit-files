@@ -28,7 +28,7 @@
       <tradeId tradeIdScheme="http://www.def.com/tradeId">123cds</tradeId>
     </partyTradeIdentifier>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-01-31Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-01-31</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.centralservice.com/netPaymentId">netPaymentABCDEF001</identifier>
     <payerPartyReference href="party1" />

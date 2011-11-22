@@ -47,7 +47,7 @@
         <executionType>Electronic</executionType>
 <!-- NEW -->
         <executionVenueType>Off-Facility</executionVenueType>
-        <confirmationType>Paper</confirmationType>
+        <confirmationMethod>Paper</confirmationMethod>
         <counterpartyTypes>DealerMSP</counterpartyTypes>
       </partyTradeInformation>
       <tradeDate>2011-02-04</tradeDate>

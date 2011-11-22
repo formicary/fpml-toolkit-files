@@ -24,12 +24,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">EN50K0000000000</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>2005-04-26Z</tradeDate>
+      <tradeDate>2005-04-26</tradeDate>
       <effectiveDate>
-        <unadjustedDate>2005-04-29Z</unadjustedDate>
+        <unadjustedDate>2005-04-29</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2006-01-30Z</unadjustedDate>
+        <unadjustedDate>2006-01-30</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">TotalReturnSwap</productType>
       <underlyer id="CLR_u.TO">
@@ -53,7 +53,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-05-30Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-05-30</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">PS0IH3NUV-9LL4-00UE20050530CAD</identifier>
     <payerPartyReference href="party1" />
@@ -75,7 +75,7 @@
       </grossCashflow>
       <observationElements id="observation_CLR_u.TO_1">
         <underlyerReference href="CLR_u.TO" />
-        <observationDate>2005-04-26Z</observationDate>
+        <observationDate>2005-04-26</observationDate>
         <observedValue>
           <value>7.87</value>
           <measureType>MarketQuote</measureType>
@@ -85,7 +85,7 @@
       </observationElements>
       <observationElements id="observation_CLR_u.TO_2">
         <underlyerReference href="CLR_u.TO" />
-        <observationDate>2005-05-25Z</observationDate>
+        <observationDate>2005-05-25</observationDate>
         <observedValue>
           <value>7.19</value>
           <measureType>MarketQuote</measureType>
@@ -115,7 +115,7 @@
       </grossCashflow>
       <observationElements id="observation_CAD-BA-CDOR">
         <underlyerReference href="CAD-BA-CDOR" />
-        <observationDate>2005-04-29Z</observationDate>
+        <observationDate>2005-04-29</observationDate>
         <observedValue>
           <value>0.0256429</value>
         </observedValue>
@@ -132,8 +132,8 @@
           <spread>0.0035</spread>
         </calculatedRate>
         <calculationPeriod>
-          <adjustedStartDate>2005-04-29Z</adjustedStartDate>
-          <adjustedEndDate>2005-05-30Z</adjustedEndDate>
+          <adjustedStartDate>2005-04-29</adjustedStartDate>
+          <adjustedEndDate>2005-05-30</adjustedEndDate>
           <numberOfDays>31</numberOfDays>
           <dayCountFraction>ACT/365.FIXED</dayCountFraction>
           <dayCountYearFraction>0.08493</dayCountYearFraction>
@@ -153,7 +153,7 @@
       </grossCashflow>
       <observationElements id="observation_CLR_u.TO_3">
         <underlyerReference href="CLR_u.TO" />
-        <observationDate>2005-05-15Z</observationDate>
+        <observationDate>2005-05-15</observationDate>
       </observationElements>
       <calculationElements>
         <numberOfUnits>

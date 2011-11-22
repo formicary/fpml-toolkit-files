@@ -19,22 +19,22 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.massivebank.com/trade-id">1234A6</tradeId>
       </partyTradeIdentifier>
-      <tradeDate>2005-01-24Z</tradeDate>
+      <tradeDate>2005-01-24</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2004-03-23Z</unadjustedDate>
+          <unadjustedDate>2004-03-23</unadjustedDate>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2009-03-20Z</unadjustedDate>
+          <unadjustedDate>2009-03-20</unadjustedDate>
         </scheduledTerminationDate>
         <buyerPartyReference href="party2" />
         <sellerPartyReference href="party1" />
         <indexReferenceInformation>
           <indexName>Dow Jones CDX NA IG.2</indexName>
           <indexSeries>2</indexSeries>
-          <indexAnnexDate>2004-07-06Z</indexAnnexDate>
+          <indexAnnexDate>2004-07-06</indexAnnexDate>
           <indexAnnexSource>Publisher</indexAnnexSource>
         </indexReferenceInformation>
       </generalTerms>
@@ -63,7 +63,7 @@
     <documentation>
       <masterConfirmation>
         <masterConfirmationType>DJ.CDX.NA</masterConfirmationType>
-        <masterConfirmationDate>2004-10-18Z</masterConfirmationDate>
+        <masterConfirmationDate>2004-10-18</masterConfirmationDate>
       </masterConfirmation>
     </documentation>
   </trade>

@@ -33,12 +33,12 @@
         <partyReference href="party2" />
         <tradeId tradeIdScheme="http://www.partyB.com/" />
       </partyTradeIdentifier>
-      <tradeDate>2006-10-05Z</tradeDate>
+      <tradeDate>2006-10-05</tradeDate>
     </tradeHeader>
     <creditDefaultSwap>
       <generalTerms>
         <effectiveDate>
-          <unadjustedDate>2006-10-11Z</unadjustedDate>
+          <unadjustedDate>2006-10-11</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>
@@ -48,7 +48,7 @@
           </dateAdjustments>
         </effectiveDate>
         <scheduledTerminationDate>
-          <unadjustedDate>2035-09-25Z</unadjustedDate>
+          <unadjustedDate>2035-09-25</unadjustedDate>
           <dateAdjustments>
             <businessDayConvention>FOLLOWING</businessDayConvention>
             <businessCenters>
@@ -92,8 +92,8 @@
             <periodMultiplier>1</periodMultiplier>
             <period>M</period>
           </paymentFrequency>
-          <firstPaymentDate>2006-11-01Z</firstPaymentDate>
-          <lastRegularPaymentDate>2035-06-01Z</lastRegularPaymentDate>
+          <firstPaymentDate>2006-11-01</firstPaymentDate>
+          <lastRegularPaymentDate>2035-06-01</lastRegularPaymentDate>
           <rollConvention>11</rollConvention>
           <fixedAmountCalculation>
             <calculationAmount>

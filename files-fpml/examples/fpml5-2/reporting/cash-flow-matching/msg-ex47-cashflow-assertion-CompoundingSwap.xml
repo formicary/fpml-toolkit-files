@@ -24,12 +24,12 @@
       <tradeId tradeIdScheme="http://www.abc.com/tradeId">LTAA1702767187</tradeId>
     </partyTradeIdentifier>
     <tradeDetails>
-      <tradeDate>1997-12-15Z</tradeDate>
+      <tradeDate>1997-12-15</tradeDate>
       <effectiveDate>
-        <unadjustedDate>1997-12-17Z</unadjustedDate>
+        <unadjustedDate>1997-12-17</unadjustedDate>
       </effectiveDate>
       <terminationDate>
-        <unadjustedDate>2005-12-17Z</unadjustedDate>
+        <unadjustedDate>2005-12-17</unadjustedDate>
       </terminationDate>
       <productType productTypeScheme="http://www.fpml.org/coding-scheme/product-type-simple-1-0">InterestRateSwap</productType>
 <!-- In this example, the fixed leg resets semi-annually. -->
@@ -53,7 +53,7 @@
       </notional>
     </tradeDetails>
   </tradeIdentifyingItems>
-  <adjustedPaymentDate>2005-06-17Z</adjustedPaymentDate>
+  <adjustedPaymentDate>2005-06-17</adjustedPaymentDate>
   <payment>
     <identifier paymentIdScheme="http://www.abc.com/netPaymentId">9188548</identifier>
     <payerPartyReference href="party1" />
@@ -75,14 +75,14 @@
       </grossCashflow>
       <observationElements id="observation-USD-LIBOR-BBA_1">
         <underlyerReference href="USD-LIBOR-BBA" />
-        <observationDate>2004-12-15Z</observationDate>
+        <observationDate>2004-12-15</observationDate>
         <observedValue>
           <value>0.02501250</value>
         </observedValue>
       </observationElements>
       <observationElements id="observation-USD-LIBOR-BBA_2">
         <underlyerReference href="USD-LIBOR-BBA" />
-        <observationDate>2005-03-15Z</observationDate>
+        <observationDate>2005-03-15</observationDate>
         <observedValue>
           <value>0.03030000</value>
         </observedValue>
@@ -100,8 +100,8 @@
         </calculatedRate>
         <calculationPeriod>
           <calculatedRateReference href="calculated-USD-LIBOR-BBA_1" />
-          <adjustedStartDate>2004-12-17Z</adjustedStartDate>
-          <adjustedEndDate>2005-03-17Z</adjustedEndDate>
+          <adjustedStartDate>2004-12-17</adjustedStartDate>
+          <adjustedEndDate>2005-03-17</adjustedEndDate>
           <numberOfDays>90</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
           <dayCountYearFraction>0.250</dayCountYearFraction>
@@ -110,8 +110,8 @@
         </calculationPeriod>
         <calculationPeriod>
           <calculatedRateReference href="calculated-USD-LIBOR-BBA_2" />
-          <adjustedStartDate>2005-03-17Z</adjustedStartDate>
-          <adjustedEndDate>2005-06-17Z</adjustedEndDate>
+          <adjustedStartDate>2005-03-17</adjustedStartDate>
+          <adjustedEndDate>2005-06-17</adjustedEndDate>
           <numberOfDays>92</numberOfDays>
           <dayCountFraction>ACT/360</dayCountFraction>
           <dayCountYearFraction>0.2555</dayCountYearFraction>
@@ -133,15 +133,15 @@
       </grossCashflow>
       <observationElements>
         <underlyerReference href="FIXED" />
-        <observationDate>2005-06-23Z</observationDate>
+        <observationDate>2005-06-23</observationDate>
         <observedValue>
           <value>0.06158870</value>
         </observedValue>
       </observationElements>
       <calculationElements>
         <calculationPeriod>
-          <adjustedStartDate>2004-12-17Z</adjustedStartDate>
-          <adjustedEndDate>2005-06-17Z</adjustedEndDate>
+          <adjustedStartDate>2004-12-17</adjustedStartDate>
+          <adjustedEndDate>2005-06-17</adjustedEndDate>
           <numberOfDays>180</numberOfDays>
           <dayCountFraction>30/360</dayCountFraction>
           <dayCountYearFraction>0.50</dayCountYearFraction>

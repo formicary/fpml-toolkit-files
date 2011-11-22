@@ -4,13 +4,38 @@
 == Financial Products Markup Language is subject to the FpML public license. 
 == A copy of this license is available at http://www.fpml.org/license/license.html
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/recordkeeping" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/recordkeeping" ecore:documentRoot="FpML" ecore:nsPrefix="" ecore:package="org.fpml.recordkeeping" version="$Revision: 8457 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:view="http://www.fpml.org/views" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns="http://www.fpml.org/FpML-5/recordkeeping" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:fpml-annotation="http://www.fpml.org/annotation" targetNamespace="http://www.fpml.org/FpML-5/recordkeeping" ecore:documentRoot="FpML" ecore:nsPrefix="" ecore:package="org.fpml.recordkeeping" version="$Revision: 8615 $" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xsd:include schemaLocation="fpml-msg-5-3.xsd" />
   <xsd:include schemaLocation="fpml-asset-5-3.xsd" />
+  <xsd:complexType name="AdditionalEvent" abstract="true">
+    <xsd:annotation>
+      <xsd:documentation>Abstract base type for an extension/substitution point to customize FpML and add additional events.</xsd:documentation>
+    </xsd:annotation>
+  </xsd:complexType>
   <xsd:complexType name="ChangeEvent" abstract="true">
     <xsd:annotation>
       <xsd:documentation>Abstract base type for non-negotiated trade change descriptions</xsd:documentation>
     </xsd:annotation>
+  </xsd:complexType>
+  <xsd:complexType name="CompressionActivity">
+    <xsd:annotation>
+      <xsd:documentation>A type that shows how multiple trades have been combined into a result.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="compressionType" type="CompressionType" minOccurs="0" />
+      <xsd:element name="replacementTradeId" type="TradeId" minOccurs="0" />
+      <xsd:element name="originatingTradeId" type="TradeId" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="CompressionType">
+    <xsd:annotation>
+      <xsd:documentation>A type that identifies the type of trade amalgamation, for example netting or portfolio compression.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="compressionTypeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/compression-type" />
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="DeClear">
     <xsd:annotation>
@@ -105,27 +130,6 @@
       <xsd:element name="payment" type="NonNegativePayment" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:complexType name="OptionExpiryBase">
-    <xsd:annotation>
-      <xsd:documentation>A structure describing an option expiring.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="tradeIdentifier" type="PartyTradeIdentifier" maxOccurs="unbounded" minOccurs="0" />
-      <xsd:element name="date" type="xsd:date" minOccurs="0" />
-      <xsd:element name="time" type="xsd:time" minOccurs="0" />
-    </xsd:sequence>
-<!-- Lyteck 3/16/2011: added base type to accomodate Maturity Notification (no need for exerciseProcedure) -->
-  </xsd:complexType>
-  <xsd:complexType name="TradeMaturity">
-    <xsd:annotation>
-      <xsd:documentation>A structure describing a trade maturing.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="tradeIdentifier" type="PartyTradeIdentifier" maxOccurs="unbounded" minOccurs="0" />
-      <xsd:element name="date" type="xsd:date" minOccurs="0" />
-    </xsd:sequence>
-<!-- Brian 4/14/2011: added type to accomodate Maturity Notification  -->
-  </xsd:complexType>
   <xsd:complexType name="OptionExpiry">
     <xsd:annotation>
       <xsd:documentation>A structure describing an option expiring.</xsd:documentation>
@@ -137,12 +141,17 @@
       <xsd:element name="exerciseProcedure" type="ExerciseProcedureOption" minOccurs="0" />
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:group name="MaturityAndExpiryEvents.model">
-    <xsd:choice>
-      <xsd:element name="optionExpiry" type="OptionExpiryBase" minOccurs="0" />
-      <xsd:element name="tradeMaturity" type="TradeMaturity" minOccurs="0" />
-    </xsd:choice>
-  </xsd:group>
+  <xsd:complexType name="OptionExpiryBase">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing an option expiring.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="tradeIdentifier" type="PartyTradeIdentifier" maxOccurs="unbounded" minOccurs="0" />
+      <xsd:element name="date" type="xsd:date" minOccurs="0" />
+      <xsd:element name="time" type="xsd:time" minOccurs="0" />
+    </xsd:sequence>
+<!-- Lyteck 3/16/2011: added base type to accomodate Maturity Notification (no need for exerciseProcedure) -->
+  </xsd:complexType>
   <xsd:complexType name="PhysicalSettlement">
     <xsd:choice>
       <xsd:element name="resultingTradeIdentifier" type="PartyTradeIdentifier" minOccurs="0">
@@ -155,7 +164,7 @@
           <xsd:documentation>The trade that resulted from the physical settlement.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:group ref="TradeEconomics.model" />
+      <xsd:element ref="product" minOccurs="0" />
 <!-- the economics of the trade resulted from the physical settlement -->
     </xsd:choice>
   </xsd:complexType>
@@ -163,6 +172,13 @@
     <xsd:sequence>
       <xsd:group ref="TradeOrTradeReference.model" />
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TerminatingEvent">
+    <xsd:simpleContent>
+      <xsd:extension base="Scheme">
+        <xsd:attribute name="terminatingEventScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/terminating-event" />
+      </xsd:extension>
+    </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="TradeAmendmentContent">
     <xsd:annotation>
@@ -229,6 +245,16 @@
         </xsd:annotation>
       </xsd:element>
     </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="TradeMaturity">
+    <xsd:annotation>
+      <xsd:documentation>A structure describing a trade maturing.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="tradeIdentifier" type="PartyTradeIdentifier" maxOccurs="unbounded" minOccurs="0" />
+      <xsd:element name="date" type="xsd:date" minOccurs="0" />
+    </xsd:sequence>
+<!-- Brian 4/14/2011: added type to accomodate Maturity Notification  -->
   </xsd:complexType>
   <xsd:complexType name="TradeNotionalChange">
     <xsd:annotation>
@@ -424,7 +450,15 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
-  <xsd:element name="additionalEvent" abstract="true">
+  <xsd:complexType name="TradeReferenceInformation">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="en">Defines a type that allows trade identifiers and/or trade information to be represented for a trade.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:group ref="TradeReferenceInformationContents.model" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="additionalEvent" type="AdditionalEvent" abstract="true">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">The additionalEvent element is an extension/substitution point to customize FpML and add additional events.</xsd:documentation>
     </xsd:annotation>
@@ -461,6 +495,19 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:group>
+  <xsd:group name="Compression.model">
+    <xsd:annotation>
+      <xsd:documentation>A model group holding information about compressions affecting this trade/event.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="compressionActivity" type="CompressionActivity" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Compression information for the trade.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
+<!-- BAL - added 2011-10-18 to address gaps with DTCC requirements -->
   <xsd:group name="Events.model">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Choice between a trade and a post-trade event.</xsd:documentation>
@@ -470,6 +517,7 @@
         <xsd:element name="originatingEvent" type="OriginatingEvent" minOccurs="0"></xsd:element>
         <xsd:element name="trade" type="Trade" minOccurs="0"></xsd:element>
       </xsd:sequence>
+<!-- BAL - end 2011-10-18 additions to address gaps with DTCC requirements -->
       <xsd:element name="amendment" type="TradeAmendmentContent" minOccurs="0"></xsd:element>
 <!-- modified from the below for SDR reporting, BAL 2011-03
                         <xsd:element name="trade" type="Trade"/>
@@ -493,6 +541,55 @@
       </xsd:element>
     </xsd:choice>
   </xsd:group>
+  <xsd:group name="EventValuation.model">
+    <xsd:annotation>
+      <xsd:documentation>A model group holding valuation information for an event.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="quote" type="BasicQuotation" maxOccurs="unbounded" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Pricing information for the trade.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="MaturityAndExpiryEvents.model">
+    <xsd:choice>
+      <xsd:element name="optionExpiry" type="OptionExpiryBase" minOccurs="0" />
+      <xsd:element name="tradeMaturity" type="TradeMaturity" minOccurs="0" />
+    </xsd:choice>
+  </xsd:group>
+  <xsd:group name="ProposedMatch.model">
+    <xsd:sequence>
+      <xsd:element name="matchId" type="MatchId" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A unique identifier assigned by the matching service to each set of matched positions.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="difference" type="TradeDifference" minOccurs="0" maxOccurs="unbounded">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">A type used to record the details of a difference between two sides of a business event.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="matchScore" type="xsd:decimal" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="en">Numeric score to represent the quality of the match.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
+  <xsd:group name="TradeAlterationPayment.model">
+    <xsd:annotation>
+      <xsd:documentation>A model group defining a payment structure.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="payment" type="Payment" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>Describes a payment made in settlement of the change.</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:group>
   <xsd:group name="TradeReferenceInformation.model">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Defines a model group that allows information about a trade to be represented.</xsd:documentation>
@@ -505,14 +602,6 @@
       </xsd:element>
     </xsd:sequence>
   </xsd:group>
-  <xsd:complexType name="TradeReferenceInformation">
-    <xsd:annotation>
-      <xsd:documentation xml:lang="en">Defines a type that allows trade identifiers and/or trade information to be represented for a trade.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:group ref="TradeReferenceInformationContents.model" />
-    </xsd:sequence>
-  </xsd:complexType>
   <xsd:group name="TradeReferenceInformationContents.model">
     <xsd:annotation>
       <xsd:documentation xml:lang="en">Defines a model group that allows trade identifiers and/or trade information to be represented.</xsd:documentation>
@@ -547,88 +636,6 @@
       </xsd:sequence>
       <xsd:group ref="TradeReferenceInformation.model" />
     </xsd:choice>
-  </xsd:group>
-  <xsd:complexType name="TerminatingEvent">
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="terminatingEventScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/terminating-event" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:group name="ProposedMatch.model">
-    <xsd:sequence>
-      <xsd:element name="matchId" type="MatchId" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">A unique identifier assigned by the matching service to each set of matched positions.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="difference" type="TradeDifference" minOccurs="0" maxOccurs="unbounded">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">A type used to record the details of a difference between two sides of a business event.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-      <xsd:element name="matchScore" type="xsd:decimal" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Numeric score to represent the quality of the match.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:group>
-  <xsd:group name="TradeAlterationPayment.model">
-    <xsd:annotation>
-      <xsd:documentation>A model group defining a payment structure.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="payment" type="Payment" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation>Describes a payment made in settlement of the change.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:group>
-  <xsd:group name="EventValuation.model">
-    <xsd:annotation>
-      <xsd:documentation>A model group holding valuation information for an event.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="quote" type="BasicQuotation" minOccurs="0" maxOccurs="unbounded">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Pricing information for the trade.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
-  </xsd:group>
-  <xsd:complexType name="CompressionActivity">
-    <xsd:annotation>
-      <xsd:documentation>A type that shows how multiple trades have been combined into a result.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="compressionType" type="CompressionType" minOccurs="0" />
-      <xsd:element name="replacementTradeId" type="TradeId" minOccurs="0" />
-      <xsd:element name="originatingTradeId" type="TradeId" minOccurs="0" maxOccurs="unbounded" />
-    </xsd:sequence>
-  </xsd:complexType>
-  <xsd:complexType name="CompressionType">
-    <xsd:annotation>
-      <xsd:documentation>A type that identifies the type of trade amalgamation, for example netting or portfolio compression.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:simpleContent>
-      <xsd:extension base="Scheme">
-        <xsd:attribute name="compressionTypeScheme" type="xsd:anyURI" default="http://www.fpml.org/coding-scheme/compression-type" />
-      </xsd:extension>
-    </xsd:simpleContent>
-  </xsd:complexType>
-  <xsd:group name="Compression.model">
-    <xsd:annotation>
-      <xsd:documentation>A model group holding information about compressions affecting this trade/event.</xsd:documentation>
-    </xsd:annotation>
-    <xsd:sequence>
-      <xsd:element name="compressionActivity" type="CompressionActivity" minOccurs="0">
-        <xsd:annotation>
-          <xsd:documentation xml:lang="en">Compression information for the trade.</xsd:documentation>
-        </xsd:annotation>
-      </xsd:element>
-    </xsd:sequence>
   </xsd:group>
 </xsd:schema>
 

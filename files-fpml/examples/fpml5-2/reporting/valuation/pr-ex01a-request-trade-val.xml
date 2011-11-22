@@ -35,7 +35,7 @@
           <partyReference href="party1" />
           <tradeId tradeIdScheme="http://www.partyA.com/trade-id">AAA123</tradeId>
         </partyTradeIdentifier>
-        <tradeDate>2004-04-29Z</tradeDate>
+        <tradeDate>2004-04-29</tradeDate>
       </tradeHeader>
       <bulletPayment>
         <payment>
@@ -46,7 +46,7 @@
             <amount>15000.00</amount>
           </paymentAmount>
           <paymentDate>
-            <unadjustedDate>2004-07-27Z</unadjustedDate>
+            <unadjustedDate>2004-07-27</unadjustedDate>
             <dateAdjustments>
               <businessDayConvention>MODFOLLOWING</businessDayConvention>
               <businessCenters id="businessCenters0">
@@ -63,7 +63,7 @@
 <!--Valuation Scenario-->
       <valuationScenario id="valscen1">
         <name>EOD Valuation</name>
-        <valuationDate>2004-05-01Z</valuationDate>
+        <valuationDate>2004-05-01</valuationDate>
       </valuationScenario>
       <baseParty href="party1" />
 <!--Requested Valuation Characteristics-->
